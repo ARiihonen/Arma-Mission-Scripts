@@ -1,0 +1,10 @@
+You are gathered at <marker name = 'respawn_guerrila'>a staging area</marker> some way south of the area of operations.
+<br /><br />
+Your primary objective is to clear <marker name = 'marker_targetarea'>the airfield</marker> of any hostiles. The hostages taken by the terrorists are a secondary objective. It would be preferrable that they survive but, as far as command is concerned, they were already dead when they got taken. We cannot bow to the terrorists' demands.
+%1
+<br /><br />
+Use an action menu command to call in the all clear, and another platoon will be sent in via helicopter to secure the site.
+<br /><br />
+Should you encounter further surprises after calling all clear, use another action menu command to cancel the all clear. We want to send the terrorists a clear message. Kill all of them - do not let any away.
+<br /><br />
+Board the helicopters after they have landed for a ride back home.
