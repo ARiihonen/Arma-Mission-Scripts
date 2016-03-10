@@ -81,7 +81,7 @@ caran_playerRadioSetup = {
 	};
 	
 	//if leader, set secondary channel to 0
-	if (player == leader group player || (toUpper typeOf player) == 'B_SOLDIER_TL_F') then {
+	if (player == leader group player) then {
 		_secondaryChannel = 0;
 	};
 	
