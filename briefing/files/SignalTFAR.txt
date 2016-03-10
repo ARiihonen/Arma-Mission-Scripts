@@ -1,9 +1,8 @@
-Channel assignment for the mission:
-<br /><br />
-Operation general: channel 1, 31.00<br />
-Command team:: channel 2, 31.05<br />
-Alpha team: channel 3, 31.10<br />
-Bravo team: channel 4, 31.20<br />
-Sniper team: channel 5, 31.30
-<br /><br />
-Group leaders have their secondary channel set to CH1 (operation general) for communication between squads.
+Channel setup for the mission:
+<br /> <br />
+CH0 (31.00): Operation-wide command <br />
+CH1 (31.05): Helicopter team internal <br />
+CH2 (31.10): Ground Team Alpha <br />
+CH3 (31.20): Ground Team Bravo
+<br /> <br />
+Squad and team leaders have their secondary channels set to CH0 for coordination between teams.

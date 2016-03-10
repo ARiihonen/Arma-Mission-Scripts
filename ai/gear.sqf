@@ -5,7 +5,7 @@ _class = typeOf _this;
 _class = toUpper _class;
 
 //Remove all gear. Remove if only adding items or swapping non-containers
-_this call caran_clearInventory;
+//_this call caran_clearInventory;
 
 //Define default gear types. Leave as is if no change from default unit required (or remove both from here and from calls at the end of this file)
 _uniform = "";

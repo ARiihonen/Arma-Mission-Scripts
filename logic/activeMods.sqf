@@ -17,7 +17,6 @@ caran_initModList = {
 			} forEach _modStrings;
 		};
 		
-		diag_log format ["Active addon: %1", _x];
 	} forEach activatedAddons;
 	
 	publicVariable "caran_modList";

@@ -56,7 +56,7 @@ asr_ai3_main_levels_units = [
 asr_ai3_main_factions = [
 	["BLU_F",4], //NATO
 	["BLU_G_F",5], //BLU FIA
-	["OPF_F",3], //CSAT
+	["OPF_F",4], //CSAT
 	["OPF_G_F",5], //RED FIA
 	["IND_F",4], //AAF
 	["IND_G_F",5], //GRN FIA

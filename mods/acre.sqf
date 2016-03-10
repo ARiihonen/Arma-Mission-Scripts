@@ -28,7 +28,7 @@ caran_playerRadioSetup = {
 		case 'Sierra': { [ (["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 4] call acre_api_fnc_setRadioChannel; };
 	};
 	
-	if (player == leader group player) then {
+	if (player == leader group player || (toUpper typeOf player) == 'B_SOLDIER_TL_F') then {
 		[ (["ACRE_PRC152"] call acre_api_fnc_getRadioByType), 1] call acre_api_fnc_setRadioChannel;
 		_personalRadio = ["ACRE_PRC343"] call acre_api_fnc_getRadioByType; 
 		_handheldRadio = ["ACRE_PRC152"] call acre_api_fnc_getRadioByType; 

@@ -8,7 +8,7 @@
 player createDiarySubject ["Diary", "Diary"];
 
 _signal = if ( "task_force_radio" call caran_checkMod ) then { "SignalTFAR.txt"; } else {""; };
-_signal = if ( "acre_" call caran_checkMod ) then { "SignalACRE.txt"; };
+if ( "acre_" call caran_checkMod ) then { _signal = "SignalACRE.txt"; };
 
 //Add new diary pages with caran_briefingFile. 
 //If including variables, add them as a list to the end of the parameters list: ["ExampleSubject", "ExampleName", "ExampleFile", [ExampleParams]]

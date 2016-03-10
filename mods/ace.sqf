@@ -1,30 +1,34 @@
 _ace_settings = [ 
 	/*Medical settings*/ 
-	["ace_medical_level", 2], /*Medical level (2 = advanced)*/
-	["ace_medical_medicSetting", 2], /*Medic info (2 = advanced)*/
+	["ace_medical_level", 2], /*Medical level (2 = advanced, 1 = basic)*/
+	["ace_medical_medicSetting", 2], /*Medic info (2 = advanced, 1 = basic)*/
+	["ace_medical_increaseTrainingInLocations", true], /*Increase training in locations*/
 	["ace_medical_allowLitterCreation", true], /*Allow litter*/
 	["ace_medical_litterCleanUpDelay", 1800], /*Time before litter is removed (seconds)*/
 	["ace_medical_enableScreams", true], /*Enable screams*/
 	["ace_medical_playerDamageThreshold", 1], /*Player damage to kill*/
 	["ace_medical_AIDamageThreshold", 1],  /*AI damage to kill*/
-	["ace_medical_enableUnconsciousnessAI", 0], /*AI unconsciousness (0 = disabled, others: 50/50, enabled)*/
+	["ace_medical_enableUnconsciousnessAI", 2], /*AI unconsciousness (0 = disabled, 2 = enabled, 1 =  50/50?*/
 	["ace_medical_remoteControlledAI", true], /*Treat remote AI as AI, not player*/
-	["ace_medical_preventInstaDeath", true], /*Prevent instant death*/
+	["ace_medical_preventInstaDeath", false], /*Prevent instant death*/
 	["ace_medical_bleedingCoefficient", 1], /*Bleeding coefficient*/
 	["ace_medical_painCoefficient", 1], /*Pain coefficient*/
 	["ace_medical_keepLocalSettingsSynced", true], /*Sync (keep true)*/
 	
 	/*Advanced medical settings*/
-	["ace_medical_enableFor", 0], /*enable for players/players and AI (players: 0)*/
+	["ace_medical_enableFor", 1], /*enable for players/players and AI (players: 0, players and AI: 1)*/
+	["ace_medical_enableOverdosing", false], /*enable overdosing*/
 	["ace_medical_enableAdvancedWounds", false], /*Wounds opening*/
 	["ace_medical_enableVehicleCrashes", true], /*Vehicle crashes*/
-	["ace_medical_medicSetting_PAK", 1], /*Who can use PAK (1 = medic onlt, 2 = doctor only, (0 = anyone??) )*/
+	["ace_medical_medicSetting_basicEpi", 1], /*Same as PAK/SK? */
+	["ace_medical_useLocation_basicEpi", 0], /*0 = anywhere*/
+	["ace_medical_medicSetting_PAK", 1], /*Who can use PAK (1 = medic only, 2 = doctor only, (0 = anyone??) )*/
 	["ace_medical_consumeItem_PAK", -1], /*Remove PAK on use (-1 = no)*/
 	["ace_medical_useCondition_PAK", 1], /*Condition at which PAK can be used ( 1 = stable, other: anytime )*/
-	["ace_medical_useLocation_PAK", -1], /*PAK use location (-1 = anywhere, 1 = medical vehicle)*/
-	["ace_medical_medicSetting_SurgicalKit", 2], /*Who can use Surgical Kit (1 = medic onlt, 2 = doctor only, (0 = anyone??) )*/
+	["ace_medical_useLocation_PAK", 0], /*0 also anywhere??? PAK use location (-1 = anywhere, 1 = medical vehicle)*/
+	["ace_medical_medicSetting_SurgicalKit", 2], /*Who can use Surgical Kit (1 = medic only, 2 = doctor only, (0 = anyone??) )*/
 	["ace_medical_consumeItem_SurgicalKit", -1], /*Remove surgical kit on use (-1 = no)*/
-	["ace_medical_useLocation_SurgicalKit", 1], /*Surgical kit use location (1 = medical vehicle)*/
+	["ace_medical_useLocation_SurgicalKit", 3], /*???*/
 	["ace_medical_useCondition_SurgicalKit", 1], /*Condition at which surgical kit can be used ( 1 = stable)*/
 	["ace_medical_healHitPointAfterAdvBandage", true], /*Heal hitpoints when full bandaged*/
 	["ace_medical_painIsOnlySuppressed", false], /*only suppress pain*/
@@ -34,14 +38,14 @@ _ace_settings = [
 	["ace_medical_menu_maxRange", 3], /*max range*/
 	
 	/*Revive*/
-	["ace_medical_enableRevive", 0], /*Enable (0 = disable, others: players, players&AI)*/
-	["ace_medical_maxReviveTime", 120], /*Max time*/
+	["ace_medical_enableRevive", 1], /*Enable (0 = disable, 1 = players, 2 = players&AI)*/
+	["ace_medical_maxReviveTime", 180], /*Max time*/
 	["ace_medical_amountOfReviveLives", -1], /*amount of lives (-1 to disable)*/
 	
 	/*Blu force tracking*/
-	["ace_map_BFT_Enabled", true], /*Enable*/
+	["ace_map_BFT_Enabled", false], /*Enable*/
 	["ace_map_BFT_Interval", 1], /*Interval*/
-	["ace_map_BFT_HideAiGroups", false], /*Show AI groups*/
+	["ace_map_BFT_HideAiGroups", true], /*Show AI groups*/
 
 	/*Map*/
 	["ace_map_mapIllumination", true], /*Illumination*/
@@ -58,7 +62,7 @@ _ace_settings = [
 	
 	/*Pointing*/
 	["ace_finger_enabled", true], /*Enable (bool)*/
-	["ace_finger_maxRange", 4], /*Max range in metres*/
+	["ace_finger_maxRange", 4],	/*Max range in metres*/
 
 	/*Vehicle locks*/
 	["ace_vehiclelock_DefaultLockpickStrength", 10], /*Lockpick time in seconds*/

@@ -1,9 +1,8 @@
 Radio setup for the mission:
 <br /><br />
 Squad-internal communication with PRC 343 personal radios.
-CH1: Command team<br />
-CH2: Alpha team<br />
-CH3: Bravo team<br />
-CH4: Sniper team Sierra
+CH1: Helicopter Team<br />
+CH2: Ground Team Alpha<br />
+CH3: Ground Team Bravo
 <br /><br />
-Group leaders have been issued PRC 152 handheld radios for inter-squad communication. CH1, description "FALCON".
+Squad and team leaders have been issued PRC 152 handheld radios for coordination between teams. CH1, designation PRIMER.
