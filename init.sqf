@@ -13,10 +13,6 @@ if ("acre_" call caran_checkMod ) then {
 	_load = [] execVM "mods\acre.sqf";
 };
 
-if ( "asr_ai3_main" call caran_checkMod ) then {
-	_load = [] execVM "mods\asr.sqf";
-};
-
 if ( "ace_" call caran_checkMod ) then {
 	_load = [] execVM "mods\ace.sqf";
 };
