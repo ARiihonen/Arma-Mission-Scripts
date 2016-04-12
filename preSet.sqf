@@ -23,6 +23,6 @@ if (isServer) then {
 	_checkList call caran_initModList;
 	
 	if ( "asr_ai3_main" call caran_checkMod ) then {
-		call "mods\asr.sqf";
+		call compile preprocessfile "mods\asr.sqf";
 	};
 };
