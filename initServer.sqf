@@ -6,7 +6,9 @@ This runs on the server machine after objects have initialised in the map. Anyth
 [missionNamespace, 1] call BIS_fnc_respawnTickets;
 [missionNamespace, -1] call BIS_fnc_respawnTickets;
 
-//Task setting: ["TaskName", locality, ["Description", "Title", "Marker"], target, "STATE", priority, showNotification, true] call BIS_fnc_setTask;
+//Task creating: [owner, task name/[task name, parent task name], [description, title, marker], destination, state, priority, shownotification, type, shared] call BIS_fnc_taskCreate;
+//Updating tasks example: ["TaskName", "STATE", false] call BIS_fnc_taskSetState;
+//Custom task update notification: ["NotificationName", ["Message"]] remoteExec ["BIS_fnc_showNotification", west, false];
 
 //Handle mission ending here, call from serverside event handler or trigger
 missioneEnding = {

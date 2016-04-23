@@ -21,8 +21,4 @@ if (isServer) then {
 	
 	//Check mod checklist against active addons
 	_checkList call caran_initModList;
-	
-	if ( "asr_ai3_main" call caran_checkMod ) then {
-		call compile preprocessfile "mods\asr.sqf";
-	};
 };

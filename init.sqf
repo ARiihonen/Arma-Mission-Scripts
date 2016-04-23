@@ -5,6 +5,10 @@ waitUntil {serverInit};
 #include "logic\activeMods.sqf"
 
 //initialise mods if active
+if ( "asr_" call caran_checkMod ) then {
+	_load = [] execVM "mods\asr.sqf";
+};
+
 if ( "task_force_radio" call caran_checkMod ) then {
 	_load = [] execVM "mods\tfar.sqf";
 };
