@@ -11,7 +11,7 @@ This runs on the server machine after objects have initialised in the map. Anyth
 //Custom task update notification: ["NotificationName", ["Message"]] remoteExec ["BIS_fnc_showNotification", west, false];
 
 //Handle mission ending here, call from serverside event handler or trigger
-missioneEnding = {
+missionEnding = {
 	//calculate which ending to show here
 	_end = "Lose";
 	
