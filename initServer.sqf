@@ -19,8 +19,8 @@ missionEnding = {
 };
 
 //Create trigger to handle ending if players dead
-trigger_dead = createTrigger ['EmptyDetector', [0,0,0], false];
-trigger_dead setTriggerActivation ['NONE', 'PRESENT', false];
+trigger_dead = createTrigger ["EmptyDetector", [0,0,0], false];
+trigger_dead setTriggerActivation ["NONE", "PRESENT", false];
 trigger_dead setTriggerStatements [
 	"count playableUnits == 0",
 	"call missionEnding;",
