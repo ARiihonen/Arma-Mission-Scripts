@@ -6,11 +6,11 @@ tf_same_lr_frequencies_for_side = true; //Generates identical long range radio s
 TF_give_microdagr_to_soldier = false; //Determines whether or not MicroDAGR is issued.
 
 //BLUFOR radios and channel settings
-tf_west_radio_code = "_independent";
-tf_defaultWestBacpkpack = "tf_anprc155";
-tf_defaultWestPersonalRadio = "tf_anprc148jem";
-tf_defaultWestRiflemanRadio = "tf_anprc154";
-tf_defaultWestAirborneRadio = "tf_anarc156";
+tf_west_radio_code = "_blufor";
+tf_defaultWestBacpkpack = "tf_rt1523g";
+tf_defaultWestPersonalRadio = "tf_anprc152";
+tf_defaultWestRiflemanRadio = "tf_rf7800str";
+tf_defaultWestAirborneRadio = "tf_anarc210";
 
 _settingsSwWest = false call TFAR_fnc_generateSwSettings;
 _settingsSwWest set [2, ["31.00","31.05","31.10","31.20","31.30","31.40"]];
@@ -25,7 +25,7 @@ tf_guer_radio_code = "_independent";
 tf_defaultGuerBacpkpack = "tf_anprc155";
 tf_defaultGuerPersonalRadio = "tf_anprc148jem";
 tf_defaultGuerRiflemanRadio = "tf_anprc154";
-tf_defaultGuerAirborneRadio = "tf_anarc156";
+tf_defaultGuerAirborneRadio = "tf_anarc164";
 
 _settingsSwGuer = false call TFAR_fnc_generateSwSettings;
 _settingsSwGuer set [2, ["31.00","31.05","31.10","31.20","31.30","31.40"]];
@@ -36,11 +36,11 @@ _settingsLrGuer set [2, ["31","32","33","40","50","51"]];
 tf_freq_Guer_lr = _settingsLrGuer;
 
 //REDFOR radios and channel settings
-tf_east_radio_code = "_independent";
-tf_defaultEastBacpkpack = "tf_anprc155";
-tf_defaultEastPersonalRadio = "tf_anprc148jem";
-tf_defaultEastRiflemanRadio = "tf_anprc154";
-tf_defaultEastAirborneRadio = "tf_anarc156";
+tf_east_radio_code = "_opfor";
+tf_defaultEastBacpkpack = "tf_mr3000";
+tf_defaultEastPersonalRadio = "tf_fadak";
+tf_defaultEastRiflemanRadio = "tf_pnr1000a";
+tf_defaultEastAirborneRadio = "tf_mr6000l";
 
 _settingsSwEast = false call TFAR_fnc_generateSwSettings;
 _settingsSwEast set [2, ["31.00","31.05","31.10","31.20","31.30","31.40"]];
