@@ -1,7 +1,7 @@
 _ace_settings = [ 
 	/*Medical settings*/ 
-	["ace_medical_level", 2], /*Medical level (2 = advanced, 1 = basic)*/
-	["ace_medical_medicSetting", 2], /*Medic info (2 = advanced, 1 = basic)*/
+	["ace_medical_level", 1], /*Medical level (2 = advanced, 1 = basic)*/
+	["ace_medical_medicSetting", 1], /*Medic info (2 = advanced, 1 = basic)*/
 	["ace_medical_increaseTrainingInLocations", true], /*Increase training in locations*/
 	["ace_medical_allowLitterCreation", true], /*Allow litter*/
 	["ace_medical_litterCleanUpDelay", 1800], /*Time before litter is removed (seconds)*/

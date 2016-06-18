@@ -29,6 +29,32 @@ _handgun = "";
 _handgun_items = [];
 _handgun_ammo_array = [];
 
+//Medical. ACE if active, vanilla if not
+if ( "ace_" call caran_checkMod ) then {
+	{ _items pushback [_x, 4, "Uniform"]; } forEach ["ACE_morphine", "ACE_epinephrine"];
+	{ _items pushback [_x, 8, "Uniform"]; } forEach ["ACE_elasticBandage", "ACE_packingBandage"];
+	_items pushback ["ACE_tourniquet", 1, "Uniform"];
+	_items pushback ["ACE_MapTools", 1, "Uniform"];
+} else {
+	_items pushback ["FirstAidKit", 2, "Uniform"];
+};
+
+if ( ["MEDIC", _class] call BIS_fnc_inString ) then {
+	_backpack = "B_AssaultPack_blk";
+	
+	if ( "ace_" call caran_checkMod ) then {
+		_items set [ count _items, ["ACE_personalAidKit", 1, "Backpack"]];
+		_items set [ count _items, ["ACE_bloodIV", 2, "Backpack"]];
+		_items set [ count _items, ["ACE_bloodIV_500", 4, "Backpack"]];
+		_items set [ count _items, ["ACE_tourniquet", 5, "Backpack"]];
+		{ _items set [count _items, [_x, 10, "Backpack"]]; } forEach ["ACE_morphine", "ACE_epinephrine", "ACE_atropine"];
+		{ _items set [count _items, [_x, 25, "Backpack"]]; } forEach ["ACE_packingBandage", "ACE_elasticBandage"];
+	} else {
+		_items set [ count _items, ["Medikit", 1, "Backpack"]];
+		_items set [ count _items, ["FirstAidKit", 10, "Backpack"]];
+	};
+};
+
 //Adding gear. 
 [player, _uniform, _vest, _backpack, _headwear] call caran_addClothing;
 [player, _items] call caran_addInventoryItems;

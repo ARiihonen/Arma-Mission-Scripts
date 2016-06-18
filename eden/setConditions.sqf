@@ -9,3 +9,4 @@ collect3DENHistory {
 };
 
 systemChat (_var_name + " last value: " + (str _counter));
+diag_log ("Conditions set for " +  _var_name + ", last value: " + (str _counter));

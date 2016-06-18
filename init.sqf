@@ -9,10 +9,6 @@ if ( "asr_" call caran_checkMod ) then {
 	_load = [] execVM "mods\asr.sqf";
 };
 
-if ( "task_force_radio" call caran_checkMod ) then {
-	_load = [] execVM "mods\tfar.sqf";
-};
-
 if ("acre_" call caran_checkMod ) then {
 	_load = [] execVM "mods\acre.sqf";
 };
@@ -25,6 +21,11 @@ if ( "ace_" call caran_checkMod ) then {
 if (!isServer || (isServer && !isDedicated) ) then {
 	//put in briefings
 	briefing = [] execVM "briefing\briefing.sqf";
+	
+	//radio setup
+	if ( "task_force_radio" call caran_checkMod ) then {
+		_load = [] execVM "mods\tfar.sqf";
+	};
 };
 
 execVM "logic\hcHandle.sqf";

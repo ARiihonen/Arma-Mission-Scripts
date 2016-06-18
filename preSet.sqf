@@ -9,14 +9,18 @@ if (isServer) then {
 	
 	//Define strings to search for in active addons
 	_checkList = [
-		"ace_common",
+		"ace_",
 		"asr_ai3_main",
 		"task_force_radio",
+		"acre_",
 		"hlcweapons_fhawcovert",
 		"hlcweapons_aks",
-		"acre_",
+		"hlcweapons_mp5",
 		"rhs_",
-		"rhsusf_"
+		"rhsusf_",
+		"scorch_invitems",
+		"melb",
+		"tf47_"
 	];
 	
 	//Check mod checklist against active addons
