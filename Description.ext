@@ -1,6 +1,7 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
+briefingName = "Description.ext Mission Name in Briefing";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
 overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
@@ -92,11 +93,9 @@ class CfgFunctions
 		class mods
 		{
 			class checkMod {};
-			class checkDefaults { preInit = 1; };
-			class initACE {};
-			class initASR {};
-			class initTFAR {};
-			class initACRE {};
+			class initASR { preInit = 1; };
+			class initTFAR { preInit = 1; };
+			class initACRE { preInit = 1; };
 			class TFARRadiosAdded {};
 		};
 
@@ -245,4 +244,18 @@ class CfgNotifications
 		priority = 4;
 		sound = "taskUpdated";
 	};
+};
+
+class CfgAISkills
+{
+	aimingAccuracy[] = {1, 1, 1, 1};
+	aimingShake[] = {1, 1, 1, 1};
+	aimingSpeed[] = {1, 1, 1, 1};
+	commanding[] = {1, 1, 1, 1};
+	courage[] = {1, 1, 1, 1};
+	endurance[] = {1, 1, 1, 1};
+	general[] = {1, 1, 1, 1};
+	reloadSpeed[] = {1, 1, 1, 1};
+	spotDistance[] = {1, 1, 1, 1};
+	spotTime[] = {1, 1, 1, 1};
 };

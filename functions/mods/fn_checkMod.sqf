@@ -7,7 +7,7 @@ Return: BOOL
 */
 _cfgName = _this param [0,"",[""]];
 
-if isClass (configfile >> "CfgPatches" >> _cfgName) then {
-    true;
-};
-false;
+_return = false;
+if isClass (configfile >> "CfgPatches" >> _cfgName) then { _return = true; };
+
+_return;
