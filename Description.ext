@@ -1,14 +1,15 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
+briefingName = "HCTesting";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-//overviewText = "Overview text"; This is overwritten by the editor-set description
+overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "Mission Name";
-OnLoadMission = "Loading Text";
+OnLoadName = "HCTesting";
+OnLoadMission = "Description.ext OnLoadMission";
 //loadscreen = "";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
@@ -20,59 +21,140 @@ respawnDelay = 5;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnTemplates[] = {"Tickets","Spectator"};
+respawnButton = 0;
 
-enableDebugConsole = 1; //enable debug console for the admin 
+enableDebugConsole = 1; //enable debug console for the admin
 
 //Game type stuff. Doesn't matter, but will get shown in mission select.
-class Header {
+class Header
+{
 	gameType = COOP;
-	minPlayers = 1;
-	maxPlayers = 2;
+	minPlayers = 4;
+	maxPlayers = 18;
+};
+
+class ACE_Settings
+{
+	#include "aceSettings.hpp"
 };
 
 //Mission ending states, used via BIS_fnc_endMission from end.sqf
-class CfgDebriefing {
+class CfgDebriefing
+{
 
-	class Dead {
+	class Dead
+	{
 		title = "You are dead";
 		subtitle = "Mission over";
-		description = "Have fun being dead";
 		picture = "KIA";
 		pictureColor[] = {0.6,0.1,0.2,1};
 	};
-	
-	class Win {
-		title = "Mission Complete";
-		subtitle = "Nicely done, man";
-		description = "You own, buddy";
+
+	class Win
+	{
+		title = "Mission Successful";
+		subtitle = "Yay you";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		picturecolor[] = {0.0,0.3,0.6,1};
 	};
-	
-	class Lose {
+
+	class Lose
+	{
 		title = "Mission Failed";
 		subtitle = "Fuck off";
 		description = "Scrub";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 		pictureColor[] = {1.0,0.3,0.2,1.0};
 	};
-	
+
 };
 
 //Functions, used to define preSet.sqf as "preInit". You can also make your own functions, but that's generally not needed.
 //More information on defining your own functions: https://community.bistudio.com/wiki/Functions_Library_%28Arma_3%29#Adding_a_Function
 class CfgFunctions
 {
-	class CARAN
+	class ARTR
 	{
-		class logic
+		class eden
 		{
-			class preset
-			{
-				preInit = 1; // 1 to call the function upon mission start, before objects are initialized. Passed arguments are ["preInit"]
-				file = "preSet.sqf";
-			};
+			class setConditions {};
+			class addIrregularGearEden {};
 		};
+
+		class preinit
+		{
+			class missionRandomisation { preInit = 1; };
+			class randInt {};
+			class populateArray {};
+			class chooseRandoms {};
+			class presenceArray {};
+		};
+
+		class mods
+		{
+			class checkMod {};
+			class initASR { preInit = 1; };
+			class initTFAR { preInit = 1; };
+			class initACRE { preInit = 1; };
+			class TFARRadiosAdded {};
+		};
+
+		class ai
+		{
+			class initSkills { preInit = 1; };
+			class setSkills { postInit = 1; };
+			class HCInit {};
+			class HCSetOwner { postInit = 1; };
+			class getAIController {};
+		};
+
+		class gear
+		{
+			class addIrregularGear {};
+			class getIrregularBackpack {};
+			class getIrregularGear {};
+			class getIrregularGearSets {};
+			class getIrregularHeadwear {};
+			class getIrregularItems {};
+			class getIrregularLinkItems {};
+			class getIrregularUniform {};
+			class getIrregularVest {};
+			class getIrregularWeaponItems {};
+			class getIrregularWeapons {};
+			class setIrregularGearSets {};
+			class playerGearByMod {};
+		};
+
+		class missionLogic
+		{
+			class briefingFile {};
+			class serverEnding {};
+			class clientEnding {};
+			class emptyTrigger {};
+			class initBriefing { postInit = 1; };
+			class JIPSetup { preInit = 1; };
+		};
+	};
+};
+
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+	       mode = 2;					//0: off, 1: on with whitelist, 2: on ignoring whitelist
+	       jip = 1;		 				// Ability to send JIP messages: 0-disabled, 1-enabled (default)
+
+	       class clientEnding
+	       {
+	              allowedTargets=0; 	// 0: can target anyone, 1: only clients, 2: only server
+	              jip = 1; 				// JIP setting override
+	       };
+	};
+
+	// List of script commands allowed to be sent from client via remoteExec
+	class Commands
+	{
 	};
 };
 
@@ -88,8 +170,32 @@ class Params
 	};
 };
 
+class CfgORBAT
+{
+	class ARTR
+	{
+		class Example
+		{
+			id = 1;
+			commander = "GreekMen";
+			commanderRank = "Captain";
+			description = "Unit description";
+			insignia = "\a3\missions_f_epa\data\img\orbat\I_AAF_ca.paa";
+			side = "Resistance";
+			size = "Platoon";
+			type = "Infantry";
+			text = "2nd Platoon";
+			textShort = "2nd Platoon";
+			texture = "flag_AAF";
+			assets[] = {};
+			subordinates[] = {};
+		};
+	};
+};
+
 //Notifications (the popups you get when completing a task and so on), can be used via BIS_fnc_showNotification
-class CfgNotifications {
+class CfgNotifications
+{
 
 	class TaskAssigned
 	{
@@ -141,4 +247,18 @@ class CfgNotifications {
 		priority = 4;
 		sound = "taskUpdated";
 	};
+};
+
+class CfgAISkills
+{
+	aimingAccuracy[] = {1, 1, 1, 1};
+	aimingShake[] = {1, 1, 1, 1};
+	aimingSpeed[] = {1, 1, 1, 1};
+	commanding[] = {1, 1, 1, 1};
+	courage[] = {1, 1, 1, 1};
+	endurance[] = {1, 1, 1, 1};
+	general[] = {1, 1, 1, 1};
+	reloadSpeed[] = {1, 1, 1, 1};
+	spotDistance[] = {1, 1, 1, 1};
+	spotTime[] = {1, 1, 1, 1};
 };
