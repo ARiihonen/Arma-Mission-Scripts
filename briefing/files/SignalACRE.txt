@@ -1,0 +1,8 @@
+Radio setup for the mission:
+<br /><br />
+Squad-internal communication with PRC 343 personal radios.
+CH1: Helicopter Team<br />
+CH2: Ground Team Alpha<br />
+CH3: Ground Team Bravo
+<br /><br />
+Squad and team leaders have been issued PRC 152 handheld radios for coordination between teams. CH1, designation PRIMER.
