@@ -1,0 +1,8 @@
+Channel setup for the mission:
+<br /> <br />
+CH0 (31.00): Operation-wide command <br />
+CH1 (31.05): Helicopter team internal <br />
+CH2 (31.10): Ground Team Alpha <br />
+CH3 (31.20): Ground Team Bravo
+<br /> <br />
+Squad and team leaders have their secondary channels set to CH0 for coordination between teams.
