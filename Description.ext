@@ -115,6 +115,9 @@ class CfgFunctions
 		{
 			class initSkills { preInit = 1; };
 			class setSkills { postInit = 1; };
+			class HCInit {};
+			class HCSetOwner { postInit = 1; };
+			class getAIController {};
 		};
 
 		class gear
