@@ -1,19 +1,19 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
-briefingName = "Description.ext Mission Name in Briefing";
+briefingName = "Description.ext Briefing Name";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
 overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "Description.ext OnLoadName";
-OnLoadMission = "Description.ext OnLoadMission";
+OnLoadName = "Description.ext On Load Name";
+OnLoadMission = "Description.ext On Load Mission";
 //loadscreen = "";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
-disabledai = 1; //Disable AI taking over un-taken player slots
+disabledai = 0; //Disable AI taking over un-taken player slots
 
 //Default respawn options
 respawn = "BASE";
@@ -24,6 +24,17 @@ respawnTemplates[] = {"Tickets","Spectator"};
 respawnButton = 0;
 
 enableDebugConsole = 1; //enable debug console for the admin
+
+ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
+ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
+ReviveRequiredTrait = 0;                //0: none, 1: medic trait is required
+ReviveRequiredItems = 2;                //0: none, 1: medkit, 2: medkit or first aid kit
+ReviveRequiredItemsFakConsumed = 1;     //0: first aid kit is not consumed upon revive, 1: first aid kit is consumed
+ReviveDelay = 6;                        //time needed to revive someone (in secs)
+ReviveMedicSpeedMultiplier = 2;         //speed multiplier for revive performed by medic
+ReviveForceRespawnDelay = 3;            //time needed to perform force respawn (in secs)
+ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
+
 
 //Game type stuff. Doesn't matter, but will get shown in mission select.
 class Header
@@ -93,6 +104,7 @@ class CfgFunctions
 		class mods
 		{
 			class checkMod {};
+			class initRevive { preInit = 1; };
 			class initASR { preInit = 1; };
 			class initTFAR { preInit = 1; };
 			class initACRE { preInit = 1; };
@@ -160,9 +172,9 @@ class CfgRemoteExec
 class Params
 {
 	class ExampleParam {
-		title = "Example param title";
+		title = "Revive setting";
 		values[] = {0,1};
-		texts[] = {"ZERO", "ONE"};
+		texts[] = {"REVIVE_MODE_ENABLED", "-100"};
 		default = 0;
 	};
 };
