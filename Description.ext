@@ -4,11 +4,10 @@ author="Sniper Party / Caranfin";
 briefingName = "Description.ext Briefing Name";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-//overviewText = "Overview text"; This is overwritten by the editor-set description
+overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-
 OnLoadName = "Description.ext On Load Name";
 OnLoadMission = "Description.ext On Load Mission";
 //loadscreen = "";
@@ -22,8 +21,9 @@ respawnDelay = 5;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnTemplates[] = {"Tickets","Spectator"};
+respawnButton = 0;
 
-enableDebugConsole = 1; //enable debug console for the admin 
+enableDebugConsole = 1; //enable debug console for the admin
 
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
@@ -37,10 +37,16 @@ ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
 
 
 //Game type stuff. Doesn't matter, but will get shown in mission select.
-class Header {
+class Header
+{
 	gameType = COOP;
-	minPlayers = 1;
-	maxPlayers = 2;
+	minPlayers = 4;
+	maxPlayers = 18;
+};
+
+class ACE_Settings
+{
+	#include "aceSettings.hpp"
 };
 
 //Mission ending states, used via BIS_fnc_endMission from end.sqf
@@ -103,6 +109,8 @@ class CfgFunctions
 			class initTFAR { preInit = 1; };
 			class initACRE { preInit = 1; };
 			class TFARRadiosAdded {};
+			class TFARSpeaking {};
+			class TFARVolumeChange {};
 		};
 
 		class ai
