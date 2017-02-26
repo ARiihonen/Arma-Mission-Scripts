@@ -42,7 +42,7 @@ if (isServer) then {
 	_playerCount = playersNumber independent;
 
 	_buildingCount = if (_playerCount < 12) then { 1; } else { 2; };
-	_enemiesPerFloorTotal = _playerCount;
+	_enemiesPerFloorTotal = ceil(_playerCount*1.5);
 	_marksmenTotal = ceil(_playerCount / 2);
 
 	_enemiesPerFloor = _enemiesPerFloorTotal/_buildingCount;
