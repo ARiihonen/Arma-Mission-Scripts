@@ -1,0 +1,3 @@
+You can use the briefing to set your starting positions by adding a marker with the text "start". If you wish to separate the squads, you can specify which squad is to start at which "start"-marker by adding the squad callsign to the marker text ("Alpha" or "Beta").
+<br /> <br />
+Applicable starting positions are within <marker name = 'mrk_exampleOuter'>the blue Area of Operations circle marker</marker>, but outside of the <marker name = 'mrk_exampleInner'>red circle.</marker>

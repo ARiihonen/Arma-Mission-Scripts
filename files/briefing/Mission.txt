@@ -1,1 +1,3 @@
-Mission txt
+Set up outside the <marker name = 'mrk_exampleInner'>Area of Operations</marker>, wherever you see fit to start the assault from.
+<br /> <br />
+Assault the <marker name = 'mrk_constructionSite'>construction site</marker>, clearing it of hostiles.

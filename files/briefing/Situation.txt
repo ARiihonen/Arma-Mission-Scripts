@@ -1,1 +1,3 @@
-Situation txt
+Remnants of the FIA forces at Syrta, fleeing from a losing battle, have holed up in <marker name = 'mrk_constructionSite'>an abandoned construction site.</marker>
+<br /> <br />
+The fighters have been surrounded by <marker name = 'respawn_guerrila'>AAF forces</marker>, who are preparing a strike force.

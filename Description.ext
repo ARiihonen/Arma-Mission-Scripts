@@ -1,19 +1,20 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
-briefingName = "Description.ext Briefing Name";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
+overviewText = "A highly replayable COOP CQB mission for 04-16 players"; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "Description.ext On Load Name";
-OnLoadMission = "Description.ext On Load Mission";
-//loadscreen = "";
+OnLoadName = "CO04-18 Slow is Smooth";
+OnLoadMission = "... smooth is fast";
+loadscreen = "files\pictures\loadingScreen_01.paa";
+
+briefingName = "CO04-18 Slow is Smooth";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
-disabledai = 0; //Disable AI taking over un-taken player slots
+disabledai = 1; //Disable AI taking over un-taken player slots
 
 //Default respawn options
 respawn = "BASE";
@@ -23,7 +24,7 @@ respawnOnStart = 0;
 respawnTemplates[] = {"Tickets","Spectator"};
 respawnButton = 0;
 
-enableDebugConsole = 1; //enable debug console for the admin
+enableDebugConsole = 0; //Disable debug console
 
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
@@ -34,7 +35,6 @@ ReviveDelay = 6;                        //time needed to revive someone (in secs
 ReviveMedicSpeedMultiplier = 2;         //speed multiplier for revive performed by medic
 ReviveForceRespawnDelay = 3;            //time needed to perform force respawn (in secs)
 ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
-
 
 //Game type stuff. Doesn't matter, but will get shown in mission select.
 class Header
@@ -64,16 +64,16 @@ class CfgDebriefing
 	class Win
 	{
 		title = "Mission Successful";
-		subtitle = "Yay you";
+		subtitle = "Militants cleared";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		picturecolor[] = {0.0,0.3,0.6,1};
 	};
 
 	class Lose
 	{
-		title = "Mission Failed";
-		subtitle = "Fuck off";
-		description = "Scrub";
+		title = "Taken Hostage";
+		subtitle = "You were seriously injured and taken hostage";
+		description = "Eventually, you were killed by the FIA fighters when your forces assaulted despite your imprisonment.";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 		pictureColor[] = {1.0,0.3,0.2,1.0};
 	};
@@ -109,8 +109,6 @@ class CfgFunctions
 			class initTFAR { preInit = 1; };
 			class initACRE { preInit = 1; };
 			class TFARRadiosAdded {};
-			class TFARSpeaking {};
-			class TFARVolumeChange {};
 		};
 
 		class ai
@@ -120,6 +118,8 @@ class CfgFunctions
 			class HCInit {};
 			class HCSetOwner { postInit = 1; };
 			class getAIController {};
+			class initIndoorsBehaviour { postInit = 1; };
+			class buildingEntered {};
 		};
 
 		class gear
@@ -137,6 +137,7 @@ class CfgFunctions
 			class getIrregularWeapons {};
 			class setIrregularGearSets {};
 			class playerGearByMod {};
+			class nvGoggles {};
 		};
 
 		class missionLogic
@@ -147,6 +148,8 @@ class CfgFunctions
 			class emptyTrigger {};
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
+			class startingPosition {};
+			class variableMarkers { postInit = 1; };
 		};
 	};
 };
@@ -169,19 +172,6 @@ class CfgRemoteExec
 	// List of script commands allowed to be sent from client via remoteExec
 	class Commands
 	{
-		class reveal { allowedTargets=0; jip=0; };
-	};
-};
-
-//Parameters, accessible from the role selection screen and used to switch between pre-defined options for the mission (time of day, gear, headless client). Parameters are in an array called paramsArray.
-//So, to check, refer to paramsArray select i, where i is array index (starting with 0)
-class Params
-{
-	class ExampleParam {
-		title = "Example title";
-		values[] = {0,1};
-		texts[] = {"ZERO", "ONE"};
-		default = 0;
 	};
 };
 
@@ -189,12 +179,12 @@ class CfgORBAT
 {
 	class ARTR
 	{
-		class Example
+		class AASF_2Plt
 		{
 			id = 1;
 			commander = "GreekMen";
 			commanderRank = "Captain";
-			description = "Unit description";
+			description = "2nd Platoon, 1st Company of the Epsilon Battalion, 1st Ranger Regiment. Separated into two detachments working together with regular infantry forces to clean up the remnants of routed FIA forces.";
 			insignia = "\a3\missions_f_epa\data\img\orbat\I_AAF_ca.paa";
 			side = "Resistance";
 			size = "Platoon";
@@ -203,7 +193,287 @@ class CfgORBAT
 			textShort = "2nd Platoon";
 			texture = "flag_AAF";
 			assets[] = {};
-			subordinates[] = {};
+			subordinates[] = { "AASF_1Detach", "AASF_2Detach" };
+		};
+		class AASF_1Detach
+		{
+			id = 1;
+			description = "A SF detachment temporarily attached to regular infantry forces, used as a strike force against FIA forces retreating from the battle at Syrta.";
+			side = "Resistance";
+			type = "Infantry";
+			text = "1st Detachment";
+			textShort = "1st Detachment";
+			subordinates[] = { "AASF_2Alpha", "AASF_2Beta" };
+		};
+		class AASF_2Alpha
+		{
+			id = 1;
+			commanderRank = "Sergeant";
+			side = "Resistance";
+			size = "Squad";
+			type = "Infantry";
+			text = "Alpha";
+			textShort = "Alpha";
+		};
+		class AASF_2Beta
+		{
+			id = 2;
+			commanderRank = "Sergeant";
+			side = "Resistance";
+			size = "Squad";
+			type = "Infantry";
+			text = "Beta";
+			textShort = "Beta";
+		};
+		class AASF_2Detach
+		{
+			id = 2;
+			commander = "GreekMen";
+			commanderRank = "Lieutenant";
+			description = "A SF detachment temporarily attached to regular infantry forces, used as a strike force to hunt FIA forces scattered in the woods around Oreokastro.";
+			side = "Resistance";
+			type = "Infantry";
+			text = "2nd Detachment";
+			textShort = "2nd Detachment";
+			subordinates[] = { "AASF_2Gamma", "AASF_2Delta" };
+		};
+		class AASF_2Gamma
+		{
+			id = 3;
+			commander = "GreekMen";
+			commanderRank = "Sergeant";
+			side = "Resistance";
+			size = "Squad";
+			type = "Infantry";
+			text = "Gamma";
+			textShort = "Gamma";
+		};
+		class AASF_2Delta
+		{
+			id = 4;
+			commander = "GreekMen";
+			commanderRank = "Sergeant";
+			side = "Resistance";
+			size = "Squad";
+			type = "Infantry";
+			text = "Delta";
+			textShort = "Delta";
+		};
+		class AAF_4Coy
+		{
+			id = 1;
+			commander = "GreekMen";
+			commanderRank = "Captain";
+			description = "";
+			insignia = "\a3\missions_f_epa\data\img\orbat\I_AAF_ca.paa";
+			side = "Resistance";
+			size = "Company";
+			type = "MotorizedInfantry";
+			text = "4th Company, 24th Motorized Infantry Brigade";
+			textShort = "4th Company";
+			texture = "flag_AAF";
+			assets[] = {};
+			subordinates[] = { "AAF_1Plt", "AAF_2Plt", "AAF_3Plt", "AAF_4Plt", "AASF_1Detach", "AASF_2Detach" };
+		};
+		class AAF_1Plt
+		{
+			id = 1;
+			commander = "GreekMen";
+			commanderRank = "Lieutenant";
+			description = "";
+			side = "Resistance";
+			size = "Platoon";
+			type = "MotorizedInfantry";
+			text = "1st Platoon, 4th Company";
+			textShort = "1st Platoon";
+		};
+		class AAF_2Plt
+		{
+			id = 2;
+			commander = "GreekMen";
+			commanderRank = "Lieutenant";
+			description = "";
+			side = "Resistance";
+			size = "Platoon";
+			type = "MotorizedInfantry";
+			text = "2nd Platoon, 4th Company";
+			textShort = "2nd Platoon";
+		};
+		class AAF_3Plt
+		{
+			id = 3;
+			commander = "GreekMen";
+			commanderRank = "Lieutenant";
+			description = "";
+			side = "Resistance";
+			size = "Platoon";
+			type = "MotorizedInfantry";
+			text = "3rd Platoon, 4th Company";
+			textShort = "3rd Platoon";
+		};
+		class AAF_4Plt
+		{
+			id = 4;
+			commander = "GreekMen";
+			commanderRank = "Lieutenant";
+			description = "";
+			side = "Resistance";
+			size = "Platoon";
+			type = "MotorizedInfantry";
+			text = "4th Platoon, 4th Company";
+			textShort = "4th Platoon";
+			subordinates[] = { "AAF_4Alpha", "AAF_4Beta", "AAF_4Gamma", "AAF_4Delta" };
+		};
+		class AAF_4Alpha
+		{
+			id = 1;
+			commander = "GreekMen";
+			commanderRank = "Sergeant";
+			description = "Alpha Squad is tasked with holding the area around the North-Western road out from the construction site.";
+			side = "Resistance";
+			size = "Squad";
+			type = "MotorizedInfantry";
+			text = "Alpha";
+			textShort = "Alpha";
+		};
+		class AAF_4Beta
+		{
+			id = 2;
+			commander = "GreekMen";
+			commanderRank = "Sergeant";
+			description = "Beta Squad is tasked with holding the area around the Northern road out from the construction site, by Krya Nera.";
+			side = "Resistance";
+			size = "Squad";
+			type = "MotorizedInfantry";
+			text = "Beta";
+			textShort = "Beta";
+		};
+		class AAF_4Gamma
+		{
+			id = 3;
+			commander = "GreekMen";
+			commanderRank = "Sergeant";
+			description = "Gamma Squad is tasked with holding the area around the Southern road out from the construction site.";
+			side = "Resistance";
+			size = "Squad";
+			type = "MotorizedInfantry";
+			text = "Gamma";
+			textShort = "Gamma";
+		};
+		class AAF_4Delta
+		{
+			id = 4;
+			commander = "GreekMen";
+			commanderRank = "Sergeant";
+			description = "Delta Squad is tasked with holding the area around the South-Western road out from the construction site.";
+			side = "Resistance";
+			size = "Squad";
+			type = "MotorizedInfantry";
+			text = "Delta";
+			textShort = "Delta";
+		};
+		class FIA_2Coy
+		{
+			id = 1;
+			commander = "GreekMen";
+			commanderRank = "Captain";
+			description = "";
+			insignia = "\a3\missions_f_epa\data\img\orbat\fia_ca.paa";
+			side = "West";
+			size = "Company";
+			type = "Infantry";
+			text = "2nd Company";
+			textShort = "2nd Company";
+			//texture = "\a3\missions_f_epa\data\img\orbat\fia_marker_ca.paa";
+			assets[] = {};
+			subordinates[] = { "FIA_1Plt", "FIA_2Plt", "FIA_3Plt" };
+		};
+		class FIA_1Plt
+		{
+			id = 1;
+			commander = "GreekMen";
+			commanderRank = "Lieutenant";
+			description = "Part of the last defense of the Syrta region by the 1st Freedom and Independence Army, scattered and routed in the battle.";
+			side = "West";
+			size = "Platoon";
+			type = "Infantry";
+			text = "1st Platoon - Syrta";
+			textShort = "1st Plt";
+		};
+
+		class FIA_2Plt
+		{
+			id = 2;
+			commander = "Stavrou";
+			commanderRank = "Lieutenant";
+			description = "A more independent part of the 1st Coy 4th Btn, tasked with harassment missions in the Oreokastro region. Routed and being hunted after an assault on their main base.";
+			side = "West";
+			size = "Platoon";
+			type = "Infantry";
+			text = "2nd Platoon - Oreokastro";
+			textShort = "2nd Plt";
+		};
+
+		class FIA_3Plt
+		{
+			id = 3;
+			commander = "GreekMen";
+			commanderRank = "Lieutenant";
+			description = "Remnants of the defense of Syrta, routed in the battle and surrounded in a construction site.";
+			side = "West";
+			size = "Platoon";
+			type = "Infantry";
+			text = "3rd Platoon - Abdera";
+			textShort = "3rd Plt";
+			subordinates[] = { "FIA_3Alpha","FIA_3Beta","FIA_3Gamma","FIA_3Delta" };
+		};
+
+		class FIA_3Alpha
+		{
+			id = 1;
+			commander = "GreekMen";
+			commanderRank = "Sergeant";
+			side = "West";
+			size = "Squad";
+			type = "Infantry";
+			text = "Alpha";
+			textShort = "Alpha";
+		};
+
+		class FIA_3Beta
+		{
+			id = 2;
+			commander = "GreekMen";
+			commanderRank = "Sergeant";
+			side = "West";
+			size = "Squad";
+			type = "Infantry";
+			text = "Beta";
+			textShort = "Beta";
+		};
+
+		class FIA_3Gamma
+		{
+			id = 3;
+			commander = "GreekMen";
+			commanderRank = "Sergeant";
+			side = "West";
+			size = "Squad";
+			type = "Infantry";
+			text = "Gamma";
+			textShort = "Gamma";
+		};
+
+		class FIA_3Delta
+		{
+			id = 4;
+			commander = "GreekMen";
+			commanderRank = "Corporal";
+			side = "West";
+			size = "Squad";
+			type = "Infantry";
+			text = "Delta";
+			textShort = "Delta";
 		};
 	};
 };

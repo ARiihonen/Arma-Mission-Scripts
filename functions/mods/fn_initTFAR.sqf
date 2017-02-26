@@ -61,8 +61,4 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 	*/
 
 	["ARTR_receivedRadios", "OnRadiosReceived", { _this call ARTR_fnc_TFARRadiosAdded; }, player] call TFAR_fnc_addEventHandler;
-
-	["ARTR_AIHearing", "OnSpeak", { _this call ARTR_fnc_TFARSpeaking; }, player] call TFAR_fnc_addEventHandler;
-
-	["ARTR_TFARVolume", "OnSpeakVolume", { _this call ARTR_fnc_TFARVolumeChange; }, player] call TFAR_fnc_addEventHandler;
 };

@@ -1,1 +1,7 @@
-TFAR Signal information
+Channel setup for the mission:
+<br /> <br />
+CH0: Command channel <br />
+CH1: Alpha Squad <br />
+CH2: Beta Squad
+<br /> <br />
+Squad and team leaders have their secondary channels set to CH0 for coordination between teams.
