@@ -36,3 +36,7 @@ _background = ["Diary", "Background", "Background.txt"] call ARTR_fnc_briefingFi
 //Add diary subject and entries for gameplay logic not in-universe
 player createDiarySubject ["Info", "Scenario Info"];
 _startPos = ["Info", "Setup logic", "StartPosition.txt"] call ARTR_fnc_briefingFile;
+if (addonTFAR) then
+{
+	_TFARHearing = ["Info", "Setup logic", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
+};

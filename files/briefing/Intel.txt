@@ -2,4 +2,4 @@ The construction site consists of %1, surrounded by a wire fence. Scouts report 
 <br /> <br />
 The opposition comprises approximately %2 squads of infantry, armed with rifles and some light machine guns.
 <br /> <br />
-The hostiles do not seem to be equipped with Night Vision gear. You will have around 20 minutes to prepare and advance under the cover of darkness, after which any hostile observers will have a much better chance of seeing you coming.
+The sun is about to rise, but the hostiles do not seem to be equipped with Night Vision gear. You have about 15 minutes to set up and start your assault if you want to take advantage of the darkness.

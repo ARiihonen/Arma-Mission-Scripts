@@ -109,6 +109,8 @@ class CfgFunctions
 			class initTFAR { preInit = 1; };
 			class initACRE { preInit = 1; };
 			class TFARRadiosAdded {};
+			class TFARSpeaking {};
+			class TFARVolumeChange {};
 		};
 
 		class ai

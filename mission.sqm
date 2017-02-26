@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6242;
+		nextID=6874;
 	};
 	class Camera
 	{
-		pos[]={9225.4678,36.202812,21650.771};
-		dir[]={0.21555111,-0.47726339,0.85203123};
-		up[]={0.11705801,0.87874478,0.46271247};
-		aside[]={0.9695664,-7.658964e-007,-0.24528503};
+		pos[]={9148.7744,55.116364,21817.412};
+		dir[]={0.67686313,-0.34885439,-0.64836234};
+		up[]={0.25195813,0.9371562,-0.24134667};
+		aside[]={-0.69181937,-8.472125e-007,-0.72223526};
 	};
 };
 binarizationWanted=0;
@@ -323,7 +323,7 @@ class Mission
 		month=10;
 		day=12;
 		hour=5;
-		minute=20;
+		minute=24;
 		startFogBase=-1000;
 		forecastFogBase=-1000;
 		startFogDecay=0;
