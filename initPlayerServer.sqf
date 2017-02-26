@@ -1,3 +1,6 @@
+/*
+Checking for Headless Client and making sure editor-spawned dudes are HC-owned
+*/
 diag_log format ["IPS: %1", _this select 0];
 if (!isNil "headlessClient") then
 {

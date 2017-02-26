@@ -94,7 +94,7 @@ class CfgFunctions
 
 		class preinit
 		{
-			class missionRandomisation { preInit = 1; };
+			class missionSettings { preInit = 1; };
 			class randInt {};
 			class populateArray {};
 			class chooseRandoms {};

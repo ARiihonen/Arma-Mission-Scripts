@@ -1,1 +1,1 @@
-ACRE Signal information
+ACRE Support not added, hope it autoconfigures something
