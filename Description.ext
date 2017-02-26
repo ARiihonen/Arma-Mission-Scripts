@@ -169,6 +169,7 @@ class CfgRemoteExec
 	// List of script commands allowed to be sent from client via remoteExec
 	class Commands
 	{
+		class reveal { allowedTargets=0; jip=0; };
 	};
 };
 
@@ -177,9 +178,9 @@ class CfgRemoteExec
 class Params
 {
 	class ExampleParam {
-		title = "Revive setting";
+		title = "Example title";
 		values[] = {0,1};
-		texts[] = {"REVIVE_MODE_ENABLED", "-100"};
+		texts[] = {"ZERO", "ONE"};
 		default = 0;
 	};
 };
