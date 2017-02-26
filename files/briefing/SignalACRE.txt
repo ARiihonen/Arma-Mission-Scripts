@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ACRE is not supported yet. Support to be added.
+=======
+ACRE Support not added, hope it autoconfigures something
+>>>>>>> refs/remotes/origin/master
