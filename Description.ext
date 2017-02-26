@@ -172,6 +172,7 @@ class CfgRemoteExec
 	// List of script commands allowed to be sent from client via remoteExec
 	class Commands
 	{
+		class reveal { allowedTargets=0; jip=0; };
 	};
 };
 
