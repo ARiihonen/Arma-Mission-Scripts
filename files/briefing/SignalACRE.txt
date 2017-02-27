@@ -1,1 +1,1 @@
-ACRE Support not added, hope it autoconfigures something
+ACRE Support not added yet, hope it autoconfigures something

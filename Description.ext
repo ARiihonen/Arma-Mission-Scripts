@@ -1,19 +1,19 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
-briefingName = "Description.ext Briefing Name";
+briefingName = "CO06-16 - Sweep And Clear";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
 overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "Description.ext On Load Name";
-OnLoadMission = "Description.ext On Load Mission";
+OnLoadName = "CO06-16 - Sweep And Clear";
+OnLoadMission = "Fog not only conceals from sight, it also dampens sound";
 //loadscreen = "";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
-disabledai = 0; //Disable AI taking over un-taken player slots
+disabledai = 1; //Disable AI taking over un-taken player slots
 
 //Default respawn options
 respawn = "BASE";
@@ -40,8 +40,8 @@ ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
 class Header
 {
 	gameType = COOP;
-	minPlayers = 4;
-	maxPlayers = 18;
+	minPlayers = 6;
+	maxPlayers = 16;
 };
 
 class ACE_Settings
@@ -52,32 +52,83 @@ class ACE_Settings
 //Mission ending states, used via BIS_fnc_endMission from end.sqf
 class CfgDebriefing
 {
-
-	class Dead
-	{
+	class Dead {
 		title = "You are dead";
 		subtitle = "Mission over";
+		description = "Have fun being dead";
 		picture = "KIA";
 		pictureColor[] = {0.6,0.1,0.2,1};
 	};
 
-	class Win
-	{
-		title = "Mission Successful";
-		subtitle = "Yay you";
+	class WinBoth {
+		title = "Complete Success";
+		subtitle = "Both objectives cleared";
+		description = "You suffered no casualties during the operation";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
-		picturecolor[] = {0.0,0.3,0.6,1};
+		picturecolor[] = {0.7,1.0,0.3,1.0};
 	};
 
-	class Lose
-	{
-		title = "Mission Failed";
-		subtitle = "Fuck off";
-		description = "Scrub";
+	class WinBothLight {
+		title = "Mission success";
+		subtitle = "Both objectives cleared";
+		description = "You suffered light casualties but completed all tasks";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		picturecolor[] = {0.7,1.0,0.3,1.0};
+	};
+
+	class WinBothHeavy {
+		title = "Mission success";
+		subtitle = "Both objectives cleared";
+		description = "You suffered heavy casualties but managed to complete all tasks";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		picturecolor[] = {0.7,1.0,0.3,1.0};
+	};
+
+	class WinOneLight {
+		title = "Mission complete";
+		subtitle = "Objective cleared";
+		description = "You suffered light casualties. The operation uncovered some more guerrilla camps, but others took care of them.";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconCanceled_ca.paa";
+		picturecolor[] = {0.7,0.7,0.7,1.0};
+	};
+
+	class WinOneHeavy {
+		title = "Mission complete";
+		subtitle = "Objective cleared";
+		description = "You suffered heavy casualties. The operation uncovered some more guerrilla camps, but others took care of them.";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 		pictureColor[] = {1.0,0.3,0.2,1.0};
 	};
 
+	class Lose {
+		title = "What";
+		subtitle = "How did you do this";
+		description = "Get out";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconCanceled_ca.paa";
+		pictureColor[] = {1.0,0.3,0.2,1.0};
+	};
+};
+
+class CfgRadio
+{
+	sounds[] = {};
+	class newTask {
+		name = "";
+		sound[] = {""};
+		title = "Excellent work. Standby for new tasking - your operation made the guerrillas break radio silence and SIGINT has a new target for you.";
+	};
+
+	class rtbBad {
+		name = "";
+		sound[] = {""};
+		title = "That's it, boys, you can stand down. Check your wounded and standby for CASEVAC.";
+	};
+
+	class rtbGood {
+		name = "";
+		sound[] = {""};
+		title = "Outstanding work, team. Another squad is coming to secure the site. Relax, and prepare to RTB.";
+	};
 };
 
 //Functions, used to define preSet.sqf as "preInit". You can also make your own functions, but that's generally not needed.
@@ -147,6 +198,7 @@ class CfgFunctions
 			class emptyTrigger {};
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
+			class advancePhase {};
 		};
 	};
 };
