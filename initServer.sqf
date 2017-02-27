@@ -3,8 +3,10 @@ This runs on the server machine after objects have initialised in the map. Anyth
 */
 
 //set weather
+/*
 0 setFog [0.5, 0.2, 12];
 (2*60*60) setFog [0,0,0];
+*/
 
 //set Overwatch name if MNP then Ukko else Overwatch
 if ( "mnp_" call ARTR_fnc_checkMod ) then {
