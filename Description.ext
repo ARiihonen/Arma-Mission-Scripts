@@ -1,27 +1,26 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
-briefingName = "Description.ext Briefing Name";
+briefingName = "[TvT10] Phantoms";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
+overviewText = "CSAT divers attempt to tag hidden FIA equipment stashes to gain intel"; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "Description.ext On Load Name";
-OnLoadMission = "Description.ext On Load Mission";
+OnLoadName = "[TvT10] Phantoms";
+OnLoadMission = "Sometimes the greatest victories are achieved without a single shot";
 //loadscreen = "";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
-disabledai = 0; //Disable AI taking over un-taken player slots
+disabledai = 1; //Disable AI taking over un-taken player slots
 
 //Default respawn options
-respawn = "BASE";
-respawnDelay = 5;
+respawn = "NONE";
+respawnDelay = 0;
 respawnDialog = 0;
 respawnOnStart = 0;
-respawnTemplates[] = {"Tickets","Spectator"};
-respawnButton = 0;
+respawnTemplates[] = {"Spectator"};
 
 enableDebugConsole = 1; //enable debug console for the admin
 
@@ -37,11 +36,10 @@ ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
 
 
 //Game type stuff. Doesn't matter, but will get shown in mission select.
-class Header
-{
-	gameType = COOP;
-	minPlayers = 4;
-	maxPlayers = 18;
+class Header {
+	gameType = TDM;
+	minPlayers = 3;
+	maxPlayers = 10;
 };
 
 class ACE_Settings
@@ -52,32 +50,61 @@ class ACE_Settings
 //Mission ending states, used via BIS_fnc_endMission from end.sqf
 class CfgDebriefing
 {
-
-	class Dead
-	{
+	class Dead {
 		title = "You are dead";
-		subtitle = "Mission over";
+		subtitle = "Whichever team won, you lost.";
 		picture = "KIA";
 		pictureColor[] = {0.6,0.1,0.2,1};
 	};
 
-	class Win
-	{
-		title = "Mission Successful";
-		subtitle = "Yay you";
+	class BlueVictoryAll {
+		title = "Complete success";
+		subtitle = "None of your shipment was tampered with";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		picturecolor[] = {0.0,0.3,0.6,1};
 	};
 
-	class Lose
-	{
-		title = "Mission Failed";
-		subtitle = "Fuck off";
-		description = "Scrub";
+	class BlueVictory {
+		title = "Mission success";
+		subtitle = "Most of the shipment is safe";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		picturecolor[] = {0.0,0.3,0.6,1};
+	};
+
+	class BlueLoss {
+		title = "Mission failed";
+		subtitle = "Most of the shipment was compromised";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 		pictureColor[] = {1.0,0.3,0.2,1.0};
 	};
 
+	class RedVictoryAll {
+		title = "Complete success";
+		subtitle = "Entire shipment bugged";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		picturecolor[] = {0.0,0.3,0.6,1};
+	};
+
+	class RedVictory {
+		title = "Mission success";
+		subtitle = "Most of the shipment is tracked";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		picturecolor[] = {0.0,0.3,0.6,1};
+	};
+
+	class RedLossAmount {
+		title = "Mission failed";
+		subtitle = "Not enough boxes bugged";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+		pictureColor[] = {1.0,0.3,0.2,1.0};
+	};
+
+	class RedLossSearch {
+		title = "Mission failed";
+		subtitle = "Too much suspicion raised";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+		pictureColor[] = {1.0,0.3,0.2,1.0};
+	};
 };
 
 //Functions, used to define preSet.sqf as "preInit". You can also make your own functions, but that's generally not needed.
@@ -147,6 +174,13 @@ class CfgFunctions
 			class emptyTrigger {};
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
+			class defenderHit {};
+			class defenderKilled {};
+			class boxTracked {};
+			class initUAV {};
+			class viewUAV {};
+			class createUAV {};
+			class trackerAction {};
 		};
 	};
 };
@@ -161,9 +195,15 @@ class CfgRemoteExec
 
 	       class clientEnding
 	       {
-	              allowedTargets=0; 	// 0: can target anyone, 1: only clients, 2: only server
-	              jip = 1; 				// JIP setting override
+	       		allowedTargets=0; 		// 0: can target anyone, 1: only clients, 2: only server
+	       		jip = 1; 				// JIP setting override
 	       };
+
+		   class boxTracked
+		   {
+			   allowedTargets = 0;
+			   jip = 1;
+		   };
 	};
 
 	// List of script commands allowed to be sent from client via remoteExec
@@ -177,10 +217,10 @@ class CfgRemoteExec
 //So, to check, refer to paramsArray select i, where i is array index (starting with 0)
 class Params
 {
-	class ExampleParam {
-		title = "Example title";
+	class ExtendedUAV {
+		title = "Extended diver info";
 		values[] = {0,1};
-		texts[] = {"ZERO", "ONE"};
+		texts[] = {"OFF", "ON"};
 		default = 0;
 	};
 };
@@ -261,6 +301,12 @@ class CfgNotifications
 		description = "%1";
 		priority = 4;
 		sound = "taskUpdated";
+	};
+	class TrackerPlaced {
+		title = "Bug placed";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		description = "Tracking online";
+		sound = "taskSucceeded";
 	};
 };
 

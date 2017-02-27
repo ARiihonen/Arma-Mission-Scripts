@@ -10,11 +10,11 @@ if ("asr_ai3_main" call ARTR_fnc_checkMod) then
 	_rearm = 50; 						//INT: basic rearming range (meters)
 	_rearm_mags = 2; 					//INT: rearm if primary has less than (magazines)
 	_rearm_fak = 1; 					//INT: rearm if first aid less than (kits)
-	_radiorange = 2000; 				//INT: radio report max range (meters, 0 to disable)
+	_radiorange = 500; 				//INT: radio report max range (meters, 0 to disable)
 	_radiodelay = 5; 					//INT: base radio report delay (seconds)
 	_delayPlus = 15; 					//INT: max extra delay (seconds)
 	_packNVG = true; 					//BOOL: AI pack NVGs during day
-	_fallDOwn = true; 					//BOOL: Soldiers fall when hit
+	_fallDown = true; 					//BOOL: Soldiers fall when hit
 	_aiStamina = false; 				//BOOL: Stamina system for AI in players group
 	_teamSwitchLeader = true; 			//BOOL: become group leader on team switch
 

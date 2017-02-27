@@ -17,10 +17,10 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 
 	//BLUFOR radios and channel settings
 	tf_west_radio_code = "_blufor";
-	TF_defaultWestBackpack = "tf_rt1523g";
-	TF_defaultWestPersonalRadio = "tf_anprc152";
-	TF_defaultWestRiflemanRadio = "tf_rf7800str";
-	TF_defaultWestAirborneRadio = "tf_anarc210";
+	TF_defaultWestBackpack = "tf_anprc155";
+	TF_defaultWestPersonalRadio = "tf_anprc148jem";
+	TF_defaultWestRiflemanRadio = "tf_anprc154";
+	TF_defaultWestAirborneRadio = "tf_anarc164";
 
 	//GREENFOR radios and channel settings
 	tf_guer_radio_code = "_independent";

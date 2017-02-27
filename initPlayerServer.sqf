@@ -1,12 +1,14 @@
+_unit = _this select 0;
+
 /*
 Checking for Headless Client and making sure editor-spawned dudes are HC-owned
 */
-diag_log format ["IPS: %1", _this select 0];
+diag_log format ["IPS: %1", _unit];
 if (!isNil "headlessClient") then
 {
-	if (_this select 0 == headlessClient) then
+	if (_unit == headlessClient) then
 	{
-		_HCUnit = _this select 0;
+		_HCUnit = _unit;
 		_id = owner headlessCLient;
 
 		diag_log format ["HCUnit: %1, ID: %2", _HCUnit, _id];
