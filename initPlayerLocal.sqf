@@ -20,7 +20,7 @@ waitUntil { missionNamespace getVariable["ARTR_serverInit", false] };
 			false,
 			true,
 			"",
-			"_this distance _target < 5"
+			"_this distance _target < 5 && time < missionNamespace getVariable ['uav_end', (60*60)]"
 		];
 
 		_x setVariable ["tracker_action", _id, false];

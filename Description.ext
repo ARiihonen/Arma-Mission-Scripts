@@ -308,6 +308,20 @@ class CfgNotifications
 		description = "Tracking online";
 		sound = "taskSucceeded";
 	};
+	class UAVTimeout {
+		title = "UAV Alert";
+		iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+		description = "%1 minutes remaining";
+		color[] = {0.7,1.0,0.3,1.0};
+		sound = "taskCanceled";
+	};
+	class UAVEnd {
+		title = "UAV Alert";
+		iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+		description = "UAV Going Offline";
+		color[] = {1.0,0.3,0.2,1.0};
+		sound = "taskFailed";
+	};
 };
 
 class CfgAISkills

@@ -23,6 +23,31 @@ trigger_tracking setTriggerStatements [
 	"
 ];
 
+//Triggers to show UAV time ending notification for OPFOR players
+trigger_uavTen = [
+	"time >= missionNamespace getVariable ['uav_end', (60*60)] - 10*60",
+	"['UAVTimeout', ['10']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
+	""
+] call ARTR_fnc_emptyTrigger;
+
+trigger_uavFive = [
+	"time >= missionNamespace getVariable ['uav_end', (60*60)] - 5*60",
+	"['UAVTimeout', ['5']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
+	""
+] call ARTR_fnc_emptyTrigger;
+
+trigger_uavOne = [
+	"time >= missionNamespace getVariable ['uav_end', (60*60)] - 1*60",
+	"['UAVTimeout', ['1']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
+	""
+] call ARTR_fnc_emptyTrigger;
+
+trigger_uavDone = [
+	"time >= missionNamespace getVariable ['uav_end', (60*60)] - 1*60",
+	"['UAVEnd', []] remoteExecCall ['BIS_fnc_showNotification', east, false];",
+	""
+] call ARTR_fnc_emptyTrigger;
+
 
 //End mission triggers
 
@@ -31,11 +56,11 @@ trigger_dead = [
 	"{ side _x == west } count playableUnits == 0 || { side _x == east } count playableUnits == 0",
 	"call ARTR_fnc_serverEnding;",
 	""
-] call ARTR_fnc_emptyTrigger ;
+] call ARTR_fnc_emptyTrigger;
 
 //End mission if redfor exfiltrate
 trigger_exfil = [
-	"( { !(_x in insertion) && side _x == east } count playableUnits <= 0 ) || ( !canMove insertion && { side _x == east && _x inArea tr_operationArea } count playableUnits == 0 )",
+	"( triggerActivated tr_missionActive && { !(_x in insertion) && side _x == east } count playableUnits <= 0 ) || ( !canMove insertion && { side _x == east && _x inArea tr_operationArea } count playableUnits == 0 )",
 	"call ARTR_fnc_serverEnding;",
 	""
 ] call ARTR_fnc_emptyTrigger;
