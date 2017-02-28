@@ -11,10 +11,8 @@ isVictory a boolean value denoting if the ending was a victory or not,
 and fancyVisuals a boolean that says whether to go straight to the
 debriefing or to use the cool new ingame ending graphic*/
 
-/*
 if (alive player) then {
 	[_ending,true,true] call BIS_fnc_endMission;
 } else {
 	["Dead", false, true] call BIS_fnc_endMission;
 };
-*/

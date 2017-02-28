@@ -22,7 +22,7 @@ respawnDialog = 0;
 respawnOnStart = 0;
 respawnTemplates[] = {"Spectator"};
 
-enableDebugConsole = 1; //enable debug console for the admin
+enableDebugConsole = 0; //enable debug console for the admin
 
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic

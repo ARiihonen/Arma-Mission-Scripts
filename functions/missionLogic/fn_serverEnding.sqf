@@ -1,5 +1,4 @@
 //calculate which ending to show here, then remoteExec the ending on all clients
-/*
 _boxes_tagged = { alive _x && _x getVariable ["tracked", false] } count boxes;
 _boxes_destroyed = { !alive _x } count boxes;
 _boxes_compromised = _boxes_tagged + _boxes_destroyed;
