@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=914;
+		nextID=925;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=196;
+		nextID=207;
 	};
 	class Camera
 	{
-		pos[]={13389.547,43.086967,12103.908};
-		dir[]={0.82400328,-0.41264981,-0.38855752};
-		up[]={0.37338749,0.91064781,-0.17607646};
-		aside[]={-0.42659238,-9.9395402e-007,-0.90466452};
+		pos[]={12312.327,83.206017,13033.102};
+		dir[]={0.17292744,-0.4033657,-0.89864385};
+		up[]={0.076228671,0.91500056,-0.39613816};
+		aside[]={-0.98207808,-2.1798769e-007,-0.18897878};
 	};
 };
 binarizationWanted=0;
@@ -58,7 +58,8 @@ addons[]=
 	"A3_Weapons_F_Mark_Rifles_MX",
 	"A3_Air_F_Heli_Heli_Transport_03",
 	"A3_Soft_F_Gamma_Truck_01",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"A3_Structures_F_Mil_Helipads"
 };
 class AddonsMetaData
 {
@@ -193,6 +194,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -224,25 +244,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
 				};
 			};
 		};
@@ -301,7 +302,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=26;
+		items=31;
 		class Item0
 		{
 			dataType="Object";
@@ -1763,6 +1764,7 @@ class Mission
 							};
 							id=198;
 							type="I_G_Soldier_F";
+							atlOffset=4.7683716e-007;
 						};
 						class Item1
 						{
@@ -1850,6 +1852,7 @@ class Mission
 							};
 							id=202;
 							type="I_G_Soldier_F";
+							atlOffset=4.7683716e-007;
 						};
 						class Item2
 						{
@@ -1937,6 +1940,7 @@ class Mission
 							};
 							id=200;
 							type="I_G_Soldier_F";
+							atlOffset=4.7683716e-007;
 						};
 						class Item3
 						{
@@ -2030,6 +2034,7 @@ class Mission
 					{
 					};
 					id=197;
+					atlOffset=4.7683716e-007;
 				};
 				class Item13
 				{
@@ -4085,6 +4090,7 @@ class Mission
 							};
 							id=221;
 							type="I_G_Soldier_F";
+							atlOffset=0.00010490417;
 						};
 						class Item3
 						{
@@ -16670,6 +16676,222 @@ class Mission
 			};
 			id=913;
 			type="EmptyDetectorAreaR50";
+		};
+		class Item26
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12495.139,3.2763507,12750.763};
+			};
+			name="headlessClient";
+			isPlayable=1;
+			id=914;
+			type="HeadlessClient_F";
+			atlOffset=0.13700008;
+		};
+		class Item27
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11579.744,23.202803,11907.55};
+						angles[]={6.2751913,0,6.2778621};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						name="transportHeloD";
+					};
+					id=917;
+					type="B_Helipilot_F";
+					atlOffset=-1.9073486e-006;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11579.744,23.202803,11907.55};
+						angles[]={6.2751913,0,6.2778621};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=918;
+					type="B_Helipilot_F";
+					atlOffset=-1.9073486e-006;
+				};
+				class Item2
+				{
+					dataType="Waypoint";
+					position[]={11579.735,23.701401,11907.5};
+					expCond="missionNamespace getVariable [""mission_phase"", 0] == 1";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=919;
+					type="Move";
+					atlOffset=0.49999046;
+					class AttachedTo
+					{
+						id=916;
+						offset[]={0,0.5,0};
+					};
+				};
+				class Item3
+				{
+					dataType="Waypoint";
+					position[]={13503.374,1.8645777,12158.98};
+					type="Land";
+					combatMode="BLUE";
+					formation="COLUMN";
+					speed="NORMAL";
+					combat="SAFE";
+					expCond="{ alive _x && vehicle _x != transportHelo } count allPlayers <= 0";
+					script="A3\functions_f\waypoints\fn_wpLand.sqf";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=920;
+					atlOffset=0.5;
+					class AttachedTo
+					{
+						id=921;
+						offset[]={0,0.5,0};
+					};
+				};
+				class Item4
+				{
+					dataType="Waypoint";
+					position[]={15512.171,25.811611,11089.244};
+					type="Land";
+					expCond="{ alive _x && vehicle _x == transportHelo } count allPlayers <= 0";
+					script="A3\functions_f\waypoints\fn_wpLand.sqf";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=922;
+					atlOffset=0.49996948;
+					class AttachedTo
+					{
+						id=923;
+						offset[]={0,0.5,0};
+					};
+				};
+				class Item5
+				{
+					dataType="Waypoint";
+					position[]={11580.37,23.206158,11908.393};
+					type="Land";
+					script="A3\functions_f\waypoints\fn_wpLand.sqf";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=924;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=917;
+						item1=916;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=918;
+						item1=916;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=915;
+			atlOffset=-9.5367432e-006;
+		};
+		class Item28
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11579.753,26.562124,11907.385};
+				angles[]={6.2751913,0,6.2778621};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				name="transportHelo";
+			};
+			id=916;
+			type="B_Heli_Transport_03_unarmed_F";
+			atlOffset=-9.5367432e-006;
+		};
+		class Item29
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13503.374,1.3645777,12158.98};
+				angles[]={0.033321146,0,0.12205668};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=921;
+			type="Land_HelipadEmpty_F";
+		};
+		class Item30
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15512.171,25.311611,11089.244};
+				angles[]={6.2671871,0,0.079830162};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=923;
+			type="Land_HelipadEmpty_F";
+			atlOffset=-3.0517578e-005;
 		};
 	};
 };

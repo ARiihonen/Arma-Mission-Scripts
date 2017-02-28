@@ -10,7 +10,7 @@ overviewText = "Description.ext Overview Text"; //This is overwritten by the edi
 //Loading screen texts and picture for loading the mission
 OnLoadName = "CO06-16 - Sweep And Clear";
 OnLoadMission = "Fog not only conceals from sight, it also dampens sound";
-//loadscreen = "";
+loadscreen = "files\pictures\loadscreen.paa";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
 disabledai = 1; //Disable AI taking over un-taken player slots
@@ -23,7 +23,7 @@ respawnOnStart = 0;
 respawnTemplates[] = {"Tickets","Spectator"};
 respawnButton = 0;
 
-enableDebugConsole = 1; //enable debug console for the admin
+enableDebugConsole = 0; //enable debug console for the admin
 
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
@@ -113,19 +113,19 @@ class CfgRadio
 {
 	sounds[] = {};
 	class newTask {
-		name = "";
+		name = "newTask";
 		sound[] = {""};
 		title = "Excellent work. Standby for new tasking - your operation made the guerrillas break radio silence and SIGINT has a new target for you.";
 	};
 
 	class rtbBad {
-		name = "";
+		name = "rtbBad";
 		sound[] = {""};
 		title = "That's it, boys, you can stand down. Check your wounded and standby for CASEVAC.";
 	};
 
 	class rtbGood {
-		name = "";
+		name = "rtbGood";
 		sound[] = {""};
 		title = "Outstanding work, team. Another squad is coming to secure the site. Relax, and prepare to RTB.";
 	};
@@ -222,6 +222,7 @@ class CfgRemoteExec
 	class Commands
 	{
 		class reveal { allowedTargets=0; jip=0; };
+		class sideRadio { allowedTargets=0; jip=0; };
 	};
 };
 

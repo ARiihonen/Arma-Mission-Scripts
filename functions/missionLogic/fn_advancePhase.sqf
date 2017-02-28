@@ -8,10 +8,10 @@ switch ( missionNamespace getVariable ["mission_phase", 0] ) do {
 		_endMission = [] spawn {
 			if ( count (allPlayers select { !alive _x }) == 0 ) then {
 				//radio message if no players have died
-				[ukko, "rtbGood"] remoteExec ["sideRadio", 0, false];
+				[ukko,"rtbGood"] remoteExec ["sideRadio", 0, false];
 			} else {
 				//radio message if some players have died
-				[ukko, "rtbBad"] remoteExec ["sideRadio", 0, false];
+				[ukko,"rtbBad"] remoteExec ["sideRadio", 0, false];
 			};
 
 			sleep 2;
@@ -31,7 +31,7 @@ switch ( missionNamespace getVariable ["mission_phase", 0] ) do {
 			if ( count (allPlayers select { !alive _x }) == 0 ) then {
 
 				//radio message if no players have died
-				[ukko, "newTask"] remoteExec ["sideRadio", 0, false];
+				[ukko,"newTask"] remoteExec ["sideRadio", 0, false];
 
 				sleep 2;
 
@@ -43,7 +43,7 @@ switch ( missionNamespace getVariable ["mission_phase", 0] ) do {
 			} else {
 
 				//radio message if some players have died
-				[ukko, "rtbBad"] remoteExec ["sideRadio", 0, false];
+				[ukko,"rtbBad"] remoteExec ["sideRadio", 0, false];
 
 				sleep 2;
 
