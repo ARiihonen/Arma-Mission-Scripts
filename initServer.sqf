@@ -1,10 +1,9 @@
 /*
 This runs on the server machine after objects have initialised in the map. Anything the server needs to set up before the mission is started is set up here.
 */
-
 //Creating tasks
 [west, "ProtectTask", ["Protect the supply stashes in the area until relief comes in", "Guard Duty", ""], nil, "ASSIGNED", 2, false, "search", false] call BIS_fnc_taskCreate;
-[east, "InfiltrateTask", ["Infiltrate the area and tag at leas half of the supply boxes without being noticed", "Infiltration", ""], nil, "ASSIGNED", 1, false, "intel", false] call BIS_fnc_taskCreate;
+[east, "InfiltrateTask", ["Infiltrate the area and tag at least half of the supply boxes without being noticed", "Infiltration", ""], nil, "ASSIGNED", 1, false, "intel", false] call BIS_fnc_taskCreate;
 [east, "ExfilTask", ["Escape the area without being captured or killed", "Exfiltration", ""], nil, "CREATED", 1, false, "exit", false] call BIS_fnc_taskCreate;
 
 //Create trigger to detect and change infiltration task status
@@ -24,29 +23,35 @@ trigger_tracking setTriggerStatements [
 ];
 
 //Triggers to show UAV time ending notification for OPFOR players
+_uavEnding = missionNamespace getVariable ['uav_end', (60*60)];
 trigger_uavTen = [
-	"time >= missionNamespace getVariable ['uav_end', (60*60)] - 10*60",
+	"true",
 	"['UAVTimeout', ['10']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
 	""
 ] call ARTR_fnc_emptyTrigger;
+trigger_uavTen setTriggerTimeout [_uavEnding-10*60,_uavEnding-10*60,_uavEnding-10*60,false];
 
 trigger_uavFive = [
-	"time >= missionNamespace getVariable ['uav_end', (60*60)] - 5*60",
+	"true",
 	"['UAVTimeout', ['5']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
 	""
 ] call ARTR_fnc_emptyTrigger;
+trigger_uavFive setTriggerTimeout [_uavEnding-5*60,_uavEnding-5*60,_uavEnding-5*60,false];
 
 trigger_uavOne = [
-	"time >= missionNamespace getVariable ['uav_end', (60*60)] - 1*60",
+	"true",
 	"['UAVTimeout', ['1']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
 	""
 ] call ARTR_fnc_emptyTrigger;
+trigger_uavOne setTriggerTimeout [_uavEnding-1*60,_uavEnding-1*60,_uavEnding-1*60,false];
 
 trigger_uavDone = [
-	"time >= missionNamespace getVariable ['uav_end', (60*60)] - 1*60",
-	"['UAVEnd', []] remoteExecCall ['BIS_fnc_showNotification', east, false];",
+	"true",
+	"['UAVEnd', []] remoteExecCall ['BIS_fnc_showNotification', east, false];
+	missionNamespace setVariable ['uav_done', true, true];",
 	""
 ] call ARTR_fnc_emptyTrigger;
+trigger_uavDone setTriggerTimeout [_uavEnding,_uavEnding,_uavEnding,false];
 
 
 //End mission triggers
@@ -69,7 +74,7 @@ trigger_exfil = [
 {
 	_x addEventHandler ["Hit", "_this call ARTR_fnc_defenderHit;"];
 	_x addEventHandler ["Killed", "_this call ARTR_fnc_defenderKilled;"];
-} forEach allUnits select { side _x == west && !isPlayer _x };
+} forEach (allUnits select { side _x == west && !isPlayer _x });
 
 //client inits wait for serverInit to be true before starting, to make sure all variables the server sets up are set up before clients try to refer to them (which would cause errors)
 missionNamespace setVariable["ARTR_serverInit", true, true];

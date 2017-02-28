@@ -10,7 +10,7 @@ if (side player == east) then {
 	for "_i" from 1 to _bomb_amount do { player addItemToBackpack "DemoCharge_Remote_Mag";};
 
 	//ACE detonator
-	if ("ace_explosives" call ARTR_fnc_ckeckMod) then {
+	if ("ace_explosives" call ARTR_fnc_checkMod) then {
 		player addItemToUniform "ACE_M26_Clacker";
 	};
 };

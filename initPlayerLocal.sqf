@@ -20,7 +20,8 @@ waitUntil { missionNamespace getVariable["ARTR_serverInit", false] };
 			false,
 			true,
 			"",
-			"_this distance _target < 5 && time < missionNamespace getVariable ['uav_end', (60*60)]"
+			"true",
+			5
 		];
 
 		_x setVariable ["tracker_action", _id, false];
@@ -46,3 +47,5 @@ switch (side player) do
 		player addEventHandler ["Killed", "_this call ARTR_fnc_defenderKilled;"];
 	};
 };
+
+call ARTR_fnc_playerGearByMod;

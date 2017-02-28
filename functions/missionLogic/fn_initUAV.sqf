@@ -8,5 +8,7 @@ _cam_action = player addAction [
 	"",
 	0,
 	false,
-	true
+	true,
+	"",
+	"!(missionNamespace getVariable ['uav_done', false])"
 ];

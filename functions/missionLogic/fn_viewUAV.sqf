@@ -16,8 +16,7 @@ player setVariable ["uav", true, false];
 
 //disable serialization and add keydown event handler for exiting from the camera
 disableSerialization;
-private ["_skipEH"];
-_skipEH = (findDisplay 46) displayAddEventHandler [
+private _skipEH = (findDisplay 46) displayAddEventHandler [
 	"KeyDown",
 	format [
 		"
@@ -57,15 +56,13 @@ ARTR_UAVDisplay = addMissionEventHandler [
 ];
 
 // Display instructions
-private ["_layerTitlecard"];
-_layerTitlecard = "BIS_layerTitlecard" call BIS_fnc_rscLayer;
+private _layerTitlecard = "BIS_layerTitlecard" call BIS_fnc_rscLayer;
 _layerTitlecard cutRsc ["RscDynamicText", "PLAIN"];
 
-private ["_dispText", "ARTR_UAVText"];
-_dispText = uiNamespace getVariable "BIS_dynamicText";
-ARTR_UAVText = _dispText displayCtrl 9999;
+private _dispText = uiNamespace getVariable "BIS_dynamicText";
+private _uavText = _dispText displayCtrl 9999;
 
-ARTR_UAVText ctrlSetPosition [
+_uavText ctrlSetPosition [
 	0 * safeZoneW + safeZoneX,
 	0.8 * safeZoneH + safeZoneY,
 	safeZoneW,
@@ -73,29 +70,27 @@ ARTR_UAVText ctrlSetPosition [
 ];
 
 // Determine appropriate key highlight colour
-private ["_keyColor"];
-_keyColor = format [
+private _keyColor = format [
 	"<t color = '%1'>",
 	(["GUI", "BCG_RGB"] call BIS_fnc_displayColorGet) call BIS_fnc_colorRGBtoHTML
 ];
 
-private ["_skipText"];
-_skipText = format ["<t size = '0.75'> Press %1 [SPACE] </t> to close</t>", _keyColor];
+private _skipText = format ["<t size = '0.75'> Press %1 [SPACE] </t> to close</t>", _keyColor];
 
-ARTR_UAVText ctrlSetStructuredText parseText _skipText;
-ARTR_UAVText ctrlSetFade 1;
-ARTR_UAVText ctrlCommit 0;
+_uavText ctrlSetStructuredText parseText _skipText;
+_uavText ctrlSetFade 1;
+_uavText ctrlCommit 0;
 
-ARTR_UAVText ctrlSetFade 0;
-ARTR_UAVText ctrlCommit 1;
+_uavText ctrlSetFade 0;
+_uavText ctrlCommit 1;
 
 // Trigger detects when player skips out, then removes HUD, postprocess effects, terminates camera
-trg_exitUAV = [
-	"!(player getVariable ['uav', false]) || !alive player",
-	"ARTR_UAVText ctrlSetFade 1;
-	ARTR_UAVText ctrlCommit 0;
+waitUntil { !(player getVariable ["uav", false]) || !alive player || missionNamespace getVariable ["uav_done", false]};
 
-	removeMissionEventHandler ['Draw3D', ARTR_UAVDisplay];
-	ppEffectDestroy ARTR_UAVPP;
-	fakeUAV cameraEffect ['TERMINATE', 'BACK'];"
-] call ARTR_fnc_emptyTrigger;
+_uavText ctrlSetFade 1;
+_uavText ctrlCommit 0;
+
+removeMissionEventHandler ["Draw3D", ARTR_UAVDisplay];
+ppEffectDestroy ARTR_UAVPP;
+ctrlDelete _uavText;
+fakeUAV cameraEffect ["TERMINATE", "BACK"];

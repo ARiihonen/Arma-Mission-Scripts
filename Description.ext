@@ -16,8 +16,8 @@ saving = 0; //Set saving to 0 so that you can exit the mission without saving an
 disabledai = 1; //Disable AI taking over un-taken player slots
 
 //Default respawn options
-respawn = "NONE";
-respawnDelay = 0;
+respawn = "BIRD";
+respawnDelay = 5;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnTemplates[] = {"Spectator"};
@@ -306,6 +306,8 @@ class CfgNotifications
 		title = "Bug placed";
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		description = "Tracking online";
+		priority = 3;
+		color[] = {0.7,1.0,0.3,1.0};
 		sound = "taskSucceeded";
 	};
 	class UAVTimeout {
