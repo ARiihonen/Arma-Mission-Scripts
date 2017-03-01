@@ -1,1 +1,5 @@
-Intel txt
+The <marker name = 'uavTarget'>target area</marker> has been left under light guard for a time, but reinforcements have been spotted on their way. They should get there in %1 minutes.
+<br /> <br />
+You have UAV support available for help with tracking the defenders. The UAV is on a limited timer and will go offline in %2 minutes.
+<br /> <br />
+It is a clear night and a full moon. Visibility is good, particularly with some of the lights still on in the abandoned hotel. The area should still provide enough cover and darkness to complete the mission successfully.

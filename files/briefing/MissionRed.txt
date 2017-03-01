@@ -1,1 +1,3 @@
-Mission txt
+Attach GPS trackers to the <marker name = '1_marker'>hidden stashes</marker>. Try to avoid being seen by the enemy. Tag at least half of the stashes to achieve sufficient coverage.
+<br /> <br />
+If you have to kill an enemy to avoid death or capture, mask the assault as a regular raid by blowing up at least 2 stashes for each defender you kill.

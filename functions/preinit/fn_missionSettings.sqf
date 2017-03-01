@@ -3,7 +3,6 @@ if (isServer) then {
 	Set any preInit-settings for the mission here, including randomizing unit presence variables using ARTR_fnc_randInt and ARTR_fnc_presenceArray
 	*/
 	_players_blue = playersNumber west;
-	_players_blue = 2;
 
 	_max_box = 0;
 	switch ( ceil(_players_blue / 2)) do {

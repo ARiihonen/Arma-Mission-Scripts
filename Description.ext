@@ -1,14 +1,14 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
-briefingName = "[TvT10] Phantoms";
+briefingName = "TvT10 Phantoms";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
 overviewText = "CSAT divers attempt to tag hidden FIA equipment stashes to gain intel"; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "[TvT10] Phantoms";
+OnLoadName = "TvT10 Phantoms";
 OnLoadMission = "Sometimes the greatest victories are achieved without a single shot";
 //loadscreen = "";
 
@@ -107,6 +107,45 @@ class CfgDebriefing
 	};
 };
 
+class CfgDebriefingSections
+{
+	class PointsOPFOR
+	{
+		title = "Infiltrator score";
+		variable = "ARTR_pointsOPFOR";
+	};
+	class PointsBLUFOR
+	{
+		title = "Defender score";
+		variable = "ARTR_pointsBLUFOR";
+	};
+	class BoxesFine
+	{
+		title = "Stashes untouched";
+		variable = "ARTR_boxesFine";
+	};
+	class BoxesKilled
+	{
+		title = "Stashes destroyed";
+		variable = "ARTR_boxesDead";
+	};
+	class BoxesTracked
+	{
+		title = "Stashes tracked";
+		variable = "ARTR_boxesTracked";
+	};
+	class DeadDefenders
+	{
+		title = "Infiltrator kills";
+		variable = "ARTR_deadDefenders";
+	};
+	class DeadInfiltrators
+	{
+		title = "Defender kills";
+		variable = "ARTR_deadInfiltrators";
+	};
+};
+
 //Functions, used to define preSet.sqf as "preInit". You can also make your own functions, but that's generally not needed.
 //More information on defining your own functions: https://community.bistudio.com/wiki/Functions_Library_%28Arma_3%29#Adding_a_Function
 class CfgFunctions
@@ -181,6 +220,8 @@ class CfgFunctions
 			class viewUAV {};
 			class createUAV {};
 			class trackerAction {};
+			class extendedUAV { postInit = 1; };
+			class maskRaid {};
 		};
 	};
 };
@@ -203,6 +244,12 @@ class CfgRemoteExec
 		   {
 			   allowedTargets = 0;
 			   jip = 1;
+		   };
+
+		   class maskRaid
+		   {
+			   	allowedTargets = 2;
+				jip = 0;
 		   };
 	};
 

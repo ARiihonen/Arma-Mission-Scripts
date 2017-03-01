@@ -1,1 +1,3 @@
-Mission txt
+Protect <marker name = '1_marker'>the supply stashes</marker> from any enemy action.
+<br /> <br />
+Your forces are stretched thin, but reinforcements are coming in approximately %1 minutes.

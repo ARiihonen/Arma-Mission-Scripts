@@ -1,1 +1,3 @@
-Situation txt
+Intelligence has uncovered <marker name = 'uavTarget'>an important guerrilla logistics site</marker>, through which they smuggle off-island material support onto Altis and then distribute it to their various cells.
+<br /> <br />
+Instead of attacking and destroying the site, command has decided to send an infiltration team to attach GPS trackers to the guerrilla supplies. This should allow us to uncover the locations of several hidden guerrilla cells.

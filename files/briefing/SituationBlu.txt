@@ -1,1 +1,3 @@
-Situation txt
+Your team has been left guarding <marker name = 'uavTarget'>an important supply point</marker>, through which off-island material support is smuggled onto Altis and then distributed to the various guerrilla cells operating on the island.
+<br /> <br />
+Your forces are stretched thin, but reinforcements are set to arrive in approximately %1 minutes.

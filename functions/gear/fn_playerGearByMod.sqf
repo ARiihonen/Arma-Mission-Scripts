@@ -47,3 +47,9 @@ if (toUpper typeOf player == "B_G_MEDIC_F") then {
 		for "_i" from 1 to 10 do { player addItemToBackpack "FirstAidKit"; };
 	};
 };
+
+//Earplugs
+if (missionNamespace getVariable []"ace_hearing_enableCombatDeafness",false]) then
+{
+	player addItemToUniform "ACE_EarPlugs";
+};

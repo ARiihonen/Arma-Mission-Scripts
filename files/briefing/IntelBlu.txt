@@ -1,1 +1,3 @@
-Intel txt
+It is a clear night with a full moon. Visibility is good.
+<br /> <br />
+Reinforcements should arrive in %1 minutes.

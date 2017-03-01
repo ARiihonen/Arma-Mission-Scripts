@@ -1,0 +1,7 @@
+There are 2 times as many supply boxes as there are defenders, and the infiltrators need to get to half of them to tag them with an action menu item.
+<br /> <br />
+For each defender killed, the infiltrators need to destroy 2 boxes to mask the mission as a regular raid, in order to avoid the guerrillas searching the boxes and finding the trackers.
+<br /> <br />
+A large squad of AI guerrillas will arrive after %1 minutes to defend the boxes and to make the infiltrators' task almost impossible.
+<br /> <br />
+The infiltrators have UAV support available. They can access a top-down UAV view of the area through their action menu. This UAV will go offline in %2 minutes. %3

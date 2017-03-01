@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=65;
+		nextID=75;
 	};
 	class Camera
 	{
-		pos[]={21871.998,62.700409,20950.666};
-		dir[]={0.4149766,-0.53631908,0.73508424};
-		up[]={0.26367065,0.84395581,0.46706533};
-		aside[]={0.87091625,2.5890185e-006,-0.49165952};
+		pos[]={21934.293,82.361443,20995.307};
+		dir[]={-0.89296365,-0.36891592,0.25831962};
+		up[]={-0.35446206,0.92938685,0.10253926};
+		aside[]={0.27792448,2.7795322e-006,0.96072727};
 	};
 };
 binarizationWanted=0;
@@ -200,7 +200,7 @@ class Mission
 		lightningsForced=1;
 		wavesForced=1;
 		windForced=1;
-		year=2036;
+		year=2037;
 		month=7;
 		day=9;
 		hour=2;
@@ -3694,12 +3694,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={21891.549,22.062532,21001.645};
-				angles[]={6.2232571,0,6.1848373};
+				position[]={21760.018,45.125885,20810.654};
+				angles[]={0,0.11057006,0};
 			};
 			isPlayable=1;
 			id=313;
 			type="VirtualSpectator_F";
+			atlOffset=53.456566;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3804,12 +3805,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={21890.609,21.811172,20999.955};
-				angles[]={6.2060065,0,0.029324362};
+				position[]={21759.93,44.831509,20808.723};
+				angles[]={0,0.2405142,0};
 			};
 			isPlayable=1;
 			id=314;
 			type="VirtualSpectator_F";
+			atlOffset=53.456566;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3914,12 +3916,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={21892.137,21.795504,20999.174};
-				angles[]={6.2060065,0,0.029324362};
+				position[]={21761.645,44.905472,20808.703};
+				angles[]={0,0.17397873,0};
 			};
 			isPlayable=1;
 			id=315;
 			type="VirtualSpectator_F";
+			atlOffset=53.456566;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4024,12 +4027,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={21893.063,21.948168,21000.938};
-				angles[]={6.223258,0,0.038646095};
+				position[]={21761.688,45.316685,20810.695};
+				angles[]={0,0.12832926,0};
 			};
 			isPlayable=1;
 			id=316;
 			type="VirtualSpectator_F";
+			atlOffset=53.45657;
 			class CustomAttributes
 			{
 				class Attribute0

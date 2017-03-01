@@ -14,5 +14,7 @@ if (side (group _killer) == east) then {
 	_murders = missionNamespace getVariable ["murdered_defenders", 0];
 	_murders = _murders + 1;
 	missionNamespace setVariable ["murdered_defenders", _murders, true];
+
+	if (! (missionNamespace getVariable ["maskTaskGiven",false]) ) then { remoteExecCall ["ARTR_fnc_maskRaid",2]; };
 };
 diag_log format ["Murdered defenders after killer check: %1", missionNamespace getVariable ["murdered_defenders", 0]];
