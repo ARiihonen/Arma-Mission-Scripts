@@ -1,14 +1,14 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
-briefingName = "CO06-16 - Sweep And Clear";
+briefingName = "CO06-16 Sweep And Clear";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
+overviewText = "Atmospheric infantry combat patrol. NATO forces clear lingering counterrevolutionary guerrillas from Altis."; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "CO06-16 - Sweep And Clear";
+OnLoadName = "CO06-16 Sweep And Clear";
 OnLoadMission = "Fog not only conceals from sight, it also dampens sound";
 loadscreen = "files\pictures\loadscreen.paa";
 
@@ -23,7 +23,7 @@ respawnOnStart = 0;
 respawnTemplates[] = {"Tickets","Spectator"};
 respawnButton = 0;
 
-enableDebugConsole = 0; //enable debug console for the admin
+enableDebugConsole = 1; //enable debug console for the admin
 
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
@@ -129,6 +129,12 @@ class CfgRadio
 		sound[] = {""};
 		title = "Outstanding work, team. Another squad is coming to secure the site. Relax, and prepare to RTB.";
 	};
+
+	class heloPickup {
+		name = "heloPickup";
+		sound[] = {""};
+		title = "We've secured transport to the next objective. Meet with them at 1342-1197."
+	};
 };
 
 //Functions, used to define preSet.sqf as "preInit". You can also make your own functions, but that's generally not needed.
@@ -188,6 +194,9 @@ class CfgFunctions
 			class getIrregularWeapons {};
 			class setIrregularGearSets {};
 			class playerGearByMod {};
+			class replaceUniform {};
+			class replaceVest {};
+			class replaceBackpack {};
 		};
 
 		class missionLogic
@@ -199,6 +208,7 @@ class CfgFunctions
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
 			class advancePhase {};
+			class secondObjective {};
 		};
 	};
 };
@@ -226,37 +236,277 @@ class CfgRemoteExec
 	};
 };
 
-//Parameters, accessible from the role selection screen and used to switch between pre-defined options for the mission (time of day, gear, headless client). Parameters are in an array called paramsArray.
-//So, to check, refer to paramsArray select i, where i is array index (starting with 0)
-class Params
-{
-	class ExampleParam {
-		title = "Example title";
-		values[] = {0,1};
-		texts[] = {"ZERO", "ONE"};
-		default = 0;
-	};
-};
-
 class CfgORBAT
 {
 	class ARTR
 	{
-		class Example
+		class AFORCMD
 		{
 			id = 1;
-			commander = "GreekMen";
-			commanderRank = "Captain";
-			description = "Unit description";
-			insignia = "\a3\missions_f_epa\data\img\orbat\I_AAF_ca.paa";
-			side = "Resistance";
-			size = "Platoon";
-			type = "Infantry";
-			text = "2nd Platoon";
-			textShort = "2nd Platoon";
-			texture = "flag_AAF";
+			idType = 0;
+			side = "West";
+			size = "Division";
+			type = "HQ";
+			insignia = "\a3\missions_f_epa\data\img\orbat\B_NATO_ca.paa";
+			commander = "NATOMen";
+			text = "NATO Altis Forces";
+			textShort = "AFOR";
+			texture = "\a3\missions_f_epa\data\img\orbat\B_NATO_ca.paa";
+	        description= "NATO forces maintaining security on Altis for a transitional period until control can be entirely left to the New Altian Army and other local security forces. Comprises six flexible multinational battlegroups primary responsible for their own sectors of the island nation.";
 			assets[] = {};
-			subordinates[] = {};
+			subordinates[] = {BGAthira,BGPoliakko,BGKavala,BGOreokastro,BGAlmyra,BGPyrgos};
+		};
+
+		class BGAthira
+		{
+			id = 1;
+			type = "HQ";
+			insignia = "\a3\missions_f_epa\data\img\orbat\B_NATO_ca.paa";
+			size = "Brigade";
+			side = "West";
+			commander = "NATOMen";
+			text = "Athira Multinational Battlegroup";
+			textShort = "Athira MNBG";
+		};
+
+		class BGPoliakko
+		{
+			id = 2;
+			type = "HQ";
+			insignia = "\a3\missions_f_epa\data\img\orbat\B_NATO_ca.paa";
+			size = "Brigade";
+			side = "West";
+			commander = "NATOMen";
+			text = "Poliakko Multinational Battlegroup";
+			textShort = "Poliakko MNBG";
+			subordinates[] = {COYUS,COYIRE,COYFINEST};
+		};
+
+		class COYUS
+		{
+			id = 1;
+			idType = 0;
+			side = "West";
+			size = "Company";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "US %2 %3";
+			textShort = "US %3";
+			subordinates[] = {USPLT1,USPLT2,USPLT3,USPLT4};
+		};
+
+		class USPLT1
+		{
+			id = 1;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "%1 Infantry %3";
+			textShort = "%1 %3";
+		};
+
+		class USPLT2
+		{
+			id = 2;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "%1 Infantry %3";
+			textShort = "%1 %3";
+		};
+
+		class USPLT3
+		{
+			id = 3;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "%1 Infantry %3";
+			textShort = "%1 %3";
+		};
+
+		class USPLT4
+		{
+			id = 4;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "%1 Infantry %3";
+			textShort = "%1 %3";
+		};
+
+		class COYIRE
+		{
+			id = 2;
+			idType = 0;
+			side = "West";
+			size = "Company";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "Irish %2 %3";
+			textShort = "IRE %3";
+			subordinates[] = {IREPLT1,IREPLT2,IREPLT3,IREPLT4};
+		};
+
+		class IREPLT1
+		{
+			id = 1;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "%1 Infantry %3";
+			textShort = "%1 %3";
+		};
+
+		class IREPLT2
+		{
+			id = 2;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "%1 Infantry %3";
+			textShort = "%1 %3";
+		};
+
+		class IREPLT3
+		{
+			id = 3;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "%1 Infantry %3";
+			textShort = "%1 %3";
+		};
+
+		class IREPLT4
+		{
+			id = 4;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "NATOMen";
+			text = "%1 Infantry %3";
+			textShort = "%1 %3";
+		};
+
+		class COYFINEST
+		{
+			id = 3;
+			idType = 0;
+			side = "West";
+			size = "Company";
+			type = "MechanizedInfantry";
+			commander = "Tönkkä";
+			text = "Finnish-Estonian Jaeger %3";
+			textShort = "FINEST %3";
+			subordinates[] = {FINESTPLT1,FINESTPLT2,FINESTPLT3,FINESTPLT4};
+		};
+
+		class FINESTPLT1
+		{
+			id = 1;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "Halme";
+			text = "%1 Jaeger %3";
+			textShort = "%1 %3";
+		};
+
+		class FINESTPLT2
+		{
+			id = 2;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "Mäkinen";
+			text = "%1 Jaeger %3";
+			textShort = "%1 %3";
+		};
+
+		class FINESTPLT3
+		{
+			id = 3;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "Seppänen";
+			text = "%1 Jaeger %3";
+			textShort = "%1 %3";
+		};
+
+		class FINESTPLT4
+		{
+			id = 4;
+			idType = 0;
+			side = "West";
+			size = "Platoon";
+			type = "MechanizedInfantry";
+			commander = "Puskar";
+			text = "%1 Jaeger %3";
+			textShort = "%1 %3";
+		};
+
+		class BGKavala
+		{
+			id = 3;
+			type = "HQ";
+			size = "Brigade";
+			side = "West";
+			commander = "NATOMen";
+			text = "Kavala Multinational Battlegroup";
+			textShort = "Kavala MNBG";
+		};
+
+		class BGOreokastro
+		{
+			id = 4;
+			type = "HQ";
+			size = "Brigade";
+			side = "West";
+			commander = "NATOMen";
+			text = "Oreokastro Multinational Battlegroup";
+			textShort = "Oreokastro MNBG";
+		};
+
+		class BGAlmyra
+		{
+			id = 5;
+			type = "HQ";
+			size = "Brigade";
+			side = "West";
+			commander = "NATOMen";
+			text = "Almyra Multinational Battlegroup";
+			textShort = "Almyra MNBG";
+		};
+
+		class BGPyrgos
+		{
+			id = 6;
+			type = "HQ";
+			size = "Brigade";
+			side = "West";
+			commander = "NATOMen";
+			text = "Pyrgos Multinational Battlegroup";
+			textShort = "Pyrgos MNBG";
 		};
 	};
 };

@@ -1,0 +1,3 @@
+A camp of counter-revolutionary guerrillas has been located on <marker name = 'marker_island'>Makrynisi</marker>. These guerrillas have most likely been responsible for several attacks on supply convoys on the mainland.
+<br /> <br />
+A combat patrol from a nearby <marker name = 'mrk_playerUnit'>%1</marker> has been sent to deal with the problem.

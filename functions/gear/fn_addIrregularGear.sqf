@@ -14,23 +14,11 @@ if (count _gearArray > 0) then {
 	_linkItems = _gearArray select 7;
 
 	if (_uniform != "") then {
-		_items = uniformItems _unit;
-		removeUniform _unit;
-		_unit forceAddUniform _uniform;
-
-		{
-			_unit addItemToUniform _x;
-		} forEach _items;
+		[_unit,_uniform] call ARTR_fnc_replaceUniform;
 	};
 
 	if (_vest != "") then {
-		_items = vestItems _unit;
-		removeVest _unit;
-		_unit addVest _vest;
-
-		{
-			_unit addItemToVest _x;
-		} forEach _items;
+		[_unit,_vest] call ARTR_fnc_replaceVest;
 	};
 
 	if (count _headWear > 0) then {
@@ -46,13 +34,7 @@ if (count _gearArray > 0) then {
 	};
 
 	if (_backpack != "") then {
-		_items = backpackItems _unit;
-		removeBackpack _unit;
-		_unit addBackpack _backpack;
-
-		{
-			_unit addItemToBackpack _x;
-		} forEach _items;
+		[_unit,_backpack] call ARTR_fnc_replaceBackpack;
 	};
 
 	{

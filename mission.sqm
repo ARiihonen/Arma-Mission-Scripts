@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=925;
+		nextID=965;
 	};
 	class MarkerIDProvider
 	{
-		nextID=3;
+		nextID=6;
 	};
 	class LayerIndexProvider
 	{
-		nextID=207;
+		nextID=229;
 	};
 	class Camera
 	{
-		pos[]={12312.327,83.206017,13033.102};
-		dir[]={0.17292744,-0.4033657,-0.89864385};
-		up[]={0.076228671,0.91500056,-0.39613816};
-		aside[]={-0.98207808,-2.1798769e-007,-0.18897878};
+		pos[]={12385.502,18.850965,12925.582};
+		dir[]={0.36829603,-0.26417142,-0.89141035};
+		up[]={0.10087807,0.96446782,-0.24416092};
+		aside[]={-0.9242413,-3.5855919e-008,-0.38186127};
 	};
 };
 binarizationWanted=0;
@@ -59,13 +59,14 @@ addons[]=
 	"A3_Air_F_Heli_Heli_Transport_03",
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Ui_F",
-	"A3_Structures_F_Mil_Helipads"
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Modules_F_StrategicMap"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=15;
+		items=16;
 		class Item0
 		{
 			className="A3_Boat_F_Gamma";
@@ -171,6 +172,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
+		class Item15
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
 	};
 };
 randomSeed=12983203;
@@ -179,6 +187,7 @@ class ScenarioData
 	author="Caranfin / Sniper Party";
 	overviewText="UN forces sweep up the remains of a failed uprising.";
 	respawnDialog=0;
+	disabledAI=1;
 	respawn=3;
 	class Header
 	{
@@ -279,18 +288,19 @@ class Mission
 	class Intel
 	{
 		briefingName="CO06-16 - Sweep and Clear";
-		overviewText="Clearing guerrilla camps on a foggy morning";
+		overviewText="Atmospheric infantry combat patrol. NATO forces clear lingering counterrevolutionary guerrillas from Altis.";
 		resistanceWest=0;
-		timeOfChanges=7200;
+		timeOfChanges=5400;
 		startWeather=0;
 		startFog=0.40003324;
 		startWind=0.1;
-		startWaves=0.1;
+		startWaves=0.5;
 		forecastWeather=0;
 		forecastWind=0.1;
-		forecastWaves=0.1;
+		forecastWaves=0.097594045;
 		forecastLightnings=0.1;
-		year=2035;
+		wavesForced=1;
+		year=2037;
 		month=6;
 		day=24;
 		hour=5;
@@ -302,7 +312,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=31;
+		items=41;
 		class Item0
 		{
 			dataType="Object";
@@ -11256,19 +11266,14 @@ class Mission
 											ammoLeft=16;
 										};
 									};
+									class binocular
+									{
+										name="Binocular";
+									};
 									class uniform
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -11360,15 +11365,6 @@ class Mission
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -11413,20 +11409,6 @@ class Mission
 									{
 										typeName="B_AssaultPack_khk";
 										isBackpack=1;
-										class ItemCargo
-										{
-											items=2;
-											class Item0
-											{
-												name="Medikit";
-												count=1;
-											};
-											class Item1
-											{
-												name="FirstAidKit";
-												count=10;
-											};
-										};
 									};
 									map="ItemMap";
 									compass="ItemCompass";
@@ -11475,19 +11457,14 @@ class Mission
 											ammoLeft=16;
 										};
 									};
+									class binocular
+									{
+										name="Binocular";
+									};
 									class uniform
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -11579,15 +11556,6 @@ class Mission
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -11690,15 +11658,6 @@ class Mission
 												ammoLeft=30;
 											};
 										};
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -11786,19 +11745,14 @@ class Mission
 											ammoLeft=16;
 										};
 									};
+									class binocular
+									{
+										name="Binocular";
+									};
 									class uniform
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -11891,15 +11845,6 @@ class Mission
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -11991,15 +11936,6 @@ class Mission
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -12138,19 +12074,14 @@ class Mission
 											ammoLeft=16;
 										};
 									};
+									class binocular
+									{
+										name="Binocular";
+									};
 									class uniform
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -12243,15 +12174,6 @@ class Mission
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -12296,20 +12218,6 @@ class Mission
 									{
 										typeName="B_AssaultPack_khk";
 										isBackpack=1;
-										class ItemCargo
-										{
-											items=2;
-											class Item0
-											{
-												name="Medikit";
-												count=1;
-											};
-											class Item1
-											{
-												name="FirstAidKit";
-												count=10;
-											};
-										};
 									};
 									map="ItemMap";
 									compass="ItemCompass";
@@ -12358,19 +12266,14 @@ class Mission
 											ammoLeft=16;
 										};
 									};
+									class binocular
+									{
+										name="Binocular";
+									};
 									class uniform
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -12463,15 +12366,6 @@ class Mission
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -12574,15 +12468,6 @@ class Mission
 												ammoLeft=30;
 											};
 										};
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -12670,19 +12555,14 @@ class Mission
 											ammoLeft=16;
 										};
 									};
+									class binocular
+									{
+										name="Binocular";
+									};
 									class uniform
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -12775,15 +12655,6 @@ class Mission
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -12875,15 +12746,6 @@ class Mission
 									{
 										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=2;
-											};
-										};
 									};
 									class vest
 									{
@@ -13390,11 +13252,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14976.576,32.399593,16962.258};
+						position[]={11329.336,19.791155,14143.206};
 						angles[]={0,3.2429788,0};
 					};
 					side="West";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						rank="CAPTAIN";
@@ -13402,14 +13264,14 @@ class Mission
 					};
 					id=833;
 					type="B_officer_F";
-					atlOffset=3.6973286;
+					atlOffset=-1.9073486e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=832;
-			atlOffset=3.6973286;
+			atlOffset=-1.9073486e-006;
 		};
 		class Item18
 		{
@@ -16696,7 +16558,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=6;
+				items=8;
 				class Item0
 				{
 					dataType="Object";
@@ -16753,20 +16615,19 @@ class Mission
 				class Item3
 				{
 					dataType="Waypoint";
-					position[]={13503.374,1.8645777,12158.98};
-					type="Land";
+					position[]={13506.872,2.5006647,12155.865};
 					combatMode="BLUE";
 					formation="COLUMN";
 					speed="NORMAL";
 					combat="SAFE";
-					expCond="{ alive _x && vehicle _x != transportHelo } count allPlayers <= 0";
-					script="A3\functions_f\waypoints\fn_wpLand.sqf";
+					expActiv="(vehicle this) land ""GET IN"";";
 					class Effects
 					{
 					};
 					showWP="NEVER";
 					id=920;
-					atlOffset=0.5;
+					type="Move";
+					atlOffset=0.5704354;
 					class AttachedTo
 					{
 						id=921;
@@ -16776,33 +16637,69 @@ class Mission
 				class Item4
 				{
 					dataType="Waypoint";
-					position[]={15512.171,25.811611,11089.244};
-					type="Land";
-					expCond="{ alive _x && vehicle _x == transportHelo } count allPlayers <= 0";
-					script="A3\functions_f\waypoints\fn_wpLand.sqf";
+					position[]={13506.872,3.0006647,12155.865};
+					expCond="{ alive _x && vehicle _x != transportHelo } count playableUnits <= 0";
 					class Effects
 					{
 					};
 					showWP="NEVER";
-					id=922;
-					atlOffset=0.49996948;
+					id=961;
+					type="Move";
+					atlOffset=1.0704354;
+					class AttachedTo
+					{
+						id=921;
+						offset[]={0,1,0};
+					};
+				};
+				class Item5
+				{
+					dataType="Waypoint";
+					position[]={15512.17,25.811642,11089.244};
+					expActiv="(vehicle this) land ""GET OUT"";";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=962;
+					type="Move";
+					atlOffset=0.5;
 					class AttachedTo
 					{
 						id=923;
 						offset[]={0,0.5,0};
 					};
 				};
-				class Item5
+				class Item6
 				{
 					dataType="Waypoint";
-					position[]={11580.37,23.206158,11908.393};
-					type="Land";
-					script="A3\functions_f\waypoints\fn_wpLand.sqf";
+					position[]={15512.17,26.311642,11089.244};
+					expCond="{ alive _x && vehicle _x == transportHelo } count playableUnits <= 0";
 					class Effects
 					{
 					};
 					showWP="NEVER";
-					id=924;
+					id=963;
+					type="Move";
+					atlOffset=1;
+					class AttachedTo
+					{
+						id=923;
+						offset[]={0,1,0};
+					};
+				};
+				class Item7
+				{
+					dataType="Waypoint";
+					position[]={11585.156,23.430813,11915.292};
+					expActiv="(vehicle this) land ""LAND"";";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=964;
+					type="Move";
+					atlOffset=1.9073486e-006;
 				};
 			};
 			class Attributes
@@ -16866,32 +16763,702 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13503.374,1.3645777,12158.98};
-				angles[]={0.033321146,0,0.12205668};
+				position[]={13506.872,2.0006647,12155.865};
 			};
 			side="Empty";
 			class Attributes
 			{
+				name="helipad_pickup";
 			};
 			id=921;
 			type="Land_HelipadEmpty_F";
+			atlOffset=0.070435405;
 		};
 		class Item30
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15512.171,25.311611,11089.244};
-				angles[]={6.2671871,0,0.079830162};
+				position[]={15512.17,25.311642,11089.244};
+				angles[]={6.2671809,0,0.079831354};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
+				name="helipad_lz";
 			};
 			id=923;
 			type="Land_HelipadEmpty_F";
-			atlOffset=-3.0517578e-005;
+		};
+		class Item31
+		{
+			dataType="Marker";
+			position[]={13506.896,9.9824829,12155.874};
+			name="mrk_pickup";
+			type="Empty";
+			id=925;
+			atlOffset=8.0498219;
+		};
+		class Item32
+		{
+			dataType="Marker";
+			position[]={15512.187,1.4368163e+032,11089.277};
+			name="mrk_LZ";
+			type="mil_circle";
+			colorName="ColorWEST";
+			alpha=0;
+			id=926;
+			atlOffset=1.4368163e+032;
+		};
+		class Item33
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14670.78,35.448273,18755.871};
+				angles[]={6.2698507,0,0.063913956};
+			};
+			id=944;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""AFORCMD""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""AFORCMD""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item34
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={10506.138,14.262194,12243.932};
+				angles[]={6.2685208,0,6.272521};
+			};
+			id=945;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""BGPoliakko""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""AFORCMD""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item35
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9203.1504,39.235939,13713.034};
+				angles[]={5.9388108,0,6.2791886};
+			};
+			presenceCondition="!(""MNP_MIXR_Config"" call ARTR_fnc_checkMod)";
+			id=952;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""COYFINEST""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""BGPoliakko""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item36
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9203.1563,39.160397,13712.823};
+				angles[]={5.9388108,0,6.2791886};
+			};
+			presenceCondition="""MNP_MIXR_Config"" call ARTR_fnc_checkMod";
+			id=954;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""COYUS""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""BGPoliakko""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item37
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11236.342,181.60728,8733.0488};
+				angles[]={0.18196802,0,6.1050916};
+			};
+			id=956;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""COYIRE""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""BGPoliakko""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item38
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11363.498,19.596684,14120.133};
+				angles[]={0,0,6.2698579};
+			};
+			presenceCondition="""MNP_MIXR_Config"" call ARTR_fnc_checkMod";
+			id=958;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""COYFINEST""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""BGPoliakko""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item39
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11363.714,19.593801,14119.916};
+				angles[]={0,0,6.2698579};
+			};
+			presenceCondition="!(""MNP_MIXR_Config"" call ARTR_fnc_checkMod)";
+			id=959;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""COYUS""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionconfigfile >> ""CfgORBAT"" >> ""ARTR"" >> ""BGPoliakko""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item40
+		{
+			dataType="Marker";
+			position[]={11363.713,-6.0651688e-016,14119.7};
+			name="mrk_playerUnit";
+			type="Empty";
+			id=960;
+			atlOffset=-19.593826;
 		};
 	};
 };

@@ -1,1 +1,5 @@
-The fog will help to cover your approach onto the island. Enemy forces should be light, as it would be impossible to hide a very sizeable force on an island of this size.
+WEATHER:<br />
+It is a foggy morning, which should help you cover your approach onto the island.
+<br /> <br />
+ENEMY FORCES:<br />
+The enemy forces should be light, as a sizeable force could not stay hidden on an island of this size. Their equipment is old but serviceable.

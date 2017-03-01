@@ -9,17 +9,25 @@ _signal = "";
 if ( addonTFAR ) then { _signal = "SignalTFAR.txt"; };
 if ( addonACRE ) then { _signal = "SignalACRE.txt"; };
 
+_nationality = if ("MNP_MIXR_Config" call ARTR_fnc_checkMod) then
+{
+	"Finnish-Estonian Jaeger Company";
+} else {
+	"Infantry Company";
+};
+
+
 //Add new diary pages with ARTR_fnc_briefingFile.
 //If including variables, add them as a list to the end of the parameters list: ["ExampleSubject", "ExampleName", "ExampleFile", [ExampleParams]]
 if ( addonTFAR || addonACRE ) then { ["Diary", "Signal", _signal] call ARTR_fnc_briefingFile; };
 _intel = ["Diary", "Intel", "Intel.txt"] call ARTR_fnc_briefingFile;
 _mission = ["Diary", "Mission", "Mission.txt"] call ARTR_fnc_briefingFile;
-_situation = ["Diary", "Situation", "Situation.txt"] call ARTR_fnc_briefingFile;
+_situation = ["Diary", "Situation", "Situation.txt",[_nationality]] call ARTR_fnc_briefingFile;
 _background = ["Diary", "Background", "Background.txt"] call ARTR_fnc_briefingFile;
 
-//Add diary subject and entries for gameplay logic
-player createDiarySubject ["Info", "Scenario Info"];
 if (addonTFAR) then
 {
+	//Add diary subject and entries for gameplay logic
+	player createDiarySubject ["Info", "Scenario Info"];
 	_TFARHearing = ["Info", "Setup logic", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
 };

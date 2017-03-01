@@ -16,7 +16,7 @@
 
 	if (({ !alive _x } count allPlayers) != 0 ) then {
 
-		if ( (count (allPlayers select { !alive _x })) > ( allPlayers/2) ) then {
+		if ( (count (allPlayers select { !alive _x })) > ( count allPlayers/2) ) then {
 			_ending = _ending + "Heavy";
 		} else {
 			_ending = _ending + "Light";

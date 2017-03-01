@@ -7,7 +7,7 @@ diag_log format ["RADIOS ADDED FOR %1: %2", _unit, _radios];
 //Need to use player setgroupID "id"; in unit init-field to get this initialised properly.
 ARTR_radioChannels = [
 	["Alpha", 1],
-	["Beta", 2]
+	["Bravo", 2]
 ];
 
 _primaryChannel = false;

@@ -4,4 +4,4 @@ CH1: Inter-squad communication <br />
 CH2: Team Alpha <br />
 CH3: Team Bravo
 <br /> <br />
-Squad leaders have their secondary channels set to CH1 for coordination between teams.
+Squad leaders and team leaders have their secondary channels set to CH1 for coordination between teams.

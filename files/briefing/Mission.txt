@@ -1,1 +1,1 @@
-Intel has verified some reports of suspicious movement on <marker name = 'marker_island'>Makrynisi</marker>, and we believe it is being used as a staging area for guerrilla forces. Board boats at <marker name = 'respawn'>an american guard post</marker>, and clear <marker name = 'marker_island'>the island</marker> of any hostile forces.
+Board boats at <marker name = 'respawn'>a guard post</marker>, and sweep <marker name = 'marker_island'>the island</marker> for the suspected guerrilla forces.
