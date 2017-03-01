@@ -92,6 +92,11 @@ class CfgFunctions
 			class addIrregularGearEden {};
 		};
 
+		class effects
+		{
+				class ambientCombat { postInit = 1; };
+		};
+
 		class preinit
 		{
 			class missionSettings { preInit = 1; };

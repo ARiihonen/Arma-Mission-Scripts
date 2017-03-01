@@ -8,22 +8,22 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=3161;
+		nextID=3181;
 	};
 	class MarkerIDProvider
 	{
-		nextID=16;
+		nextID=17;
 	};
 	class LayerIndexProvider
 	{
-		nextID=6874;
+		nextID=7190;
 	};
 	class Camera
 	{
-		pos[]={9148.7744,55.116364,21817.412};
-		dir[]={0.67686313,-0.34885439,-0.64836234};
-		up[]={0.25195813,0.9371562,-0.24134667};
-		aside[]={-0.69181937,-8.472125e-007,-0.72223526};
+		pos[]={9175.0898,83.46801,21663.15};
+		dir[]={0.16622037,-0.47135502,0.86626488};
+		up[]={0.088827252,0.88192511,0.46293771};
+		aside[]={0.98220265,-1.3197423e-006,-0.18846348};
 	};
 };
 binarizationWanted=0;
@@ -331,7 +331,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=20;
+		items=27;
 		class Item0
 		{
 			dataType="Layer";
@@ -54375,11 +54375,11 @@ class Mission
 		class Item16
 		{
 			dataType="Marker";
-			position[]={8870.3076,-1.3619799e-021,21997.904};
+			position[]={8367.9766,5.3718262,22205.139};
 			name="mrk_exampleOuter";
 			type="Empty";
 			id=3157;
-			atlOffset=-24.817093;
+			atlOffset=-20.957314;
 		};
 		class Item17
 		{
@@ -54415,6 +54415,69 @@ class Mission
 			isPlayable=1;
 			id=3160;
 			type="HeadlessClient_F";
+		};
+		class Item20
+		{
+			dataType="Marker";
+			position[]={6885.7808,-1.2449461e-029,22074.371};
+			name="mrk_ac_1";
+			type="Empty";
+			id=3173;
+			atlOffset=-142.27548;
+		};
+		class Item21
+		{
+			dataType="Marker";
+			position[]={6904.8936,101.24057,21515.154};
+			name="mrk_ac_2";
+			type="Empty";
+			id=3175;
+			atlOffset=-142.5121;
+		};
+		class Item22
+		{
+			dataType="Marker";
+			position[]={8508.9766,-74.514374,20852.172};
+			name="mrk_ac_3";
+			type="Empty";
+			id=3176;
+			atlOffset=-142.26816;
+		};
+		class Item23
+		{
+			dataType="Marker";
+			position[]={9358.9951,-45.793068,20196.785};
+			name="mrk_ac_4";
+			type="Empty";
+			id=3177;
+			atlOffset=-142.09619;
+		};
+		class Item24
+		{
+			dataType="Marker";
+			position[]={10051.355,72.160011,20737.404};
+			name="mrk_ac_5";
+			type="Empty";
+			id=3178;
+			atlOffset=-7.6293945e-006;
+		};
+		class Item25
+		{
+			dataType="Marker";
+			position[]={11119.982,-14.643044,20952.283};
+			name="mrk_ac_6";
+			type="Empty";
+			id=3179;
+			atlOffset=-142.31815;
+		};
+		class Item26
+		{
+			dataType="Marker";
+			position[]={11192.322,-92.993706,21892.691};
+			name="mrk_ac_7";
+			type="Empty";
+			id=3180;
+			atlOffset=-142.38412;
 		};
 	};
 };
