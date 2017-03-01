@@ -80,3 +80,8 @@ if ("ace_medical" call ARTR_fnc_checkMod) then
 		player addItemToBackpack _item;
 	};
 } forEach _medicGear;
+
+//Earplugs
+{
+	player addItemToUniform "ACE_EarPlugs";
+};
