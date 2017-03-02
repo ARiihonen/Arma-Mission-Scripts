@@ -17,9 +17,9 @@ _mission = ["Diary", "Mission", "Mission.txt"] call ARTR_fnc_briefingFile;
 _situation = ["Diary", "Situation", "Situation.txt"] call ARTR_fnc_briefingFile;
 _background = ["Diary", "Background", "Background.txt"] call ARTR_fnc_briefingFile;
 
-//Add diary subject and entries for gameplay logic
-player createDiarySubject ["Info", "Scenario Info"];
 if (addonTFAR) then
 {
+	//Add diary subject and entries for gameplay logic
+	player createDiarySubject ["Info", "Scenario Info"];
 	_TFARHearing = ["Info", "Setup logic", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
 };
