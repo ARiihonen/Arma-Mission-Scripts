@@ -1,4 +1,6 @@
-_unit = _this;
+params [
+	[ "_unit", player, [objNull] ]
+];
 
 _gearSets = _unit call ARTR_fnc_getIrregularGearSets;
 
@@ -11,8 +13,6 @@ if (typeName _gearSets == "BOOL") then {
 } else {
 	_uniformSets = _gearSets select 0;
 };
-
-diag_log format ["IRREGULAR UNIFORM SETS: %1, GEAR SETS: %2", _uniformSets, _gearSets];
 
 //Uniform sets definition
 _uniformsGuerrilla = ["U_BG_Guerilla2_3","U_BG_Guerrilla_6_1","U_BG_Guerilla1_1","U_BG_Guerilla2_2","U_BG_Guerilla2_1"];

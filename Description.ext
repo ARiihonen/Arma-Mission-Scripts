@@ -124,19 +124,14 @@ class CfgFunctions
 
 		class gear
 		{
-			class addIrregularGear {};
-			class getIrregularBackpack {};
-			class getIrregularGear {};
-			class getIrregularGearSets {};
-			class getIrregularHeadwear {};
-			class getIrregularItems {};
-			class getIrregularLinkItems {};
-			class getIrregularUniform {};
-			class getIrregularVest {};
-			class getIrregularWeaponItems {};
-			class getIrregularWeapons {};
-			class setIrregularGearSets {};
-			class playerGearByMod {};
+			class giveMagazines {};
+			class modGear {};
+			class switchBackpack {};
+			class switchHandgun {};
+			class switchPrimaryWeapon {};
+			class switchSecondaryWeapon {};
+			class switchUniform {};
+			class switchVest {};
 		};
 
 		class missionLogic

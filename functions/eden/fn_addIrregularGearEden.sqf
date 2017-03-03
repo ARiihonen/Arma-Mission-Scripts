@@ -5,7 +5,7 @@ Params: none
 */
 collect3DENHistory {
 	{
-		_x call ARTR_fnc_addIrregularGear;
+		_x call ARTR_fnc_addIrregularClothes;
 		save3DENInventory [_x];
 	} forEach get3DENSelected "object";
 };
