@@ -1,17 +1,17 @@
-_vanillaBasicGear = [
+private _vanillaBasicGear = [
 	["FirstAidKit", 2]
 ];
-_vanillaMedicGear = [
+private _vanillaMedicGear = [
 	["FirstAidKit", 10],
 	["Medikit",1]
 ];
 
-_ACEBasicGear = [
+private _ACEBasicGear = [
 	["ACE_fieldDressing", 6],
 	["ACE_epinephrine", 2],
 	["ACE_morphine", 2]
 ];
-_ACEMedicGear = [
+private _ACEMedicGear = [
 	["ACE_fieldDressing", 25],
 	["ACE_epinephrine", 10],
 	["ACE_morphine", 10],
@@ -36,8 +36,8 @@ if ("ace_maptools" call ARTR_fnc_checkMod && (player == leader group player || [
 };
 
 
-_basicGear = [];
-_medicGear = [];
+private _basicGear = [];
+private _medicGear = [];
 
 if ("ace_medical" call ARTR_fnc_checkMod) then
 {
