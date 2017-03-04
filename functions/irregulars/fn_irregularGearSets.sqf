@@ -1,0 +1,1 @@
+call ARTR_fnc_irregularClothSets;

@@ -134,6 +134,16 @@ class CfgFunctions
 			class switchVest {};
 		};
 
+		class irregulars
+		{
+			class getIrregularClothes {};
+			class getIrregularThing {};
+			class irregularClothSets {};
+			class irregularGearSets { preInit = 1; };
+			class setIrregularClothes {};
+			class setIrregularGear {};
+		};
+
 		class missionLogic
 		{
 			class briefingFile {};
@@ -271,4 +281,17 @@ class CfgAISkills
 	reloadSpeed[] = {1, 1, 1, 1};
 	spotDistance[] = {1, 1, 1, 1};
 	spotTime[] = {1, 1, 1, 1};
+};
+
+class Cfg3DEN
+{
+	class EventHandlers
+	{
+		class ARTR
+		{
+			OnMissionLoad = "call ARTR_fnc_irregularGearSets;"
+			OnMissionNew = "call ARTR_fnc_irregularGearSets;"
+			OnMissionSave = "call ARTR_fnc_irregularGearSets;"
+		};
+	};
 };
