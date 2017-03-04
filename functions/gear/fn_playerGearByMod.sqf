@@ -82,6 +82,7 @@ if ("ace_medical" call ARTR_fnc_checkMod) then
 } forEach _medicGear;
 
 //Earplugs
+if (missionNamespace getVariable ["ace_hearing_enableCombatDeafness",false]) then
 {
 	player addItemToUniform "ACE_EarPlugs";
 };
