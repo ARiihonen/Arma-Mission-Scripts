@@ -49,7 +49,7 @@ if (toUpper typeOf player == "B_G_MEDIC_F") then {
 };
 
 //Earplugs
-if (missionNamespace getVariable []"ace_hearing_enableCombatDeafness",false]) then
+if (missionNamespace getVariable ["ace_hearing_enableCombatDeafness",false]) then
 {
 	player addItemToUniform "ACE_EarPlugs";
 };

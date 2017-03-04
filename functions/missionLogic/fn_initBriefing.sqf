@@ -16,12 +16,15 @@ _intel = "Intel"+_teamSuffix;
 _mission = "Mission"+_teamSuffix;
 _situation = "Situation"+_teamSuffix;
 
+_truckStart = (missionNamespace getVariable "trucks_start" / 60);
+_uavEnd = (missionNamespace getVariable "uav_end" /60);
+
 //Add new diary pages with ARTR_fnc_briefingFile.
 //If including variables, add them as a list to the end of the parameters list: ["ExampleSubject", "ExampleName", "ExampleFile", [ExampleParams]]
 if ( addonTFAR || addonACRE ) then { ["Diary", "Signal", _signal] call ARTR_fnc_briefingFile; };
-["Diary", "Intel", _intel,[missionNamespace getVariable "trucks_start",missionNamespace getVariable "uav_end"]] call ARTR_fnc_briefingFile;
-["Diary", "Mission", _mission,[missionNamespace getVariable "trucks_start"]] call ARTR_fnc_briefingFile;
-["Diary", "Situation", _situation,[missionNamespace getVariable "trucks_start"]] call ARTR_fnc_briefingFile;
+["Diary", "Intel", _intel,[_truckStart,_uavEnd]] call ARTR_fnc_briefingFile;
+["Diary", "Mission",_mission,[_truckStart]] call ARTR_fnc_briefingFile;
+["Diary", "Situation", _situation,[_truckStart]] call ARTR_fnc_briefingFile;
 ["Diary", "Background", "Background.txt"] call ARTR_fnc_briefingFile;
 
 //Add diary subject and entries for gameplay logic
