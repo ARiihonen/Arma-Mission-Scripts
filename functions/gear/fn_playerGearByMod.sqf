@@ -7,7 +7,7 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod) then
 	[player,(selectRandom ["MNP_Vest_FIN_1","MNP_Vest_FIN_2"])] call ARTR_fnc_replaceVest;
 
 	//Remove primary weapon and its magazines, since it is going to be changed
-	player removeMagazines (primaryWeaponMagazine player);
+	{ player removeMagazines _x; } forEach (primaryWeaponMagazine player);
 	player removeWeapon (primaryWeapon player);
 
 	//Check for mods that might be used
@@ -18,10 +18,10 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod) then
 	//If NIArms AKS are on, add RK62, otherwise add BI AK12
 	if (_hlcAK) then
 	{
-		for "_i" from 1 to 8 do { player addItemToUniform "hlc_30Rnd_762x39_b_ak"; };
+		for "_i" from 1 to 8 do { player addItemToVest "hlc_30Rnd_762x39_b_ak"; };
 		player addWeapon "hlc_rifle_RK62";
 	} else {
-		for "_i" from 1 to 8 do { player addItemToUniform "30Rnd_762x39_Mag_F"; };
+		for "_i" from 1 to 8 do { player addItemToVest "30Rnd_762x39_Mag_F"; };
 		player addWeapon "arifle_AK12_F";
 
 		if (typeOf player find "_SL_" >= 0 || typeOf player find "_TL_" >= 0) then
@@ -39,11 +39,11 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod) then
 		player addGoggles "rhs_ess_black";
 
 		//Remove default handgun
-		player removeMagazines (handgunMagazine player);
+		{ player removeMagazines _x; } forEach (handgunMagazine player);
 		player removeWeapon (handgunWeapon player);
 
 		//Switch to RHS Glock17
-		for "_i" from 1 to 2 do { player addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP"; };
+		for "_i" from 1 to 2 do { player addItemToVest "rhsusf_mag_17Rnd_9x19_JHP"; };
 		player addWeapon "rhsusf_weap_glock17g4";
 	};
 
@@ -52,7 +52,7 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod) then
 	{
 		if (_rhsRUS) then
 		{
-			for "_i" from 1 to 8 do { player addItemToUniform "rhs_10Rnd_762x54mmR_7N1"; };
+			for "_i" from 1 to 8 do { player addItemToVest "rhs_10Rnd_762x54mmR_7N1"; };
 			player addWeapon "rhs_weap_svds";
 			player addPrimaryWeaponItem "rhs_acc_pso1m2";
 		} else {
