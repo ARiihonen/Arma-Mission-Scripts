@@ -289,9 +289,9 @@ class Cfg3DEN
 	{
 		class ARTR
 		{
-			OnMissionLoad = "call ARTR_fnc_irregularGearSets;"
-			OnMissionNew = "call ARTR_fnc_irregularGearSets;"
-			OnMissionSave = "call ARTR_fnc_irregularGearSets;"
+			OnMissionLoad = "call ARTR_fnc_irregularGearSets;";
+			OnMissionNew = "call ARTR_fnc_irregularGearSets;";
+			OnMissionSave = "call ARTR_fnc_irregularGearSets;";
 		};
 	};
 };

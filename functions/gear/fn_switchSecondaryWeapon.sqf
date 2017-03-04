@@ -14,7 +14,7 @@ _ret = false;
 if (_weapon != "") then
 {
 	_ret = true;
-	
+
 	//Get secondary weapon mag type, remove all matching
 	{
 		private _identifier = "";
@@ -23,11 +23,11 @@ if (_weapon != "") then
 		_identifier = _x select [0,[_x find "_"]];
 
 		{
-			removeMagazines _x;
+			_unit removeMagazines _x;
 		} forEach (magazines _unit select { _x find _identifier >= 0 });
 	} forEach (secondaryWeaponMagazine _unit);
 
-	removeWeapon (secondaryWeapon _unit);
+	_unit removeWeapon (secondaryWeapon _unit);
 
 	{
 		_unit addMagazines [_x select 0, _x select 1];

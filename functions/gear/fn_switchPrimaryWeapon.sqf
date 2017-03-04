@@ -14,7 +14,7 @@ _ret = false;
 if (_weapon != "") then
 {
 	_ret = true;
-	
+
 	//Get primary weapon mags and remove all types associated, then remove the primary weapon
 	{
 		private _identifier = "";
@@ -29,11 +29,11 @@ if (_weapon != "") then
 		};
 
 		{
-			removeMagazines _x;
+			_unit removeMagazines _x;
 		} forEach (magazines _unit select { _x find _identifier >= 0 });
 	} forEach (primaryWeaponMagazine _unit);
 
-	removeWeapon (primaryWeapon _unit);
+	_unit removeWeapon (primaryWeapon _unit);
 
 	[_unit,_magArray] call ARTR_fnc_giveMagazines;
 

@@ -1,6 +1,6 @@
 params [
-	["_unit", player, [objNull]],
-	["_magArray", ["",0], []]
+	["_unit", player, [objNull] ],
+	["_magArray", ["",0], [[]] ]
 ];
 
 //Give magazines
@@ -12,6 +12,6 @@ params [
 
 	if (_mag != "") then
 	{
-		for "_i" from 1 to _magCount { _unit addItemToVest _mag; };
+		for "_i" from 1 to _magCount do { _unit addItemToVest _mag; };
 	};
 } forEach _magArray;

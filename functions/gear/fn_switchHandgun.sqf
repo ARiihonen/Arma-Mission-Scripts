@@ -14,7 +14,7 @@ _ret = false;
 if (_weapon != "") then
 {
 	_ret = true;
-	
+
 	//Get handgun mag type and remove all that match it
 	{
 		private _identifier = "";
@@ -24,11 +24,11 @@ if (_weapon != "") then
 		_identifier = _identifier select [1,[_identifier find "_"]];
 
 		{
-			removeMagazines _x;
+			_unit removeMagazines _x;
 		} forEach (magazines _unit select { _x find _identifier >= 0 });
 	} forEach (handgunMagazine _unit);
 
-	removeWeapon (handgunWeapon _unit);
+	_unit removeWeapon (handgunWeapon _unit);
 
 	[_unit,_magArray] call ARTR_fnc_giveMagazines;
 
