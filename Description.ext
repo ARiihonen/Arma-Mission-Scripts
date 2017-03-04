@@ -89,7 +89,7 @@ class CfgFunctions
 		class eden
 		{
 			class setConditions {};
-			class addIrregularGearEden {};
+			class setIrregularGearEden {};
 		};
 
 		class preinit
