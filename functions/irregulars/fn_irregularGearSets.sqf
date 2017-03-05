@@ -1,2 +1,0 @@
-call ARTR_fnc_irregularClothSets;
-call ARTR_fnc_irregularCollections;
