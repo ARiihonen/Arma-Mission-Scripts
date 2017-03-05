@@ -10,7 +10,7 @@ overviewText = "Description.ext Overview Text"; //This is overwritten by the edi
 //Loading screen texts and picture for loading the mission
 OnLoadName = "Description.ext On Load Name";
 OnLoadMission = "Description.ext On Load Mission";
-//loadscreen = "";
+loadscreen = "files\pictures\loadscreen.paa";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
 disabledai = 0; //Disable AI taking over un-taken player slots
