@@ -1,5 +1,5 @@
-_HCUnit = player;
-_id = clientOwner;
+private _HCUnit = player;
+private _id = clientOwner;
 
 diag_log format ["HCUnit: %1, ID: %2", _HCUnit, _id];
 missionNamespace setVariable ["ARTR_AIController", _HCUnit, true];

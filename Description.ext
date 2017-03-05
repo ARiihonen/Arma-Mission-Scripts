@@ -88,7 +88,13 @@ class CfgFunctions
 	{
 		class effects
 		{
-				class ambientCombat { postInit = 1; };
+			class ambientCombat { postInit = 1; };
+		};
+
+		class eden
+		{
+			class setConditions {};
+			class setIrregularGearEden {};
 		};
 
 		class preinit
@@ -125,8 +131,26 @@ class CfgFunctions
 
 		class gear
 		{
-			class playerGearByMod {};
 			class nvGoggles {};
+			class giveMagazines {};
+			class modGear {};
+			class switchBackpack {};
+			class switchHandgun {};
+			class switchPrimaryWeapon {};
+			class switchSecondaryWeapon {};
+			class switchUniform {};
+			class switchVest {};
+		};
+
+		class irregulars
+		{
+			class getIrregularClothes {};
+			class getIrregularThing {};
+			class irregularClothSets {};
+			class irregularCollections {};
+			class irregularGearSets { preInit = 1; };
+			class setIrregularClothes {};
+			class setIrregularGear {};
 		};
 
 		class missionLogic
@@ -536,4 +560,17 @@ class CfgAISkills
 	reloadSpeed[] = {1, 1, 1, 1};
 	spotDistance[] = {1, 1, 1, 1};
 	spotTime[] = {1, 1, 1, 1};
+};
+
+class Cfg3DEN
+{
+	class EventHandlers
+	{
+		class ARTR
+		{
+			OnMissionLoad = "call ARTR_fnc_irregularGearSets;";
+			OnMissionNew = "call ARTR_fnc_irregularGearSets;";
+			OnMissionSave = "call ARTR_fnc_irregularGearSets;";
+		};
+	};
 };
