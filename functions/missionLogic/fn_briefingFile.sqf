@@ -8,17 +8,19 @@ Parameters:
 	3: List of optional parameters to format the txt. ARRAY
 */
 
-_subject = param [0, 'Diary', ['']];
-_name = param [1, 'No Name', ['']];
-_filePath = param [2, 'Error.txt', ['']];
-_optionals = param [3, [], [[]], []];
+params [
+	["_subject","Diary",[""]],
+	["_name", "No Name", [""]],
+	["_filePath", "Error.txt", [""]],
+	["_optionals", [], [[]]]
+];
 
-_filePath = format ['files\briefing\%1', _filePath];
+private _filePath = "files\briefing\%1" + _filePath;
 
-_formatParams = '[LoadFile _filePath';
+private _formatParams = "[LoadFile _filePath";
 {
 	_formatParams = format ['%1, "%2"', _formatParams, _x];
 } forEach _optionals;
-_formatParams = format ['%1]', _formatParams];
+_formatParams = _formatParams + "]";
 
 player createDiaryRecord [_subject, [_name, format (call compile _formatParams)]];

@@ -1,18 +1,17 @@
 if (isServer) then {
-	_list = (allUnits - playableUnits);
-
 	waitUntil { missionNamespace getVariable ["ARTR_ai_setsSet", false] };
 
-	_skillSets = missionNamespace getVariable "ARTR_ai_skillSets";
-	_factionSkills = missionNamespace getVariable "ARTR_ai_factionSkills";
-	_unitSets = missionNamespace getVariable "ARTR_ai_unitSets";
-	_classSets = missionNamespace getVariable "ARTR_ai_classSets";
+	private _list = (allUnits - playableUnits);
+	private _skillSets = missionNamespace getVariable "ARTR_ai_skillSets";
+	private _factionSkills = missionNamespace getVariable "ARTR_ai_factionSkills";
+	private _unitSets = missionNamespace getVariable "ARTR_ai_unitSets";
+	private _classSets = missionNamespace getVariable "ARTR_ai_classSets";
 
 	{
-		_unit = _x;
-		_set_index = 3;
+		private _unit = _x;
+		private _set_index = 3;
 
-		_override = false;
+		private _override = false;
 		{
 			if (_unit == _x select 0) exitWith {
 				_set_index = _x select 1;
@@ -40,7 +39,7 @@ if (isServer) then {
 
 		_unit setSkill 1;
 
-		_skill_set = _skillSets select _set_index;
+		private _skill_set = _skillSets select _set_index;
 		{
 			_main = _x select 0;
 			_offset = _x select 1;

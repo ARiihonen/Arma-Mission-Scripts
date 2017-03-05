@@ -8,9 +8,10 @@ Params:
 Return:
 	0: trigger - OBJECT
 */
-
-_condition = _this param [0,"",[""]];
-_exec = _this param [1,"",[""]];
+params [
+	[ "_condition", "", [""]],
+	[ "_exec", "", [""]]
+];
 
 _newTrigger = createTrigger ["EmptyDetector", [0,0,0], false];
 _newTrigger setTriggerActivation ["NONE", "PRESENT", false];
@@ -20,4 +21,4 @@ _newTrigger setTriggerStatements [
 	""
 ];
 
-_newTrigger
+_newTrigger;

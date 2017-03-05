@@ -1,4 +1,6 @@
-_ending = _this select 0;
+params [
+	["_ending", "Lose", [""]]
+];
 
 //Separate ending conditions:
 
@@ -10,11 +12,7 @@ and fancyVisuals a boolean that says whether to go straight to the
 debriefing or to use the cool new ingame ending graphic*/
 
 
-if ("ace_medical" call ARTR_fnc_checkMod) then
-{
-	if (player getVariable ['ACE_isUnconscious', false]) then { player setDamage 1; };
-};
-
+if (player getVariable ['ACE_isUnconscious', false]) then { player setDamage 1; };
 
 if (alive player) then {
 
