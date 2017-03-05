@@ -1,7 +1,7 @@
 if (isServer) then {
 
 	//Init sets of AI skill: general/aiming/spotting, format: [skill,random deviation]
-	private _ai_skill_sets = [
+	_ai_skill_sets = [
 		[ [1.00,0.00],[1.00,0.00],[1.00,0.00] ], // 00: Super
 		[ [0.90,0.02],[0.50,0.01],[0.50,0.01] ], // 01: Tier 1
 		[ [0.85,0.03],[0.40,0.02],[0.40,0.02] ], // 02: Real Good
@@ -17,7 +17,7 @@ if (isServer) then {
 	missionNamespace setVariable ["ARTR_ai_skillSets", _ai_skill_sets];
 
 	//Faction default skill sets (["faction",skillset])
-	private _ai_faction_skills = [
+	_ai_faction_skills = [
 		["BLU_F",3],
 		["OPF_F",3],
 		["IND_F",4],
@@ -29,13 +29,13 @@ if (isServer) then {
 	missionNamespace setVariable ["ARTR_ai_factionSkills", _ai_faction_skills];
 
 	//Per-unit exceptions to faction skill ([unit,skillset])
-	private _ai_unit_sets = [
+	_ai_unit_sets = [
 
 	];
 	missionNamespace setVariable ["ARTR_ai_unitSets", _ai_unit_sets];
 
 	//Per-class exceptions to faction skill ([class,skillset])
-	private _ai_class_sets = [
+	_ai_class_sets = [
 
 	];
 	missionNamespace setVariable ["ARTR_ai_classSets", _ai_class_sets];

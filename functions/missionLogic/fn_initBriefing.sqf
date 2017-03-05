@@ -5,7 +5,7 @@
 //Add main diary subject
 player createDiarySubject ["Diary", "Diary"];
 
-private _signal = "";
+_signal = "";
 if ( addonTFAR ) then { _signal = "SignalTFAR.txt"; };
 if ( addonACRE ) then { _signal = "SignalACRE.txt"; };
 

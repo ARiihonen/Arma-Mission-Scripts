@@ -22,5 +22,5 @@
 			_ending = _ending + "Light";
 		};
 	};
-
+	
 	[_ending] remoteExecCall ["ARTR_fnc_clientEnding",0,false];

@@ -7,12 +7,12 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 	call compile preprocessFileLineNumbers "\task_force_radio\functions\common.sqf";
 
 	//General settings
-	private _autoLR = false; 			//automatically add backpack radio to leader
-	private _gruntUpgrade = true; 		//give personal radio to regular riflemen
-	private _microDagr = false;			//give microDAGR to regular riflemen
-	private _sameSW = true;				//same SW frequency for entire side
-	private _sameLR = true;				//same LR frequency for entire side
-	private _sameDD = true;				//same DD frequency for entire side
+	_autoLR = false; 			//automatically add backpack radio to leader
+	_gruntUpgrade = true; 		//give personal radio to regular riflemen
+	_microDagr = false;			//give microDAGR to regular riflemen
+	_sameSW = true;				//same SW frequency for entire side
+	_sameLR = true;				//same LR frequency for entire side
+	_sameDD = true;				//same DD frequency for entire side
 
 
 	//BLUFOR radios and channel settings
@@ -36,6 +36,15 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 	TF_defaultEastRiflemanRadio = "tf_pnr1000a";
 	TF_defaultEastAirborneRadio = "tf_mr6000l";
 
+
+	["CBA_settings_setSettingMission", ["TF_no_auto_long_range_radio",_autoLR,true]] call CBA_fnc_localEvent;
+	["CBA_settings_setSettingMission", ["TF_give_personal_radio_to_regular_soldier",_gruntUpgrade,true]] call CBA_fnc_localEvent;
+	["CBA_settings_setSettingMission", ["TF_give_microdagr_to_soldier",_microDagr,true]] call CBA_fnc_localEvent;
+	["CBA_settings_setSettingMission", ["TF_same_sw_frequencies_for_side",_sameSW,true]] call CBA_fnc_localEvent;
+	["CBA_settings_setSettingMission", ["TF_same_lr_frequencies_for_side",_sameLR,true]] call CBA_fnc_localEvent;
+	["CBA_settings_setSettingMission", ["TF_same_dd_frequencies_for_side",_sameDD,true]] call CBA_fnc_localEvent;
+
+	/*
 	[
 		"CBA_beforeSettingsInitialized",
 		{
@@ -49,6 +58,7 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 		},
 		[]
 	] call CBA_fnc_addEventHandlerArgs;
+	*/
 
 	["ARTR_receivedRadios", "OnRadiosReceived", { _this call ARTR_fnc_TFARRadiosAdded; }, player] call TFAR_fnc_addEventHandler;
 
