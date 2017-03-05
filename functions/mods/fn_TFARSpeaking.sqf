@@ -13,5 +13,5 @@ if (_isSpeaking && alive _unit && !(player getVariable ['ACE_isUnconscious', fal
 		private _revealAmount = 4*(exp(-3.69*(_distance/_maxDistance)));
 
 		[_x,[_unit, _revealAmount]] remoteExecCall ["reveal", _x, false];
-	} forEach _affectedObjects;
+	} forEach _affectedObjects select { !isNil _x };
 };

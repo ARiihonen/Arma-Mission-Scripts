@@ -21,4 +21,4 @@ _newTrigger setTriggerStatements [
 	""
 ];
 
-_newTrigger
+_newTrigger;
