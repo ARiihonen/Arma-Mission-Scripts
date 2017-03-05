@@ -16,7 +16,7 @@ saving = 0; //Set saving to 0 so that you can exit the mission without saving an
 disabledai = 1; //Disable AI taking over un-taken player slots
 
 //Default respawn options
-respawn = "BASE";
+respawn = "GROUP";
 respawnDelay = 5;
 respawnDialog = 0;
 respawnOnStart = 0;
@@ -145,7 +145,6 @@ class CfgFunctions
 	{
 		class eden
 		{
-			class setConditions {};
 			class addIrregularGearEden {};
 		};
 
@@ -175,24 +174,12 @@ class CfgFunctions
 			class initSkills { preInit = 1; };
 			class setSkills { postInit = 1; };
 			class HCInit {};
-			class HCSetOwner { postInit = 1; };
+			class HCSetOwner {};
 			class getAIController {};
 		};
 
 		class gear
 		{
-			class addIrregularGear {};
-			class getIrregularBackpack {};
-			class getIrregularGear {};
-			class getIrregularGearSets {};
-			class getIrregularHeadwear {};
-			class getIrregularItems {};
-			class getIrregularLinkItems {};
-			class getIrregularUniform {};
-			class getIrregularVest {};
-			class getIrregularWeaponItems {};
-			class getIrregularWeapons {};
-			class setIrregularGearSets {};
 			class playerGearByMod {};
 			class replaceUniform {};
 			class replaceVest {};

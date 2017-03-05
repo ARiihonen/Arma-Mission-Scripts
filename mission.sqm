@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=328;
+		nextID=361;
 	};
 	class Camera
 	{
-		pos[]={12330.997,63.889515,12945.599};
-		dir[]={0.58179736,-0.43625793,-0.6865955};
-		up[]={0.28207028,0.89974535,-0.33287457};
-		aside[]={-0.76305515,-1.3023382e-006,-0.64659101};
+		pos[]={13290.73,214.09062,11855.615};
+		dir[]={0.49154809,-0.44743067,0.74727231};
+		up[]={0.24591571,0.89422536,0.37385538};
+		aside[]={0.83560383,-1.5317928e-006,-0.54964805};
 	};
 };
 binarizationWanted=0;
@@ -292,7 +292,6 @@ class Mission
 		resistanceWest=0;
 		timeOfChanges=5400;
 		startWeather=0;
-		startFog=0.40003324;
 		startWind=0.1;
 		startWaves=0.5;
 		forecastWeather=0;
@@ -305,9 +304,9 @@ class Mission
 		day=24;
 		hour=5;
 		minute=-15;
-		startFogBase=12;
+		startFogBase=-1000;
 		forecastFogBase=-1000;
-		startFogDecay=0.1;
+		startFogDecay=0;
 		forecastFogDecay=0;
 	};
 	class Entities
@@ -16620,7 +16619,7 @@ class Mission
 					formation="COLUMN";
 					speed="NORMAL";
 					combat="SAFE";
-					expActiv="(vehicle this) land ""GET IN"";";
+					expActiv="(vehicle this) land ""GET IN"";" \n "{" \n "    _x disableAI ""TARGET"";" \n "    _x disableAI ""AUTOTARGET"";" \n "    _x disableAI ""SUPPRESSION"";" \n "    _x disableAI ""COVER"";" \n "    _x disableAI ""AUTOCOMBAT"";" \n "} forEach (crew vehicle this);";
 					class Effects
 					{
 					};
@@ -16655,7 +16654,7 @@ class Mission
 				class Item5
 				{
 					dataType="Waypoint";
-					position[]={15512.17,25.811642,11089.244};
+					position[]={15122.529,13.994573,11200.636};
 					expActiv="(vehicle this) land ""GET OUT"";";
 					class Effects
 					{
@@ -16673,7 +16672,7 @@ class Mission
 				class Item6
 				{
 					dataType="Waypoint";
-					position[]={15512.17,26.311642,11089.244};
+					position[]={15122.529,14.494573,11200.636};
 					expCond="{ alive _x && vehicle _x == transportHelo } count playableUnits <= 0";
 					class Effects
 					{
@@ -16779,8 +16778,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15512.17,25.311642,11089.244};
-				angles[]={6.2671809,0,0.079831354};
+				position[]={15122.529,13.494573,11200.636};
+				angles[]={6.2765174,0,0.11942901};
 			};
 			side="Empty";
 			class Attributes
@@ -16802,13 +16801,14 @@ class Mission
 		class Item32
 		{
 			dataType="Marker";
-			position[]={15512.187,1.4368163e+032,11089.277};
+			position[]={15122.31,1.4543963e+037,11200.714};
 			name="mrk_LZ";
+			text="LZ";
 			type="mil_circle";
 			colorName="ColorWEST";
 			alpha=0;
 			id=926;
-			atlOffset=1.4368163e+032;
+			atlOffset=1.4543963e+037;
 		};
 		class Item33
 		{

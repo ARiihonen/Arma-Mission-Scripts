@@ -5,6 +5,7 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod) then
 {
 	[player,(selectRandom ["MNP_CombatUniform_Fin_A","MNP_CombatUniform_Fin_B"])] call ARTR_fnc_replaceUniform;
 	[player,(selectRandom ["MNP_Vest_FIN_1","MNP_Vest_FIN_2"])] call ARTR_fnc_replaceVest;
+	player addHeadgear "MNP_Helmet_FIN_T";
 
 	//Remove primary weapon and its magazines, since it is going to be changed
 	{ player removeMagazines _x; } forEach (primaryWeaponMagazine player);
@@ -15,20 +16,57 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod) then
 	_rhsUS = "rhsusf_c_weapons" call ARTR_fnc_checkMod;
 	_hlcAK = "hlcweapons_aks" call ARTR_fnc_checkMod;
 
-	//If NIArms AKS are on, add RK62, otherwise add BI AK12
-	if (_hlcAK) then
-	{
-		for "_i" from 1 to 8 do { player addItemToVest "hlc_30Rnd_762x39_b_ak"; };
-		player addWeapon "hlc_rifle_RK62";
-	} else {
-		for "_i" from 1 to 8 do { player addItemToVest "30Rnd_762x39_Mag_F"; };
-		player addWeapon "arifle_AK12_F";
+	_weaponAdded = false;
 
-		if (typeOf player find "_SL_" >= 0 || typeOf player find "_TL_" >= 0) then
+	//Check for marksman, give RHS SVD if exists, DMR if not
+	if (typeOf player find "_M_" >= 0) then
+	{
+		_weaponAdded = true;
+
+		if (_rhsRUS) then
 		{
-			player addPrimaryWeaponItem "optic_MRCO";
+			for "_i" from 1 to 8 do { player addItemToVest "rhs_10Rnd_762x54mmR_7N1"; };
+			player addWeapon "rhs_weap_svds";
+			player addPrimaryWeaponItem "rhs_acc_pso1m2";
 		} else {
-			player addPrimaryWeaponItem "optic_Holosight_blk_F";
+			for "_i" from 1 to 8 do { player addItemToVest "20Rnd_762x51_Mag"; };
+			player addWeapon "srifle_DMR_03_khaki_F";
+			player addPrimaryWeaponItem "optic_DMS";
+		};
+	};
+
+	//Check for autorifleman, give RHS PKM if exists, otherwise give Zafir
+	if (typeOf player find "_AR_" >= 0) then
+	{
+
+		_weaponAdded = true;
+
+		if (_rhsRUS) then
+		{
+			for "_i" from 1 to 2 do { player addItemToVest "rhs_100Rnd_762x54mmR_green"; };
+			player addWeapon "rhs_weap_pkm";
+		} else {
+			for "_i" from 1 to 2 do { player addItemToVest "150Rnd_762x54_Box_Tracer"; };
+			player addWeapon "LMG_Zafir_F";
+		};
+	};
+
+	//If NIArms AKS are on, add RK62, otherwise add BI AK12
+	if (!_weaponAdded) then {
+		if (_hlcAK) then
+		{
+			for "_i" from 1 to 8 do { player addItemToVest "hlc_30Rnd_762x39_b_ak"; };
+			player addWeapon "hlc_rifle_RK62";
+		} else {
+			for "_i" from 1 to 8 do { player addItemToVest "30Rnd_762x39_Mag_F"; };
+			player addWeapon "arifle_AK12_F";
+
+			if (typeOf player find "_SL_" >= 0 || typeOf player find "_TL_" >= 0) then
+			{
+				player addPrimaryWeaponItem "optic_MRCO";
+			} else {
+				player addPrimaryWeaponItem "optic_Holosight_blk_F";
+			};
 		};
 	};
 
@@ -45,34 +83,6 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod) then
 		//Switch to RHS Glock17
 		for "_i" from 1 to 2 do { player addItemToVest "rhsusf_mag_17Rnd_9x19_JHP"; };
 		player addWeapon "rhsusf_weap_glock17g4";
-	};
-
-	//Check for marksman, give RHS SVD if exists, DMR if not
-	if (typeOf player find "_M_" >= 0) then
-	{
-		if (_rhsRUS) then
-		{
-			for "_i" from 1 to 8 do { player addItemToVest "rhs_10Rnd_762x54mmR_7N1"; };
-			player addWeapon "rhs_weap_svds";
-			player addPrimaryWeaponItem "rhs_acc_pso1m2";
-		} else {
-			for "_i" from 1 to 8 do { player addItemToVest "20Rnd_762x51_Mag"; };
-			player addWeapon "srifle_DMR_03_khaki_F";
-			player addPrimaryWeaponItem "optic_DMS";
-		};
-	};
-
-	//Check for autorifleman, give RHS PKM if exists, otherwise give Zafir
-	if (typeOf player find "_AR_" >= 0) then
-	{
-		if (_rhsRUS) then
-		{
-			for "_i" from 1 to 2 do { player addItemToVest "rhs_100Rnd_762x54mmR_green"; };
-			player addWeapon "rhs_weap_pkm";
-		} else {
-			for "_i" from 1 to 2 do { player addItemToVest "150Rnd_762x54_Box_Tracer"; };
-			player addWeapon "LMG_Zafir_F";
-		};
 	};
 
 	//Check for autorifleman, give backpack w/ PKM ammo if exists, otherwise w/ Zafir ammo

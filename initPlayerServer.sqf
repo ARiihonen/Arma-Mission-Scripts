@@ -13,8 +13,9 @@ if (!isNil "headlessClient") then
 		missionNamespace setVariable ["ARTR_AIController", _HCUnit, true];
 		missionNamespace setVariable ["ARTR_HCID", _id, true];
 
-		if (!(missionNamespace getVariable ["ARTR_HCSET", false]) && BIS_fnc_init) then
+		if (!(missionNamespace getVariable ["ARTR_HCSET", false])) then
 		{
+			waitUntil {time > 0};
 			call ARTR_fnc_HCSetOwner;
 		};
 	};

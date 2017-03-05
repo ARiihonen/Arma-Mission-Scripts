@@ -29,5 +29,5 @@ if (addonTFAR) then
 {
 	//Add diary subject and entries for gameplay logic
 	player createDiarySubject ["Info", "Scenario Info"];
-	_TFARHearing = ["Info", "Setup logic", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
+	_TFARHearing = ["Info", "TFAR Hearing", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
 };
