@@ -1,4 +1,4 @@
-if (isServer) then {
+if (isServer && (call ARTR_fnc_getAIController isEqualType 2) || player == headlessClient ) then {
 	_units = _this;
 
 	{

@@ -86,12 +86,6 @@ class CfgFunctions
 {
 	class ARTR
 	{
-		class eden
-		{
-			class setConditions {};
-			class addIrregularGearEden {};
-		};
-
 		class effects
 		{
 				class ambientCombat { postInit = 1; };
@@ -123,7 +117,7 @@ class CfgFunctions
 			class initSkills { preInit = 1; };
 			class setSkills { postInit = 1; };
 			class HCInit {};
-			class HCSetOwner { postInit = 1; };
+			class HCSetOwner {};
 			class getAIController {};
 			class initIndoorsBehaviour { postInit = 1; };
 			class buildingEntered {};
@@ -131,18 +125,6 @@ class CfgFunctions
 
 		class gear
 		{
-			class addIrregularGear {};
-			class getIrregularBackpack {};
-			class getIrregularGear {};
-			class getIrregularGearSets {};
-			class getIrregularHeadwear {};
-			class getIrregularItems {};
-			class getIrregularLinkItems {};
-			class getIrregularUniform {};
-			class getIrregularVest {};
-			class getIrregularWeaponItems {};
-			class getIrregularWeapons {};
-			class setIrregularGearSets {};
 			class playerGearByMod {};
 			class nvGoggles {};
 		};
