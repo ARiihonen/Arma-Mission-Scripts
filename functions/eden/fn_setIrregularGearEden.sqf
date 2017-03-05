@@ -2,18 +2,17 @@
 Randomise gear for irregular soldiers in Eden, so you don't need to waste resources in changing unnecessary gear stuff in-mission.
 
 Params:
-	0 - Clothes sets - ARRAY: [UNIFORM SETS,VEST SETS,BACKPACK SETS,HEADGEAR SETS, GOGGLE SETS]
-	1 - Weapon sets (optional, default: "leave") - ARRAY:
+	0 - Clothes collection - STRING (leave/remove or a collection in ARTR_irregularCollections)
+	1 - Weapon collection (optional, default: "leave") - STRING (leave/remove or a collection defined in ARTR_irregularCollections)
 */
 params [
-	["_clothSets", "leave", ["",[]] ],
-	["_weaponSets", "leave", ["",[]] ]
+	["_clothCollection", "leave", [""] ],
+	["_weaponCollection", "leave", [""] ]
 ];
 
-private _sets = [_clothSets,_weaponSets];
 collect3DENHistory {
 	{
-		[_x,_sets] call ARTR_fnc_setIrregularGear;
+		[_x,_clothCollection,_weaponCollection] call ARTR_fnc_setIrregularGear;
 		save3DENInventory [_x];
 	} forEach get3DENSelected "object";
 };

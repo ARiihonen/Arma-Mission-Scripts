@@ -1,9 +1,9 @@
 params [
 	["_unit", player, [objNull]],
-	["_set", "leave", ["",[]]]
+	["_collection", "leave", [""] ]
 ];
 
-private _clothArray = _set call ARTR_fnc_getIrregularClothes;
+private _clothArray = _collection call ARTR_fnc_getIrregularClothes;
 
 _clothArray params [
 	[ "_uniform", "leave", [""] ],

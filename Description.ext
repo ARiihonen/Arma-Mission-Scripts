@@ -139,6 +139,7 @@ class CfgFunctions
 			class getIrregularClothes {};
 			class getIrregularThing {};
 			class irregularClothSets {};
+			class irregularCollections {};
 			class irregularGearSets { preInit = 1; };
 			class setIrregularClothes {};
 			class setIrregularGear {};

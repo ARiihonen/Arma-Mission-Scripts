@@ -22,6 +22,25 @@ private _ACEMedicGear = [
 	["ACE_bloodIV_500", 8]
 ];
 
+private _ACEAdvGear = [
+	["ACE_fieldDressing", 6],
+	["ACE_packingBandage", 6],
+	["ACE_epinephrine", 2],
+	["ACE_morphine", 2],
+	["ACE_tourniquet", 2]
+];
+private _ACEAdvMedicGear = [
+	["ACE_fieldDressing", 15],
+	["ACE_packingBandage", 15],
+	["ACE_elasticBandage", 15],
+	["ACE_quikclot", 15],
+	["ACE_epinephrine", 10],
+	["ACE_morphine", 10],
+	["ACE_atropine", 10],
+	["ACE_tourniquet", 5],
+	["ACE_bloodIV_500", 8]
+];
+
 
 if (_unit == leader (group _unit) && !("ItemGPS" in assignedItems _unit)) then
 {
@@ -45,10 +64,10 @@ private _medicGear = [];
 
 if ("ace_medical" call ARTR_fnc_checkMod) then
 {
-	_basicGear = _ACEBasicGear;
+	_basicGear = [_ACEBasicGear,_ACEAdvGear] select (missionNamespace getVariable ["ace_medical_level",0] == 2);
 
 	if (["medic", typeOf _unit] call BIS_fnc_inString ) then {
-		_medicGear = _ACEMedicGear;
+		_medicGear = [_ACEMedicGear,_ACEAdvMedicGear] select (missionNamespace getVariable ["ace_medical_level",0] == 2);
 	};
 } else {
 	_basicGear = _vanillaBasicGear;
