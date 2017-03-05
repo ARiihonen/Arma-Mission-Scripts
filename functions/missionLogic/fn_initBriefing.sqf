@@ -16,8 +16,8 @@ _intel = "Intel"+_teamSuffix;
 _mission = "Mission"+_teamSuffix;
 _situation = "Situation"+_teamSuffix;
 
-_truckStart = (missionNamespace getVariable "trucks_start" / 60);
-_uavEnd = (missionNamespace getVariable "uav_end" /60);
+_truckStart = ( (missionNamespace getVariable "trucks_start") / 60);
+_uavEnd = ( (missionNamespace getVariable "uav_end") / 60);
 
 //Add new diary pages with ARTR_fnc_briefingFile.
 //If including variables, add them as a list to the end of the parameters list: ["ExampleSubject", "ExampleName", "ExampleFile", [ExampleParams]]
@@ -43,7 +43,7 @@ if (missionNamespace getVariable ["extendedUAV",false]) then
 	_extraUAVInfo = _extraUAVInfo + "The UAV has additional graphical information to mark tracked defender locations. It tracks visible defenders and marks both their locations and the locations where it lost vision on hidden defenders.";
 };
 
-["Info", "Mission Mechanics", "Mechanics.txt",[[missionNamespace getVariable "trucks_start",missionNamespace getVariable "uav_end"],_extraUAVInfo]] call ARTR_fnc_briefingFile;
+["Info", "Mission Mechanics", "Mechanics.txt",[_truckStart,_uavEnd,_extraUAVInfo]] call ARTR_fnc_briefingFile;
 if (addonTFAR) then
 {
 	["Info", "Setup logic", "TFARHearing.txt"] call ARTR_fnc_briefingFile;

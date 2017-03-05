@@ -7,11 +7,11 @@ _boxes_fine = count boxes - _boxes_compromised;
 _dead_infiltrators = { side (group _x) == east && !alive _x } count allUnits;
 _dead_defenders = missionNamespace getVariable ["murdered_defenders", 0];
 
-missionNamespace setVariable ["ARTR_boxesFine",_boxes_fine,true];
-missionNamespace setVariable ["ARTR_boxesDead",_boxes_destroyed,true];
-missionNamespace setVariable ["ARTR_boxesTagged",_boxes_tagged,true];
-missionNamespace setVariable ["ARTR_deadDefenders",_dead_defenders,true];
-missionNamespace setVariable ["ARTR_deadInfiltrators",_dead_infiltrators,true];
+missionNamespace setVariable ["ARTR_boxesFine",str(_boxes_fine),true];
+missionNamespace setVariable ["ARTR_boxesDead",str(_boxes_destroyed),true];
+missionNamespace setVariable ["ARTR_boxesTagged",str(_boxes_tagged),true];
+missionNamespace setVariable ["ARTR_deadDefenders",str(_dead_defenders),true];
+missionNamespace setVariable ["ARTR_deadInfiltrators",str(_dead_infiltrators),true];
 
 _search = if (_boxes_destroyed * 2 < _dead_defenders) then { true; } else { false; };
 if ( { side _x == west } count playableUnits == 0) then {

@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=95;
+		nextID=110;
 	};
 	class Camera
 	{
-		pos[]={21957.387,102.79871,20883.965};
-		dir[]={-0.8784439,-0.46479902,0.11186431};
-		up[]={-0.46113548,0.88533694,0.058722243};
-		aside[]={0.12634064,2.9080547e-006,0.99210906};
+		pos[]={21921.482,61.01709,20813.166};
+		dir[]={-0.65388191,-0.50731349,0.56150621};
+		up[]={-0.38491878,0.8616817,0.33053979};
+		aside[]={0.65156513,2.9345974e-006,0.75875372};
 	};
 };
 binarizationWanted=0;
@@ -189,6 +189,7 @@ class Mission
 {
 	class Intel
 	{
+		overviewText="Stealth TVT: CSAT divers attempt to tag hidden FIA equipment stashes to gain intel";
 		startWeather=0;
 		startWind=0;
 		startLightnings=0.097459801;
@@ -1852,7 +1853,7 @@ class Mission
 					};
 					id=181;
 					type="IG_supplyCrate_F";
-					atlOffset=0.0011196136;
+					atlOffset=0.00037765503;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1927,7 +1928,6 @@ class Mission
 						angles[]={0,2.1012542,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						init="_nul = boxes pushBack this;";
@@ -1935,7 +1935,7 @@ class Mission
 					};
 					id=183;
 					type="IG_supplyCrate_F";
-					atlOffset=0.11003494;
+					atlOffset=3.2660007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2541,7 +2541,7 @@ class Mission
 				};
 			};
 			id=269;
-			atlOffset=4.6772938;
+			atlOffset=4.67729;
 		};
 		class Item5
 		{
