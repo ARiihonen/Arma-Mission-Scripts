@@ -2,9 +2,9 @@ if (isServer) then {
 	/*
 	Set any preInit-settings for the mission here, including randomizing unit presence variables using ARTR_fnc_randInt and ARTR_fnc_presenceArray
 	*/
-	_players = playersNumber west;
+	private _players = playersNumber west;
 
-	_units_count = if (_players < 8) then { 2; } else {
+	private _units_count = if (_players < 8) then { 2; } else {
 		if (_players < 10) then { 3; } else {
 			if (_players < 12) then { 4; } else {
 				if (_players < 14) then { 3; } else {
@@ -14,11 +14,11 @@ if (isServer) then {
 		};
 	};
 
-	_patrol_guys_count = floor (_players/2);
-	_extras_count = floor (_players/2);
-	_patrols_count = if (_players < 8) then { 1; } else { 2; };
-	_camps_count = if (_players < 12) then { 2; } else { 3; };
-	_camps = [6, _camps_count] call ARTR_fnc_presenceArray;
+	private _patrol_guys_count = floor (_players/2);
+	private _extras_count = floor (_players/2);
+	private _patrols_count = if (_players < 8) then { 1; } else { 2; };
+	private _camps_count = if (_players < 12) then { 2; } else { 3; };
+	private _camps = [6, _camps_count] call ARTR_fnc_presenceArray;
 
 	camp_1 = [];
 	camp_1_patrols = [];

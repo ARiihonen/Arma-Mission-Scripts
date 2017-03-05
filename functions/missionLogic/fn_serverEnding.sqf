@@ -23,4 +23,4 @@
 		};
 	};
 
-	_ending remoteExec ["ARTR_fnc_clientEnding",0,true];
+	[_ending] remoteExecCall ["ARTR_fnc_clientEnding",0,false];
