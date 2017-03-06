@@ -28,15 +28,15 @@ if ("ace_logistics_wirecutter" call ARTR_fnc_checkMod) then { _wireCutterText = 
 //Add new diary pages with ARTR_fnc_briefingFile.
 //If including variables, add them as a list to the end of the parameters list: ["ExampleSubject", "ExampleName", "ExampleFile", [ExampleParams]]
 if ( addonTFAR || addonACRE ) then { ["Diary", "Signal", _signal] call ARTR_fnc_briefingFile; };
-private _intel = ["Diary", "Intel", "Intel.txt",[_buildingText,_enemySquadsText,_wireCutterText]] call ARTR_fnc_briefingFile;
-private _mission = ["Diary", "Mission", "Mission.txt"] call ARTR_fnc_briefingFile;
-private _situation = ["Diary", "Situation", "Situation.txt"] call ARTR_fnc_briefingFile;
-private _background = ["Diary", "Background", "Background.txt"] call ARTR_fnc_briefingFile;
+["Diary", "Intel", "Intel.txt",[_buildingText,_enemySquadsText,_wireCutterText]] call ARTR_fnc_briefingFile;
+["Diary", "Mission", "Mission.txt"] call ARTR_fnc_briefingFile;
+["Diary", "Situation", "Situation.txt"] call ARTR_fnc_briefingFile;
+["Diary", "Background", "Background.txt"] call ARTR_fnc_briefingFile;
 
 //Add diary subject and entries for gameplay logic not in-universe
 player createDiarySubject ["Info", "Scenario Info"];
-_startPos = ["Info", "Setup logic", "StartPosition.txt"] call ARTR_fnc_briefingFile;
+["Info", "Setup logic", "StartPosition.txt"] call ARTR_fnc_briefingFile;
 if (addonTFAR) then
 {
-	private _TFARHearing = ["Info", "Setup logic", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
+	["Info", "Setup logic", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
 };
