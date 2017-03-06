@@ -4,7 +4,7 @@ params [
 
 if (side _unit == east) then {
 	//add explosives equal to half the boxes to the infiltrators
-	_bomb_amount = ( (count boxes / 2) / _unitsNumber east );
+	_bomb_amount = ( (count boxes / 2) / playersNumber east );
 	if (_unit == leader group _unit) then {
 		_bomb_amount = ceil _bomb_amount;
 	} else {
