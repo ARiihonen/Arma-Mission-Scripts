@@ -48,4 +48,6 @@ switch (side player) do
 	};
 };
 
-call ARTR_fnc_playerGearByMod;
+waitUntil { time > 0 };
+
+[player] call ARTR_fnc_modGear;

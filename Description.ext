@@ -10,7 +10,7 @@ overviewText = "CSAT divers attempt to tag hidden FIA equipment stashes to gain 
 //Loading screen texts and picture for loading the mission
 OnLoadName = "TvT10 Phantoms";
 OnLoadMission = "Sometimes the greatest victories are achieved without a single shot";
-//loadscreen = "";
+loadscreen = "files\pictures\loadscreen.paa";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
 disabledai = 1; //Disable AI taking over un-taken player slots
@@ -152,6 +152,12 @@ class CfgFunctions
 {
 	class ARTR
 	{
+		class eden
+		{
+			class setConditions {};
+			class setIrregularGearEden {};
+		};
+
 		class preinit
 		{
 			class missionSettings { preInit = 1; };
@@ -184,7 +190,25 @@ class CfgFunctions
 
 		class gear
 		{
-			class playerGearByMod {};
+			class giveMagazines {};
+			class modGear {};
+			class switchBackpack {};
+			class switchHandgun {};
+			class switchPrimaryWeapon {};
+			class switchSecondaryWeapon {};
+			class switchUniform {};
+			class switchVest {};
+		};
+
+		class irregulars
+		{
+			class getIrregularClothes {};
+			class getIrregularThing {};
+			class irregularClothSets {};
+			class irregularCollections {};
+			class irregularGearSets { preInit = 1; };
+			class setIrregularClothes {};
+			class setIrregularGear {};
 		};
 
 		class missionLogic
@@ -367,4 +391,17 @@ class CfgAISkills
 	reloadSpeed[] = {1, 1, 1, 1};
 	spotDistance[] = {1, 1, 1, 1};
 	spotTime[] = {1, 1, 1, 1};
+};
+
+class Cfg3DEN
+{
+	class EventHandlers
+	{
+		class ARTR
+		{
+			OnMissionLoad = "call ARTR_fnc_irregularGearSets;";
+			OnMissionNew = "call ARTR_fnc_irregularGearSets;";
+			OnMissionSave = "call ARTR_fnc_irregularGearSets;";
+		};
+	};
 };

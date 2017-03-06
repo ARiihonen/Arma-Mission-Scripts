@@ -66,5 +66,5 @@ if ( _end_red find "Victory" >= 0 ) then {
 	};
 } forEach (allUnits select { side _x == east } );
 
-_end_blu remoteExecCall ["ARTR_fnc_clientEnding", west, true];
-_end_red remoteExecCall ["ARTR_fnc_clientEnding", east, true];
+[_end_blu] remoteExecCall ["ARTR_fnc_clientEnding", west, true];
+[_end_red] remoteExecCall ["ARTR_fnc_clientEnding", east, true];
