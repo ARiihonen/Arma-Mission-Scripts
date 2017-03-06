@@ -4,18 +4,18 @@ Creates a diary record with optional variables to dynamically modify the briefin
 Parameters:
 	0: DiarySubject (defined elsewhere). STRING
 	1: Record name. STRING
-	2: File path to .txt file. STRING
+	2: File name in files/briefing STRING
 	3: List of optional parameters to format the txt. ARRAY
 */
 
 params [
 	["_subject","Diary",[""]],
 	["_name", "No Name", [""]],
-	["_filePath", "Error.txt", [""]],
+	["_fileName", "Error.txt", [""]],
 	["_optionals", [], [[]]]
 ];
 
-private _filePath = "files\briefing\%1" + _filePath;
+private _filePath = "files\briefing\" + _fileName;
 
 private _formatParams = "[LoadFile _filePath";
 {
