@@ -2,10 +2,10 @@ params [
 	["_unit", player, [objNull]]
 ];
 
-//If MNP Uniforms: _units are finnish and get: AK-12 OR (if NIArms AKs): RK-62, if RHS: ESS goggles, glock17
+//If MNP Uniforms and param is right: _units are finnish and get: AK-12 OR (if NIArms AKs): RK-62, if RHS: ESS goggles, glock17
 
 //Check for MNP Uniforms, give MNP Finnish uniforms if they are there
-if ("MNP_MIXR_Config" call ARTR_fnc_checkMod) then
+if ("MNP_MIXR_Config" call ARTR_fnc_checkMod && ("GearPreference" call BIS_fnc_getParamValue == 1) ) then
 {
 	[_unit,(selectRandom ["MNP_CombatUniform_Fin_A","MNP_CombatUniform_Fin_B"])] call ARTR_fnc_replaceUniform;
 	[_unit,(selectRandom ["MNP_Vest_FIN_1","MNP_Vest_FIN_2"])] call ARTR_fnc_replaceVest;

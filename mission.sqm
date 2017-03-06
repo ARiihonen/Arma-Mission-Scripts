@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=361;
+		nextID=383;
 	};
 	class Camera
 	{
-		pos[]={13290.73,214.09062,11855.615};
-		dir[]={0.49154809,-0.44743067,0.74727231};
-		up[]={0.24591571,0.89422536,0.37385538};
-		aside[]={0.83560383,-1.5317928e-006,-0.54964805};
+		pos[]={12378.645,21.729433,12916.451};
+		dir[]={0.39549723,-0.37965262,-0.83646435};
+		up[]={0.16231449,0.92501932,-0.34328353};
+		aside[]={-0.9041962,-1.3601966e-006,-0.42752454};
 	};
 };
 binarizationWanted=0;
@@ -42,7 +42,10 @@ addons[]=
 	"A3_Weapons_F_Exp_Rifles_AKM",
 	"A3_Weapons_F_Exp",
 	"A3_Weapons_F",
+	"A3_Characters_F_Exp",
 	"A3_Weapons_F_Items",
+	"A3_Characters_F_Heads",
+	"A3_Characters_F_Exp_Headgear",
 	"A3_Structures_F_EPA_Items_Tools",
 	"A3_Structures_F_Civ_Constructions",
 	"A3_Structures_F_Items_Electronics",
@@ -66,7 +69,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=17;
 		class Item0
 		{
 			className="A3_Boat_F_Gamma";
@@ -125,54 +128,61 @@ class AddonsMetaData
 		};
 		class Item8
 		{
+			className="A3_Characters_F_Exp";
+			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item9
+		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item9
+		class Item10
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item10
+		class Item11
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item11
+		class Item12
 		{
 			className="A3_Weapons_F_Mark";
 			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item12
+		class Item13
 		{
 			className="A3_Air_F_Heli";
 			name="Arma 3 Helicopters - Aircrafts";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item13
+		class Item14
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item15
+		class Item16
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
@@ -619,7 +629,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -633,7 +643,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -673,7 +683,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_oli";
 								};
 							};
 							id=207;
@@ -706,7 +716,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -720,7 +730,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -760,7 +770,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=208;
@@ -793,7 +802,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -807,7 +816,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -847,7 +856,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_ShemagOpen_khk";
 								};
 							};
 							id=209;
@@ -880,7 +889,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -894,7 +903,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -934,7 +943,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_blk";
 								};
 							};
 							id=210;
@@ -979,7 +988,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerrilla_6_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -993,7 +1002,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_cbr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -1033,7 +1042,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_blk";
 								};
 							};
 							id=733;
@@ -1065,7 +1074,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -1079,7 +1088,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -1119,7 +1128,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Blue";
+									headgear="H_Watchcap_cbr";
 								};
 							};
 							id=735;
@@ -1228,7 +1238,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -1242,7 +1252,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_brn";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -1282,7 +1292,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Watchcap_khk";
 								};
 							};
 							id=741;
@@ -1314,7 +1324,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerrilla_6_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -1328,7 +1338,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -1368,7 +1378,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Blue";
+									headgear="H_Watchcap_cbr";
 								};
 							};
 							id=742;
@@ -1714,7 +1725,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerrilla_6_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -1728,7 +1739,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_cbr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -1768,7 +1779,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Cap_grn";
 								};
 							};
 							id=198;
@@ -1802,7 +1813,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_3";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -1816,7 +1827,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -1856,7 +1867,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_oli";
 								};
 							};
 							id=202;
@@ -1890,7 +1901,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -1904,7 +1915,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -1944,7 +1955,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=200;
@@ -1978,7 +1988,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -1992,7 +2002,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -2032,7 +2042,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_khk";
+									headgear="H_Watchcap_cbr";
 								};
 							};
 							id=204;
@@ -2078,7 +2089,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -2092,7 +2103,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -2132,7 +2143,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_blk";
+									headgear="H_Watchcap_khk";
 								};
 							};
 							id=745;
@@ -2164,7 +2176,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -2218,7 +2230,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Red";
 								};
 							};
 							id=746;
@@ -2325,7 +2337,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -2339,7 +2351,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -2379,7 +2391,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=749;
@@ -2411,7 +2422,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -2425,7 +2436,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -2465,7 +2476,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Blue";
 								};
 							};
 							id=750;
@@ -2798,7 +2809,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_3";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -2812,7 +2823,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -2852,7 +2863,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_Red";
+									headgear="H_MilCap_mcamo";
 								};
 							};
 							id=213;
@@ -2885,7 +2897,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -2899,7 +2911,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -2939,7 +2951,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=214;
@@ -2972,7 +2983,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -2986,7 +2997,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -3026,7 +3037,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=215;
@@ -3059,7 +3069,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -3073,7 +3083,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -3113,7 +3123,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Green";
+									headgear="H_Bandanna_gry";
 								};
 							};
 							id=216;
@@ -3158,7 +3169,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -3172,7 +3183,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -3212,7 +3223,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_oli";
+									headgear="H_Bandanna_cbr";
 								};
 							};
 							id=753;
@@ -3244,7 +3256,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -3258,7 +3270,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -3298,7 +3310,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_BlackWhite";
 								};
 							};
 							id=754;
@@ -3394,7 +3406,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -3448,7 +3460,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=757;
@@ -3480,7 +3491,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -3494,7 +3505,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -3534,7 +3545,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_blu";
 								};
 							};
 							id=758;
@@ -3866,7 +3877,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -3880,7 +3891,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -3920,7 +3931,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_shades";
+									headgear="H_MilCap_ocamo";
 								};
 							};
 							id=219;
@@ -3953,7 +3965,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -3967,7 +3979,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -4007,7 +4019,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=220;
@@ -4040,7 +4051,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -4094,7 +4105,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Watchcap_cbr";
 								};
 							};
 							id=221;
@@ -4128,7 +4139,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -4142,7 +4153,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -4182,7 +4193,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_khk";
+									headgear="H_Watchcap_blk";
 								};
 							};
 							id=222;
@@ -4227,7 +4239,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -4241,7 +4253,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -4281,7 +4293,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=761;
@@ -4313,7 +4324,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -4327,7 +4338,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -4367,7 +4378,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_shades";
 								};
 							};
 							id=762;
@@ -4475,7 +4486,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -4489,7 +4500,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -4529,7 +4540,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_ShemagOpen_tan";
 								};
 							};
 							id=765;
@@ -4561,7 +4572,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla1_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -4575,7 +4586,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -4615,7 +4626,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_oli";
+									headgear="H_MilCap_mcamo";
 								};
 							};
 							id=766;
@@ -4960,7 +4972,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -4974,7 +4986,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -5014,7 +5026,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=225;
@@ -5047,7 +5058,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -5061,7 +5072,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -5101,7 +5112,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_blk";
+									headgear="H_Cap_tan";
 								};
 							};
 							id=226;
@@ -5134,7 +5146,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -5148,7 +5160,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -5188,7 +5200,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Black";
 								};
 							};
 							id=227;
@@ -5221,7 +5233,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -5235,7 +5247,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_cbr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -5275,7 +5287,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=228;
@@ -5320,7 +5331,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -5334,7 +5345,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -5374,7 +5385,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_sgg";
 								};
 							};
 							id=769;
@@ -5406,7 +5417,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -5420,7 +5431,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -5460,7 +5471,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Green";
 								};
 							};
 							id=770;
@@ -5568,7 +5579,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -5582,7 +5593,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -5622,7 +5633,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=773;
@@ -5654,7 +5664,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerrilla_6_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -5668,7 +5678,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -5708,7 +5718,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_mcamo";
 								};
 							};
 							id=774;
@@ -6051,7 +6061,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -6065,7 +6075,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -6105,7 +6115,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=231;
@@ -6139,7 +6148,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_3";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -6153,7 +6162,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -6193,7 +6202,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=232;
@@ -6226,7 +6234,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -6240,7 +6248,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -6280,7 +6288,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_MilCap_tna_F";
 								};
 							};
 							id=233;
@@ -6314,7 +6322,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -6328,7 +6336,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -6368,7 +6376,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_Blackyellow";
+									headgear="H_Bandanna_sand";
 								};
 							};
 							id=234;
@@ -6414,7 +6423,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -6428,7 +6437,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -6468,7 +6477,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Blue";
 								};
 							};
 							id=777;
@@ -6501,7 +6510,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -6515,7 +6524,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -6555,7 +6564,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_tan";
 								};
 							};
 							id=778;
@@ -6663,7 +6672,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -6677,7 +6686,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -6717,7 +6726,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_tan";
 								};
 							};
 							id=781;
@@ -6749,7 +6758,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -6763,7 +6772,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_cbr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -6803,7 +6812,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_MilCap_gry";
 								};
 							};
 							id=782;
@@ -7594,7 +7603,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_leader";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -7608,7 +7617,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_PlateCarrierIA1_dgtl";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -7648,12 +7657,55 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Aviator";
+									headgear="H_MilCap_dgtl";
 								};
 							};
 							id=675;
 							type="I_G_officer_F";
 							atlOffset=-0.058689117;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="face";
+									expression="_this setface _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="GreekHead_A3_03";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="unitName";
+									expression="_this setname _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 						class Item1
 						{
@@ -7682,7 +7734,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -7696,7 +7748,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -7736,7 +7788,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_ShemagOpen_khk";
 								};
 							};
 							id=676;
@@ -7769,7 +7821,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -7783,7 +7835,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -7823,7 +7875,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=677;
@@ -7857,7 +7908,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -7871,7 +7922,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -7911,7 +7962,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_mcamo";
 								};
 							};
 							id=678;
@@ -7944,7 +7995,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -7998,7 +8049,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_mcamo";
 								};
 							};
 							id=679;
@@ -8031,7 +8082,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8045,7 +8096,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8085,7 +8136,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=680;
@@ -8119,7 +8169,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8133,7 +8183,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8173,7 +8223,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Black";
 								};
 							};
 							id=681;
@@ -8206,7 +8256,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8220,7 +8270,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8260,7 +8310,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_shades";
 								};
 							};
 							id=682;
@@ -8305,7 +8355,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_3";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8319,7 +8369,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8359,7 +8409,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_Checkered";
+									headgear="H_Bandanna_camo";
 								};
 							};
 							id=684;
@@ -8391,7 +8442,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8405,7 +8456,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8445,7 +8496,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Watchcap_cbr";
 								};
 							};
 							id=685;
@@ -8477,7 +8528,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_3";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8491,7 +8542,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8531,7 +8582,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_oli";
+									headgear="H_MilCap_dgtl";
 								};
 							};
 							id=686;
@@ -8563,7 +8615,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8577,7 +8629,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_cbr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8617,7 +8669,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_blk";
 								};
 							};
 							id=687;
@@ -8725,7 +8777,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerrilla_6_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8739,7 +8791,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8779,7 +8831,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=689;
@@ -8811,7 +8862,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8825,7 +8876,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8865,7 +8916,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_oli";
 								};
 							};
 							id=690;
@@ -8897,7 +8948,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -8911,7 +8962,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_cbr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -8951,7 +9002,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_cbr";
 								};
 							};
 							id=691;
@@ -8983,7 +9034,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -9037,7 +9088,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Red";
+									headgear="H_MilCap_tna_F";
 								};
 							};
 							id=692;
@@ -9676,7 +9728,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_leader";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -9690,7 +9742,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_PlateCarrierIA1_dgtl";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -9730,12 +9782,55 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Aviator";
+									headgear="H_MilCap_dgtl";
 								};
 							};
 							id=636;
 							type="I_G_officer_F";
 							atlOffset=3.8146973e-006;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="face";
+									expression="_this setface _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="GreekHead_A3_03";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="unitName";
+									expression="_this setname _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 						class Item1
 						{
@@ -9764,7 +9859,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -9778,7 +9873,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_brn";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -9818,7 +9913,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_oli";
+									headgear="H_Bandanna_gry";
 								};
 							};
 							id=650;
@@ -9851,7 +9947,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -9865,7 +9961,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -9905,7 +10001,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=648;
@@ -9938,7 +10033,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -9952,7 +10047,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -9992,7 +10087,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_Red";
+									headgear="H_Watchcap_cbr";
 								};
 							};
 							id=646;
@@ -10025,7 +10121,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10039,7 +10135,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -10079,7 +10175,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=644;
@@ -10113,7 +10208,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10127,7 +10222,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -10167,7 +10262,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Watchcap_blk";
 								};
 							};
 							id=642;
@@ -10200,7 +10295,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10214,7 +10309,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -10254,7 +10349,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=640;
@@ -10287,7 +10381,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla1_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10301,7 +10395,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_cbr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -10341,7 +10435,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_sand";
 								};
 							};
 							id=638;
@@ -10386,7 +10480,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10400,7 +10494,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_cbr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -10440,7 +10534,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_oli";
 								};
 							};
 							id=652;
@@ -10471,7 +10565,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10485,7 +10579,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -10525,7 +10619,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=654;
@@ -10557,7 +10650,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10571,7 +10664,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -10611,7 +10704,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_BlackWhite";
 								};
 							};
 							id=656;
@@ -10643,7 +10736,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10657,7 +10750,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -10697,7 +10790,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_oli";
 								};
 							};
 							id=658;
@@ -10792,7 +10885,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10846,7 +10939,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Cap_grn";
 								};
 							};
 							id=660;
@@ -10878,7 +10971,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10892,7 +10985,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -10932,7 +11025,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=661;
@@ -10964,7 +11056,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -10978,7 +11070,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -11018,7 +11110,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_blk";
+									headgear="H_Cap_blk";
 								};
 							};
 							id=662;
@@ -11051,7 +11144,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla1_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -11065,7 +11158,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -11105,7 +11198,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_tan";
+									headgear="H_Watchcap_cbr";
 								};
 							};
 							id=663;
@@ -13347,7 +13441,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -13361,7 +13455,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -13401,7 +13495,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=838;
@@ -13433,7 +13526,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -13447,7 +13540,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -13487,7 +13580,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_gry";
 								};
 							};
 							id=840;
@@ -13519,7 +13612,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -13533,7 +13626,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -13573,7 +13666,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Blue";
 								};
 							};
 							id=842;
@@ -13604,7 +13697,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -13618,7 +13711,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -13658,7 +13751,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_blu";
 								};
 							};
 							id=844;
@@ -13791,7 +13884,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -13805,7 +13898,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -13845,7 +13938,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=846;
@@ -13877,7 +13969,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -13891,7 +13983,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -13931,7 +14023,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=847;
@@ -13962,7 +14053,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14016,7 +14107,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_camo";
 								};
 							};
 							id=848;
@@ -14047,7 +14138,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla1_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14061,7 +14152,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -14101,7 +14192,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=849;
@@ -14192,7 +14282,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14206,7 +14296,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -14246,7 +14336,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=851;
@@ -14278,7 +14367,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14292,7 +14381,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -14332,7 +14421,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=852;
@@ -14363,7 +14451,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14377,7 +14465,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -14417,7 +14505,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=853;
@@ -14448,7 +14535,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14462,7 +14549,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -14502,7 +14589,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=854;
@@ -14599,7 +14685,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14613,7 +14699,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -14653,7 +14739,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Cap_grn";
 								};
 							};
 							id=856;
@@ -14684,7 +14770,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14738,7 +14824,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_Blackyellow";
 								};
 							};
 							id=857;
@@ -14769,7 +14855,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerrilla_6_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14823,7 +14909,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Blue";
 								};
 							};
 							id=858;
@@ -14854,7 +14940,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_3";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -14868,7 +14954,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -14908,7 +14994,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_MilCap_mcamo";
 								};
 							};
 							id=859;
@@ -15005,7 +15091,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15019,7 +15105,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15059,7 +15145,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=861;
@@ -15090,7 +15175,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15104,7 +15189,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15144,7 +15229,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_BlackWhite";
 								};
 							};
 							id=862;
@@ -15175,7 +15260,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_5_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15189,7 +15274,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15229,7 +15314,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=863;
@@ -15260,7 +15344,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15274,7 +15358,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_rgr";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15314,7 +15398,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Shades_Blue";
 								};
 							};
 							id=864;
@@ -15411,7 +15495,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15425,7 +15509,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15465,7 +15549,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_blk";
 								};
 							};
 							id=866;
@@ -15496,7 +15580,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15510,7 +15594,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15550,7 +15634,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Balaclava_oli";
 								};
 							};
 							id=867;
@@ -15581,7 +15665,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15595,7 +15679,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_brn";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15635,7 +15719,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=868;
@@ -15666,7 +15749,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Para_1_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15680,7 +15763,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15720,7 +15803,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Bandanna_sgg";
 								};
 							};
 							id=869;
@@ -15805,7 +15888,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_2_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15819,7 +15902,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_blk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15859,7 +15942,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Bandanna_beast";
+									headgear="H_Cap_grn";
 								};
 							};
 							id=897;
@@ -15906,7 +15990,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_3_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -15920,7 +16004,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -15960,7 +16044,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Watchcap_camo";
 								};
 							};
 							id=899;
@@ -16007,7 +16091,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -16021,7 +16105,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_camo";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -16061,7 +16145,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_Checkered";
+									headgear="H_Watchcap_cbr";
 								};
 							};
 							id=901;
@@ -16108,7 +16193,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla1_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -16122,7 +16207,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_Chestrig_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -16162,7 +16247,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_MilCap_tna_F";
 								};
 							};
 							id=903;
@@ -16209,7 +16294,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_3";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -16223,7 +16308,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_BandollierB_oli";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -16263,7 +16348,6 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
 								};
 							};
 							id=905;
@@ -16310,7 +16394,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_BG_Guerilla2_2";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -16364,7 +16448,8 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									goggles="G_Sport_Red";
+									headgear="H_Cap_tan";
 								};
 							};
 							id=907;
@@ -16411,7 +16496,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_IG_Guerilla1_1";
+										typeName="U_I_C_Soldier_Bandit_4_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -16425,7 +16510,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_Chestrig_oli";
+										typeName="V_TacVest_khk";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -16465,7 +16550,7 @@ class Mission
 									map="ItemMap";
 									compass="ItemCompass";
 									watch="ItemWatch";
-									headgear="H_Shemag_olive";
+									headgear="H_Cap_grn";
 								};
 							};
 							id=909;

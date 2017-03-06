@@ -44,6 +44,18 @@ class Header
 	maxPlayers = 16;
 };
 
+//Parameters, accessible from the role selection screen and used to switch between pre-defined options for the mission (time of day, gear, headless client). Parameters are in an array called paramsArray.
+//So, to check, refer to paramsArray select i, where i is array index (starting with 0)
+class Params
+{
+	class GearPreference {
+		title = "Gear Preference";
+		values[] = {0,1};
+		texts[] = {"American", "Finnish"};
+		default = 1;
+	};
+};
+
 class ACE_Settings
 {
 	#include "aceSettings.hpp"
