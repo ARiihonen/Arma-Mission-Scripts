@@ -7,8 +7,8 @@ params [
 //Check for MNP Uniforms, give MNP Finnish uniforms if they are there
 if ("MNP_MIXR_Config" call ARTR_fnc_checkMod && ("GearPreference" call BIS_fnc_getParamValue == 1) ) then
 {
-	[_unit,(selectRandom ["MNP_CombatUniform_Fin_A","MNP_CombatUniform_Fin_B"])] call ARTR_fnc_replaceUniform;
-	[_unit,(selectRandom ["MNP_Vest_FIN_1","MNP_Vest_FIN_2"])] call ARTR_fnc_replaceVest;
+	[_unit,(selectRandom ["MNP_CombatUniform_Fin_A","MNP_CombatUniform_Fin_B"])] call ARTR_fnc_switchUniform;
+	[_unit,(selectRandom ["MNP_Vest_FIN_1","MNP_Vest_FIN_2"])] call ARTR_fnc_switchVest;
 	_unit addHeadgear "MNP_Helmet_FIN_T";
 
 	//Remove primary weapon and its magazines, since it is going to be changed
@@ -47,11 +47,13 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod && ("GearPreference" call BIS_fnc_g
 
 		if (_rhsRUS) then
 		{
-			for "_i" from 1 to 2 do { _unit addItemToVest "rhs_100Rnd_762x54mmR_green"; };
+			_unit addItemToVest "rhs_100Rnd_762x54mmR_green";
 			_unit addWeapon "rhs_weap_pkm";
+			_unit addItemToVest "rhs_100Rnd_762x54mmR_green";
 		} else {
-			for "_i" from 1 to 2 do { _unit addItemToVest "150Rnd_762x54_Box_Tracer"; };
+			_unit addItemToVest "150Rnd_762x54_Box_Tracer";
 			_unit addWeapon "LMG_Zafir_F";
+			_unit addItemToVest "150Rnd_762x54_Box_Tracer";
 		};
 	};
 

@@ -16,7 +16,7 @@ saving = 0; //Set saving to 0 so that you can exit the mission without saving an
 disabledai = 1; //Disable AI taking over un-taken player slots
 
 //Default respawn options
-respawn = "GROUP";
+respawn = "BASE";
 respawnDelay = 5;
 respawnDialog = 0;
 respawnOnStart = 0;

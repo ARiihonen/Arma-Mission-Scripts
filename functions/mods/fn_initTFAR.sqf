@@ -37,28 +37,20 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 	TF_defaultEastAirborneRadio = "tf_mr6000l";
 
 
-	["CBA_settings_setSettingMission", ["TF_no_auto_long_range_radio",_autoLR,true]] call CBA_fnc_localEvent;
-	["CBA_settings_setSettingMission", ["TF_give_personal_radio_to_regular_soldier",_gruntUpgrade,true]] call CBA_fnc_localEvent;
-	["CBA_settings_setSettingMission", ["TF_give_microdagr_to_soldier",_microDagr,true]] call CBA_fnc_localEvent;
-	["CBA_settings_setSettingMission", ["TF_same_sw_frequencies_for_side",_sameSW,true]] call CBA_fnc_localEvent;
-	["CBA_settings_setSettingMission", ["TF_same_lr_frequencies_for_side",_sameLR,true]] call CBA_fnc_localEvent;
-	["CBA_settings_setSettingMission", ["TF_same_dd_frequencies_for_side",_sameDD,true]] call CBA_fnc_localEvent;
-
-	/*
 	[
 		"CBA_beforeSettingsInitialized",
 		{
-			["CBA_settings_setSettingMission", ["TF_no_auto_long_range_radio",ARTR_TFAR_autoLR,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_give_personal_radio_to_regular_soldier",ARTR_TFAR_gruntUpgrade,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_give_microdagr_to_soldier",ARTR_TFAR_microDagr,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_same_sw_frequencies_for_side",ARTR_TFAR_sameSW,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_same_lr_frequencies_for_side",ARTR_TFAR_sameLR,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_same_dd_frequencies_for_side",ARTR_TFAR_sameDD,true]] call CBA_fnc_localEvent;
+			["CBA_settings_setSettingMission", ["TF_no_auto_long_range_radio",_autoLR,true]] call CBA_fnc_localEvent;
+			["CBA_settings_setSettingMission", ["TF_give_personal_radio_to_regular_soldier",_gruntUpgrade,true]] call CBA_fnc_localEvent;
+			["CBA_settings_setSettingMission", ["TF_give_microdagr_to_soldier",_microDagr,true]] call CBA_fnc_localEvent;
+			["CBA_settings_setSettingMission", ["TF_same_sw_frequencies_for_side",_sameSW,true]] call CBA_fnc_localEvent;
+			["CBA_settings_setSettingMission", ["TF_same_lr_frequencies_for_side",_sameLR,true]] call CBA_fnc_localEvent;
+			["CBA_settings_setSettingMission", ["TF_same_dd_frequencies_for_side",_sameDD,true]] call CBA_fnc_localEvent;
 			["CBA_beforeSettingsInitialized",_thisId] call CBA_fnc_removeEventHandler;
 		},
 		[]
 	] call CBA_fnc_addEventHandlerArgs;
-	*/
+
 
 	["ARTR_receivedRadios", "OnRadiosReceived", { _this call ARTR_fnc_TFARRadiosAdded; }, player] call TFAR_fnc_addEventHandler;
 
