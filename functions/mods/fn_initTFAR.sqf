@@ -7,12 +7,12 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 	call compile preprocessFileLineNumbers "\task_force_radio\functions\common.sqf";
 
 	//General settings
-	private _autoLR = false; 			//automatically add backpack radio to leader
-	private _gruntUpgrade = true; 		//give personal radio to regular riflemen
-	private _microDagr = false;			//give microDAGR to regular riflemen
-	private _sameSW = true;				//same SW frequency for entire side
-	private _sameLR = true;				//same LR frequency for entire side
-	private _sameDD = true;				//same DD frequency for entire side
+	ARTR_TFAR_autoLR = false; 			//automatically add backpack radio to leader
+	ARTR_TFAR_gruntUpgrade = true; 		//give personal radio to regular riflemen
+	ARTR_TFAR_microDagr = false;			//give microDAGR to regular riflemen
+	ARTR_TFAR_sameSW = true;				//same SW frequency for entire side
+	ARTR_TFAR_sameLR = true;				//same LR frequency for entire side
+	ARTR_TFAR_sameDD = true;				//same DD frequency for entire side
 
 
 	//BLUFOR radios and channel settings
@@ -45,7 +45,7 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 			["CBA_settings_setSettingMission", ["TF_same_sw_frequencies_for_side",ARTR_TFAR_sameSW,true]] call CBA_fnc_localEvent;
 			["CBA_settings_setSettingMission", ["TF_same_lr_frequencies_for_side",ARTR_TFAR_sameLR,true]] call CBA_fnc_localEvent;
 			["CBA_settings_setSettingMission", ["TF_same_dd_frequencies_for_side",ARTR_TFAR_sameDD,true]] call CBA_fnc_localEvent;
-			["CBA_beforeSettingsInitialized",_thisId] call CBA_fnc_removeEventHandler;
+			["CBA_beforeSettingsInitialized",ARTR_TFAR_thisId] call CBA_fnc_removeEventHandler;
 		},
 		[]
 	] call CBA_fnc_addEventHandlerArgs;
