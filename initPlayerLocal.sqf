@@ -1,2 +1,5 @@
-//Runs on the client after server has initialised
-waitUntil { missionNamespace getVariable["ARTR_serverInit", false] };
+if (player == headlessClient) then
+{
+	waitUntil { missionNamespace getVariable ["ARTR_HCSET", false] };
+	call ARTR_fnc_initIndoorsBehaviour;
+};
