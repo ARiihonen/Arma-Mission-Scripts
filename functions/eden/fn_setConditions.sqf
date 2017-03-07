@@ -6,7 +6,10 @@ Params:
 	1: (Optional) Counter start position. INT
 */
 
-params[ ["_var_name","presenceArray",[""]], ["_counter",0,[0]] ];
+params[
+	["_var_name","presenceArray",[""]],
+	["_counter",0,[0]]
+];
 
 collect3DENHistory {
 	{
