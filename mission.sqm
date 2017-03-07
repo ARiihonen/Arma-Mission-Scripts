@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=115;
+		nextID=120;
 	};
 	class Camera
 	{
@@ -1853,7 +1853,7 @@ class Mission
 					};
 					id=181;
 					type="IG_supplyCrate_F";
-					atlOffset=0.00037765503;
+					atlOffset=0.0011196136;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1928,6 +1928,7 @@ class Mission
 						angles[]={0,2.1012542,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						init="_nul = boxes pushBack this;";
@@ -1935,7 +1936,7 @@ class Mission
 					};
 					id=183;
 					type="IG_supplyCrate_F";
-					atlOffset=3.2660007;
+					atlOffset=0.11003494;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2541,7 +2542,7 @@ class Mission
 				};
 			};
 			id=269;
-			atlOffset=4.67729;
+			atlOffset=4.6772938;
 		};
 		class Item5
 		{

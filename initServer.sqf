@@ -26,21 +26,21 @@ trigger_tracking setTriggerStatements [
 _uavEnding = missionNamespace getVariable ['uav_end', (60*60)];
 trigger_uavTen = [
 	"true",
-	"['UAVTimeout', ['10']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
+	"['UAVTimeout', ['10 minutes']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
 	""
 ] call ARTR_fnc_emptyTrigger;
 trigger_uavTen setTriggerTimeout [_uavEnding-10*60,_uavEnding-10*60,_uavEnding-10*60,false];
 
 trigger_uavFive = [
 	"true",
-	"['UAVTimeout', ['5']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
+	"['UAVTimeout', ['5 minutes']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
 	""
 ] call ARTR_fnc_emptyTrigger;
 trigger_uavFive setTriggerTimeout [_uavEnding-5*60,_uavEnding-5*60,_uavEnding-5*60,false];
 
 trigger_uavOne = [
 	"true",
-	"['UAVTimeout', ['1']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
+	"['UAVTimeout', ['1 minute']] remoteExecCall ['BIS_fnc_showNotification', east, false];",
 	""
 ] call ARTR_fnc_emptyTrigger;
 trigger_uavOne setTriggerTimeout [_uavEnding-1*60,_uavEnding-1*60,_uavEnding-1*60,false];
@@ -75,6 +75,10 @@ trigger_exfil = [
 	_x addEventHandler ["Hit", "_this call ARTR_fnc_defenderHit;"];
 	_x addEventHandler ["Killed", "_this call ARTR_fnc_defenderKilled;"];
 } forEach (allUnits select { side _x == west && !isPlayer _x });
+
+{
+	_x setVariable ["R3D_LOG_Disabled", true, true];
+} forEach boxes;
 
 //client inits wait for serverInit to be true before starting, to make sure all variables the server sets up are set up before clients try to refer to them (which would cause errors)
 missionNamespace setVariable["ARTR_serverInit", true, true];

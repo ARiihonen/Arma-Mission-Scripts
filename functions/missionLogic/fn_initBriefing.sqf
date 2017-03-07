@@ -7,10 +7,6 @@ player createDiarySubject ["Diary", "Diary"];
 
 _teamSuffix = if (side player == west) then { "Blu.txt"; } else { "Red.txt"; };
 
-_signal = "";
-if ( addonTFAR ) then { _signal = "SignalTFAR"; };
-if ( addonACRE ) then { _signal = "SignalACRE"; };
-
 _signal = _signal+_teamSuffix;
 _intel = "Intel"+_teamSuffix;
 _mission = "Mission"+_teamSuffix;
@@ -21,14 +17,13 @@ _uavEnd = ( (missionNamespace getVariable "uav_end") / 60);
 
 //Add new diary pages with ARTR_fnc_briefingFile.
 //If including variables, add them as a list to the end of the parameters list: ["ExampleSubject", "ExampleName", "ExampleFile", [ExampleParams]]
-if ( addonTFAR || addonACRE ) then { ["Diary", "Signal", _signal] call ARTR_fnc_briefingFile; };
 ["Diary", "Intel", _intel,[_truckStart,_uavEnd]] call ARTR_fnc_briefingFile;
 ["Diary", "Mission",_mission,[_truckStart]] call ARTR_fnc_briefingFile;
 ["Diary", "Situation", _situation,[_truckStart]] call ARTR_fnc_briefingFile;
 ["Diary", "Background", "Background.txt"] call ARTR_fnc_briefingFile;
 
 //Add diary subject and entries for gameplay logic
-player createDiarySubject ["Info", "Scenario Info"];
+player createDiarySubject ["Info", "<t color='#FF0000'>Scenario Info</t>"];
 
 _extraUAVInfo = "";
 if (missionNamespace getVariable ["extendedUAV",false]) then
@@ -46,5 +41,5 @@ if (missionNamespace getVariable ["extendedUAV",false]) then
 ["Info", "Mission Mechanics", "Mechanics.txt",[_truckStart,_uavEnd,_extraUAVInfo]] call ARTR_fnc_briefingFile;
 if (addonTFAR) then
 {
-	["Info", "Setup logic", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
+	["Info", "TFAR Hearing", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
 };

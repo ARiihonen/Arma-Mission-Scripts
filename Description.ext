@@ -37,7 +37,7 @@ ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
 
 //Game type stuff. Doesn't matter, but will get shown in mission select.
 class Header {
-	gameType = TDM;
+	gameType = Unknown;
 	minPlayers = 3;
 	maxPlayers = 10;
 };
@@ -111,38 +111,8 @@ class CfgDebriefingSections
 {
 	class PointsOPFOR
 	{
-		title = "Infiltrator score";
-		variable = "ARTR_pointsOPFOR";
-	};
-	class PointsBLUFOR
-	{
-		title = "Defender score";
-		variable = "ARTR_pointsBLUFOR";
-	};
-	class BoxesFine
-	{
-		title = "Stashes untouched";
-		variable = "ARTR_boxesFine";
-	};
-	class BoxesKilled
-	{
-		title = "Stashes destroyed";
-		variable = "ARTR_boxesDead";
-	};
-	class BoxesTracked
-	{
-		title = "Stashes tracked";
-		variable = "ARTR_boxesTracked";
-	};
-	class DeadDefenders
-	{
-		title = "Infiltrator kills";
-		variable = "ARTR_deadDefenders";
-	};
-	class DeadInfiltrators
-	{
-		title = "Defender kills";
-		variable = "ARTR_deadInfiltrators";
+		title = "MISSION STATISTICS";
+		variable = "ARTR_endStats";
 	};
 };
 
@@ -217,6 +187,7 @@ class CfgFunctions
 			class serverEnding {};
 			class clientEnding {};
 			class emptyTrigger {};
+			class infilMarker {};
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
 			class defenderHit {};
@@ -226,7 +197,6 @@ class CfgFunctions
 			class viewUAV {};
 			class createUAV {};
 			class trackerAction {};
-			class extendedUAV { postInit = 1; };
 			class maskRaid {};
 		};
 	};
@@ -366,8 +336,8 @@ class CfgNotifications
 	class UAVTimeout {
 		title = "UAV Alert";
 		iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
-		description = "%1 minutes remaining";
-		color[] = {0.7,1.0,0.3,1.0};
+		description = "%1 remaining";
+		color[] = {0.85,0.85,0,1.0};
 		sound = "taskCanceled";
 	};
 	class UAVEnd {

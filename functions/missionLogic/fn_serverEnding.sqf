@@ -7,12 +7,6 @@ _boxes_fine = count boxes - _boxes_compromised;
 _dead_infiltrators = { side (group _x) == east && !alive _x } count allUnits;
 _dead_defenders = missionNamespace getVariable ["murdered_defenders", 0];
 
-missionNamespace setVariable ["ARTR_boxesFine",str(_boxes_fine),true];
-missionNamespace setVariable ["ARTR_boxesDead",str(_boxes_destroyed),true];
-missionNamespace setVariable ["ARTR_boxesTagged",str(_boxes_tagged),true];
-missionNamespace setVariable ["ARTR_deadDefenders",str(_dead_defenders),true];
-missionNamespace setVariable ["ARTR_deadInfiltrators",str(_dead_infiltrators),true];
-
 _search = if (_boxes_destroyed * 2 < _dead_defenders) then { true; } else { false; };
 if ( { side _x == west } count playableUnits == 0) then {
 	_search = true;
@@ -20,9 +14,9 @@ if ( { side _x == west } count playableUnits == 0) then {
 
 diag_log format ["boxes tagged: %1, destroyed: %2, compromised: %3; dead infiltrators: %4, defenders: %5, search: %6", _boxes_tagged, _boxes_destroyed, _boxes_compromised, _dead_infiltrators, _dead_defenders, _search];
 
-_score_blu = (_dead_infiltrators*50) - ( _boxes_compromised/(count boxes)*100 ) - ( _dead_defenders/( _dead_defenders + ({ side _x == west } count playableUnits) ) * 100 );
+_score_blu = (_dead_infiltrators*50) - ( _boxes_compromised/(count boxes)*100 ) - ( _dead_defenders/({ side _x == west } count allPlayers) * 100 );
 
-_score_red = ( _boxes_tagged/(count boxes)*100 ) - (_dead_infiltrators*50) - ( _dead_defenders/( _dead_defenders + ({ side _x == west } count playableUnits) ) * 100 );
+_score_red = ( _boxes_tagged/(count boxes)*100 ) - (_dead_infiltrators*50) - ( _dead_defenders/({ side _x == west } count allPlayers) * 100 );
 if (!canMove insertion) then { _score_red = _score_red - 50; };
 
 {
@@ -37,8 +31,9 @@ if (!canMove insertion) then { _score_red = _score_red - 50; };
 	};
 } forEach allUnits;
 
-missionNamespace setVariable ["ARTR_pointsOPFOR",_score_red,true];
-missionNamespace setVariable ["ARTR_pointsBLUFOR",_score_blu,true];
+_endText = "SUPPLY BOX STATUS <br />Fine: " + str(_boxes_fine) + " Tagged: " + str(_boxes_tagged) + " Destroyed: " + str(_boxes_destroyed) + "<br /><br />PLAYER STATUS <br />Infiltrators killed: " + str(_dead_infiltrators) + " Defenders killed: " + str(_dead_defenders) + "<br /><br />SCORING <br />Infiltrators: " + str(_score_red) + "<br />Defenders: " + str(_score_blu);
+
+missionNamespace setVariable ["ARTR_endStats",_endText,true];
 
 _end_blu = if (_boxes_compromised < ((count boxes)/2)) then { "BlueVictory"; } else { "BlueLoss"; };
 if (_boxes_compromised == 0) then { _end_blu = "BlueVictoryAll"; };

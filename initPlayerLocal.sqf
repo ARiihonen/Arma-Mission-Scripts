@@ -39,6 +39,13 @@ switch (side player) do
 
 		//create camera
 		call ARTR_fnc_initUAV;
+
+		//trigger to set a marker to SDV position when disembarking
+		tr_SDVPlaced = [
+			"count crew infiltration <= 0",
+			"call ARTR_fnc_infilMarker;",
+			""
+		] call ARTR_fnc_emptyTrigger;
 	};
 
 	case west: {

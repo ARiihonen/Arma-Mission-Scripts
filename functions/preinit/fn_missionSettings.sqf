@@ -8,6 +8,11 @@ missionNamespace setVariable ["uav_end", _uav_end, false];
 
 boxes = [];
 
+if ( playersNumber east <= 1 || ("ExtendedUAV" call BIS_fnc_getParamValue) == 1 ) then
+{
+	missionNamespace setVariable ["ExtendedUAV", true];
+};
+
 if (isServer) then {
 	/*
 	Set any preInit-settings for the mission here, including randomizing unit presence variables using ARTR_fnc_randInt and ARTR_fnc_presenceArray

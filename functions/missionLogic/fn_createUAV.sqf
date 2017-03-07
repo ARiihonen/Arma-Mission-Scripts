@@ -38,3 +38,32 @@ fakeUAV camCommitPrepared 0;
 		fakeUAV camCommitPrepared 0;
 	};
 };
+
+//Extended UAV
+if (missionNamespace getVariable ["ExtendedUAV", false]) then
+{
+	_trackerLoop = [] spawn
+	{
+		while { missionNamespace getVariable ['uav_done', false] } do
+		{
+			{
+				if ( !(lineIntersects [getPos _x, getPos fakeUAV,_x]) ) then
+				{
+					if ( !(_x getVariable ["tracked", false]) ) then
+					{
+						_x setVariable ["tracked",true,true];
+					};
+					_x setVariable ["lastPos", visiblePosition _x, true];
+				} else {
+					if (_x getVariable ["tracked", false]) then
+					{
+						_x setVariable ["tracked",false,true];
+						_x setVariable ["trackLost",time,true];
+					};
+				};
+
+				sleep 0.5;
+			} forEach (allPlayers select { side _x == west });
+		};
+	};
+};
