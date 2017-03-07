@@ -5,9 +5,10 @@ Params:
 	0: Variable name of the condition array. STRING
 	1: (Optional) Counter start position. INT
 */
-
-_var_name = _this param [0,"presenceArray",[""]];
-_counter = _this param [1,0,[0]];
+params[
+	["_var_name","presenceArray",[""]],
+	["_counter",0,[0]]
+];
 
 collect3DENHistory {
 	{
