@@ -1,4 +1,4 @@
-if (isServer || player == headlessClient) then {
+if (isServer || (!isNil "headlessClient" && { player == headlessClient}) ) then {
 	{
 		_x setUnitPos "UP";
 		_x forceSpeed 0;

@@ -34,7 +34,7 @@ if ( addonTFAR || addonACRE ) then { ["Diary", "Signal", _signal] call ARTR_fnc_
 ["Diary", "Background", "Background.txt"] call ARTR_fnc_briefingFile;
 
 //Add diary subject and entries for gameplay logic not in-universe
-player createDiarySubject ["Info", "Scenario Info"];
+player createDiarySubject ["Info", "SCENARIO INFO"];
 ["Info", "Setup logic", "StartPosition.txt"] call ARTR_fnc_briefingFile;
 if (addonTFAR) then
 {
