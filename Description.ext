@@ -222,6 +222,7 @@ class CfgFunctions
 			class emptyTrigger {};
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
+			class punishEarlyClear {};
 			class advancePhase {};
 			class secondObjective {};
 		};

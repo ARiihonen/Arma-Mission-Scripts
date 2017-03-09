@@ -4,7 +4,7 @@ This runs on the server machine after objects have initialised in the map. Anyth
 
 //set weather
 0 setFog [0.5, 0.2, 12];
-(2*60*60) setFog [0,0,0];
+(1.5*60*60) setFog [0,0,0];
 
 //set Overwatch name if MNP then Ukko else Overwatch
 if ( "mnp_" call ARTR_fnc_checkMod ) then {
@@ -22,7 +22,7 @@ trigger_dead setTriggerTimeout [5, 5, 5, true];
 
 //Create trigger to advance phase when island cleared
 trigger_island = [
-	"triggerActivated trigger_islandCleared && triggerActivated trigger_islandSouth_1 && triggerActivated trigger_islandSouth_2 && triggerActivated trigger_islandNorth_1 && triggerActivated trigger_islandNorth_2",
+	"triggerActivated trigger_islandCleared && triggerActivated trigger_islandSouth_1 && triggerActivated trigger_islandSouth_2 && triggerActivated trigger_islandNorth_1 && triggerActivated trigger_islandNorth_2 && (missionNamespace getVariable ['mission_phase',0] == 0)",
 	"call ARTR_fnc_advancePhase;",
 	""
 ] call ARTR_fnc_emptyTrigger;

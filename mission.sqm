@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=965;
+		nextID=966;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=394;
+		nextID=449;
 	};
 	class Camera
 	{
-		pos[]={12378.645,21.729433,12916.451};
-		dir[]={0.39549723,-0.37965262,-0.83646435};
-		up[]={0.16231449,0.92501932,-0.34328353};
-		aside[]={-0.9041962,-1.3601966e-006,-0.42752454};
+		pos[]={14526.287,379.72861,11048.989};
+		dir[]={-0.3640863,-0.46080923,0.80943274};
+		up[]={-0.18903312,0.88748062,0.42025813};
+		aside[]={0.91202641,-5.2212272e-007,0.41023603};
 	};
 };
 binarizationWanted=0;
@@ -213,6 +213,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -244,25 +263,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
 				};
 			};
 		};
@@ -321,7 +321,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=41;
+		items=42;
 		class Item0
 		{
 			dataType="Object";
@@ -15948,14 +15948,14 @@ class Mission
 							};
 							id=897;
 							type="I_G_Soldier_F";
-							atlOffset=3.7339621;
+							atlOffset=2.5526276;
 						};
 					};
 					class Attributes
 					{
 					};
 					id=896;
-					atlOffset=3.7339621;
+					atlOffset=2.5526276;
 				};
 				class Item7
 				{
@@ -16049,14 +16049,14 @@ class Mission
 							};
 							id=899;
 							type="I_G_Soldier_F";
-							atlOffset=3.3789978;
+							atlOffset=2.8625059;
 						};
 					};
 					class Attributes
 					{
 					};
 					id=898;
-					atlOffset=3.3789978;
+					atlOffset=2.8625059;
 				};
 				class Item8
 				{
@@ -16074,7 +16074,7 @@ class Mission
 								angles[]={0,4.9656711,0};
 							};
 							side="Independent";
-							flags=3;
+							flags=7;
 							class Attributes
 							{
 								presenceCondition="27 in patrol_guys";
@@ -16151,14 +16151,14 @@ class Mission
 							};
 							id=901;
 							type="I_G_Soldier_F";
-							atlOffset=3.7360001;
+							atlOffset=0.00025749207;
 						};
 					};
 					class Attributes
 					{
 					};
 					id=900;
-					atlOffset=3.7360001;
+					atlOffset=0.00025749207;
 				};
 				class Item9
 				{
@@ -16682,7 +16682,9 @@ class Mission
 				{
 					dataType="Waypoint";
 					position[]={11579.735,23.701401,11907.5};
+					combat="CARELESS";
 					expCond="missionNamespace getVariable [""mission_phase"", 0] == 1";
+					expActiv="{" \n "    _x disableAI ""TARGET"";" \n "    _x disableAI ""AUTOTARGET"";" \n "    _x disableAI ""SUPPRESSION"";" \n "    _x disableAI ""COVER"";" \n "    _x disableAI ""AUTOCOMBAT"";" \n "} forEach (crew vehicle this);";
 					class Effects
 					{
 					};
@@ -16704,7 +16706,7 @@ class Mission
 					formation="COLUMN";
 					speed="NORMAL";
 					combat="SAFE";
-					expActiv="(vehicle this) land ""GET IN"";" \n "{" \n "    _x disableAI ""TARGET"";" \n "    _x disableAI ""AUTOTARGET"";" \n "    _x disableAI ""SUPPRESSION"";" \n "    _x disableAI ""COVER"";" \n "    _x disableAI ""AUTOCOMBAT"";" \n "} forEach (crew vehicle this);";
+					expActiv="(vehicle this) land ""GET IN"";";
 					class Effects
 					{
 					};
@@ -16739,7 +16741,7 @@ class Mission
 				class Item5
 				{
 					dataType="Waypoint";
-					position[]={15122.529,13.994573,11200.636};
+					position[]={15331.146,26.762428,11135.43};
 					expActiv="(vehicle this) land ""GET OUT"";";
 					class Effects
 					{
@@ -16747,7 +16749,7 @@ class Mission
 					showWP="NEVER";
 					id=962;
 					type="Move";
-					atlOffset=0.5;
+					atlOffset=0.4642868;
 					class AttachedTo
 					{
 						id=923;
@@ -16757,7 +16759,7 @@ class Mission
 				class Item6
 				{
 					dataType="Waypoint";
-					position[]={15122.529,14.494573,11200.636};
+					position[]={15331.146,27.262428,11135.43};
 					expCond="{ alive _x && vehicle _x == transportHelo } count playableUnits <= 0";
 					class Effects
 					{
@@ -16765,7 +16767,7 @@ class Mission
 					showWP="NEVER";
 					id=963;
 					type="Move";
-					atlOffset=1;
+					atlOffset=0.9642868;
 					class AttachedTo
 					{
 						id=923;
@@ -16863,16 +16865,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15122.529,13.494573,11200.636};
-				angles[]={6.2765174,0,0.11942901};
+				position[]={15331.146,26.262428,11135.43};
+				angles[]={0.012000273,0,0.081154868};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				name="helipad_lz";
 			};
 			id=923;
 			type="Land_HelipadEmpty_F";
+			atlOffset=-0.035713196;
 		};
 		class Item31
 		{
@@ -16886,14 +16890,14 @@ class Mission
 		class Item32
 		{
 			dataType="Marker";
-			position[]={15122.31,1.4543963e+037,11200.714};
+			position[]={15330.582,-2.6064744e-021,11135.583};
 			name="mrk_LZ";
 			text="LZ";
 			type="mil_circle";
 			colorName="ColorWEST";
 			alpha=0;
 			id=926;
-			atlOffset=1.4543963e+037;
+			atlOffset=-26.250427;
 		};
 		class Item33
 		{
@@ -17544,6 +17548,24 @@ class Mission
 			type="Empty";
 			id=960;
 			atlOffset=-19.593826;
+		};
+		class Item41
+		{
+			dataType="Trigger";
+			position[]={12807.394,0.0078725815,12931.741};
+			class Attributes
+			{
+				name="tr_rideMusic";
+				condition="{ isNull objectParent _x } count playableUnits == 0";
+				onActivation="switch (missionNamespace getVariable [""mission_phase"", 0]) do" \n "{" \n "    case 0: { playMusic ""AmbientTrack04a_F""; };" \n "    case 1: { 5 fadeMusic 1; playMusic ""LeadTrack03_F""; };" \n "};" \n "";
+				onDeactivation="5 fadeMusic 0;";
+				sizeA=0;
+				sizeB=0;
+				repeatable=1;
+			};
+			id=965;
+			type="EmptyDetector";
+			atlOffset=4.2969999;
 		};
 	};
 };

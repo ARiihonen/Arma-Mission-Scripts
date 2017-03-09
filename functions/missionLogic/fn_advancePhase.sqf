@@ -11,6 +11,8 @@ switch ( missionNamespace getVariable ["mission_phase", 0] ) do {
 
 			if ( count (allPlayers select { !alive _x }) == 0 ) then
 			{
+				//Make all enemies on the island run to the beach
+				call ARTR_fnc_punishEarlyClear;
 
 				//radio message if no players have died
 				[ukko,"newTask"] remoteExec ["sideRadio", 0, false];
