@@ -20,6 +20,21 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod && ("GearPreference" call BIS_fnc_g
 	_rhsUS = "rhsusf_c_weapons" call ARTR_fnc_checkMod;
 	_hlcAK = "hlcweapons_aks" call ARTR_fnc_checkMod;
 
+	//If RHS USF is on, add RHS ESS and Glock17, else just give default pistol
+	if (_rhsUS) then
+	{
+		//Switch to RHS ESS
+		_unit addGoggles "rhs_ess_black";
+
+		//Remove default handgun
+		{ _unit removeMagazines _x; } forEach (handgunMagazine _unit);
+		_unit removeWeapon (handgunWeapon _unit);
+
+		//Switch to RHS Glock17
+		for "_i" from 1 to 2 do { _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP"; };
+		_unit addWeapon "rhsusf_weap_glock17g4";
+	};
+
 	_weaponAdded = false;
 
 	//Check for marksman, give RHS SVD if exists, DMR if not
@@ -76,24 +91,10 @@ if ("MNP_MIXR_Config" call ARTR_fnc_checkMod && ("GearPreference" call BIS_fnc_g
 		};
 	};
 
-	//If RHS USF is on, add RHS ESS and Glock17, else just give default pistol
-	if (_rhsUS) then
+	//Check for assistant autorifleman, give backpack w/ PKM ammo if exists, otherwise w/ Zafir ammo
+	if (typeOf _unit find "_AAR_" >= 0) then
 	{
-		//Switch to RHS ESS
-		_unit addGoggles "rhs_ess_black";
-
-		//Remove default handgun
-		{ _unit removeMagazines _x; } forEach (handgunMagazine _unit);
-		_unit removeWeapon (handgunWeapon _unit);
-
-		//Switch to RHS Glock17
-		for "_i" from 1 to 2 do { _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP"; };
-		_unit addWeapon "rhsusf_weap_glock17g4";
-	};
-
-	//Check for autorifleman, give backpack w/ PKM ammo if exists, otherwise w/ Zafir ammo
-	if (typeOf _unit find "_A_" >= 0) then
-	{
+		removeBackpack _unit;
 		_unit addBackpack "B_Kitbag_rgr";
 
 		if (_rhsRUS) then

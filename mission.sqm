@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=449;
+		nextID=482;
 	};
 	class Camera
 	{
-		pos[]={14526.287,379.72861,11048.989};
-		dir[]={-0.3640863,-0.46080923,0.80943274};
-		up[]={-0.18903312,0.88748062,0.42025813};
-		aside[]={0.91202641,-5.2212272e-007,0.41023603};
+		pos[]={12429.875,23.663797,12855.322};
+		dir[]={0.57791525,-0.34201959,-0.74104482};
+		up[]={0.21034983,0.93966466,-0.26972696};
+		aside[]={-0.78859729,-1.5203841e-007,-0.61500198};
 	};
 };
 binarizationWanted=0;
@@ -213,25 +213,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -263,6 +244,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
 				};
 			};
 		};
@@ -15948,14 +15948,14 @@ class Mission
 							};
 							id=897;
 							type="I_G_Soldier_F";
-							atlOffset=2.5526276;
+							atlOffset=3.7339621;
 						};
 					};
 					class Attributes
 					{
 					};
 					id=896;
-					atlOffset=2.5526276;
+					atlOffset=3.7339621;
 				};
 				class Item7
 				{
@@ -16049,14 +16049,14 @@ class Mission
 							};
 							id=899;
 							type="I_G_Soldier_F";
-							atlOffset=2.8625059;
+							atlOffset=3.3789978;
 						};
 					};
 					class Attributes
 					{
 					};
 					id=898;
-					atlOffset=2.8625059;
+					atlOffset=3.3789978;
 				};
 				class Item8
 				{
@@ -16074,7 +16074,7 @@ class Mission
 								angles[]={0,4.9656711,0};
 							};
 							side="Independent";
-							flags=7;
+							flags=3;
 							class Attributes
 							{
 								presenceCondition="27 in patrol_guys";
@@ -16151,14 +16151,14 @@ class Mission
 							};
 							id=901;
 							type="I_G_Soldier_F";
-							atlOffset=0.00025749207;
+							atlOffset=3.7360001;
 						};
 					};
 					class Attributes
 					{
 					};
 					id=900;
-					atlOffset=0.00025749207;
+					atlOffset=3.7360001;
 				};
 				class Item9
 				{
