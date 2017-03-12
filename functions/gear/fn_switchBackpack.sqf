@@ -4,10 +4,10 @@ params [
 ];
 
 _ret = false;
-if (_uniform != "") then {
+if (_backpack != "") then {
 	private _items = backpackItems _unit;
 	removeBackpack _unit;
-	_unit addBackpack _uniform;
+	_unit addBackpack _backpack;
 
 	{
 		_unit addItemToBackpack _x;
