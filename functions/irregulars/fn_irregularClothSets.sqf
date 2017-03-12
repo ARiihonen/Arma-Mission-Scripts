@@ -2,7 +2,7 @@
 ARTR_irregularUniforms = [
 	[
 		"guerrilla",
-		["U_BG_Guerilla2_3","U_BG_Guerrilla_6_1","U_BG_Guerilla1_1","U_BG_Guerilla2_2","U_BG_Guerilla2_1"]
+		["U_BG_Guerilla2_3","U_BG_Guerrilla_6_1","U_BG_Guerilla1_1","U_BG_Guerilla2_2","U_BG_Guerilla2_1","U_I_G_resistanceLeader_F"]
 	],
 	[
 		"paramilitary",
