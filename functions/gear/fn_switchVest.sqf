@@ -4,7 +4,7 @@ params [
 ];
 
 _ret = false;
-if (_vest != "") then {
+if (_uniform != "") then {
 	private _items = vestItems _unit;
 	removeVest _unit;
 	_unit addVest _vest;

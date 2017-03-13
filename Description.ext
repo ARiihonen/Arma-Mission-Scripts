@@ -1,15 +1,15 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
-briefingName = "Description.ext Briefing Name";
+briefingName = "TVT12-25 Hostage Exchange";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
+overviewText = "Asymmetric TvT."; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "Description.ext On Load Name";
-OnLoadMission = "Description.ext On Load Mission";
+OnLoadName = "TVT12-25 Hostage Exchange";
+OnLoadMission = "Maybe the whole thing will go without a hitch...";
 loadscreen = "files\pictures\loadscreen.paa";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
@@ -39,14 +39,9 @@ ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
 //Game type stuff. Doesn't matter, but will get shown in mission select.
 class Header
 {
-	gameType = COOP;
-	minPlayers = 4;
-	maxPlayers = 18;
-};
-
-class ACE_Settings
-{
-	#include "aceSettings.hpp"
+	gameType = Unknown;
+	minPlayers = 12;
+	maxPlayers = 25;
 };
 
 //Mission ending states, used via BIS_fnc_endMission from end.sqf
@@ -151,7 +146,7 @@ class CfgFunctions
 			class serverEnding {};
 			class clientEnding {};
 			class emptyTrigger {};
-			class initBriefing { postInit = 1; };
+			class initBriefing { };
 			class JIPSetup { preInit = 1; };
 		};
 	};
