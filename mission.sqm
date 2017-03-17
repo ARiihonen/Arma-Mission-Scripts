@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=1;
@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=966;
+		nextID=967;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=493;
+		nextID=526;
 	};
 	class Camera
 	{
-		pos[]={12429.875,23.663797,12855.322};
-		dir[]={0.57791525,-0.34201959,-0.74104482};
-		up[]={0.21034983,0.93966466,-0.26972696};
-		aside[]={-0.78859729,-1.5203841e-007,-0.61500198};
+		pos[]={11560.178,30.31403,11914.317};
+		dir[]={0.87671649,-0.35404328,-0.32588103};
+		up[]={0.33190838,0.93518096,-0.12337396};
+		aside[]={-0.34844664,-8.9756213e-007,-0.93742502};
 	};
 };
 binarizationWanted=0;
@@ -63,7 +63,8 @@ addons[]=
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Ui_F",
 	"A3_Structures_F_Mil_Helipads",
-	"A3_Modules_F_StrategicMap"
+	"A3_Modules_F_StrategicMap",
+	"A3_Modules_F"
 };
 class AddonsMetaData
 {
@@ -75,119 +76,119 @@ class AddonsMetaData
 			className="A3_Boat_F_Gamma";
 			name="Arma 3 - Boats and Submersibles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item5
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item6
 		{
 			className="A3_Weapons_F_Exp";
 			name="Arma 3 Apex - Weapons and Accessories";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item7
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item8
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item9
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item10
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item11
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item12
 		{
 			className="A3_Weapons_F_Mark";
 			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item13
 		{
 			className="A3_Air_F_Heli";
 			name="Arma 3 Helicopters - Aircrafts";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item14
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item15
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item16
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -321,7 +322,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=42;
+		items=43;
 		class Item0
 		{
 			dataType="Object";
@@ -15948,14 +15949,14 @@ class Mission
 							};
 							id=897;
 							type="I_G_Soldier_F";
-							atlOffset=3.7339621;
+							atlOffset=2.5526276;
 						};
 					};
 					class Attributes
 					{
 					};
 					id=896;
-					atlOffset=3.7339621;
+					atlOffset=2.5526276;
 				};
 				class Item7
 				{
@@ -16049,14 +16050,14 @@ class Mission
 							};
 							id=899;
 							type="I_G_Soldier_F";
-							atlOffset=3.3789978;
+							atlOffset=2.8625059;
 						};
 					};
 					class Attributes
 					{
 					};
 					id=898;
-					atlOffset=3.3789978;
+					atlOffset=2.8625059;
 				};
 				class Item8
 				{
@@ -16074,7 +16075,7 @@ class Mission
 								angles[]={0,4.9656711,0};
 							};
 							side="Independent";
-							flags=3;
+							flags=7;
 							class Attributes
 							{
 								presenceCondition="27 in patrol_guys";
@@ -16151,14 +16152,14 @@ class Mission
 							};
 							id=901;
 							type="I_G_Soldier_F";
-							atlOffset=3.7360001;
+							atlOffset=0.00025749207;
 						};
 					};
 					class Attributes
 					{
 					};
 					id=900;
-					atlOffset=3.7360001;
+					atlOffset=0.00025749207;
 				};
 				class Item9
 				{
@@ -16682,9 +16683,12 @@ class Mission
 				{
 					dataType="Waypoint";
 					position[]={11579.735,23.701401,11907.5};
+					combatMode="BLUE";
+					formation="COLUMN";
+					speed="NORMAL";
 					combat="CARELESS";
 					expCond="missionNamespace getVariable [""mission_phase"", 0] == 1";
-					expActiv="{" \n "    _x disableAI ""TARGET"";" \n "    _x disableAI ""AUTOTARGET"";" \n "    _x disableAI ""SUPPRESSION"";" \n "    _x disableAI ""COVER"";" \n "    _x disableAI ""AUTOCOMBAT"";" \n "} forEach (crew vehicle this);";
+					expActiv="{" \n "    _x disableAI ""TARGET"";" \n "    _x disableAI ""AUTOTARGET"";" \n "    _x disableAI ""SUPPRESSION"";" \n "    _x disableAI ""COVER"";" \n "    _x disableAI ""AUTOCOMBAT"";" \n "    _x disableAI ""CHECKVISIBLE"";" \n "} forEach (crew vehicle this);" \n "" \n "(vehicle this) forceSpeed 10;";
 					class Effects
 					{
 					};
@@ -16702,10 +16706,6 @@ class Mission
 				{
 					dataType="Waypoint";
 					position[]={13506.872,2.5006647,12155.865};
-					combatMode="BLUE";
-					formation="COLUMN";
-					speed="NORMAL";
-					combat="SAFE";
 					expActiv="(vehicle this) land ""GET IN"";";
 					class Effects
 					{
@@ -16725,6 +16725,7 @@ class Mission
 					dataType="Waypoint";
 					position[]={13506.872,3.0006647,12155.865};
 					expCond="{ alive _x && vehicle _x != transportHelo } count playableUnits <= 0";
+					expActiv="[""BoardHelo"", ""SUCCEEDED"", true] call BIS_fnc_taskSetState;";
 					class Effects
 					{
 					};
@@ -16761,6 +16762,7 @@ class Mission
 					dataType="Waypoint";
 					position[]={15331.146,27.262428,11135.43};
 					expCond="{ alive _x && vehicle _x == transportHelo } count playableUnits <= 0";
+					expActiv="[""ClearAnother"", ""ASSIGNED"", true] call BIS_fnc_taskSetState;";
 					class Effects
 					{
 					};
@@ -17566,6 +17568,18 @@ class Mission
 			id=965;
 			type="EmptyDetector";
 			atlOffset=4.2969999;
+		};
+		class Item42
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12447.271,5.3715749,12831.974};
+			};
+			init="BIS_initRespawn_disconnect = -1;";
+			id=966;
+			type="Logic";
+			atlOffset=0.001999855;
 		};
 	};
 };
