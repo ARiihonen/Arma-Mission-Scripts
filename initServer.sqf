@@ -11,7 +11,7 @@ trigger_tracking = createTrigger ["EmptyDetector", [0,0,0], false];
 trigger_tracking setTriggerActivation ["NONE", "PRESENT", true];
 trigger_tracking setTriggerStatements [
 	"
-		{ alive _x && _x getVariable ['tracked', false] } count boxes >= ({ side (group _x) == west && isPlayer _x } count allUnits) / 2",
+		({ alive _x && _x getVariable ['tracked', false] } count boxes >= ({ side (group _x) == west && isPlayer _x } count allUnits) / 2) && (!(['MaskTask'] call BIS_fnc_taskExists) || {['MaskTask'] call BIS_fnc_taskState == 'SUCCEEDED'})",
 	"
 		['InfiltrateTask', 'SUCCEEDED', false] call BIS_fnc_taskSetState;
 		['TaskSucceeded', ['Minimum tracker amount met']] remoteExecCall ['BIS_fnc_showNotification', east, false];
