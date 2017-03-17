@@ -22,6 +22,8 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 	TF_defaultWestRiflemanRadio = "tf_rf7800str";
 	TF_defaultWestAirborneRadio = "tf_anarc210";
 
+	_defaultWestRadios = [TF_defaultWestPersonalRadio,TF_defaultWestRiflemanRadio,TF_defaultWestAirborneRadio];
+
 	//GREENFOR radios and channel settings
 	tf_guer_radio_code = "_independent";
 	TF_defaultGuerBackpack = "tf_anprc155";
@@ -29,12 +31,43 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 	TF_defaultGuerRiflemanRadio = "tf_anprc154";
 	TF_defaultGuerAirborneRadio = "tf_anarc164";
 
+	_defaultGuerRadios = [TF_defaultGuerPersonalRadio,TF_defaultGuerRiflemanRadio,TF_defaultGuerAirborneRadio];
+
 	//REDFOR radios and channel settings
 	tf_east_radio_code = "_opfor";
 	TF_defaultEastBackpack = "tf_mr3000";
 	TF_defaultEastPersonalRadio = "tf_fadak";
 	TF_defaultEastRiflemanRadio = "tf_pnr1000a";
 	TF_defaultEastAirborneRadio = "tf_mr6000l";
+
+	_defaultEastRadios = [TF_defaultEastPersonalRadio,TF_defaultEastRiflemanRadio,TF_defaultEastAirborneRadio];
+
+	switch (side player) do
+	{
+		case west:
+		{
+			ARTR_TF_defaultRadios = _defaultWestRadios;
+			ARTR_TF_defaultBackpack = TF_defaultWestBackpack;
+		};
+
+		case resistance:
+		{
+			ARTR_TF_defaultRadios = _defaultGuerRadios;
+			ARTR_TF_defaultBackpack = TF_defaultGuerBackpack;
+		};
+
+		case east:
+		{
+			ARTR_TF_defaultRadios = _defaultEastRadios;
+			ARTR_TF_defaultBackpack = TF_defaultEastBackpack;
+		};
+
+		default
+		{
+			ARTR_TF_defaultRadios = [];
+			ARTR_TF_defaultBackpack = "";
+		};
+	};
 
 	[
 		"CBA_beforeSettingsInitialized",

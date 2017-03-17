@@ -1,10 +1,10 @@
-waitUntil { missionNamespace getVariable["ARTR_serverInit", false] }
+waitUntil { missionNamespace getVariable["ARTR_serverInit", false] };
 
 if (side player == west || side player == resistance) then
 {
 	{
 		deleteMarkerLocal _x;
-	} forEach (["mrk_meetOne","mrk_meetTwo","mrk_meetThree","mrk_meetFour"] - ((side player) getVariable "real_meet_location"));
+	} forEach (["mrk_meetOne","mrk_meetTwo","mrk_meetThree","mrk_meetFour"] - [(missionNamespace getVariable "real_meet_location")]);
 };
 
 call ARTR_fnc_initBriefing;
@@ -17,44 +17,82 @@ switch (side player) do
 };
 
 //command actions for helicopter
-act_heloIn = commandHelo addAction [
-	"Pick LZ",
-	{player call ARTR_fnc_designateLZ;},
-	[],
-	2,
-	false,
-	true,
-	nil,
-	{vehicle player == (_this select 0) && player == leader group player && !(player getVariable ['ACE_isUnconscious', false])},
-	1,
-	false
-];
+private _conditionInside = {
+	vehicle player == commandHelo &&
+	player == leader group player &&
+	!(player getVariable ['ACE_isUnconscious', false])
+};
 
-act_heloOut = commandHelo addAction [
+private _conditionOutside = {
+	vehicle player != commandHelo &&
+	player == leader group player &&
+	!(player getVariable ['ACE_isUnconscious', false]) &&
+	call ARTR_fnc_hasRadio
+};
+
+private _conditionGTG = {
+	player == leader group player &&
+	!(player getVariable ['ACE_isUnconscious', false]) &&
+	(vehicle player == commandHelo || player call ARTR_fnc_hasRadio) &&
+	commandHelo getVariable ["landed",false]
+};
+
+private _conditionRTB = {
+	vehicle player == commandHelo &&
+	player == leader group player &&
+	!(player getVariable ['ACE_isUnconscious', false]) &&
+	time > (20*60)
+};
+
+act_assignLZ = [
+	"assignLZ",
+	"Assign LZ",
+	"",
+	{ commandHelo call ARTR_fnc_designateLZ; },
+	{true},
+	{},
+	[],
+	[0,0,0]
+] call ace_interact_menu_fnc_createAction;
+
+act_callHelo = [
+	"callHelo",
+	"Call Helicopter",
+	"",
+	{ commandHelo call ARTR_fnc_designateLZ; },
+	{true},
+	{},
+	[],
+	[0,0,0]
+] call ace_interact_menu_fnc_createAction;
+
+act_goodToGo = [
+	"callHelo",
+	"Clear to lift",
+	"",
+	{ commandHelo call ARTR_fnc_goodToGo; },
+	{true},
+	{},
+	[],
+	[0,0,0],
+	20
+] call ace_interact_menu_fnc_createAction;
+
+act_rtb = [
+	"RTB",
 	"Return to Base",
-	{call ARTR_fnc_RTB;},
+	"",
+	{ commandHelo call ARTR_fnc_RTB; },
+	{true},
+	{},
 	[],
-	1,
-	false,
-	true,
-	nil,
-	{vehicle player == (_this select 0) && player == leader group player && !(player getVariable ['ACE_isUnconscious', false]) &&  time > 15*60},
-	1,
-	false
-];
+	[0,0,0]
+] call ace_interact_menu_fnc_createAction;
 
-act_heloPick = commandHelo addAction [
-	"Call helicopter",
-	{player call ARTR_fnc_designateLZ;},
-	[],
-	2,
-	false,
-	true,
-	nil,
-	{ player call ARTR_fnc_hasRadio && player == leader group player && !(player getVariable ['ACE_isUnconscious', false])},
-	1,
-	false
-];
+[commandHelo, 0, ["ACE_Actions"], act_assignLZ] call ace_interact_menu_fnc_addActionToObject;
+[commandHelo, 0, ["ACE_Actions"], act_goodToGo] call ace_interact_menu_fnc_addActionToObject;
+[commandHelo, 0, ["ACE_Actions"], act_rtb] call ace_interact_menu_fnc_addActionToObject;
+[player, 0, ["ACE_SelfActions"], act_callHelo] call ace_interact_menu_fnc_addActionToObject;
 
 //Cuff escaping handler
 ARTR_captiveEH = [
@@ -64,7 +102,8 @@ ARTR_captiveEH = [
 
 		if (_unit == player && _type == "SetHandcuffed") then
 		{
-			if (_state) then {
+			if (_state) then
+			{
 				call ARTR_fnc_handcuffed;
 			} else {
 				waitUntil {!isNil (player getVariable ["uncuffKeyHandler",nil]) };
@@ -74,7 +113,9 @@ ARTR_captiveEH = [
 	}
 ] call CBA_fnc_addEventHandler;
 
+/*
 if (player == hostageBLU || player == hostageGRN) then
 {
 	[player,true] call ACE_captives_fnc_setHandcuffed;
 };
+*/
