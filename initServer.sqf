@@ -1,15 +1,21 @@
-/*
-This runs on the server machine after objects have initialised in the map. Anything the server needs to set up before the mission is started is set up here.
-*/
+//Update spawn points
+{ _x call ARTR_fnc_updateSpawnPoints; } forEach [west, resistance];
 
-//Task creating: [owner, task name/[task name, parent task name], [description, title, marker], destination, state, priority, shownotification, type, shared] call BIS_fnc_taskCreate;
+//Create tasks
+[west, "WESTWin", ["REACH THE GREEN MONOLITH", "CONQUER MONOLITH", "ADVANCE"], green_monolith, "ASSIGNED", 10, true, "attack", false] call BIS_fnc_taskCreate;
+[resistance, "GUERWin", ["REACH THE BLUE MONOLITH", "CONQUER MONOLITH", "ADVANCE"], blue_monolith, "ASSIGNED", 10, true, "attack", false] call BIS_fnc_taskCreate;
 
-//Updating tasks example: ["TaskName", "STATE", false] call BIS_fnc_taskSetState;
-//Custom task update notification: ["NotificationName", ["Message"]] remoteExec ["BIS_fnc_showNotification", west, false];
+//Triggers to handle teams dying
+tr_bluDead = [
+	" { side _x == west && !(_x getVariable ['hades',false]) } count playableUnits <= 0",
+	"west spawn ARTR_fnc_respawnPlayers;"
+] call ARTR_fnc_emptyTrigger;
+
+tr_grnDead = [
+	" { side _x == resistance && !(_x getVariable ['hades',false]) } count playableUnits <= 0",
+	"resistance spawn ARTR_fnc_respawnPlayers;"
+] call ARTR_fnc_emptyTrigger;
 
 //Call server ending if all players are dead
 trigger_dead = ["{ alive _x } count playableUnits <= 0", "call ARTR_fnc_serverEnding;"] call ARTR_fnc_emptyTrigger;
 trigger_dead setTriggerTimeout [5, 5, 5, true];
-
-//client inits wait for serverInit to be true before starting, to make sure all variables the server sets up are set up before clients try to refer to them (which would cause errors)
-missionNamespace setVariable["ARTR_serverInit", true, true];

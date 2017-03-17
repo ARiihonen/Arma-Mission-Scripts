@@ -1,0 +1,3261 @@
+version=53;
+class EditorData
+{
+	moveGridStep=0.5;
+	angleGridStep=1.5707964;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=37;
+	class ItemIDProvider
+	{
+		nextID=921;
+	};
+	class MarkerIDProvider
+	{
+		nextID=22;
+	};
+	class LayerIndexProvider
+	{
+		nextID=138;
+	};
+	class Camera
+	{
+		pos[]={4051.8894,113.89389,4040.7734};
+		dir[]={-0.0039889361,-0.91169876,-0.41106075};
+		up[]={-0.0088468892,0.41085586,-0.91163278};
+		aside[]={-1.0000451,-3.5703306e-007,0.0097051887};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Structures_F_Bootcamp_VR_Blocks",
+	"A3_Structures_F_Bootcamp_VR_CoverObjects",
+	"A3_Structures_F_Exp_A_VR_Blocks",
+	"A3_Characters_F",
+	"A3_Weapons_F",
+	"A3_Ui_F"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=5;
+		class Item0
+		{
+			className="A3_Structures_F_Bootcamp";
+			name="Arma 3 Bootcamp Update - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Structures_F_Exp_A";
+			name="Arma 3 Nexus Update - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=6407883;
+class ScenarioData
+{
+	author="Caranfin / Sniper Party";
+	overviewText="Fast paced CQB action in a virtual reality - ALPHA TEST VERSION";
+	disabledAI=1;
+	joinUnassigned=0;
+	respawn=3;
+	class Header
+	{
+		gameType="TDM";
+		minPlayers=2;
+		maxPlayers=16;
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=2;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="None";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Tickets";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=2;
+	};
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="TvT02-16 - Tug of VR ALPHA";
+		resistanceWest=0;
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=0;
+		minute=0;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Entities
+	{
+		items=16;
+		class Item0
+		{
+			dataType="Layer";
+			name="Middle";
+			state=1;
+			class Entities
+			{
+				items=11;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4000,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=37;
+					type="Land_VR_Block_01_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4020,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=38;
+					type="Land_VR_Block_01_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3980,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=39;
+					type="Land_VR_Block_01_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4040,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=40;
+					type="Land_VR_Block_01_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3960,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=41;
+					type="Land_VR_Block_01_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4000,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=45;
+					type="Land_VR_Block_01_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4020,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=46;
+					type="Land_VR_Block_01_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3980,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=47;
+					type="Land_VR_Block_01_F";
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4040,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=48;
+					type="Land_VR_Block_01_F";
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3960,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=49;
+					type="Land_VR_Block_01_F";
+				};
+				class Item10
+				{
+					dataType="Layer";
+					name="Obstacles";
+					state=1;
+					class Entities
+					{
+						items=40;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3990,5.8849998,4004};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=192;
+							type="Land_VR_CoverObject_01_kneel_F";
+							atlOffset=0.46999979;
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3991,5.8849998,4004};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=193;
+							type="Land_VR_CoverObject_01_kneel_F";
+							atlOffset=0.46999979;
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4009,5.8849998,3996};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=201;
+							type="Land_VR_CoverObject_01_kneel_F";
+							atlOffset=0.46999979;
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4010,5.8849998,3996};
+								angles[]={0,3.120858,0};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=202;
+							type="Land_VR_CoverObject_01_kneel_F";
+							atlOffset=0.46999979;
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3988,5.6503096,4004};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=190;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3989,5.6503096,4004};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=191;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3993,5.6503096,4004};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=195;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3994,5.6503096,4004};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=196;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3992,5.6503096,4004};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=194;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item9
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4006,5.6503096,3996};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=198;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item10
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4007,5.6503096,3996};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=199;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item11
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4008,5.6503096,3996};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=200;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4011,5.6503096,3996};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=203;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item13
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4012,5.6503096,3996};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=204;
+							type="Land_VR_CoverObject_01_stand_F";
+						};
+						class Item14
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3985,7,4000};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=156;
+							type="Land_VR_Block_05_F";
+						};
+						class Item15
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4015,7,4000};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=158;
+							type="Land_VR_Block_05_F";
+						};
+						class Item16
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4000,7,4008};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=170;
+							type="Land_VR_Block_02_F";
+						};
+						class Item17
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4000,7,3992};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=171;
+							type="Land_VR_Block_02_F";
+						};
+						class Item18
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3989.5,7,3990};
+								angles[]={0,1.5707964,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=178;
+							type="Land_VR_Slope_01_F";
+						};
+						class Item19
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4010.5,7,4010};
+								angles[]={0,4.712389,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=181;
+							type="Land_VR_Slope_01_F";
+						};
+						class Item20
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3985,11,4008};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=212;
+							type="Land_VR_Block_05_F";
+							atlOffset=4;
+						};
+						class Item21
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3985,11,3992};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=211;
+							type="Land_VR_Block_05_F";
+							atlOffset=3.8000002;
+						};
+						class Item22
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4041,3.3000002,4000};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=519;
+							type="Land_VR_Block_03_F";
+							atlOffset=-4.6999998;
+						};
+						class Item23
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4049.9998,7,3991};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=516;
+							type="Land_VR_Block_05_F";
+						};
+						class Item24
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4049.9998,7,4009};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=520;
+							type="Land_VR_Block_05_F";
+						};
+						class Item25
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4049.9998,9,3995};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=524;
+							type="Land_VR_Block_05_F";
+							atlOffset=2;
+						};
+						class Item26
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4049.9998,9,4005};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=525;
+							type="Land_VR_Block_05_F";
+							atlOffset=2;
+						};
+						class Item27
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4015,11,4008};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=517;
+							type="Land_VR_Block_05_F";
+							atlOffset=3.8000002;
+						};
+						class Item28
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4015,11,3992};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=518;
+							type="Land_VR_Block_05_F";
+							atlOffset=4;
+						};
+						class Item29
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4029,5,4000};
+								angles[]={0,4.712389,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=523;
+							type="Land_VR_Block_05_F";
+							atlOffset=-2;
+						};
+						class Item30
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4029,4.3000002,3989};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=521;
+							type="Land_VR_Block_02_F";
+							atlOffset=-2.6999998;
+						};
+						class Item31
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4029,4.3000002,4011};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=522;
+							type="Land_VR_Block_02_F";
+							atlOffset=-2.6999998;
+						};
+						class Item32
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3950,7,4009};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=207;
+							type="Land_VR_Block_05_F";
+						};
+						class Item33
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3950,7,3991};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=206;
+							type="Land_VR_Block_05_F";
+						};
+						class Item34
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3971,5,4000};
+								angles[]={0,1.5707964,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=256;
+							type="Land_VR_Block_05_F";
+							atlOffset=-2;
+						};
+						class Item35
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3950,9,4005};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=258;
+							type="Land_VR_Block_05_F";
+							atlOffset=2;
+						};
+						class Item36
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3950,9,3995};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=259;
+							type="Land_VR_Block_05_F";
+							atlOffset=2;
+						};
+						class Item37
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3971,4.3000002,4011};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=236;
+							type="Land_VR_Block_02_F";
+							atlOffset=-2.6999998;
+						};
+						class Item38
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3971,4.3000002,3989};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=238;
+							type="Land_VR_Block_02_F";
+							atlOffset=-2.6999998;
+						};
+						class Item39
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3959,3.3000002,4000};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=216;
+							type="Land_VR_Block_03_F";
+							atlOffset=-4.6999998;
+						};
+					};
+					id=205;
+					atlOffset=-3.213495;
+				};
+			};
+			id=61;
+			atlOffset=-1.6067476;
+		};
+		class Item1
+		{
+			dataType="Layer";
+			name="Blue";
+			state=1;
+			class Entities
+			{
+				items=11;
+				class Item0
+				{
+					dataType="Layer";
+					name="Obstacles";
+					class Entities
+					{
+						items=28;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3903,7,4000};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=491;
+							type="Land_VR_Block_05_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3893.5,7,3994.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=498;
+							type="Land_VR_Block_05_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3893.5,7,4005.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=499;
+							type="Land_VR_Block_05_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3886,7,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=504;
+							type="Land_VR_Block_05_F";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3879,7,3991.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=509;
+							type="Land_VR_Block_05_F";
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3879,7,4008.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=510;
+							type="Land_VR_Block_05_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3852,7,4007};
+								angles[]={0,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=512;
+							type="Land_VR_Block_02_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3852,7,3993};
+								angles[]={0,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=513;
+							type="Land_VR_Block_02_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3792,11,4000};
+								angles[]={0,0,1.5707964};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								createAsSimpleObject=1;
+							};
+							id=514;
+							type="Land_VR_Block_02_F";
+							atlOffset=4;
+						};
+						class Item9
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3792,23,4000};
+								angles[]={0,0,1.5707964};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								name="blue_monolith";
+								createAsSimpleObject=1;
+							};
+							id=515;
+							type="Land_VR_Block_02_F";
+							atlOffset=16;
+						};
+						class Item10
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3859.5,7,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=669;
+							type="Land_VR_Block_05_F";
+						};
+						class Item11
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3866.5,7,4008.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=670;
+							type="Land_VR_Block_05_F";
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3866.5,7,3991.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=671;
+							type="Land_VR_Block_05_F";
+						};
+						class Item13
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3873,7,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=672;
+							type="Land_VR_Block_05_F";
+						};
+						class Item14
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3935,2.5,3995.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=739;
+							type="Land_VR_Block_05_F";
+							atlOffset=-4.5;
+						};
+						class Item15
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3935,2.5,4004.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=740;
+							type="Land_VR_Block_05_F";
+							atlOffset=-4.5;
+						};
+						class Item16
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3926,3,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=741;
+							type="Land_VR_Block_05_F";
+							atlOffset=-4;
+						};
+						class Item17
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3942,2,4009.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=742;
+							type="Land_VR_Block_05_F";
+							atlOffset=-5;
+						};
+						class Item18
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3942,2,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=743;
+							type="Land_VR_Block_05_F";
+							atlOffset=-5;
+						};
+						class Item19
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3942,2,3990.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=744;
+							type="Land_VR_Block_05_F";
+							atlOffset=-5;
+						};
+						class Item20
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3916.5,5.5,4009};
+								angles[]={0,4.712389,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=726;
+							type="Land_VR_Block_05_F";
+							atlOffset=-1.5;
+						};
+						class Item21
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3916.5,5.5,3991};
+								angles[]={0,4.712389,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=731;
+							type="Land_VR_Block_05_F";
+							atlOffset=-1.5;
+						};
+						class Item22
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3906.5,5.5,4009};
+								angles[]={0,1.5707964,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=725;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1.5;
+						};
+						class Item23
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3915,6,4004.5};
+								angles[]={4.712389,1.5707964,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=727;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1;
+						};
+						class Item24
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3922,6,4007.5};
+								angles[]={0,0,4.712389};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=728;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1;
+						};
+						class Item25
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3922,6,3992.5};
+								angles[]={3.1415927,0,4.712389};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=729;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1;
+						};
+						class Item26
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3915,6,3995.5};
+								angles[]={1.5707964,1.5707964,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=730;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1;
+						};
+						class Item27
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3906.5,5.5,3991};
+								angles[]={0,1.5707964,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=732;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1.5;
+						};
+					};
+					id=558;
+					atlOffset=-1.2786217;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3900,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=62;
+					type="Land_VR_Block_01_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3920,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=63;
+					type="Land_VR_Block_01_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3880,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=64;
+					type="Land_VR_Block_01_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3940,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=65;
+					type="Land_VR_Block_01_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3860,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=66;
+					type="Land_VR_Block_01_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3900,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=67;
+					type="Land_VR_Block_01_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3920,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=68;
+					type="Land_VR_Block_01_F";
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3880,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=69;
+					type="Land_VR_Block_01_F";
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3940,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=70;
+					type="Land_VR_Block_01_F";
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3860,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=71;
+					type="Land_VR_Block_01_F";
+				};
+			};
+			id=73;
+			atlOffset=-0.0012483597;
+		};
+		class Item2
+		{
+			dataType="Layer";
+			name="Green";
+			state=1;
+			class Entities
+			{
+				items=11;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4100,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=75;
+					type="Land_VR_Block_01_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4120,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=76;
+					type="Land_VR_Block_01_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4080,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=77;
+					type="Land_VR_Block_01_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4140,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=78;
+					type="Land_VR_Block_01_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4060,9,4015};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=79;
+					type="Land_VR_Block_01_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4100,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=80;
+					type="Land_VR_Block_01_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4120,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=81;
+					type="Land_VR_Block_01_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4080,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=82;
+					type="Land_VR_Block_01_F";
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4140,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=83;
+					type="Land_VR_Block_01_F";
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4060,9,3985};
+						angles[]={0,1.5707964,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=84;
+					type="Land_VR_Block_01_F";
+				};
+				class Item10
+				{
+					dataType="Layer";
+					name="Obstacles";
+					class Entities
+					{
+						items=28;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4208,11,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								createAsSimpleObject=1;
+							};
+							id=556;
+							type="Land_VR_Block_02_F";
+							atlOffset=4;
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4208,23,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								name="green_monolith";
+								createAsSimpleObject=1;
+							};
+							id=557;
+							type="Land_VR_Block_02_F";
+							atlOffset=16;
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4097,7,4000};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=745;
+							type="Land_VR_Block_05_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4106.5,7,4005.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=746;
+							type="Land_VR_Block_05_F";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4106.5,7,3994.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=747;
+							type="Land_VR_Block_05_F";
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4114,7,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=748;
+							type="Land_VR_Block_05_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4121,7,4008.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=749;
+							type="Land_VR_Block_05_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4121,7,3991.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=750;
+							type="Land_VR_Block_05_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4148,7,3993};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=751;
+							type="Land_VR_Block_02_F";
+						};
+						class Item9
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4148,7,4007};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=752;
+							type="Land_VR_Block_02_F";
+						};
+						class Item10
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4140.5,7,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=753;
+							type="Land_VR_Block_05_F";
+						};
+						class Item11
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4133.5,7,3991.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=754;
+							type="Land_VR_Block_05_F";
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4133.5,7,4008.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=755;
+							type="Land_VR_Block_05_F";
+						};
+						class Item13
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4127,7,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=756;
+							type="Land_VR_Block_05_F";
+						};
+						class Item14
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4065,2.5,4004.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=757;
+							type="Land_VR_Block_05_F";
+							atlOffset=-4.5;
+						};
+						class Item15
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4065,2.5,3995.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=758;
+							type="Land_VR_Block_05_F";
+							atlOffset=-4.5;
+						};
+						class Item16
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4074,3,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=759;
+							type="Land_VR_Block_05_F";
+							atlOffset=-4;
+						};
+						class Item17
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4058,2,3990.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=760;
+							type="Land_VR_Block_05_F";
+							atlOffset=-5;
+						};
+						class Item18
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4058,2,4000};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=761;
+							type="Land_VR_Block_05_F";
+							atlOffset=-5;
+						};
+						class Item19
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4058,2,4009.5};
+								angles[]={1.5707964,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=762;
+							type="Land_VR_Block_05_F";
+							atlOffset=-5;
+						};
+						class Item20
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4093.5,5.5,3991};
+								angles[]={0,4.712389,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=763;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1.5;
+						};
+						class Item21
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4083.5,5.5,3991};
+								angles[]={0,1.5707964,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=764;
+							type="Land_VR_Block_05_F";
+							atlOffset=-1.5;
+						};
+						class Item22
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4085,6,3995.5};
+								angles[]={1.5707964,4.712389,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=765;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1;
+						};
+						class Item23
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4078,6,3992.5};
+								angles[]={0,3.1415927,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=766;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1;
+						};
+						class Item24
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4078,6,4007.5};
+								angles[]={0,0,1.5707964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=767;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1;
+						};
+						class Item25
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4085,6,4004.5};
+								angles[]={4.712389,4.712389,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=768;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1;
+						};
+						class Item26
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4083.5,5.5,4009};
+								angles[]={0,1.5707964,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=769;
+							type="Land_VR_Block_05_F";
+							atlOffset=-1.5;
+						};
+						class Item27
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4093.5,5.5,4009};
+								angles[]={0,4.712389,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="if (isServer) then { everything pushBack this; };";
+								createAsSimpleObject=1;
+							};
+							id=770;
+							type="Land_VR_Slope_01_F";
+							atlOffset=-1.5;
+						};
+					};
+					id=559;
+					atlOffset=-1.3958435;
+				};
+			};
+			id=74;
+			atlOffset=-0.69792175;
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4210.5,5.0014391,4001.05};
+						angles[]={0,1.5707964,0};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=664;
+					type="I_Soldier_VR_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4210.5,5.0014391,4002.05};
+						angles[]={0,1.5707964,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=906;
+					type="I_Soldier_VR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4210.5,5.0014391,4003.05};
+						angles[]={0,1.5707964,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=908;
+					type="I_Soldier_VR_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4210.5,5.0014391,4004.05};
+						angles[]={0,1.5707964,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=910;
+					type="I_Soldier_VR_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4210.5,5.0014391,3999.05};
+						angles[]={0,1.5707964,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=912;
+					type="I_Soldier_VR_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4210.5,5.0014391,3998.05};
+						angles[]={0,1.5707964,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=914;
+					type="I_Soldier_VR_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4210.5,5.0014391,3997.05};
+						angles[]={0,1.5707964,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=916;
+					type="I_Soldier_VR_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4210.5,5.0014391,3996.05};
+						angles[]={0,1.5707964,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=918;
+					type="I_Soldier_VR_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=663;
+		};
+		class Item4
+		{
+			dataType="Trigger";
+			position[]={3900,5,4000};
+			class Attributes
+			{
+				name="trigger_green";
+				onActivation="resistance call ARTR_fnc_teamAdvanced;";
+				sizeB=10;
+				repeatable=1;
+				activationBy="GUER";
+				isRectangle=1;
+				isServerOnly=1;
+			};
+			id=862;
+			type="EmptyDetector";
+		};
+		class Item5
+		{
+			dataType="Trigger";
+			position[]={4100,5,4000};
+			class Attributes
+			{
+				name="trigger_blue";
+				onActivation="west call ARTR_fnc_teamAdvanced;";
+				sizeB=10;
+				repeatable=1;
+				activationBy="WEST";
+				isRectangle=1;
+				isServerOnly=1;
+			};
+			id=863;
+			type="EmptyDetector";
+		};
+		class Item6
+		{
+			dataType="Marker";
+			position[]={3788.5,5,4000};
+			name="respawn_west";
+			type="Empty";
+			id=864;
+		};
+		class Item7
+		{
+			dataType="Marker";
+			position[]={4214.6157,5,3999.7427};
+			name="respawn_guerrila";
+			type="Empty";
+			id=865;
+		};
+		class Item8
+		{
+			dataType="Trigger";
+			position[]={4000,5,4000};
+			class Attributes
+			{
+				name="trigger_area";
+				sizeA=150;
+				sizeB=15;
+				isRectangle=1;
+			};
+			id=866;
+			type="EmptyDetector";
+		};
+		class Item9
+		{
+			dataType="Trigger";
+			position[]={3792,5,4000};
+			class Attributes
+			{
+				name="trigger_bluearea";
+				sizeA=62;
+				sizeB=62;
+			};
+			id=867;
+			type="EmptyDetectorArea10x10";
+		};
+		class Item10
+		{
+			dataType="Trigger";
+			position[]={4208,5,4000};
+			class Attributes
+			{
+				name="trigger_greenarea";
+				sizeA=62;
+				sizeB=62;
+			};
+			id=868;
+			type="EmptyDetectorArea10x10";
+		};
+		class Item11
+		{
+			dataType="Trigger";
+			position[]={0,5,0};
+			class Attributes
+			{
+				name="trigger_purgatory";
+				sizeA=20;
+				sizeB=20;
+			};
+			id=885;
+			type="EmptyDetectorArea10x10";
+		};
+		class Item12
+		{
+			dataType="Layer";
+			name="Purgatory";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15,11,0};
+						angles[]={0,0,1.5707964};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=869;
+					type="Land_VR_Block_02_F";
+					atlOffset=4;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15,23,0};
+						angles[]={0,0,1.5707964};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=870;
+					type="Land_VR_Block_02_F";
+					atlOffset=16;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={0,11,15};
+						angles[]={1.5707964,0,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=876;
+					type="Land_VR_Block_02_F";
+					atlOffset=4;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={0,23,15};
+						angles[]={1.5707964,0,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=877;
+					type="Land_VR_Block_02_F";
+					atlOffset=16;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={0,11,-15};
+						angles[]={1.5707964,0,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=878;
+					type="Land_VR_Block_02_F";
+					atlOffset=4;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={0,23,-15};
+						angles[]={1.5707964,0,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=879;
+					type="Land_VR_Block_02_F";
+					atlOffset=16;
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-15,11,0};
+						angles[]={0,0,1.5707964};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=880;
+					type="Land_VR_Block_02_F";
+					atlOffset=4;
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-15,23,0};
+						angles[]={0,0,1.5707964};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						init="if (isServer) then { everything pushBack this; };";
+						createAsSimpleObject=1;
+					};
+					id=881;
+					type="Land_VR_Block_02_F";
+					atlOffset=16;
+				};
+			};
+			id=886;
+			atlOffset=11.96875;
+		};
+		class Item13
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3789.5,5.0014391,4001.05};
+						angles[]={0,4.7054424,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=898;
+					type="B_Soldier_VR_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3789.5,5.0014391,3999.05};
+						angles[]={0,4.7054424,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=890;
+					type="B_Soldier_VR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3789.5,5.0014391,3998.05};
+						angles[]={0,4.7054424,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=892;
+					type="B_Soldier_VR_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3789.5,5.0014391,3997.05};
+						angles[]={0,4.7054424,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=894;
+					type="B_Soldier_VR_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3789.5,5.0014391,3996.05};
+						angles[]={0,4.7054424,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=896;
+					type="B_Soldier_VR_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3789.5,5.0014391,4002.05};
+						angles[]={0,4.7054424,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=900;
+					type="B_Soldier_VR_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3789.541,5.0014319,4003.2175};
+						angles[]={0,4.7054424,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=902;
+					type="B_Soldier_VR_F";
+					atlOffset=-7.1525574e-006;
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3789.5,5.0014391,4004.05};
+						angles[]={0,4.7054424,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="CANDIDATE";
+						isPlayable=1;
+						class Inventory
+						{
+							radio="ItemRadio";
+						};
+					};
+					id=904;
+					type="B_Soldier_VR_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=897;
+		};
+		class Item14
+		{
+			dataType="Trigger";
+			position[]={3792,5,4000};
+			class Attributes
+			{
+				name="trigger_greenWin";
+				condition="this && isServer";
+				onActivation="_ending = resistance spawn ARTR_fnc_serverEnding;";
+				sizeA=35;
+				sizeB=35;
+				activationBy="GUER";
+			};
+			id=919;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item15
+		{
+			dataType="Trigger";
+			position[]={4208,5,4000};
+			class Attributes
+			{
+				name="trigger_blueWin";
+				condition="this && isServer";
+				onActivation="_thing = west spawn ARTR_fnc_serverEnding;";
+				sizeA=35;
+				sizeB=35;
+				activationBy="WEST";
+				isServerOnly=1;
+			};
+			id=920;
+			type="EmptyDetectorAreaR50";
+		};
+	};
+};

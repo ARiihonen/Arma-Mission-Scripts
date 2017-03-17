@@ -1,23 +1,24 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
-briefingName = "Description.ext Briefing Name";
+briefingName = "TvT02-16 Tug Of VR";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
+overviewText = "High-intensity Team versus Team CQB"; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "Description.ext On Load Name";
-OnLoadMission = "Description.ext On Load Mission";
+OnLoadName = "TvT02-16 Tug Of VR";
+OnLoadMission = "";
 loadscreen = "files\pictures\loadscreen.paa";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
-disabledai = 0; //Disable AI taking over un-taken player slots
+disabledai = 1; //Disable AI taking over un-taken player slots
+briefing = 0;
 
 //Default respawn options
 respawn = "BASE";
-respawnDelay = 5;
+respawnDelay = 1;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnTemplates[] = {"Tickets","Spectator"};
@@ -30,18 +31,18 @@ ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
 ReviveRequiredTrait = 0;                //0: none, 1: medic trait is required
 ReviveRequiredItems = 2;                //0: none, 1: medkit, 2: medkit or first aid kit
 ReviveRequiredItemsFakConsumed = 1;     //0: first aid kit is not consumed upon revive, 1: first aid kit is consumed
-ReviveDelay = 6;                        //time needed to revive someone (in secs)
+ReviveDelay = 2;                        //time needed to revive someone (in secs)
 ReviveMedicSpeedMultiplier = 2;         //speed multiplier for revive performed by medic
 ReviveForceRespawnDelay = 3;            //time needed to perform force respawn (in secs)
-ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
+ReviveBleedOutDelay = 10;              //unconscious state duration (in secs)
 
 
 //Game type stuff. Doesn't matter, but will get shown in mission select.
 class Header
 {
-	gameType = COOP;
-	minPlayers = 4;
-	maxPlayers = 18;
+	gameType = DM;
+	minPlayers = 2;
+	maxPlayers = 16;
 };
 
 class ACE_Settings
@@ -53,29 +54,18 @@ class ACE_Settings
 class CfgDebriefing
 {
 
-	class Dead
-	{
-		title = "You are dead";
-		subtitle = "Mission over";
+	class Victory {
+		title = "CONQUEROR";
+		subtitle = "YOU HAVE EARNED FREEDOM";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		picturecolor[] = {0.7,1.0,0.3,1.0};
+	};
+
+	class Loss {
+		title = "CONQUERED";
+		subtitle = "PREPARE TO BE PROCESSED";
 		picture = "KIA";
 		pictureColor[] = {0.6,0.1,0.2,1};
-	};
-
-	class Win
-	{
-		title = "Mission Successful";
-		subtitle = "Yay you";
-		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
-		picturecolor[] = {0.0,0.3,0.6,1};
-	};
-
-	class Lose
-	{
-		title = "Mission Failed";
-		subtitle = "Fuck off";
-		description = "Scrub";
-		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
-		pictureColor[] = {1.0,0.3,0.2,1.0};
 	};
 
 };
@@ -86,73 +76,50 @@ class CfgFunctions
 {
 	class ARTR
 	{
-		class eden
+		class areaRestriction
 		{
-			class setConditions {};
-			class setIrregularGearEden {};
+			class areaRestriction {};
+			class areaViolated {};
 		};
 
-		class preinit
+		class effects
 		{
-			class missionSettings { preInit = 1; };
-			class randInt {};
-			class populateArray {};
-			class chooseRandoms {};
-			class presenceArray {};
+			class environmentInit {};
+			class environmentLightCreate {};
+			class hitEffect {};
+			class killedEffect {};
+			class playerLightInit {};
+		};
+
+		class gear
+		{
+			class infiniteAmmo {};
+			class modGear {};
+		};
+
+		class missionLogic
+		{
+			class clientEnding {};
+			class emptyTrigger {};
+			class JIPSetup { preInit = 1; };
+			class respawnPlayers {};
+			class serverEnding {};
+			class setPlayerPosition {};
+			class teamAdvanced {};
+			class updateSpawnpoints {};
 		};
 
 		class mods
 		{
 			class checkMod {};
-			class initRevive { preInit = 1; };
-			class initASR { preInit = 1; };
-			class initTFAR { preInit = 1; };
 			class initACRE { preInit = 1; };
-			class TFARRadiosAdded {};
-			class TFARSpeaking {};
-			class TFARVolumeChange {};
+			class initRevive { preInit = 1; };
+			class initTFAR { preInit = 1; };
 		};
 
-		class ai
+		class preinit
 		{
-			class initSkills { preInit = 1; };
-			class setSkills { postInit = 1; };
-			class HCInit {};
-			class HCSetOwner { postInit = 1; };
-			class getAIController {};
-		};
-
-		class gear
-		{
-			class giveMagazines {};
-			class modGear {};
-			class switchBackpack {};
-			class switchHandgun {};
-			class switchPrimaryWeapon {};
-			class switchSecondaryWeapon {};
-			class switchUniform {};
-			class switchVest {};
-		};
-
-		class irregulars
-		{
-			class getIrregularClothes {};
-			class getIrregularThing {};
-			class irregularClothSets {};
-			class irregularCollections {};
-			class irregularGearSets { preInit = 1; };
-			class setIrregularClothes {};
-			class setIrregularGear {};
-		};
-
-		class missionLogic
-		{
-			class briefingFile {};
-			class serverEnding {};
-			class clientEnding {};
-			class emptyTrigger {};
-			class initBriefing { postInit = 1; };
-			class JIPSetup { preInit = 1; };
+			class missionSettings { preInit = 1; };
 		};
 	};
 };
@@ -170,6 +137,12 @@ class CfgRemoteExec
 	              allowedTargets=0; 	// 0: can target anyone, 1: only clients, 2: only server
 	              jip = 1; 				// JIP setting override
 	       };
+
+		   class setPlayerPosition
+		   {
+			   allowedTargets = 2;
+			   jip = 0;
+		   };
 	};
 
 	// List of script commands allowed to be sent from client via remoteExec
@@ -183,34 +156,11 @@ class CfgRemoteExec
 //So, to check, refer to paramsArray select i, where i is array index (starting with 0)
 class Params
 {
-	class ExampleParam {
-		title = "Example title";
+	class WeaponParam {
+		title = "Weapons";
 		values[] = {0,1};
-		texts[] = {"ZERO", "ONE"};
-		default = 0;
-	};
-};
-
-class CfgORBAT
-{
-	class ARTR
-	{
-		class Example
-		{
-			id = 1;
-			commander = "GreekMen";
-			commanderRank = "Captain";
-			description = "Unit description";
-			insignia = "\a3\missions_f_epa\data\img\orbat\I_AAF_ca.paa";
-			side = "Resistance";
-			size = "Platoon";
-			type = "Infantry";
-			text = "2nd Platoon";
-			textShort = "2nd Platoon";
-			texture = "flag_AAF";
-			assets[] = {};
-			subordinates[] = {};
-		};
+		texts[] = {"Pistols only", "Rifles and pistols"};
+		default = 1;
 	};
 };
 
@@ -267,32 +217,5 @@ class CfgNotifications
 		description = "%1";
 		priority = 4;
 		sound = "taskUpdated";
-	};
-};
-
-class CfgAISkills
-{
-	aimingAccuracy[] = {1, 1, 1, 1};
-	aimingShake[] = {1, 1, 1, 1};
-	aimingSpeed[] = {1, 1, 1, 1};
-	commanding[] = {1, 1, 1, 1};
-	courage[] = {1, 1, 1, 1};
-	endurance[] = {1, 1, 1, 1};
-	general[] = {1, 1, 1, 1};
-	reloadSpeed[] = {1, 1, 1, 1};
-	spotDistance[] = {1, 1, 1, 1};
-	spotTime[] = {1, 1, 1, 1};
-};
-
-class Cfg3DEN
-{
-	class EventHandlers
-	{
-		class ARTR
-		{
-			OnMissionLoad = "call ARTR_fnc_irregularGearSets;";
-			OnMissionNew = "call ARTR_fnc_irregularGearSets;";
-			OnMissionSave = "call ARTR_fnc_irregularGearSets;";
-		};
 	};
 };
