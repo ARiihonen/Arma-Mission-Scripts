@@ -3,7 +3,9 @@ if ( !(missionNamespace getVariable ["maskTaskGiven",false]) ) then
 	missionNamespace setVariable ["maskTaskGiven",true,true];
 
 	[east, "MaskTask", ["Destroy supply boxes to mask the mission as a typical raid", "Destroy", ""], nil, "ASSIGNED", 6, false, "destroy", false] call BIS_fnc_taskCreate;
-	['TaskAssigned', ['Mask the mission as a raid']] remoteExecCall ['BIS_fnc_showNotification', east, false];
+	["TaskAssigned", ["Mask the mission as a raid"]] remoteExecCall ["BIS_fnc_showNotification", east, false];
+
+	["ExfilTask", "CREATED", false] call BIS_fnc_taskSetState;
 
 	//Create trigger to detect and change mask task status
 	trigger_masking = createTrigger ["EmptyDetector", [0,0,0], false];

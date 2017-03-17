@@ -4,7 +4,7 @@ _boxes_destroyed = { !alive _x } count boxes;
 _boxes_compromised = _boxes_tagged + _boxes_destroyed;
 _boxes_fine = count boxes - _boxes_compromised;
 
-_dead_infiltrators = { side (group _x) == east && !alive _x } count allUnits;
+_dead_infiltrators = { side (group _x) == east && (!alive _x || _x getVariable ["ACE_isUnconscious", false]) } count allUnits;
 _dead_defenders = missionNamespace getVariable ["murdered_defenders", 0];
 
 _search = if (_boxes_destroyed * 2 < _dead_defenders) then { true; } else { false; };
@@ -15,9 +15,11 @@ if ( { side _x == west } count playableUnits == 0) then {
 diag_log format ["boxes tagged: %1, destroyed: %2, compromised: %3; dead infiltrators: %4, defenders: %5, search: %6", _boxes_tagged, _boxes_destroyed, _boxes_compromised, _dead_infiltrators, _dead_defenders, _search];
 
 _score_blu = (_dead_infiltrators*50) - ( _boxes_compromised/(count boxes)*100 ) - ( _dead_defenders/({ side _x == west } count allPlayers) * 100 );
+_score_blu = round(_score_blu);
 
 _score_red = ( _boxes_tagged/(count boxes)*100 ) - (_dead_infiltrators*50) - ( _dead_defenders/({ side _x == west } count allPlayers) * 100 );
 if (!canMove insertion) then { _score_red = _score_red - 50; };
+_score_red = round(_score_red);
 
 {
 	_points = rating _x;

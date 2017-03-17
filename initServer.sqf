@@ -78,7 +78,10 @@ trigger_exfil = [
 
 {
 	_x setVariable ["R3D_LOG_Disabled", true, true];
+	_x setVariable ["ace_cookoff_enable", false, true];
 } forEach boxes;
+
+missionNamespace setVariable ["authorizedPlayers", call BIS_fnc_listPlayers, true];
 
 //client inits wait for serverInit to be true before starting, to make sure all variables the server sets up are set up before clients try to refer to them (which would cause errors)
 missionNamespace setVariable["ARTR_serverInit", true, true];
