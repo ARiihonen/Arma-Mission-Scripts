@@ -44,7 +44,7 @@ if (missionNamespace getVariable ["ExtendedUAV", false]) then
 {
 	_trackerLoop = [] spawn
 	{
-		while { missionNamespace getVariable ['uav_done', false] } do
+		while { !(missionNamespace getVariable ['uav_done', false]) } do
 		{
 			{
 				if ( !(lineIntersects [getPos _x, getPos fakeUAV,_x]) ) then

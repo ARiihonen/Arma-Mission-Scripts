@@ -35,8 +35,8 @@ uiNamespace setVariable ["skipEH", _skipEH];
 
 //create HUD markers
 TRACKER_ICON = "\A3\ui_f\data\map\markers\military\objective_CA.paa";
-TRACKER_COLOUR = [0, 1, 0, 0.5];
-TRACKER_COLOURD = [1, 0, 0, 0.5];
+TRACKER_COLOUR = [0, 1, 0, 0.85];
+TRACKER_COLOURD = [1, 0, 0, 0.85];
 TRACKER_TEXT = "ONLINE";
 TRACKER_TEXTD = "CONTACT LOST";
 ARTR_UAVDisplay = addMissionEventHandler [

@@ -11,7 +11,7 @@ trigger_tracking = createTrigger ["EmptyDetector", [0,0,0], false];
 trigger_tracking setTriggerActivation ["NONE", "PRESENT", true];
 trigger_tracking setTriggerStatements [
 	"
-		({ alive _x && _x getVariable ['tracked', false] } count boxes >= ({ side (group _x) == west && isPlayer _x } count allUnits) / 2) && (!(['MaskTask'] call BIS_fnc_taskExists) || {['MaskTask'] call BIS_fnc_taskState == 'SUCCEEDED'})",
+		({ alive _x && _x getVariable ['tracked', false] } count boxes >= ({ side (group _x) == west && isPlayer _x } count allUnits)) && (['MaskTask'] call BIS_fnc_taskState in ['','SUCCEEDED'])",
 	"
 		['InfiltrateTask', 'SUCCEEDED', false] call BIS_fnc_taskSetState;
 		['TaskSucceeded', ['Minimum tracker amount met']] remoteExecCall ['BIS_fnc_showNotification', east, false];
@@ -84,4 +84,4 @@ trigger_exfil = [
 missionNamespace setVariable ["authorizedPlayers", call BIS_fnc_listPlayers, true];
 
 //client inits wait for serverInit to be true before starting, to make sure all variables the server sets up are set up before clients try to refer to them (which would cause errors)
-missionNamespace setVariable["ARTR_serverInit", true, true];
+missionNamespace setVariable ["ARTR_serverInit", true, true];

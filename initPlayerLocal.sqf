@@ -42,7 +42,7 @@ switch (side player) do
 
 		//trigger to set a marker to SDV position when disembarking
 		tr_SDVPlaced = [
-			"count crew infiltration <= 0",
+			"count crew insertion <= 0",
 			"call ARTR_fnc_infilMarker;",
 			""
 		] call ARTR_fnc_emptyTrigger;

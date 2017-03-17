@@ -23,7 +23,7 @@ _uavEnd = ( (missionNamespace getVariable "uav_end") / 60);
 ["Diary", "Background", "Background.txt"] call ARTR_fnc_briefingFile;
 
 //Add diary subject and entries for gameplay logic
-player createDiarySubject ["Info", "<t color='#FF0000'>Scenario Info</t>"];
+player createDiarySubject ["Info", "SCENARIO INFO"];
 
 _extraUAVInfo = "";
 if (missionNamespace getVariable ["extendedUAV",false]) then
