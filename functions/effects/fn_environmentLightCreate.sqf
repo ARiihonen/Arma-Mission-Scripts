@@ -4,7 +4,7 @@ private _position = (getPosWorld _monolith) vectorAdd [0,0,ENVL_HEIGHT];
 
 _new_light = "#lightpoint" createVehicleLocal _position;
 _new_light setLightBrightness ENVL_BRIGHTNESS;
-_new_light setLightAmbient ENVL_AMBIENT;
+_new_light setLightAmbient _colour;
 _new_light setLightColor _colour;
 _new_light setLightAttenuation ENVL_ATTENUATION;
 
