@@ -1,6 +1,6 @@
 _players_blue = playersNumber west;
 
-_trucks_start = 10*60 + (_players_blue * 10 * 60);
+_trucks_start = 15*60 + (_players_blue * 5 * 60);
 missionNamespace setVariable ["trucks_start", _trucks_start, false];
 
 _uav_end = _trucks_start;

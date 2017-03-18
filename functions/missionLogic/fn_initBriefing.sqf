@@ -7,7 +7,6 @@ player createDiarySubject ["Diary", "Diary"];
 
 _teamSuffix = if (side player == west) then { "Blu.txt"; } else { "Red.txt"; };
 
-_signal = _signal+_teamSuffix;
 _intel = "Intel"+_teamSuffix;
 _mission = "Mission"+_teamSuffix;
 _situation = "Situation"+_teamSuffix;

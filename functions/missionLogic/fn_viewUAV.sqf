@@ -62,12 +62,12 @@ if (missionNamespace getVariable ["ExtendedUAV", false]) then
 			{
 				drawIcon3D [
 					UNITTRACK_ICON,
-					[UNITTRACK_COLOUR,UNITTRACK_COLOURL] select (_x getVariable ['tracked', false]),
-					[visiblePosition _x,_x getVariable ['lastPos',[0,0,0]]] select (_x getVariable ['tracked', false]),
+					[UNITTRACK_COLOURL,UNITTRACK_COLOUR] select (_x getVariable ['tracked', false]),
+					[_x getVariable ['lastPos',[0,0,0]],visiblePosition _x] select (_x getVariable ['tracked', false]),
 					0.2,
 					0.2,
 					0,
-					[UNITTRACK_TEXT,format ['LASTPOS +%1s', time - (_x getVariable ['trackLost',0])]] select (_x getVariable ['tracked', false]),
+					[format ['LASTPOS +%1s', time - (_x getVariable ['trackLost',0])],UNITTRACK_TEXT] select (_x getVariable ['tracked', false]),
 					0,
 					0.025,
 					'TahomaB'

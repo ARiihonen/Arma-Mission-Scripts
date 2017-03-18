@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=135;
+		nextID=150;
 	};
 	class Camera
 	{
-		pos[]={21657.967,123.97813,20795.877};
-		dir[]={0.16186279,-0.6982156,0.69750559};
-		up[]={0.15783332,0.71582538,0.68014354};
-		aside[]={0.97423398,3.2174867e-006,-0.22608113};
+		pos[]={21905.242,36.852989,21016.979};
+		dir[]={-0.44228607,-0.52571344,-0.72680336};
+		up[]={-0.27331454,0.850568,-0.44913533};
+		aside[]={-0.8543694,2.1166634e-006,0.5199185};
 	};
 };
 binarizationWanted=0;
@@ -131,24 +131,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -163,6 +145,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -2589,6 +2589,7 @@ class Mission
 									{
 										name="arifle_MX_F";
 										optics="optic_ACO_grn";
+										flashlight="acc_flashlight";
 										class primaryMuzzleMag
 										{
 											name="30Rnd_65x39_caseless_mag";
@@ -2601,7 +2602,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_BG_leader";
+										typeName="U_BG_Guerilla3_1";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -2695,6 +2696,7 @@ class Mission
 									class primaryWeapon
 									{
 										name="arifle_TRG21_F";
+										flashlight="acc_flashlight";
 										class primaryMuzzleMag
 										{
 											name="30Rnd_556x45_Stanag";
@@ -2790,6 +2792,7 @@ class Mission
 									class primaryWeapon
 									{
 										name="arifle_Katiba_F";
+										flashlight="acc_flashlight";
 										class primaryMuzzleMag
 										{
 											name="30Rnd_65x39_caseless_green";
@@ -2798,7 +2801,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_BG_Guerilla2_3";
+										typeName="U_I_G_resistanceLeader_F";
 										isBackpack=0;
 										class ItemCargo
 										{
@@ -2885,6 +2888,7 @@ class Mission
 									class primaryWeapon
 									{
 										name="arifle_Mk20_F";
+										flashlight="acc_flashlight";
 										class primaryMuzzleMag
 										{
 											name="30Rnd_556x45_Stanag";
@@ -2984,6 +2988,7 @@ class Mission
 									{
 										name="arifle_Mk20_F";
 										optics="optic_ACO_grn";
+										flashlight="acc_flashlight";
 										class primaryMuzzleMag
 										{
 											name="30Rnd_556x45_Stanag";
@@ -3116,6 +3121,7 @@ class Mission
 									class primaryWeapon
 									{
 										name="arifle_TRG21_F";
+										flashlight="acc_flashlight";
 										class primaryMuzzleMag
 										{
 											name="30Rnd_556x45_Stanag";
@@ -3211,6 +3217,7 @@ class Mission
 									class primaryWeapon
 									{
 										name="LMG_Mk200_F";
+										flashlight="acc_flashlight";
 										underBarrel="bipod_03_F_blk";
 										class primaryMuzzleMag
 										{
@@ -3315,6 +3322,7 @@ class Mission
 									{
 										name="srifle_EBR_F";
 										optics="optic_MRCO";
+										flashlight="acc_flashlight";
 										underBarrel="bipod_03_F_blk";
 										class primaryMuzzleMag
 										{
@@ -3402,8 +3410,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={20990.996,-2.6002915,20983.559};
-								angles[]={0,1.5619022,0};
+								position[]={20990.996,-2.6005661,20983.559};
+								angles[]={0,1.5618951,0};
 							};
 							side="East";
 							flags=2;
@@ -3411,6 +3419,7 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
+								init="(group this) setGroupIDGlobal [""al-Jinn""];";
 								description="Infiltrator";
 								isPlayable=1;
 								class Inventory
@@ -3494,21 +3503,22 @@ class Mission
 							};
 							id=28;
 							type="O_diver_TL_F";
-							atlOffset=83.245277;
+							atlOffset=83.245003;
 						};
 						class Item1
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={20990.996,-2.6002915,20983.559};
-								angles[]={0,1.5619022,0};
+								position[]={20990.996,-2.6005661,20983.559};
+								angles[]={0,1.5618951,0};
 							};
 							side="East";
 							class Attributes
 							{
 								skill=0.60000002;
 								rank="CORPORAL";
+								init="(group this) setGroupIDGlobal [""al-Jinn""];";
 								description="Infiltrator";
 								isPlayable=1;
 								class Inventory
@@ -3592,7 +3602,7 @@ class Mission
 							};
 							id=29;
 							type="O_diver_F";
-							atlOffset=83.245277;
+							atlOffset=83.245003;
 						};
 					};
 					class Attributes
