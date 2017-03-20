@@ -13,7 +13,7 @@ OnLoadMission = "Description.ext On Load Mission";
 loadscreen = "files\pictures\loadscreen.paa";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
-disabledai = 0; //Disable AI taking over un-taken player slots
+disabledai = 1; //Disable AI taking over un-taken player slots
 
 //Default respawn options
 respawn = "BASE";
@@ -22,8 +22,6 @@ respawnDialog = 0;
 respawnOnStart = 0;
 respawnTemplates[] = {"Tickets","Spectator"};
 respawnButton = 0;
-
-enableDebugConsole = 1; //enable debug console for the admin
 
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
@@ -40,8 +38,8 @@ ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
 class Header
 {
 	gameType = COOP;
-	minPlayers = 4;
-	maxPlayers = 18;
+	minPlayers = 10;
+	maxPlayers = 48;
 };
 
 class ACE_Settings
@@ -61,19 +59,34 @@ class CfgDebriefing
 		pictureColor[] = {0.6,0.1,0.2,1};
 	};
 
-	class Win
+	class WinTotal
 	{
-		title = "Mission Successful";
-		subtitle = "Yay you";
+		title = "Complete Success";
+		subtitle = "All equipment saved";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		picturecolor[] = {0.0,0.3,0.6,1};
 	};
 
-	class Lose
+	class WinPartial
+	{
+		title = "Mission Successful";
+		subtitle = "The enemy got nothing";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		picturecolor[] = {0.0,0.3,0.6,1};
+	};
+
+	class LosePartial
 	{
 		title = "Mission Failed";
-		subtitle = "Fuck off";
-		description = "Scrub";
+		subtitle = "The enemy has gained important gear";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+		pictureColor[] = {1.0,0.3,0.2,1.0};
+	};
+
+	class LoseTotal
+	{
+		title = "Complete Failure";
+		subtitle = "The enemy has gained a significant amount of gear";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 		pictureColor[] = {1.0,0.3,0.2,1.0};
 	};
@@ -183,34 +196,20 @@ class CfgRemoteExec
 //So, to check, refer to paramsArray select i, where i is array index (starting with 0)
 class Params
 {
-	class ExampleParam {
-		title = "Example title";
-		values[] = {0,1};
-		texts[] = {"ZERO", "ONE"};
-		default = 0;
-	};
-};
+	#define DEBUGCONSOLE_DEFAULT 1
+	#include "\a3\functions_f\Params\paramDebugConsole.hpp"
 
-class CfgORBAT
-{
-	class ARTR
-	{
-		class Example
-		{
-			id = 1;
-			commander = "GreekMen";
-			commanderRank = "Captain";
-			description = "Unit description";
-			insignia = "\a3\missions_f_epa\data\img\orbat\I_AAF_ca.paa";
-			side = "Resistance";
-			size = "Platoon";
-			type = "Infantry";
-			text = "2nd Platoon";
-			textShort = "2nd Platoon";
-			texture = "flag_AAF";
-			assets[] = {};
-			subordinates[] = {};
-		};
+	#define DAYTIMEPERIOD_DEFAULT 12
+	#include "\a3\functions_f\Params\paramDaytimePeriod.hpp"
+
+	#define WEATHER_DEFAULT 50
+	#include "\a3\functions_f\Params\paramWeather.hpp"
+
+	class GearPreference {
+		title = "Gear Preference (Required mods listed)";
+		values[] = {0,1,2};
+		texts[] = {"US Army", "British Armed Forces", "Finnish Defence Forces"};
+		default = 0;
 	};
 };
 
@@ -282,17 +281,4 @@ class CfgAISkills
 	reloadSpeed[] = {1, 1, 1, 1};
 	spotDistance[] = {1, 1, 1, 1};
 	spotTime[] = {1, 1, 1, 1};
-};
-
-class Cfg3DEN
-{
-	class EventHandlers
-	{
-		class ARTR
-		{
-			OnMissionLoad = "call ARTR_fnc_irregularGearSets;";
-			OnMissionNew = "call ARTR_fnc_irregularGearSets;";
-			OnMissionSave = "call ARTR_fnc_irregularGearSets;";
-		};
-	};
 };
