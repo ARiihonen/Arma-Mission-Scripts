@@ -17,7 +17,7 @@ if ( count _other_players > 0 ) then
 
 } else {
 	_var = "last_pos_" + _team_name;
-	if (!isNil (missionNamespace getVariable [_var, nil]) ) then
+	if (!isNil {(missionNamespace getVariable [_var, nil])} ) then
 	{
 		_position = missionNamespace getVariable _var;
 	};

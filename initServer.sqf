@@ -15,7 +15,3 @@ tr_grnDead = [
 	" { side _x == resistance && !(_x getVariable ['hades',false]) } count playableUnits <= 0",
 	"resistance spawn ARTR_fnc_respawnPlayers;"
 ] call ARTR_fnc_emptyTrigger;
-
-//Call server ending if all players are dead
-trigger_dead = ["{ alive _x } count playableUnits <= 0", "call ARTR_fnc_serverEnding;"] call ARTR_fnc_emptyTrigger;
-trigger_dead setTriggerTimeout [5, 5, 5, true];

@@ -220,7 +220,7 @@ class ace_medical_enableOverdosing {
     force = 1;
 };
 class ace_medical_bleedingCoefficient {
-    value = 1;
+    value = 0.5;
     typeName = "SCALAR";
     force = 1;
 };
@@ -775,12 +775,12 @@ class ace_advanced_fatigue_enabled {
     force = 1;
 };
 class ace_advanced_fatigue_performanceFactor {
-    value = 1;
+    value = 2;
     typeName = "SCALAR";
     force = 1;
 };
 class ace_advanced_fatigue_recoveryFactor {
-    value = 1;
+    value = 2;
     typeName = "SCALAR";
     force = 1;
 };

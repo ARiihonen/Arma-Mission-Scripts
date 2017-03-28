@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=166;
+		nextID=187;
 	};
 	class Camera
 	{
-		pos[]={3978.2595,36.577618,4101.5396};
-		dir[]={-0.18435755,-0.45371294,-0.87198943};
-		up[]={-0.093876719,0.89104873,-0.44402415};
-		aside[]={-0.97848058,-1.2434612e-006,0.20687164};
+		pos[]={3852.5762,30.429321,3990.4954};
+		dir[]={0.91508549,-0.39782363,0.067817882};
+		up[]={0.39691085,0.91732901,0.029414337};
+		aside[]={0.073918596,-5.0762901e-007,-0.99737716};
 	};
 };
 binarizationWanted=0;
@@ -108,6 +108,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -153,25 +172,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
 				};
 			};
 		};
@@ -3237,11 +3237,11 @@ class Mission
 			class Attributes
 			{
 				name="trigger_greenWin";
-				condition="this && isServer";
 				onActivation="_ending = resistance spawn ARTR_fnc_serverEnding;";
 				sizeA=35;
 				sizeB=35;
 				activationBy="GUER";
+				isServerOnly=1;
 			};
 			id=919;
 			type="EmptyDetectorAreaR50";
@@ -3253,8 +3253,7 @@ class Mission
 			class Attributes
 			{
 				name="trigger_blueWin";
-				condition="this && isServer";
-				onActivation="_thing = west spawn ARTR_fnc_serverEnding;";
+				onActivation="_thing = [west] spawn ARTR_fnc_serverEnding;";
 				sizeA=35;
 				sizeB=35;
 				activationBy="WEST";

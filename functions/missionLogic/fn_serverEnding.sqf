@@ -17,5 +17,8 @@ _lose_task = _otherTeam_name + "Win";
 ["Victory"] remoteExecCall ["ARTR_fnc_clientEnding",_team,false];
 ["Loss"] remoteExecCall ["ARTR_fnc_clientEnding",_otherTeam,false];
 
-sleep 20;
-endMission "END1";
+_ensureEnd = [] spawn
+{
+	sleep 20;
+	endMission "END1";
+};
