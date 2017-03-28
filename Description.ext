@@ -99,46 +99,38 @@ class CfgFunctions
 {
 	class ARTR
 	{
+		class ai
+		{
+			class enemyAttack {};
+			class getAIController {};
+			class HCInit {};
+			class HCSetOwner { postInit = 1; };
+			class infantryGroup {};
+			class initSkills { preInit = 1; };
+			class randomSuppression { postInit = 1; };
+			class setSkills {};
+			class suppressPositions {};
+			class VBIED {};
+			class vehicleGroup {};
+		};
+
+		class cargo
+		{
+			class fillCargo {};
+			class initCargo { postInit = 1; };
+		};
+
 		class eden
 		{
 			class setConditions {};
 			class setIrregularGearEden {};
 		};
 
-		class preinit
-		{
-			class missionSettings { preInit = 1; };
-			class randInt {};
-			class populateArray {};
-			class chooseRandoms {};
-			class presenceArray {};
-		};
-
-		class mods
-		{
-			class checkMod {};
-			class initRevive { preInit = 1; };
-			class initASR { preInit = 1; };
-			class initTFAR { preInit = 1; };
-			class initACRE { preInit = 1; };
-			class TFARRadiosAdded {};
-			class TFARSpeaking {};
-			class TFARVolumeChange {};
-		};
-
-		class ai
-		{
-			class initSkills { preInit = 1; };
-			class setSkills { postInit = 1; };
-			class HCInit {};
-			class HCSetOwner { postInit = 1; };
-			class getAIController {};
-		};
-
 		class gear
 		{
 			class giveMagazines {};
 			class modGear {};
+			class selectGear { preInit = 1; };
 			class switchBackpack {};
 			class switchHandgun {};
 			class switchPrimaryWeapon {};
@@ -161,11 +153,33 @@ class CfgFunctions
 		class missionLogic
 		{
 			class briefingFile {};
-			class serverEnding {};
 			class clientEnding {};
 			class emptyTrigger {};
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
+			class serverEnding {};
+			class spawnWave {};
+		};
+
+		class mods
+		{
+			class checkMod {};
+			class initRevive { preInit = 1; };
+			class initASR { preInit = 1; };
+			class initTFAR { preInit = 1; };
+			class initACRE { preInit = 1; };
+			class TFARRadiosAdded {};
+			class TFARSpeaking {};
+			class TFARVolumeChange {};
+		};
+
+		class preinit
+		{
+			class missionSettings { preInit = 1; };
+			class randInt {};
+			class populateArray {};
+			class chooseRandoms {};
+			class presenceArray {};
 		};
 	};
 };
@@ -180,9 +194,21 @@ class CfgRemoteExec
 
 	       class clientEnding
 	       {
-	              allowedTargets=0; 	// 0: can target anyone, 1: only clients, 2: only server
-	              jip = 1; 				// JIP setting override
+			   allowedTargets=0; 	// 0: can target anyone, 1: only clients, 2: only server
+			   jip = 1; 				// JIP setting override
 	       };
+
+		   class infantryGroup
+		   {
+			   allowedTargets = 0;
+			   jip = 0;
+		   };
+
+		   class vehicleGroup
+		   {
+			   allowedTargets = 0;
+			   jip = 0;
+		   };
 	};
 
 	// List of script commands allowed to be sent from client via remoteExec
@@ -207,9 +233,16 @@ class Params
 
 	class GearPreference {
 		title = "Gear Preference (Required mods listed)";
-		values[] = {0,1,2};
-		texts[] = {"US Army", "British Armed Forces", "Finnish Defence Forces"};
+		values[] = {0,1,2,3};
+		texts[] = {"NATO (Standard ARMA)", "US Army [RHS USAF]", "British Army [3CB BAF]", "Russian army [RHS AFRF]"};
 		default = 0;
+	};
+
+	class StaticPreference {
+		title = "If available, give 3CB static weapons regardless of gear preference";
+		values = {0,1};
+		texts[] = { "False", "True" };
+		default = 1;
 	};
 };
 

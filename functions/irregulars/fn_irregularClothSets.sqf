@@ -30,7 +30,7 @@ ARTR_irregularUniforms = [
 ARTR_irregularVests = [
 	[
 		"plateCarrier",
-		["V_PlateCarrier2_rgr_noflag_F","V_PlateCarrier2_rgr","V_PlateCarrier2_blk","V_PlateCarrier1_rgr_noflag_F","V_PlateCarrier1_blk"]
+		["V_PlateCarrier2_rgr_noflag_F","V_PlateCarrier2_blk","V_PlateCarrier1_rgr_noflag_F","V_PlateCarrier1_blk"]
 	],
 	[
 		"chestRig",
@@ -45,8 +45,8 @@ ARTR_irregularVests = [
 		["V_BandollierB_oli","V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_rgr","V_BandollierB_khk"]
 	],
 	[
-	 "tacVest",
-	 ["V_TacVest_oli","V_TacVest_khk","V_TacVest_camo","V_TacVest_brn","V_TacVest_blk"]
+	 	"tacVest",
+	 	["V_TacVest_oli","V_TacVest_khk","V_TacVest_camo","V_TacVest_brn","V_TacVest_blk"]
 	]
 ];
 
