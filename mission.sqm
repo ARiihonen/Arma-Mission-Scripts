@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={19446.564,98.447548,12731.441};
-		dir[]={0.87168002,-0.45888162,0.17264597};
-		up[]={0.45017269,0.88843226,0.089162022};
-		aside[]={0.19430572,8.0955215e-007,-0.98105127};
+		pos[]={19472.338,86.562607,12758.029};
+		dir[]={0.93565804,-0.33739707,-0.10437746};
+		up[]={0.33544406,0.94128042,-0.037421186};
+		aside[]={-0.11087928,1.0656222e-006,-0.9939369};
 	};
 };
 binarizationWanted=0;
@@ -50,6 +50,7 @@ addons[]=
 	"A3_Weapons_F_Explosives",
 	"ace_rangecard",
 	"A3_Drones_F_Weapons_F_Gamma_Items",
+	"ace_logistics_uavbattery",
 	"ace_nouniformrestrictions",
 	"A3_Weapons_F_Rifles_MX_Black",
 	"A3_Weapons_F_Pistols_Pistol_Heavy_01",
@@ -86,7 +87,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=43;
+		items=44;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -229,159 +230,166 @@ class AddonsMetaData
 		};
 		class Item20
 		{
+			className="ace_logistics_uavbattery";
+			name="ACE3 - Logistics UAV Battery";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item21
+		{
 			className="ace_nouniformrestrictions";
 			name="ACE3 - No Uniform Restrictions";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item21
+		class Item22
 		{
 			className="ace_optics";
 			name="ACE3 - Optics";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item22
+		class Item23
 		{
 			className="ace_chemlights";
 			name="ace_chemlights";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item23
+		class Item24
 		{
 			className="ace_ai";
 			name="ACE3 - AI";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item24
+		class Item25
 		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircrafts";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item26
 		{
 			className="ace_repair";
 			name="ACE3 - Repair";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item26
+		class Item27
 		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircrafts";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item28
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item29
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item30
 		{
 			className="ace_advanced_ballistics";
 			name="ACE3 - Advanced Ballistics";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item30
+		class Item31
 		{
 			className="ace_advanced_fatigue";
 			name="ACE3 - Advanced Fatigue";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item31
+		class Item32
 		{
 			className="ace_advanced_throwing";
 			name="ACE3 - Advanced Throwing";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item32
+		class Item33
 		{
 			className="ace_hearing";
 			name="ACE3 - Hearing";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item33
+		class Item34
 		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item34
+		class Item35
 		{
 			className="ace_map";
 			name="ACE3 - Map";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item35
+		class Item36
 		{
 			className="ace_map_gestures";
 			name="ACE3 - Map Gestures";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item36
+		class Item37
 		{
 			className="ace_nametags";
 			name="ACE3 - Name Tags";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item37
+		class Item38
 		{
 			className="ace_nightvision";
 			name="ACE3 - Night Vision";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item38
+		class Item39
 		{
 			className="ace_finger";
 			name="ACE3 - Finger";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item39
+		class Item40
 		{
 			className="ace_vehiclelock";
 			name="ACE3 - Vehicle Lock";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item40
+		class Item41
 		{
 			className="ace_weather";
 			name="ACE3 - Weather";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item41
+		class Item42
 		{
 			className="ace_winddeflection";
 			name="ACE3 - Wind Deflection";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item42
+		class Item43
 		{
 			className="ace_medical_menu";
 			name="ACE3 - Medical Menu";
@@ -475,8 +483,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={19479.668,84.740097,12758.934};
-						angles[]={0,5.9953976,0};
+						position[]={19478.527,84.732391,12757.811};
+						angles[]={0,6.2130866,0};
 					};
 					side="East";
 					flags=7;
@@ -493,7 +501,7 @@ class Mission
 								name="arifle_AK12_F";
 								optics="optic_Aco";
 								muzzle="muzzle_snds_B";
-								flashlight="ACE_acc_pointer_green";
+								flashlight="acc_pointer_IR";
 								class primaryMuzzleMag
 								{
 									name="30Rnd_762x39_Mag_F";
@@ -634,6 +642,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -651,7 +678,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item1
@@ -659,7 +686,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={19481.188,84.765701,12756.34};
+						position[]={19478.926,84.738564,12756.129};
 						angles[]={0,2.2886887,0};
 					};
 					side="East";
@@ -676,7 +703,7 @@ class Mission
 								name="arifle_AK12_F";
 								optics="optic_Aco";
 								muzzle="muzzle_snds_B";
-								flashlight="ACE_acc_pointer_green";
+								flashlight="acc_pointer_IR";
 								class primaryMuzzleMag
 								{
 									name="30Rnd_762x39_Mag_F";
@@ -861,8 +888,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={19479.689,84.747734,12756.207};
-						angles[]={0,3.8753967,0};
+						position[]={19477.803,84.729271,12756.201};
+						angles[]={0,3.6431508,0};
 					};
 					side="East";
 					flags=5;
@@ -878,7 +905,7 @@ class Mission
 								name="arifle_AK12_F";
 								optics="optic_Aco";
 								muzzle="muzzle_snds_B";
-								flashlight="ACE_acc_pointer_green";
+								flashlight="acc_pointer_IR";
 								class primaryMuzzleMag
 								{
 									name="30Rnd_762x39_Mag_F";
@@ -1059,15 +1086,14 @@ class Mission
 					};
 					id=11;
 					type="O_recon_medic_F";
-					atlOffset=1.5258789e-005;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={19480.811,84.756599,12758.411};
-						angles[]={0,1.3709805,0};
+						position[]={19479.17,84.741501,12757.04};
+						angles[]={0,1.3072727,0};
 					};
 					side="East";
 					flags=5;
@@ -1083,7 +1109,7 @@ class Mission
 								name="arifle_AK12_F";
 								optics="optic_DMS";
 								muzzle="muzzle_snds_B";
-								flashlight="ACE_acc_pointer_green";
+								flashlight="acc_pointer_IR";
 								class primaryMuzzleMag
 								{
 									name="30Rnd_762x39_Mag_F";
@@ -1225,15 +1251,14 @@ class Mission
 					};
 					id=13;
 					type="O_recon_M_F";
-					atlOffset=7.6293945e-006;
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={19478.766,84.735809,12757.708};
-						angles[]={0,5.0790534,0};
+						position[]={19477.643,84.72316,12757.423};
+						angles[]={0,4.9276743,0};
 					};
 					side="East";
 					flags=5;
@@ -1249,7 +1274,7 @@ class Mission
 								name="arifle_AK12_F";
 								optics="optic_Aco";
 								muzzle="muzzle_snds_B";
-								flashlight="ACE_acc_pointer_green";
+								flashlight="acc_pointer_IR";
 								class primaryMuzzleMag
 								{
 									name="30Rnd_762x39_Mag_F";
@@ -1375,6 +1400,15 @@ class Mission
 										ammoLeft=1;
 									};
 								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="ACE_UAVBattery";
+										count=2;
+									};
+								};
 							};
 							class backpack
 							{
@@ -1391,7 +1425,6 @@ class Mission
 					};
 					id=15;
 					type="O_soldier_UAV_F";
-					atlOffset=7.6293945e-006;
 				};
 			};
 			class Attributes

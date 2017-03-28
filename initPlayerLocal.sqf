@@ -20,19 +20,19 @@ switch (side player) do
 private _conditionInside = {
 	vehicle player == commandHelo &&
 	player == leader group player &&
-	!(player getVariable ['ACE_isUnconscious', false])
+	!(player getVariable ["ACE_isUnconscious", false])
 };
 
 private _conditionOutside = {
 	vehicle player != commandHelo &&
 	player == leader group player &&
-	!(player getVariable ['ACE_isUnconscious', false]) &&
+	!(player getVariable ["ACE_isUnconscious", false]) &&
 	call ARTR_fnc_hasRadio
 };
 
 private _conditionGTG = {
 	player == leader group player &&
-	!(player getVariable ['ACE_isUnconscious', false]) &&
+	!(player getVariable ["ACE_isUnconscious", false]) &&
 	(vehicle player == commandHelo || player call ARTR_fnc_hasRadio) &&
 	commandHelo getVariable ["landed",false]
 };
@@ -40,7 +40,7 @@ private _conditionGTG = {
 private _conditionRTB = {
 	vehicle player == commandHelo &&
 	player == leader group player &&
-	!(player getVariable ['ACE_isUnconscious', false]) &&
+	!(player getVariable ["ACE_isUnconscious", false]) &&
 	time > (20*60)
 };
 
@@ -49,7 +49,7 @@ act_assignLZ = [
 	"Assign LZ",
 	"",
 	{ commandHelo call ARTR_fnc_designateLZ; },
-	{true},
+	_conditionInside,
 	{},
 	[],
 	[0,0,0]
@@ -60,18 +60,18 @@ act_callHelo = [
 	"Call Helicopter",
 	"",
 	{ commandHelo call ARTR_fnc_designateLZ; },
-	{true},
+	_conditionOutside,
 	{},
 	[],
 	[0,0,0]
 ] call ace_interact_menu_fnc_createAction;
 
 act_goodToGo = [
-	"callHelo",
+	"goodToGo",
 	"Clear to lift",
 	"",
 	{ commandHelo call ARTR_fnc_goodToGo; },
-	{true},
+	_conditionGTG,
 	{},
 	[],
 	[0,0,0],
@@ -83,16 +83,16 @@ act_rtb = [
 	"Return to Base",
 	"",
 	{ commandHelo call ARTR_fnc_RTB; },
-	{true},
+	_conditionRTB,
 	{},
 	[],
 	[0,0,0]
 ] call ace_interact_menu_fnc_createAction;
 
-[commandHelo, 0, ["ACE_Actions"], act_assignLZ] call ace_interact_menu_fnc_addActionToObject;
-[commandHelo, 0, ["ACE_Actions"], act_goodToGo] call ace_interact_menu_fnc_addActionToObject;
-[commandHelo, 0, ["ACE_Actions"], act_rtb] call ace_interact_menu_fnc_addActionToObject;
-[player, 0, ["ACE_SelfActions"], act_callHelo] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, ["ACE_SelfActions"], act_goodToGo] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, ["ACE_SelfActions"], act_rtb] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, ["ACE_SelfActions"], act_callHelo] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, ["ACE_SelfActions"], act_assignLZ] call ace_interact_menu_fnc_addActionToObject;
 
 //Cuff escaping handler
 ARTR_captiveEH = [

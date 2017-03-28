@@ -21,7 +21,7 @@ if (commandHelo getVariable ["availableForTasking",true]) then
 	tr_mapClosed = [
 		"!visibleMap",
 		"
-			removeMissionEventHandler ARTR_mapClickEH;
+			removeMissionEventHandler ['MapSingleClick',ARTR_mapClickEH];
 		"
 	] call ARTR_fnc_emptyTrigger;
 } else {

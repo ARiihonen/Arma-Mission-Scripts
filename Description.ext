@@ -81,33 +81,6 @@ class CfgFunctions
 {
 	class ARTR
 	{
-		class eden
-		{
-			class setConditions {};
-			class setIrregularGearEden {};
-		};
-
-		class preinit
-		{
-			class missionSettings { preInit = 1; };
-			class randInt {};
-			class populateArray {};
-			class chooseRandoms {};
-			class presenceArray {};
-		};
-
-		class mods
-		{
-			class checkMod {};
-			class initRevive { preInit = 1; };
-			class initASR { preInit = 1; };
-			class initTFAR { preInit = 1; };
-			class initACRE { preInit = 1; };
-			class TFARRadiosAdded {};
-			class TFARSpeaking {};
-			class TFARVolumeChange {};
-		};
-
 		class ai
 		{
 			class initSkills { preInit = 1; };
@@ -115,6 +88,17 @@ class CfgFunctions
 			class HCInit {};
 			class HCSetOwner { postInit = 1; };
 			class getAIController {};
+		};
+
+		class captives
+		{
+			class handcuffed {};
+		};
+
+		class eden
+		{
+			class setConditions {};
+			class setIrregularGearEden {};
 		};
 
 		class gear
@@ -127,6 +111,15 @@ class CfgFunctions
 			class switchSecondaryWeapon {};
 			class switchUniform {};
 			class switchVest {};
+		};
+
+		class helicopters
+		{
+			class designateLZ {};
+			class goodToGo {};
+			class newLandingZone {};
+			class RTB {};
+			class standByStation {};
 		};
 
 		class irregulars
@@ -149,6 +142,27 @@ class CfgFunctions
 			class initBriefing { };
 			class JIPSetup { preInit = 1; };
 		};
+
+		class mods
+		{
+			class checkMod {};
+			class initRevive { preInit = 1; };
+			class initASR { preInit = 1; };
+			class initTFAR { preInit = 1; };
+			class initACRE { preInit = 1; };
+			class TFARRadiosAdded {};
+			class TFARSpeaking {};
+			class TFARVolumeChange {};
+		};
+
+		class preinit
+		{
+			class missionSettings { preInit = 1; };
+			class randInt {};
+			class populateArray {};
+			class chooseRandoms {};
+			class presenceArray {};
+		};
 	};
 };
 
@@ -165,6 +179,36 @@ class CfgRemoteExec
 	              allowedTargets=0; 	// 0: can target anyone, 1: only clients, 2: only server
 	              jip = 1; 				// JIP setting override
 	       };
+
+		   class designateLZ
+		   {
+			   allowedTargets = 0;
+			   jip = 0;
+		   };
+
+		   class goodToGo
+		   {
+			   allowedTargets = 0;
+			   jip = 0;
+		   };
+
+		   class newLandingZone
+		   {
+			   allowedTargets = 0;
+			   jip = 0;
+		   };
+
+		   class RTB
+		   {
+			   allowedTargets = 0;
+			   jip = 0;
+		   };
+
+		   class standByStation
+		   {
+			   allowedTargets = 0;
+			   jip = 0;
+		   };
 	};
 
 	// List of script commands allowed to be sent from client via remoteExec
