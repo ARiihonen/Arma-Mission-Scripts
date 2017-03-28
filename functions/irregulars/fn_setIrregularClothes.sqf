@@ -54,7 +54,7 @@ switch (_goggles) do
 	default { _unit addGoggles _goggles; };
 };
 
-if (( ((goggles _unit) find "Balaclava" >= 0 ) && ((headgear _unit) find "Helmet" >= 0 )) || ((headgear _unit) find "Shemag" >= 0 )) then
+if (( ((goggles _unit) find "Balaclava" >= 0 ) && ((headgear _unit) find "Helmet" < 0 )) || ((headgear _unit) find "Shemag" >= 0 )) then
 {
 	if (random 1 > 0.5) then { removeGoggles _unit; } else { removeHeadgear _unit };
 };
