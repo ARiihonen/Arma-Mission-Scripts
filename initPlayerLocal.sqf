@@ -46,6 +46,8 @@ switch (side player) do
 			"call ARTR_fnc_infilMarker;",
 			""
 		] call ARTR_fnc_emptyTrigger;
+
+		player setVariable ["ARTR_profileName", profileName, true];
 	};
 
 	case west: {
@@ -58,3 +60,5 @@ switch (side player) do
 waitUntil { time > 0 };
 
 [player] call ARTR_fnc_modGear;
+
+player setVariable ["ARTR_trueSide", playerSide];

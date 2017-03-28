@@ -63,7 +63,7 @@ if (missionNamespace getVariable ["ExtendedUAV", false]) then
 				drawIcon3D [
 					UNITTRACK_ICON,
 					[UNITTRACK_COLOURL,UNITTRACK_COLOUR] select (_x getVariable ['tracked', false]),
-					[_x getVariable ['lastPos',[0,0,0]],visiblePosition _x] select (_x getVariable ['tracked', false]),
+					[_x getVariable ['lastPos',[0,0,0]],getPosWorld _x] select (_x getVariable ['tracked', false]),
 					0.2,
 					0.2,
 					0,
@@ -72,7 +72,7 @@ if (missionNamespace getVariable ["ExtendedUAV", false]) then
 					0.025,
 					'TahomaB'
 				];
-			} forEach (allPlayers select {side _x == west});
+			} forEach (allPlayers select {_x getVariable 'ARTR_trueSide' == west});
 
 			{
 				drawIcon3D [
@@ -82,12 +82,12 @@ if (missionNamespace getVariable ["ExtendedUAV", false]) then
 					0.2,
 					0.2,
 					0,
-					format ['%1',_x],
+					'الجني' + (_x getVariable ['ARTR_profileName']),
 					0,
 					0.025,
 					'TahomaB'
 				];
-			} forEach (allPlayers select { side _x == east});
+			} forEach (allPlayers select { _x getVariable 'ARTR_trueSide' == east});
 		"
 	];
 };

@@ -3,7 +3,7 @@ This runs on the server machine after objects have initialised in the map. Anyth
 */
 //Creating tasks
 [west, "ProtectTask", ["Protect the supply stashes in the area until relief comes in", "Guard Duty", ""], nil, "ASSIGNED", 2, false, "search", false] call BIS_fnc_taskCreate;
-[east, "InfiltrateTask", ["Infiltrate the area and tag at least half of the supply boxes without being noticed", "Infiltration", ""], nil, "ASSIGNED", 1, false, "intel", false] call BIS_fnc_taskCreate;
+[east, "InfiltrateTask", ["Infiltrate the area and tag at least half of the supply boxes without being noticed", "Infiltration", ""], nil, "ASSIGNED", 2, false, "intel", false] call BIS_fnc_taskCreate;
 [east, "ExfilTask", ["Escape the area without being captured or killed", "Exfiltration", ""], nil, "CREATED", 1, false, "exit", false] call BIS_fnc_taskCreate;
 
 //Create trigger to detect and change infiltration task status
@@ -11,7 +11,7 @@ trigger_tracking = createTrigger ["EmptyDetector", [0,0,0], false];
 trigger_tracking setTriggerActivation ["NONE", "PRESENT", true];
 trigger_tracking setTriggerStatements [
 	"
-		({ alive _x && _x getVariable ['tracked', false] } count boxes >= ({ side (group _x) == west && isPlayer _x } count allUnits)) && (['MaskTask'] call BIS_fnc_taskState in ['','SUCCEEDED'])",
+		({ alive _x && _x getVariable ['tracked', false] } count boxes >= ({ side (group _x) == west && isPlayer _x } count allUnits))",
 	"
 		['InfiltrateTask', 'SUCCEEDED', false] call BIS_fnc_taskSetState;
 		['TaskSucceeded', ['Minimum tracker amount met']] remoteExecCall ['BIS_fnc_showNotification', east, false];
@@ -58,14 +58,14 @@ trigger_uavDone setTriggerTimeout [_uavEnding,_uavEnding,_uavEnding,false];
 
 //End mission if either side is dead
 trigger_dead = [
-	"{ side _x == west } count playableUnits == 0 || { side _x == east } count playableUnits == 0",
+	"({ side _x == west } count playableUnits == 0 || { side _x == east } count playableUnits == 0) && !(missionNamespace getVariable ['ARTR_serverEnding', false])",
 	"call ARTR_fnc_serverEnding;",
 	""
 ] call ARTR_fnc_emptyTrigger;
 
 //End mission if redfor exfiltrate
 trigger_exfil = [
-	"( triggerActivated tr_missionActive && { !(_x in insertion) && side _x == east } count playableUnits <= 0 ) || ( !canMove insertion && { side _x == east && _x inArea tr_operationArea } count playableUnits == 0 )",
+	"( triggerActivated tr_missionActive && { !(_x in insertion) && side _x == east } count playableUnits <= 0 ) || ( !canMove insertion && { side _x == east && _x inArea tr_operationArea } count playableUnits == 0 ) && !(missionNamespace getVariable ['ARTR_serverEnding', false])",
 	"call ARTR_fnc_serverEnding;",
 	""
 ] call ARTR_fnc_emptyTrigger;

@@ -10,7 +10,7 @@ if ( !(missionNamespace getVariable ["maskTaskGiven",false]) ) then
 	trigger_masking setTriggerActivation ["NONE", "PRESENT", true];
 	trigger_masking setTriggerStatements [
 		"
-			{ !alive _x &&  } count boxes >= missionNamespace getVariable ['murdered_defenders',0]",
+			{ !alive _x } count boxes >= missionNamespace getVariable ['murdered_defenders',0]",
 		"
 			['MaskTask', 'SUCCEEDED', false] call BIS_fnc_taskSetState;
 			['TaskSucceeded', ['Mission masked sufficiently']] remoteExecCall ['BIS_fnc_showNotification', east, false];

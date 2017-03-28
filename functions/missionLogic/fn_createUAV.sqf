@@ -43,6 +43,9 @@ fakeUAV camCommitPrepared 0;
 if (missionNamespace getVariable ["ExtendedUAV", false]) then
 {
 	_trackerLoop = [] spawn
+
+	waitUntil { time > 5 };
+
 	{
 		while { !(missionNamespace getVariable ['uav_done', false]) } do
 		{
@@ -51,19 +54,19 @@ if (missionNamespace getVariable ["ExtendedUAV", false]) then
 				{
 					if ( !(_x getVariable ["tracked", false]) ) then
 					{
-						_x setVariable ["tracked",true,true];
+						_x setVariable ["tracked",true,false];
 					};
-					_x setVariable ["lastPos", visiblePosition _x, true];
+					_x setVariable ["lastPos", getPosWorld _x, false];
 				} else {
 					if (_x getVariable ["tracked", false]) then
 					{
-						_x setVariable ["tracked",false,true];
-						_x setVariable ["trackLost",time,true];
+						_x setVariable ["tracked",false,false];
+						_x setVariable ["trackLost",time,false];
 					};
 				};
 
 				sleep 0.5;
-			} forEach (allPlayers select { side _x == west });
+			} forEach (allPlayers select { _x getVariable "ARTR_trueSide" == west });
 		};
 	};
 };

@@ -1,10 +1,12 @@
+missionNamespace setVariable ["ARTR_serverEnding", true, true];
+
 //calculate which ending to show here, then remoteExec the ending on all clients
 _boxes_tagged = { alive _x && _x getVariable ["tracked", false] } count boxes;
 _boxes_destroyed = { !alive _x } count boxes;
 _boxes_compromised = _boxes_tagged + _boxes_destroyed;
 _boxes_fine = count boxes - _boxes_compromised;
 
-_dead_infiltrators = { side (group _x) == east && (!alive _x || _x getVariable ["ACE_isUnconscious", false]) } count allUnits;
+_dead_infiltrators = { _x getVariable "ARTR_trueSide" == east && (!alive _x || _x getVariable ["ACE_isUnconscious", false]) } count allUnits;
 _dead_defenders = missionNamespace getVariable ["murdered_defenders", 0];
 
 _search = if (_boxes_destroyed * 2 < _dead_defenders) then { true; } else { false; };
