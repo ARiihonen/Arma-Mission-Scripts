@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=62;
+		nextID=70;
 	};
 	class Camera
 	{
-		pos[]={10240.72,117.26343,14809.813};
-		dir[]={-0.34184864,-0.35953325,0.86826164};
-		up[]={-0.13171349,0.93313175,0.33453932};
-		aside[]={0.9304812,2.3923349e-008,0.36634523};
+		pos[]={10219.627,106.73159,14809.295};
+		dir[]={0.44186845,-0.42482251,0.79011589};
+		up[]={0.20735726,0.9052754,0.37078038};
+		aside[]={0.87278855,4.4878107e-008,-0.4881033};
 	};
 };
 binarizationWanted=0;
@@ -11371,7 +11371,7 @@ class Mission
 			colorName="ColorWEST";
 			a=2;
 			b=2;
-			angle=166.00696;
+			angle=166.00693;
 			id=371;
 			atlOffset=-104.6497;
 		};
@@ -11396,7 +11396,7 @@ class Mission
 			colorName="ColorWEST";
 			a=2;
 			b=2;
-			angle=297.84491;
+			angle=297.84485;
 			id=373;
 			atlOffset=-109.95913;
 		};
@@ -11421,7 +11421,7 @@ class Mission
 			colorName="ColorWEST";
 			a=2;
 			b=2;
-			angle=166.00696;
+			angle=166.00693;
 			id=375;
 			atlOffset=-105.23814;
 		};
@@ -12215,7 +12215,7 @@ class Mission
 					};
 					id=680;
 					type="B_TargetSoldier";
-					atlOffset=7.6293945e-006;
+					atlOffset=0.00021362305;
 				};
 				class Item26
 				{
@@ -12233,10 +12233,11 @@ class Mission
 					};
 					id=683;
 					type="B_TargetSoldier";
+					atlOffset=9.9182129e-005;
 				};
 			};
 			id=545;
-			atlOffset=2.5686798;
+			atlOffset=2.5688705;
 		};
 		class Item65
 		{
@@ -13441,7 +13442,7 @@ class Mission
 				};
 			};
 			id=678;
-			atlOffset=7.6293945e-006;
+			atlOffset=0.00021362305;
 		};
 		class Item88
 		{
@@ -13493,6 +13494,7 @@ class Mission
 				};
 			};
 			id=681;
+			atlOffset=9.9182129e-005;
 		};
 		class Item89
 		{
@@ -14171,7 +14173,7 @@ class Mission
 			colorName="ColorWEST";
 			a=116.741;
 			b=87.650002;
-			angle=224.29396;
+			angle=224.29393;
 			id=725;
 			atlOffset=-95.249496;
 		};
@@ -14231,7 +14233,7 @@ class Mission
 			fillName="FDiagonal";
 			a=270.25128;
 			b=414.21198;
-			angle=104.65681;
+			angle=104.65679;
 			id=729;
 			atlOffset=-42.99765;
 		};
@@ -14285,7 +14287,7 @@ class Mission
 			fillName="FDiagonal";
 			a=235.83549;
 			b=559.82373;
-			angle=10.50508;
+			angle=10.505079;
 			id=733;
 			atlOffset=2.7366295;
 		};

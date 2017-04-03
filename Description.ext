@@ -9,7 +9,7 @@ overviewText = "Evacuating an outpost under escalating enemy assault."; //This i
 
 //Loading screen texts and picture for loading the mission
 OnLoadName = "CO10-46 Grace Under Pressure";
-OnLoadMission = "An organized retreat is a recognized military maneuver. So is a chaotic retreat.";
+OnLoadMission = "An organized withdrawal is a recognized military maneuver. So is a chaotic retreat.";
 loadscreen = "files\pictures\loadscreen.paa";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
