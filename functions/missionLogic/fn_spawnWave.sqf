@@ -54,4 +54,10 @@ private _syncTime = serverTime + (random(5*60));
 	[_marker,_vehicleType,_syncTime] remoteExecCall ["ARTR_fnc_vehicleGroup", call ARTR_fnc_getAIController, false];
 } forEach attackVehicles;
 
-//Still need to figure out logic for vehicles and VBIEDs and shit
+//Depending on the setting, respawn players as the new wave starts
+switch ("RespawnPreference" call BIS_fnc_getParamValue >= 2) do
+{
+	case 1: { call ARTR_fnc_respawnHelicopters; };
+	case 2: { call ARTR_fnc_respawnPlayers; };
+	case 3: { call ARTR_fnc_respawnPlayers; call ARTR_fnc_respawnHelicopters; };
+};

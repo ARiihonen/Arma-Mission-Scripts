@@ -1,15 +1,15 @@
 //https://community.bistudio.com/wiki/Description.ext
 
 author="Sniper Party / Caranfin";
-briefingName = "Description.ext Briefing Name";
+briefingName = "CO10-46 Grace Under Pressure";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
+overviewText = "Evacuating an outpost under escalating enemy assault."; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission
-OnLoadName = "Description.ext On Load Name";
-OnLoadMission = "Description.ext On Load Mission";
+OnLoadName = "CO10-46 Grace Under Pressure";
+OnLoadMission = "An organized retreat is a recognized military maneuver. So is a chaotic retreat.";
 loadscreen = "files\pictures\loadscreen.paa";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
@@ -17,10 +17,10 @@ disabledai = 1; //Disable AI taking over un-taken player slots
 
 //Default respawn options
 respawn = "BASE";
-respawnDelay = 5;
+respawnDelay = 10;
 respawnDialog = 0;
 respawnOnStart = 0;
-respawnTemplates[] = {"Tickets","Spectator"};
+respawnTemplates[] = {"Tickets","Spectator","Counter"};
 respawnButton = 0;
 
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
@@ -39,8 +39,18 @@ class Header
 {
 	gameType = COOP;
 	minPlayers = 10;
-	maxPlayers = 48;
+	maxPlayers = 46;
 };
+
+corpseManagerMode = 3;
+corpseLimit = 100;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 3600;
+wreckManagerMode = 1;
+wreckLimit = 10;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 3600;
+minPlayerDistance = 100;
 
 class ACE_Settings
 {
@@ -50,15 +60,6 @@ class ACE_Settings
 //Mission ending states, used via BIS_fnc_endMission from end.sqf
 class CfgDebriefing
 {
-
-	class Dead
-	{
-		title = "You are dead";
-		subtitle = "Mission over";
-		picture = "KIA";
-		pictureColor[] = {0.6,0.1,0.2,1};
-	};
-
 	class WinTotal
 	{
 		title = "Complete Success";
@@ -73,6 +74,14 @@ class CfgDebriefing
 		subtitle = "The enemy got nothing";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		picturecolor[] = {0.0,0.3,0.6,1};
+	};
+
+	class LossAmount
+	{
+		title = "Mission Failed";
+		subtitle = "Not enough gear was saved";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+		pictureColor[] = {1.0,0.3,0.2,1.0};
 	};
 
 	class LosePartial
@@ -130,6 +139,8 @@ class CfgFunctions
 		{
 			class giveMagazines {};
 			class modGear {};
+			class modVehicles { postInit = 1; };
+			class switchVehicle {};
 			class selectGear { preInit = 1; };
 			class switchBackpack {};
 			class switchHandgun {};
@@ -159,6 +170,8 @@ class CfgFunctions
 			class JIPSetup { preInit = 1; };
 			class serverEnding {};
 			class spawnWave {};
+			class respawnPlayers {};
+			class respawnHelicopters {};
 		};
 
 		class mods
@@ -222,11 +235,11 @@ class CfgRemoteExec
 //So, to check, refer to paramsArray select i, where i is array index (starting with 0)
 class Params
 {
-	#define DEBUGCONSOLE_DEFAULT 1
+	#define DEBUGCONSOLE_DEFAULT 0
 	#include "\a3\functions_f\Params\paramDebugConsole.hpp"
 
-	#define DAYTIMEPERIOD_DEFAULT 12
-	#include "\a3\functions_f\Params\paramDaytimePeriod.hpp"
+	#define DAYTIMEHOUR_DEFAULT 12
+	#include "\a3\functions_f\Params\paramDaytimeHour.hpp"
 
 	#define WEATHER_DEFAULT 50
 	#include "\a3\functions_f\Params\paramWeather.hpp"
@@ -234,15 +247,22 @@ class Params
 	class GearPreference {
 		title = "Gear Preference (Required mods listed)";
 		values[] = {0,1,2,3};
-		texts[] = {"NATO (Standard ARMA)", "US Army [RHS USAF]", "British Army [3CB BAF]", "Russian army [RHS AFRF]"};
-		default = 0;
+		texts[] = {"NATO (Standard ARMA)","US Army [RHS USAF]","British Army [3CB BAF]","Russian army [RHS AFRF]"};
+		default = 2;
 	};
 
 	class StaticPreference {
 		title = "If available, give 3CB static weapons regardless of gear preference";
-		values = {0,1};
+		values[] = {0,1};
 		texts[] = { "False", "True" };
 		default = 1;
+	};
+
+	class RespawnSetting {
+		title = "Reinforcement preference";
+		values[] = {0,1,2,3};
+		texts[] = {"None","Helicopters only","Infantry only","Everyone"};
+		default = 3;
 	};
 };
 

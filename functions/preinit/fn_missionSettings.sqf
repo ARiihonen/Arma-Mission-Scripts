@@ -3,11 +3,11 @@ if (isServer) then
 	switch ("GearPreference" call BIS_fnc_getParamValue) do
 	{
 		case 1: { if ("rhsusf_c_weapons" call ARTR_fnc_checkMod) then { missionNamespace setVariable ["gearSelection", "RHSUSF", true] }; };
-		case 2: { if ("UK3CB_BAF_Weapons" call ARTR_fnc_checkMod && "UK3CB_BAF_Weapons" call ARTR_fnc_checkMod) then { missionNamespace setVariable ["gearSelection", "BAF"], true }; };
+		case 2: { if ("UK3CB_BAF_Weapons" call ARTR_fnc_checkMod && "UK3CB_BAF_Equipment" call ARTR_fnc_checkMod) then { missionNamespace setVariable ["gearSelection", "BAF"], true }; };
 		case 3: { if ("rhs_c_weapons" call ARTR_fnc_checkMod) then { missionNamespace setVariable ["gearSelection", "RHSAFRF"], true }; };
 	};
 
-	if ("UK3CB_BAF_Weapons" call ARTR_fnc_checkMod && "StaticPreference" call BIS_fnc_getParamValue) then { missionNamespace setVariable ["staticConvert", true, true]; };
+	if ("UK3CB_BAF_Weapons" call ARTR_fnc_checkMod && ("StaticPreference" call BIS_fnc_getParamValue) == 1) then { missionNamespace setVariable ["staticConvert", true, true]; };
 
 	infantryTiers = [
 		[
@@ -83,9 +83,8 @@ if (isServer) then
 	attackVehicles = [];
 
 	groundVehicles = [];
-
-	supplyBoxes = [];
-	emptyBoxes = [];
+	cargoBoxes = [];
+	ammoBoxes = [];
 };
 
 if (isServer || (!isServer && !hasInterface)) then

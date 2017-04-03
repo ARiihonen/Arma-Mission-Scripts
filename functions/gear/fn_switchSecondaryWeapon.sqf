@@ -29,15 +29,18 @@ if (_weapon != "") then
 
 	_unit removeWeapon (secondaryWeapon _unit);
 
+	if (_weapon != "remove") then
 	{
-		_unit addMagazines [_x select 0, _x select 1];
-	} forEach _magArray;
+		{
+			_unit addMagazines [_x select 0, _x select 1];
+		} forEach _magArray;
 
-	_unit addWeapon _weapon;
+		_unit addWeapon _weapon;
 
-	{
-		_unit addSecondaryWeaponItem _x;
-	} forEach _attachments;
+		{
+			_unit addSecondaryWeaponItem _x;
+		} forEach _attachments;
+	};
 };
 
 _ret;
