@@ -11,6 +11,16 @@ if ("ace_attach" call ARTR_fnc_checkMod) then {
 	_unit addItem "ACE_IR_Strobe_Item";
 };
 
+//Grenades
+if ("ace_grenades" call ARTR_fnc_checkMod) then {
+
+	while { { _x == "HandGrenade"} count (vestItems _unit) > 0 } do
+	{
+		_unit removeMagazine "HandGrenade";
+		_unit addItemToVest "ACE_M84";
+	};
+};
+
 private _vanillaBasicGear = [
 	["FirstAidKit", 2]
 ];
