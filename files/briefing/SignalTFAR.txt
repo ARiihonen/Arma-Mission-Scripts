@@ -1,1 +1,13 @@
-TFAR Signal information
+All task force elements are on the same net. Each team has their own designated channel, and all leaders have a secondary channel (CH1) assigned inter-team communication.
+<br /> <br />
+CH01: TF Command Channel <br />
+CH02: Delta 2 - Command element <br />
+CH03: Delta 2-1 - First Squad <br />
+CH04: Delta 2-2 - Second Squad <br />
+CH05: Delta 2-3 - Third Squad <br />
+CH06: Delta 2-4 - Sniper Team <br />
+CH07: Delta 2-5 - Mortar Team <br />
+CH08: Delta 2-6 - HMG Team <br />
+CH09: Delta 3-1 - TF attached Transport Helo <br />
+CH10: Delta 3-2 - TF attached CAS Helo <br />
+<br /> <br />

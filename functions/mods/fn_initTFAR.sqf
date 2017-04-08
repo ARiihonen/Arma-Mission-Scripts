@@ -14,13 +14,52 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 	ARTR_TFAR_sameLR = true;				//same LR frequency for entire side
 	ARTR_TFAR_sameDD = true;				//same DD frequency for entire side
 
+	private _gearSetting = "default";
+	switch ("GearPreference" call BIS_fnc_getParamValue) do
+	{
+		case 1: {
+			if ("rhsusf_c_weapons" call ARTR_fnc_checkMod) then { _gearSetting = "RHSUSF"; };
+		};
+		case 2: {
+			if ("UK3CB_BAF_Weapons" call ARTR_fnc_checkMod && "UK3CB_BAF_Equipment" call ARTR_fnc_checkMod) then { _gearSetting =  "BAF"; };
+		};
+		case 3: {
+			if ("rhs_c_weapons" call ARTR_fnc_checkMod) then { _gearSetting = "RHSAFRF"; };
+		};
+	};
 
 	//BLUFOR radios and channel settings
 	tf_west_radio_code = "_blufor";
-	TF_defaultWestBackpack = "tf_rt1523g";
-	TF_defaultWestPersonalRadio = "tf_anprc152";
-	TF_defaultWestRiflemanRadio = "tf_rf7800str";
-	TF_defaultWestAirborneRadio = "tf_anarc210";
+	switch( _gearSetting ) do
+	{
+		case "RHSUSF": {
+			TF_defaultWestBackpack = "tf_anprc155_coyote";
+			TF_defaultWestPersonalRadio = "tf_anprc152";
+			TF_defaultWestRiflemanRadio = "tf_anprc152";
+			TF_defaultWestAirborneRadio = "tf_anarc210";
+		};
+
+		case "RHSAFRF": {
+			TF_defaultWestBackpack = "tf_mr3000_rhs";
+			TF_defaultWestPersonalRadio = "tf_anprc152";
+			TF_defaultWestRiflemanRadio = "tf_anprc152";
+			TF_defaultWestAirborneRadio = "tf_mr6000l";
+		};
+
+		case "BAF": {
+			TF_defaultWestBackpack = "UK3CB_BAF_B_Bergen_DPMT_JTAC_A";
+			TF_defaultWestPersonalRadio = "tf_anprc152";
+			TF_defaultWestRiflemanRadio = "tf_anprc152";
+			TF_defaultWestAirborneRadio = "tf_anarc210";
+		};
+
+		default {
+			TF_defaultWestBackpack = "tf_rt1523g";
+			TF_defaultWestPersonalRadio = "tf_anprc152";
+			TF_defaultWestRiflemanRadio = "tf_anprc152";
+			TF_defaultWestAirborneRadio = "tf_anarc210";
+		};
+	};
 
 	//GREENFOR radios and channel settings
 	tf_guer_radio_code = "_independent";

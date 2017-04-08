@@ -18,11 +18,13 @@ if (_weapon != "") then
 	//Get primary weapon mags and remove all types associated, then remove the primary weapon
 	{
 		private _identifier = "";
-		if (_x find "_grenade_" < 0 || _x find "UGL" < 0) then
+		if (_x find "_grenade_" < 0 && _x find "UGL" < 0) then
 		{
 			//Strip the mag class name to the bit between the first two _, result is caliber
-			_identifier = _x select [0,[_x find "_"]];
-			_identifier = _identifier select [1,[_identifier find "_"]];
+			private _firstBoundary = (_x find "_")+1;
+			private _secondBoundary = ((_x select [_firstBoundary]) find "_");
+
+			_identifier = _x select [_firstBoundary,_secondBoundary];
 		} else {
 			//If it's an UGL grenade or flare, these identifiers are used
 			_identifier = (["_grenade_","UGL"] select (_x find "UGL" >= 0));
@@ -35,13 +37,16 @@ if (_weapon != "") then
 
 	_unit removeWeapon (primaryWeapon _unit);
 
-	[_unit,_magArray] call ARTR_fnc_giveMagazines;
-
-	_unit addWeapon _weapon;
-
+	if (_weapon != "remove") then
 	{
-		_unit addPrimaryWeaponItem _x;
-	} forEach _attachments;
+		[_unit,_magArray] call ARTR_fnc_giveMagazines;
+
+		_unit addWeapon _weapon;
+
+		{
+			_unit addPrimaryWeaponItem _x;
+		} forEach _attachments;
+	};
 };
 
 _ret;
