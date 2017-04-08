@@ -17,7 +17,7 @@ if (missionNamespace getVariable [_permission_name, false] || time < 10) then {
 	player enableFatigue false;
 	player addEventHandler ["Take", { _this call ARTR_fnc_infiniteAmmo; } ];
 
-	player remoteExecCall ["ARTR_fnc_setPlayerPosition", 2, false];
+	call ARTR_fnc_setPlayerPosition;
 } else {
 	player setPos [-15+(random 30),-15+(random 30),2];
 	player setDamage 1;

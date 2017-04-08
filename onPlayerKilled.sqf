@@ -1,4 +1,6 @@
-private _var = ["last_pos_west","last_pos_guer"] select (side player == resistance);
+params ["_player","_killer"];
 
-missionNamespace setVariable [_var, getPos (_this select 0), true];
+private _var = "last_pos_" + str(side player);
+
+missionNamespace setVariable [_var, getPosWorld _player, true];
 player setVariable ["hades",false];

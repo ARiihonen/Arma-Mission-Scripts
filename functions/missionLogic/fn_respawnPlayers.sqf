@@ -1,7 +1,5 @@
 params ["_team"];
 
-_team call ARTR_fnc_updateSpawnPoints;
-
 private _permission_name = "respawn_permission_" + str(_team);
 missionNamespace setVariable [_permission_name,true,true];
 
