@@ -18,7 +18,3 @@ if (!isNil "headlessClient") then
 		};
 	};
 };
-
-//if player is pilot and the blackfish is piloted by AI, replace AI pilot with player
-
-//Same for if heli pilot and ghosthawk

@@ -10,16 +10,6 @@ ARTR_irregularClothCollections = [
 		]
 	],
 	[
-		"guerrillaHeavy",
-		[
-			["guerrilla", "paramilitary"],
-			["plateCarrier"],
-			["bandanna", "beanie", "cap", "shemagh", "milcap"],
-			["balaclava","bandanna","shades","shadesSport"],
-			"leave"
-		]
-	],
-	[
 		"civilian",
 		[
 			["civilian", "civilianShorts", "civilianSports"],

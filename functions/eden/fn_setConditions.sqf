@@ -7,20 +7,16 @@ Params:
 */
 
 params[
-	["_varName","presenceArray",[""]],
+	["_var_name","presenceArray",[""]],
 	["_counter",0,[0]]
 ];
 
 collect3DENHistory {
 	{
 		_counter = _counter + 1;
-		private _oldCondition = (_x get3DENAttribute "presenceCondition") select 0;
-		private _newCondition = str(_counter) + " in " + _varName;
-		private _finalCondition = [(_oldCondition + " && " + _newCondition),_newCondition] select (_oldCondition == "true");
-		_x set3DENAttribute ["presenceCondition",_finalCondition];
+		_x set3DENAttribute ["presenceCondition", format ["%1 in %2", _counter, _var_name]];
 	} forEach get3DENSelected "object";
 };
 
-systemChat ("Conditions set for " +  _varName + ", last value: " + (str _counter));
-diag_log ("Conditions set for " +  _varName + ", last value: " + (str _counter));
+diag_log ("Conditions set for " +  _var_name + ", last value: " + (str _counter));
 copyToClipboard str _counter;

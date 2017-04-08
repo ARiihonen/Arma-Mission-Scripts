@@ -690,7 +690,7 @@ class ace_viewdistance_limitViewDistance {
     force = 1;
 };
 class ace_weather_enableServerController {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
