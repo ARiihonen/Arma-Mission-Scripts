@@ -4,7 +4,7 @@ if (missionNamespace getVariable ["noInfilMarker", true]) then {
 	_marker setMarkerTypeLocal "hd_marker";
 	_marker setMarkerColorLocal "colorOPFOR";
 
-	missionNamespace setVariable ["noInfilMarker", false, true];
+	missionNamespace setVariable ["noInfilMarker", false, false];
 } else {
 	"mrk_infil" setMarkerPos (getPosWorld insertion);
 };

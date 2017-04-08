@@ -10,3 +10,38 @@ if (!(player in (missionNamespace getVariable "authorizedPlayers"))) then {
 if (!alive player) then {
 	["Initialize", [player, allGroups select {isPlayer (leader _x)}, true]] call BIS_fnc_EGSpectator;
 };
+
+switch (side player) do
+{
+	case east: {
+		//Starting position marker
+		_mark = createMarkerLocal ["start", getMarkerPos "redStart"];
+		_mark setMarkerShapeLocal "ICON";
+		_mark setMarkerTypeLocal "mil_start";
+		_mark setMarkerColorLocal "colorBlue";
+
+		//create camera
+		call ARTR_fnc_initUAV;
+
+		//trigger to set a marker to SDV position when disembarking
+		tr_SDVPlaced = [
+			"count crew insertion <= 0",
+			"call ARTR_fnc_infilMarker;",
+			""
+		] call ARTR_fnc_emptyTrigger;
+
+		player setVariable ["ARTR_profileName", profileName, true];
+	};
+
+	case west: {
+		//Add EHs to handle defenders being killed by infiltrators
+		player addEventHandler ["Hit", "_this call ARTR_fnc_defenderHit;"];
+		player addEventHandler ["Killed", "_this call ARTR_fnc_defenderKilled;"];
+	};
+};
+
+waitUntil { time > 0 };
+
+[player] call ARTR_fnc_modGear;
+
+player setVariable ["ARTR_trueSide", playerSide];
