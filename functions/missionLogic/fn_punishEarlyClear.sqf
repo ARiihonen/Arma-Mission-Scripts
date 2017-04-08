@@ -8,7 +8,7 @@
 		deleteWaypoint _x;
 	} forEach (waypoints _x);
 
-	_newWaypoint = _x addWaypoint [getMarkerPos "mrk_pickup", 0];
+	_newWaypoint = _x addWaypoint [getMarkerPos "mrk_pickup", 10];
 	_newWaypoint setWaypointSpeed "FULL";
 	_x setCurrentWaypoint _newWaypoint;
 
