@@ -1,7 +1,7 @@
-if (isServer) then {
+if (isServer || (!isServer && !hasInterface)) then {
 	waitUntil { missionNamespace getVariable ["ARTR_ai_setsSet", false] };
 
-	private _list = (allUnits - playableUnits);
+	private _list = _this;
 	private _skillSets = missionNamespace getVariable "ARTR_ai_skillSets";
 	private _factionSkills = missionNamespace getVariable "ARTR_ai_factionSkills";
 	private _unitSets = missionNamespace getVariable "ARTR_ai_unitSets";
@@ -57,5 +57,6 @@ if (isServer) then {
 				_unit setSkill [_skill_type,_total];
 			} forEach _skills;
 		} forEach _skill_set;
+
 	} forEach _list;
 };

@@ -20,6 +20,6 @@ if ( addonTFAR || addonACRE ) then { ["Diary", "Signal", _signal] call ARTR_fnc_
 if (addonTFAR) then
 {
 	//Add diary subject and entries for gameplay logic
-	player createDiarySubject ["Info", "Scenario Info"];
-	["Info", "Setup logic", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
+	player createDiarySubject ["Info", "SCENARIO INFO"];
+	["Info", "TFAR Hearing", "TFARHearing.txt"] call ARTR_fnc_briefingFile;
 };

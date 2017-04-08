@@ -1,4 +1,4 @@
-if (isServer) then {
+if (isServer || (!isServer && !hasInterface)) then {
 
 	//Init sets of AI skill: general/aiming/spotting, format: [skill,random deviation]
 	private _ai_skill_sets = [
@@ -36,7 +36,7 @@ if (isServer) then {
 
 	//Per-class exceptions to faction skill ([class,skillset])
 	private _ai_class_sets = [
-
+	
 	];
 	missionNamespace setVariable ["ARTR_ai_classSets", _ai_class_sets];
 
