@@ -1,3 +1,0 @@
-The insurgents have gained a surprising amount of Altis in a very short time, and an occupation outpost at <marker name = 'mrk_outpost'>a factory near Alikampos</marker> is being threatened with envelopment by insurgent forces, who have recently driven off their opposition from <marker name = 'mrk_dam'>Xirolimni Dam</marker>.
-<br /> <br />
-The company holding the outpost has been forced to pack up and pull back as quickly as they can, and they are still in the middle of transporting the last of their gear out of the facility as the enemy start their assault.

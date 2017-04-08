@@ -1,3 +1,0 @@
-Protect <marker name = 'mrk_outpost'>the outpost</marker> and transport as much of <marker name = 'mrk_lowBoxes'>the</marker> <marker name = 'mrk_roofBoxes'>supplies</marker> as you can to the <marker name = 'mrk_targetArea'>Evacuation Area</marker>.
-<br /> <br />
-Destroy any materiel you can not evacuate from the outpost. Do not give the enemy any of our advanced technology.
