@@ -36,11 +36,7 @@ if (isServer || (!isServer && !hasInterface)) then {
 
 	//Per-class exceptions to faction skill ([class,skillset])
 	private _ai_class_sets = [
-		["O_G_Soldier_SL_F", 4],
-		["O_G_Soldier_F", 4],
-		["O_G_Sharpshooter_F", 10],
-		["O_G_Soldier_LAT_F", 4],
-		["O_G_Soldier_AR_F", 4]
+	
 	];
 	missionNamespace setVariable ["ARTR_ai_classSets", _ai_class_sets];
 

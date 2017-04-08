@@ -6,15 +6,7 @@ params [
 //SQUAD SPECIFIC RADIO CHANNEL SETTINGS: [GROUP ID, DEFAULT CHANNEL]. By default, channel 0 is for inter-squad communication
 //Need to use player setgroupID "id"; in unit init-field to get this initialised properly.
 ARTR_radioChannels = [
-	["Delta 2", 1],
-	["Delta 2-1", 2],
-	["Delta 2-2", 3],
-	["Delta 2-3", 4],
-	["Delta 2-4", 5],
-	["Delta 2-5", 6],
-	["Delta 2-6", 7],
-	["Delta 3-1", 8],
-	["Delta 3-2", 9]
+
 ];
 
 _addStuff = [] spawn {
