@@ -11,7 +11,7 @@ private _vanillaMedicGear = [
 ];
 
 private _ACEBasicGear = [
-	["ACE_fieldDressing", 6],
+	["ACE_fieldDressing", 4],
 	["ACE_epinephrine", 2],
 	["ACE_morphine", 2]
 ];
@@ -23,11 +23,11 @@ private _ACEMedicGear = [
 ];
 
 private _ACEAdvGear = [
-	["ACE_fieldDressing", 6],
-	["ACE_packingBandage", 6],
+	["ACE_fieldDressing", 4],
+	["ACE_packingBandage", 4],
 	["ACE_epinephrine", 2],
 	["ACE_morphine", 2],
-	["ACE_tourniquet", 2]
+	["ACE_tourniquet", 1]
 ];
 private _ACEAdvMedicGear = [
 	["ACE_fieldDressing", 15],
@@ -40,24 +40,6 @@ private _ACEAdvMedicGear = [
 	["ACE_tourniquet", 5],
 	["ACE_bloodIV_500", 8]
 ];
-
-
-if (_unit == leader (group _unit) && !("ItemGPS" in assignedItems _unit)) then
-{
-	_unit linkItem "ItemGPS";
-};
-
-if ("ace_microdagr" call ARTR_fnc_checkMod && "ItemGPS" in (assignedItems _unit) ) then
-{
-	_unit unLinkItem "ItemGPS";
-	_unit addItemToUniform "ACE_microDagr";
-};
-
-if ("ace_maptools" call ARTR_fnc_checkMod && (_unit == leader group _unit || ["_SL_", typeOf _unit] call BIS_fnc_inString || ["_TL_", typeOf _unit] call BIS_fnc_inString) ) then
-{
-	_unit addItemToUniform "ACE_MapTools";
-};
-
 
 private _basicGear = [];
 private _medicGear = [];
