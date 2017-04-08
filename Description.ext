@@ -235,6 +235,7 @@ class CfgRemoteExec
 //So, to check, refer to paramsArray select i, where i is array index (starting with 0)
 class Params
 {
+	/*
 	#define DEBUGCONSOLE_DEFAULT 0
 	#include "\a3\functions_f\Params\paramDebugConsole.hpp"
 
@@ -243,7 +244,8 @@ class Params
 
 	#define WEATHER_DEFAULT 50
 	#include "\a3\functions_f\Params\paramWeather.hpp"
-
+	*/
+	
 	class GearPreference {
 		title = "Gear Preference (Required mods listed)";
 		values[] = {0,1,2,3};

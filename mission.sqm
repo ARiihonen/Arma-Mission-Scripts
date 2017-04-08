@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=70;
+		nextID=78;
 	};
 	class Camera
 	{
-		pos[]={10219.627,106.73159,14809.295};
-		dir[]={0.44186845,-0.42482251,0.79011589};
-		up[]={0.20735726,0.9052754,0.37078038};
-		aside[]={0.87278855,4.4878107e-008,-0.4881033};
+		pos[]={10225.286,101.14889,14840.154};
+		dir[]={0.7150656,-0.69540632,-0.071528412};
+		up[]={0.69195497,0.718615,-0.069216788};
+		aside[]={-0.099534906,5.8033038e-008,-0.9950484};
 	};
 };
 binarizationWanted=0;
@@ -11371,7 +11371,7 @@ class Mission
 			colorName="ColorWEST";
 			a=2;
 			b=2;
-			angle=166.00693;
+			angle=166.00691;
 			id=371;
 			atlOffset=-104.6497;
 		};
@@ -11421,7 +11421,7 @@ class Mission
 			colorName="ColorWEST";
 			a=2;
 			b=2;
-			angle=166.00693;
+			angle=166.00691;
 			id=375;
 			atlOffset=-105.23814;
 		};
@@ -14173,7 +14173,7 @@ class Mission
 			colorName="ColorWEST";
 			a=116.741;
 			b=87.650002;
-			angle=224.29393;
+			angle=224.2939;
 			id=725;
 			atlOffset=-95.249496;
 		};
@@ -14233,7 +14233,7 @@ class Mission
 			fillName="FDiagonal";
 			a=270.25128;
 			b=414.21198;
-			angle=104.65679;
+			angle=104.65677;
 			id=729;
 			atlOffset=-42.99765;
 		};

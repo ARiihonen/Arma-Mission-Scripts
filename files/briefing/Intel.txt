@@ -1,3 +1,7 @@
+ENEMY FORCES:<br />
 The opposition consists of large numbers of irregular infantry, armed with old but reliabble rifles acquired through the black market, as well as a worrying amount of RPGs.
 <br /> <br />
 Enemy tactics are likely to be unsophisticated. Expect infantry to assault from multiple directions, with the support of some armed technicals and VBIED rushes.
+<br /> <br />
+FRIENDLY FORCES:<br />
+The outpost is currently in control of the remains of Delta Company, who have been evacuating it as quickly as possible. The remaining equipment is guarded by parts of 2nd Platoon, with attached air elements operating in CAS and transport roles.
