@@ -58,5 +58,9 @@ if (isServer || (!isServer && !hasInterface)) then {
 			} forEach _skills;
 		} forEach _skill_set;
 
+		_unit setSkill ["courage",1];
+		_unit disableAI "AUTOCOMBAT";
+		_unit enableFatigue false;
+
 	} forEach _list;
 };

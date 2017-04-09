@@ -9,4 +9,4 @@ deleteVehicle _oldVehicle;
 call compile format ["%1 = _newVehicle createVehicle _pos;", _name];
 call compile format ["%1 setDir _dir;", _name];
 call compile format ["%1 setPos _pos;", _name];
-call compile format ["%1 setVariable ['tf_side',west,true];"];
+call compile format ["%1 setVariable ['tf_side',west,true];", _name];

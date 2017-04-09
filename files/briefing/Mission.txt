@@ -1,0 +1,7 @@
+Protect <marker name = 'mrk_outpost'>the outpost</marker> and transport as much of <marker name = 'mrk_lowBoxes'>the</marker> <marker name = 'mrk_roofBoxes'>supplies</marker> as you can to the <marker name = 'mrk_targetArea'>Evacuation Area</marker>.
+<br /> <br />
+Destroy any materiel you can not evacuate from the outpost. Do not give the enemy any of our advanced technology.
+<br /> <br />
+All of the materiel you need to evacuate is already packed into boxes with cargo netting and readied for slingloading. The supplies are in two locations: <marker name = 'mrk_lowBoxes'>on the ground inside the outpost</marker>, and <marker name = 'mrk_roofBoxes'>on top of the factory roof.</marker>
+<br /> <br />
+The air element will be able to provide ammo resupply by bringing in similarly packaged <marker name = 'mrk_ammoBoxes'>ammunition boxes</marker> from the airbase.
