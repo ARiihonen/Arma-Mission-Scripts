@@ -6,15 +6,6 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 
 	call compile preprocessFileLineNumbers "\task_force_radio\functions\common.sqf";
 
-	//General settings
-	ARTR_TFAR_autoLR = false; 			//automatically add backpack radio to leader
-	ARTR_TFAR_gruntUpgrade = true; 		//give personal radio to regular riflemen
-	ARTR_TFAR_microDagr = false;			//give microDAGR to regular riflemen
-	ARTR_TFAR_sameSW = true;				//same SW frequency for entire side
-	ARTR_TFAR_sameLR = true;				//same LR frequency for entire side
-	ARTR_TFAR_sameDD = true;				//same DD frequency for entire side
-
-
 	//BLUFOR radios and channel settings
 	tf_west_radio_code = "_blufor";
 	TF_defaultWestBackpack = "tf_rt1523g";
@@ -36,19 +27,6 @@ if ("task_force_radio" call ARTR_fnc_checkMod) then
 	TF_defaultEastRiflemanRadio = "tf_pnr1000a";
 	TF_defaultEastAirborneRadio = "tf_mr6000l";
 
-	[
-		"CBA_beforeSettingsInitialized",
-		{
-			["CBA_settings_setSettingMission", ["TF_no_auto_long_range_radio",ARTR_TFAR_autoLR,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_give_personal_radio_to_regular_soldier",ARTR_TFAR_gruntUpgrade,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_give_microdagr_to_soldier",ARTR_TFAR_microDagr,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_same_sw_frequencies_for_side",ARTR_TFAR_sameSW,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_same_lr_frequencies_for_side",ARTR_TFAR_sameLR,true]] call CBA_fnc_localEvent;
-			["CBA_settings_setSettingMission", ["TF_same_dd_frequencies_for_side",ARTR_TFAR_sameDD,true]] call CBA_fnc_localEvent;
-			["CBA_beforeSettingsInitialized",ARTR_TFAR_thisId] call CBA_fnc_removeEventHandler;
-		},
-		[]
-	] call CBA_fnc_addEventHandlerArgs;
 
 	["ARTR_receivedRadios", "OnRadiosReceived", { _this call ARTR_fnc_TFARRadiosAdded; }, player] call TFAR_fnc_addEventHandler;
 
