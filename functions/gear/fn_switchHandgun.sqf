@@ -20,8 +20,10 @@ if (_weapon != "") then
 		private _identifier = "";
 
 		//Strip the mag class name to the bit between the first two _, result is caliber
-		_identifier = _x select [0,[_x find "_"]];
-		_identifier = _identifier select [1,[_identifier find "_"]];
+		private _firstBoundary = (_x find "_")+1;
+		private _secondBoundary = ((_x select [_firstBoundary]) find "_");
+		
+		_identifier = _x select [_firstBoundary,_secondBoundary];
 
 		{
 			_unit removeMagazines _x;
@@ -30,13 +32,16 @@ if (_weapon != "") then
 
 	_unit removeWeapon (handgunWeapon _unit);
 
-	[_unit,_magArray] call ARTR_fnc_giveMagazines;
-
-	_unit addWeapon _weapon;
-
+	if (_weapon != "remove") then
 	{
-		_unit addHandgunItem _x;
-	} forEach _attachments;
+		[_unit,_magArray] call ARTR_fnc_giveMagazines;
+
+		_unit addWeapon _weapon;
+
+		{
+			_unit addHandgunItem _x;
+		} forEach _attachments;
+	};
 };
 
 _ret;

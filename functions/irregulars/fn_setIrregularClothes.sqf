@@ -22,14 +22,14 @@ switch (_uniform) do
 
 switch (_vest) do
 {
-	case "remove": { removeUniform _unit; };
+	case "remove": { removeVest _unit; };
 	case "leave": {};
 	default { [_unit,_vest] call ARTR_fnc_switchVest; };
 };
 
 switch (_backpack) do
 {
-	case "remove": { removeUniform _unit; };
+	case "remove": { removeBackpack _unit; };
 	case "leave": {};
 	default { [_unit,_backpack] call ARTR_fnc_switchBackpack; };
 };

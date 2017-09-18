@@ -23,7 +23,7 @@ _buildingText = if (count buildings > 1) then
 _enemySquadsText = str( [({ side _x == west } count allUnits) / 8, 0] call BIS_fnc_cutDecimals );
 
 _wirecutterText = "";
-if ("ace_logistics_wirecutter" call ARTR_fnc_checkMod) then { _wireCutterText = " Your team is also equipped with wire cutters to make your own entrance if you prefer." };
+if ("ace_logistics_wirecutter" call ARTR_fnc_checkMod) then { _wireCutterText = " Your team is also equipped with wire cutters to make your own entrance if you prefer."; };
 
 //Add new diary pages with ARTR_fnc_briefingFile.
 //If including variables, add them as a list to the end of the parameters list: ["ExampleSubject", "ExampleName", "ExampleFile", [ExampleParams]]

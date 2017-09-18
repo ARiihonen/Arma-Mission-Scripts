@@ -110,7 +110,6 @@ class CfgFunctions
 		{
 			class checkMod {};
 			class initRevive { preInit = 1; };
-			class initASR { preInit = 1; };
 			class initTFAR { preInit = 1; };
 			class initACRE { preInit = 1; };
 			class TFARRadiosAdded {};
