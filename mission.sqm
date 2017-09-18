@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=669;
+		nextID=680;
 	};
 	class Camera
 	{
@@ -45,6 +45,7 @@ addons[]=
 	"A3_Characters_F_Exp",
 	"A3_Weapons_F_Items",
 	"A3_Characters_F_Heads",
+	"A3_Characters_F_Orange_Facewear",
 	"A3_Characters_F_Exp_Headgear",
 	"A3_Structures_F_EPA_Items_Tools",
 	"A3_Structures_F_Civ_Constructions",
@@ -70,7 +71,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			className="A3_Boat_F_Gamma";
@@ -136,54 +137,61 @@ class AddonsMetaData
 		};
 		class Item9
 		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item11
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item12
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item13
 		{
 			className="A3_Weapons_F_Mark";
 			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item14
 		{
 			className="A3_Air_F_Heli";
-			name="Arma 3 Helicopters - Aircrafts";
+			name="Arma 3 Helicopters - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item16
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item17
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
@@ -337,7 +345,7 @@ class Mission
 			};
 			id=12;
 			type="B_G_Boat_Transport_01_F";
-			atlOffset=2.1423731;
+			atlOffset=2.1442995;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -382,7 +390,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_1";
-						createAsSimpleObject=1;
 					};
 					id=111;
 					type="Land_TentDome_F";
@@ -401,7 +408,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_1";
-						createAsSimpleObject=1;
 					};
 					id=113;
 					type="Land_TentDome_F";
@@ -420,7 +426,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_1";
-						createAsSimpleObject=1;
 					};
 					id=114;
 					type="Land_TentDome_F";
@@ -1479,7 +1484,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_2";
-						createAsSimpleObject=1;
 					};
 					id=132;
 					type="Land_TentDome_F";
@@ -1497,7 +1501,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_2";
-						createAsSimpleObject=1;
 					};
 					id=133;
 					type="Land_TentDome_F";
@@ -1515,7 +1518,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_2";
-						createAsSimpleObject=1;
 					};
 					id=134;
 					type="Land_TentDome_F";
@@ -2564,7 +2566,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_3";
-						createAsSimpleObject=1;
 					};
 					id=145;
 					type="Land_TentDome_F";
@@ -2582,7 +2583,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_3";
-						createAsSimpleObject=1;
 					};
 					id=146;
 					type="Land_TentDome_F";
@@ -2600,7 +2600,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_3";
-						createAsSimpleObject=1;
 					};
 					id=147;
 					type="Land_TentDome_F";
@@ -3633,7 +3632,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_4";
-						createAsSimpleObject=1;
 					};
 					id=158;
 					type="Land_TentDome_F";
@@ -3652,7 +3650,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_4";
-						createAsSimpleObject=1;
 					};
 					id=159;
 					type="Land_TentDome_F";
@@ -3670,7 +3667,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_4";
-						createAsSimpleObject=1;
 					};
 					id=160;
 					type="Land_TentDome_F";
@@ -4727,7 +4723,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_5";
-						createAsSimpleObject=1;
 					};
 					id=171;
 					type="Land_TentDome_F";
@@ -4745,7 +4740,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_5";
-						createAsSimpleObject=1;
 					};
 					id=172;
 					type="Land_TentDome_F";
@@ -4763,7 +4757,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_5";
-						createAsSimpleObject=1;
 					};
 					id=173;
 					type="Land_TentDome_F";
@@ -5816,7 +5809,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_6";
-						createAsSimpleObject=1;
 					};
 					id=184;
 					type="Land_TentDome_F";
@@ -5835,7 +5827,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_6";
-						createAsSimpleObject=1;
 					};
 					id=185;
 					type="Land_TentDome_F";
@@ -5853,7 +5844,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="0 < count camp_6";
-						createAsSimpleObject=1;
 					};
 					id=186;
 					type="Land_TentDome_F";
@@ -6929,7 +6919,7 @@ class Mission
 			};
 			id=287;
 			type="B_G_Boat_Transport_01_F";
-			atlOffset=1.9650147;
+			atlOffset=1.966941;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6968,7 +6958,7 @@ class Mission
 			};
 			id=288;
 			type="B_G_Boat_Transport_01_F";
-			atlOffset=2.0795896;
+			atlOffset=2.0815158;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7007,7 +6997,7 @@ class Mission
 			};
 			id=289;
 			type="B_G_Boat_Transport_01_F";
-			atlOffset=1.8738608;
+			atlOffset=1.8757871;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7069,7 +7059,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=496;
 					type="Land_TentDome_F";
@@ -7087,7 +7076,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=498;
 					type="Land_TentDome_F";
@@ -7106,7 +7094,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=499;
 					type="Land_TentDome_F";
@@ -7124,7 +7111,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=500;
 					type="Land_TentDome_F";
@@ -7142,7 +7128,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=501;
 					type="Land_TentDome_F";
@@ -7314,7 +7299,7 @@ class Mission
 					};
 					id=524;
 					type="Land_SurvivalRadio_F";
-					atlOffset=0.00012779236;
+					atlOffset=0.0038528442;
 				};
 				class Item14
 				{
@@ -7333,7 +7318,7 @@ class Mission
 					};
 					id=525;
 					type="Land_CampingTable_F";
-					atlOffset=-0.0031604767;
+					atlOffset=-0.0069961548;
 				};
 				class Item15
 				{
@@ -7363,6 +7348,7 @@ class Mission
 						angles[]={0.12074188,1.5707964,0.030874874};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
@@ -7371,7 +7357,7 @@ class Mission
 					};
 					id=527;
 					type="Land_Map_altis_F";
-					atlOffset=0.81599998;
+					atlOffset=0.0037651062;
 				};
 				class Item17
 				{
@@ -7386,7 +7372,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=528;
 					type="StorageBladder_02_water_forest_F";
@@ -7404,7 +7389,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=529;
 					type="CamoNet_INDP_F";
@@ -7422,7 +7406,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=530;
 					type="CamoNet_INDP_F";
@@ -7469,7 +7452,7 @@ class Mission
 						class Attribute1
 						{
 							property="VehicleCustomization";
-							expression="if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+							expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 							class Value
 							{
 								class data
@@ -7731,7 +7714,7 @@ class Mission
 						class Attribute1
 						{
 							property="VehicleCustomization";
-							expression="if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+							expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 							class Value
 							{
 								class data
@@ -7993,7 +7976,7 @@ class Mission
 						class Attribute1
 						{
 							property="VehicleCustomization";
-							expression="if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+							expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 							class Value
 							{
 								class data
@@ -8198,7 +8181,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="1 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=539;
 					type="CamoNet_INDP_big_F";
@@ -9822,7 +9804,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=544;
 					type="Land_TentDome_F";
@@ -9840,7 +9821,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=545;
 					type="Land_TentDome_F";
@@ -9858,7 +9838,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=546;
 					type="Land_TentDome_F";
@@ -9876,7 +9855,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=547;
 					type="Land_TentDome_F";
@@ -9894,7 +9872,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=548;
 					type="Land_TentDome_F";
@@ -10061,6 +10038,7 @@ class Mission
 						angles[]={0.14040335,5.6909161,0.018848188};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
@@ -10069,7 +10047,7 @@ class Mission
 					};
 					id=557;
 					type="Land_SurvivalRadio_F";
-					atlOffset=0.81268692;
+					atlOffset=0.0036849976;
 				};
 				class Item14
 				{
@@ -10088,7 +10066,7 @@ class Mission
 					};
 					id=558;
 					type="Land_CampingTable_F";
-					atlOffset=-0.00052261353;
+					atlOffset=-0.0043640137;
 				};
 				class Item15
 				{
@@ -10127,7 +10105,7 @@ class Mission
 					};
 					id=560;
 					type="Land_Map_altis_F";
-					atlOffset=1.1444092e-005;
+					atlOffset=0.0037269592;
 				};
 				class Item17
 				{
@@ -10142,7 +10120,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=561;
 					type="StorageBladder_02_water_forest_F";
@@ -10160,7 +10137,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=562;
 					type="CamoNet_INDP_F";
@@ -10179,7 +10155,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=563;
 					type="CamoNet_INDP_F";
@@ -10227,7 +10202,7 @@ class Mission
 						class Attribute1
 						{
 							property="VehicleCustomization";
-							expression="if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+							expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 							class Value
 							{
 								class data
@@ -10489,7 +10464,7 @@ class Mission
 						class Attribute1
 						{
 							property="VehicleCustomization";
-							expression="if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+							expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 							class Value
 							{
 								class data
@@ -10751,7 +10726,7 @@ class Mission
 						class Attribute1
 						{
 							property="VehicleCustomization";
-							expression="if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+							expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 							class Value
 							{
 								class data
@@ -10956,7 +10931,6 @@ class Mission
 					class Attributes
 					{
 						presenceCondition="2 in extra_camps";
-						createAsSimpleObject=1;
 					};
 					id=567;
 					type="CamoNet_INDP_big_F";
@@ -18031,7 +18005,7 @@ class Mission
 					showWP="NEVER";
 					id=920;
 					type="Move";
-					atlOffset=41.929035;
+					atlOffset=41.895599;
 				};
 				class Item4
 				{
@@ -18178,7 +18152,7 @@ class Mission
 				class Attribute1
 				{
 					property="VehicleCustomization";
-					expression="if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
 					{
 						class data
