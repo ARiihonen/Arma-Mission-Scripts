@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=11456;
+		nextID=11614;
 	};
 	class Camera
 	{
-		pos[]={9176.7051,55.16201,21650.914};
-		dir[]={0.6266228,-0.45259076,0.63463289};
-		up[]={0.31801349,0.89169455,0.32207856};
-		aside[]={0.71168822,2.978486e-007,-0.7026974};
+		pos[]={9013.2471,90.875168,21550.119};
+		dir[]={0.61781359,-0.47096524,0.6298824};
+		up[]={0.32980528,0.88212907,0.33624795};
+		aside[]={0.7140184,1.7136335e-007,-0.70032907};
 	};
 };
 binarizationWanted=0;
@@ -38,6 +38,7 @@ addons[]=
 	"A3_Weapons_F",
 	"A3_Weapons_F_Items",
 	"A3_Characters_F_Heads",
+	"A3_Characters_F_Orange_Facewear",
 	"A3_Weapons_F_Machineguns_M200",
 	"A3_Weapons_F_Mark_Machineguns_M200",
 	"A3_Weapons_F_Mark_Acc",
@@ -56,14 +57,13 @@ addons[]=
 	"A3_Soft_F_Beta_Truck_02",
 	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Structures_F_Items_Electronics",
-	"A3_Props_F_Exp_A_Military_Equipment",
-	"A3_Modules_F"
+	"A3_Props_F_Exp_A_Military_Equipment"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -94,33 +94,40 @@ class AddonsMetaData
 		};
 		class Item4
 		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
 			className="A3_Weapons_F_Mark";
 			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item6
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item7
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item8
 		{
 			className="A3_Soft_F_Beta";
 			name="Arma 3 Beta - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item9
 		{
 			className="A3_Props_F_Exp_A";
 			name="Arma 3 Nexus Update - Decorative and Mission Objects";
@@ -332,7 +339,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=28;
+		items=27;
 		class Item0
 		{
 			dataType="Layer";
@@ -400,7 +407,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=235;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -418,7 +424,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=233;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -437,7 +442,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=248;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -456,7 +460,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=256;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -475,7 +478,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=237;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -493,7 +495,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=259;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -511,7 +512,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=261;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -530,7 +530,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=238;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -548,7 +547,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=287;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -567,7 +565,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=286;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -586,7 +583,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=285;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -605,7 +601,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=284;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -624,7 +619,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=283;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -643,7 +637,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=282;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -662,7 +655,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=281;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -681,7 +673,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=280;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -699,7 +690,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=246;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -718,7 +708,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=247;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -737,7 +726,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=244;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -756,7 +744,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=236;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -775,7 +762,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=239;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -793,7 +779,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=241;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -811,7 +796,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=240;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -830,7 +814,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=272;
 							type="Land_Shoot_House_Wall_F";
@@ -848,7 +831,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=262;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -867,7 +849,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=228;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -885,7 +866,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=229;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -904,7 +884,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=230;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -923,7 +902,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=278;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -942,7 +920,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=270;
 							type="Land_Shoot_House_Wall_F";
@@ -961,7 +938,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=226;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -980,7 +956,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=225;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -999,7 +974,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=227;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1018,7 +992,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=300;
 							type="Land_Shoot_House_Wall_F";
@@ -1036,7 +1009,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=301;
 							type="Land_Shoot_House_Wall_F";
@@ -1055,7 +1027,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=303;
 							type="Land_Shoot_House_Wall_F";
@@ -1073,7 +1044,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=302;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1091,7 +1061,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=425;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1109,7 +1078,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=441;
 							type="Land_Shoot_House_Wall_Stand_F";
@@ -1127,7 +1095,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=550;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1145,7 +1112,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=551;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1163,7 +1129,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=598;
 							type="Land_Shoot_House_Wall_F";
@@ -1182,7 +1147,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1951;
 							type="Land_Crane_F";
@@ -1201,7 +1165,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3214;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1220,7 +1183,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3215;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1239,7 +1201,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3216;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1258,7 +1219,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3217;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1277,7 +1237,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3218;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1296,7 +1255,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3219;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1315,7 +1273,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3220;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1334,7 +1291,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3221;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1353,7 +1309,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3222;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1371,7 +1326,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3223;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1389,7 +1343,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3224;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1408,7 +1361,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3225;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1426,7 +1378,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3226;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1444,7 +1395,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3227;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1462,7 +1412,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3228;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1480,7 +1429,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3229;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1498,7 +1446,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3230;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1516,7 +1463,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3231;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1535,7 +1481,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3232;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1553,7 +1498,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3233;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1571,7 +1515,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3234;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1589,7 +1532,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3235;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1607,7 +1549,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3236;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1625,7 +1566,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3237;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1643,7 +1583,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3238;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1661,7 +1600,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3239;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1679,7 +1617,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3240;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1697,7 +1634,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3241;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1716,7 +1652,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3242;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1734,7 +1669,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3243;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1752,7 +1686,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3244;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1770,7 +1703,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3245;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -1788,7 +1720,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3280;
 							type="Land_Shoot_House_Wall_F";
@@ -1806,7 +1737,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="1 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3281;
 							type="Land_Shoot_House_Wall_F";
@@ -1874,7 +1804,6 @@ class Mission
 													class Attributes
 													{
 														presenceCondition="5 in buildingOneEntrances && buildingOneOpenStairs == 2";
-														createAsSimpleObject=1;
 													};
 													id=621;
 													type="Land_Scaffolding_F";
@@ -1903,7 +1832,6 @@ class Mission
 													class Attributes
 													{
 														presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs != 2 )";
-														createAsSimpleObject=1;
 													};
 													id=630;
 													type="Land_Shoot_House_Wall_Long_F";
@@ -1922,7 +1850,6 @@ class Mission
 													class Attributes
 													{
 														presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs != 2 )";
-														createAsSimpleObject=1;
 													};
 													id=631;
 													type="Land_Shoot_House_Wall_F";
@@ -1940,7 +1867,6 @@ class Mission
 													class Attributes
 													{
 														presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs != 2 )";
-														createAsSimpleObject=1;
 													};
 													id=632;
 													type="Land_Shoot_House_Wall_F";
@@ -1974,7 +1900,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs != 1)";
-												createAsSimpleObject=1;
 											};
 											id=640;
 											type="Land_Shoot_House_Wall_F";
@@ -2008,7 +1933,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && 6 in buildingOneEntrances";
-										createAsSimpleObject=1;
 									};
 									id=605;
 									type="Land_Scaffolding_F";
@@ -2034,7 +1958,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && !(6 in buildingOneEntrances)";
-												createAsSimpleObject=1;
 											};
 											id=611;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -2057,7 +1980,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && 6 in buildingOneEntrances";
-										createAsSimpleObject=1;
 									};
 									id=607;
 									type="Land_Obstacle_Ramp_F";
@@ -2110,7 +2032,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="3 in buildingOneEntrances && buildingOneClimbup == 2";
-												createAsSimpleObject=1;
 											};
 											id=578;
 											type="Land_Obstacle_Ramp_F";
@@ -2146,7 +2067,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="3 in buildingOneEntrances && buildingOneClimbup == 2";
-												createAsSimpleObject=1;
 											};
 											id=577;
 											type="Land_Scaffolding_F";
@@ -2173,7 +2093,6 @@ class Mission
 													{
 														presence=0;
 														presenceCondition="1 in buildings && ( !(3 in buildingOneEntrances) || buildingOneClimbup != 2 )";
-														createAsSimpleObject=1;
 													};
 													id=572;
 													type="Land_Shoot_House_Wall_F";
@@ -2193,7 +2112,6 @@ class Mission
 													{
 														presence=0;
 														presenceCondition="1 in buildings && ( !(3 in buildingOneEntrances) || buildingOneClimbup != 2 )";
-														createAsSimpleObject=1;
 													};
 													id=571;
 													type="Land_Shoot_House_Wall_Long_F";
@@ -2227,7 +2145,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && ( !(3 in buildingOneEntrances) || buildingOneClimbup != 1)";
-												createAsSimpleObject=1;
 											};
 											id=635;
 											type="Land_Shoot_House_Wall_F";
@@ -2261,7 +2178,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && !(1 in buildingOneEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=645;
 									type="Land_Shoot_House_Wall_F";
@@ -2280,7 +2196,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && !(1 in buildingOneEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=644;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2310,7 +2225,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && !(7 in buildingOneEntrances) && stairsOneSides == 1";
-										createAsSimpleObject=1;
 									};
 									id=662;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2329,7 +2243,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && !(7 in buildingOneEntrances) && stairsOneSides == 2";
-										createAsSimpleObject=1;
 									};
 									id=661;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2355,7 +2268,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && !(7 in buildingOneEntrances) && buildingOneStairsExclusive == 2";
-												createAsSimpleObject=1;
 											};
 											id=659;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -2374,7 +2286,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && !(7 in buildingOneEntrances) && buildingOneStairsExclusive == 1";
-												createAsSimpleObject=1;
 											};
 											id=658;
 											type="Land_Shoot_House_Wall_F";
@@ -2408,7 +2319,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && !(4 in buildingOneEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=651;
 									type="Land_Shoot_House_Wall_F";
@@ -2426,7 +2336,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && !(4 in buildingOneEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=649;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2444,7 +2353,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && !(4 in buildingOneEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=650;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2474,7 +2382,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && !(2 in buildingOneEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=643;
 									type="Land_Shoot_House_Wall_F";
@@ -2515,7 +2422,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=447;
 									type="Land_Shoot_House_Wall_F";
@@ -2534,7 +2440,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=444;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2553,7 +2458,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=445;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2572,7 +2476,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=446;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2591,7 +2494,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=448;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2610,7 +2512,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=449;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2629,7 +2530,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=450;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2648,7 +2548,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=451;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2666,7 +2565,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=452;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2685,7 +2583,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=453;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2704,7 +2601,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=454;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2723,7 +2619,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=457;
 									type="Land_Shoot_House_Wall_F";
@@ -2742,7 +2637,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=460;
 									type="Land_Shoot_House_Wall_F";
@@ -2761,7 +2655,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=455;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2780,7 +2673,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=456;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2799,7 +2691,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=458;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2818,7 +2709,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingOneFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=459;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -2844,7 +2734,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 1 && 1 in oneToTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=471;
 											type="Land_Shoot_House_Wall_F";
@@ -2863,7 +2752,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 1 && 2 in oneToTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=472;
 											type="Land_Shoot_House_Wall_F";
@@ -2882,7 +2770,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 1 && 3 in oneToTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=474;
 											type="Land_Shoot_House_Wall_F";
@@ -2913,7 +2800,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="buildingOneFloorOneLayout == 1";
-												createAsSimpleObject=1;
 											};
 											id=475;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -2933,7 +2819,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="buildingOneFloorOneLayout == 1";
-												createAsSimpleObject=1;
 											};
 											id=476;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -2953,7 +2838,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="buildingOneFloorOneLayout == 1";
-												createAsSimpleObject=1;
 											};
 											id=484;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -2973,7 +2857,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="buildingOneFloorOneLayout == 1";
-												createAsSimpleObject=1;
 											};
 											id=485;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -3003,7 +2886,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 1 && 1 in oneToThreeOne";
-												createAsSimpleObject=1;
 											};
 											id=478;
 											type="Land_Shoot_House_Wall_F";
@@ -3022,7 +2904,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 1 && 2 in oneToThreeOne";
-												createAsSimpleObject=1;
 											};
 											id=479;
 											type="Land_Shoot_House_Wall_F";
@@ -3041,7 +2922,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 1 && 3 in oneToThreeOne";
-												createAsSimpleObject=1;
 											};
 											id=480;
 											type="Land_Shoot_House_Wall_F";
@@ -3071,7 +2951,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 1 && oneOrTwoOne == 1";
-												createAsSimpleObject=1;
 											};
 											id=482;
 											type="Land_Shoot_House_Wall_F";
@@ -3090,7 +2969,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 1 && oneOrTwoOne == 2";
-												createAsSimpleObject=1;
 											};
 											id=483;
 											type="Land_Shoot_House_Wall_F";
@@ -5016,7 +4894,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=487;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5035,7 +4912,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=491;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5054,7 +4930,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=492;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5073,7 +4948,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=493;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5092,7 +4966,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=494;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5111,7 +4984,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=495;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5130,7 +5002,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=496;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5149,7 +5020,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=497;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5168,7 +5038,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=498;
 											type="Land_Shoot_House_Wall_F";
@@ -5187,7 +5056,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=499;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5206,7 +5074,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=500;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5225,7 +5092,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=501;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5244,7 +5110,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=502;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5263,7 +5128,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=503;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5282,7 +5146,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=505;
 											type="Land_Shoot_House_Wall_F";
@@ -5301,7 +5164,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=504;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5331,7 +5193,6 @@ class Mission
 											{
 												presence=0.49576423;
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=489;
 											type="Land_Shoot_House_Wall_F";
@@ -5351,7 +5212,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=511;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -5371,7 +5231,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=512;
 											type="Land_Shoot_House_Wall_F";
@@ -5391,7 +5250,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="buildingOneFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=518;
 											type="Land_Shoot_House_Wall_F";
@@ -5421,7 +5279,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2 && 1 in oneToTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=514;
 											type="Land_Shoot_House_Wall_F";
@@ -5440,7 +5297,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2 && 2 in oneToTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=516;
 											type="Land_Shoot_House_Wall_F";
@@ -5459,7 +5315,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2 && 3 in oneToTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=517;
 											type="Land_Shoot_House_Wall_F";
@@ -5489,7 +5344,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2 && 1 in zeroToThreeOne";
-												createAsSimpleObject=1;
 											};
 											id=520;
 											type="Land_Shoot_House_Wall_F";
@@ -5508,7 +5362,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2 && 2 in zeroToThreeOne";
-												createAsSimpleObject=1;
 											};
 											id=521;
 											type="Land_Shoot_House_Wall_F";
@@ -5527,7 +5380,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2 && 3 in zeroToThreeOne";
-												createAsSimpleObject=1;
 											};
 											id=522;
 											type="Land_Shoot_House_Wall_F";
@@ -5557,7 +5409,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2 && 1 in zeroToOneOne";
-												createAsSimpleObject=1;
 											};
 											id=524;
 											type="Land_Shoot_House_Wall_F";
@@ -5576,7 +5427,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 2 && 2 in zeroToOneOne";
-												createAsSimpleObject=1;
 											};
 											id=525;
 											type="Land_Shoot_House_Wall_F";
@@ -7717,7 +7567,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=552;
 											type="Land_Shoot_House_Wall_F";
@@ -7747,7 +7596,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in outerOneOne && 1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=467;
 											type="Land_Shoot_House_Wall_F";
@@ -7766,7 +7614,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in outerOneOne && 1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=468;
 											type="Land_Shoot_House_Wall_F";
@@ -7785,7 +7632,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="3 in outerOneOne && 1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=469;
 											type="Land_Shoot_House_Wall_F";
@@ -7814,7 +7660,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in outerTwoOne && 1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=462;
 											type="Land_Shoot_House_Wall_F";
@@ -7833,7 +7678,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in outerTwoOne && 1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=463;
 											type="Land_Shoot_House_Wall_F";
@@ -7852,7 +7696,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="3 in outerTwoOne && 1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=464;
 											type="Land_Shoot_House_Wall_F";
@@ -7871,7 +7714,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="4 in outerTwoOne && 1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=465;
 											type="Land_Shoot_House_Wall_F";
@@ -7913,7 +7755,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=527;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -7932,7 +7773,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=528;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -7951,7 +7791,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=529;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -7970,7 +7809,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=530;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -7989,7 +7827,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=531;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -8008,7 +7845,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=532;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -8027,7 +7863,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=533;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -8045,7 +7880,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=535;
 											type="Land_Shoot_House_Wall_F";
@@ -8064,7 +7898,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=536;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -8083,7 +7916,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=537;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -8102,7 +7934,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=539;
 											type="Land_Shoot_House_Wall_F";
@@ -8121,7 +7952,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=540;
 											type="Land_Shoot_House_Wall_F";
@@ -8151,7 +7981,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3 && 1 in oneToTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=542;
 											type="Land_Shoot_House_Wall_F";
@@ -8169,7 +7998,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3 && 2 in oneToTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=543;
 											type="Land_Shoot_House_Wall_F";
@@ -8188,7 +8016,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3 && 3 in oneToTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=544;
 											type="Land_Shoot_House_Wall_F";
@@ -8218,7 +8045,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3 && 1 in zeroToOneOne";
-												createAsSimpleObject=1;
 											};
 											id=545;
 											type="Land_Shoot_House_Wall_F";
@@ -8237,7 +8063,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3 && 2 in zeroToOneOne";
-												createAsSimpleObject=1;
 											};
 											id=546;
 											type="Land_Shoot_House_Wall_F";
@@ -8267,7 +8092,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3 && oneOrTwoOne == 1";
-												createAsSimpleObject=1;
 											};
 											id=548;
 											type="Land_Shoot_House_Wall_F";
@@ -8286,7 +8110,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingOneFloorOneLayout == 3 && oneOrTwoOne == 2";
-												createAsSimpleObject=1;
 											};
 											id=549;
 											type="Land_Shoot_House_Wall_F";
@@ -11760,7 +11583,6 @@ class Mission
 															class Attributes
 															{
 																presenceCondition="1 in buildings && !(2 in entrancesTwoOne)";
-																createAsSimpleObject=1;
 															};
 															id=569;
 															type="Land_Shoot_House_Wall_Long_F";
@@ -11791,7 +11613,6 @@ class Mission
 															{
 																presence=0.5;
 																presenceCondition="1 in buildings && !(2 in entrancesTwoOne)";
-																createAsSimpleObject=1;
 															};
 															id=566;
 															type="Land_Shoot_House_Wall_F";
@@ -11811,7 +11632,6 @@ class Mission
 															{
 																presence=0.5;
 																presenceCondition="1 in buildings && !(2 in entrancesTwoOne)";
-																createAsSimpleObject=1;
 															};
 															id=570;
 															type="Land_Shoot_House_Wall_F";
@@ -11849,7 +11669,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && 3 in entrancesTwoOne";
-												createAsSimpleObject=1;
 											};
 											id=576;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -11879,7 +11698,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && !(1 in entrancesTwoOne)";
-												createAsSimpleObject=1;
 											};
 											id=574;
 											type="Land_Shoot_House_Wall_F";
@@ -11936,7 +11754,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && doubleRoomsOne == 1";
-												createAsSimpleObject=1;
 											};
 											id=585;
 											type="Land_Shoot_House_Wall_F";
@@ -11955,7 +11772,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && doubleRoomsOne == 2";
-												createAsSimpleObject=1;
 											};
 											id=586;
 											type="Land_Shoot_House_Wall_F";
@@ -11986,7 +11802,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=593;
 											type="Land_Shoot_House_Wall_F";
@@ -12005,7 +11820,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=596;
 											type="Land_Shoot_House_Wall_F";
@@ -12024,7 +11838,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="1 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=617;
 											type="Land_Shoot_House_Wall_Crouch_F";
@@ -12053,7 +11866,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && doubleRoomsOne != 0";
-												createAsSimpleObject=1;
 											};
 											id=590;
 											type="Land_Shoot_House_Wall_F";
@@ -12071,7 +11883,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in buildings && doubleRoomsOne != 0";
-												createAsSimpleObject=1;
 											};
 											id=591;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -12106,7 +11917,6 @@ class Mission
 									{
 										presence=0.5;
 										presenceCondition="1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=600;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -12136,7 +11946,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && openWallOne == 1";
-										createAsSimpleObject=1;
 									};
 									id=602;
 									type="Land_Shoot_House_Wall_F";
@@ -12155,7 +11964,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && openWallOne == 2";
-										createAsSimpleObject=1;
 									};
 									id=603;
 									type="Land_Shoot_House_Wall_F";
@@ -12184,7 +11992,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && 3 in entrancesTwoOne";
-										createAsSimpleObject=1;
 									};
 									id=613;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -16475,7 +16282,6 @@ class Mission
 									{
 										presence=0.5;
 										presenceCondition="1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=663;
 									type="Land_Shoot_House_Wall_Crouch_F";
@@ -16495,7 +16301,6 @@ class Mission
 									{
 										presence=0.5;
 										presenceCondition="1 in buildings && (1 in buildingOneEntrances || ( !(3 in bigRoomOne) && count bigRoomOne > 1) )";
-										createAsSimpleObject=1;
 									};
 									id=675;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -16515,7 +16320,6 @@ class Mission
 									{
 										presence=0.49576423;
 										presenceCondition="1 in buildings && sideRoomTwoOne != 1";
-										createAsSimpleObject=1;
 									};
 									id=655;
 									type="Land_Shoot_House_Wall_F";
@@ -16545,7 +16349,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && 1 in bigRoomOne";
-										createAsSimpleObject=1;
 									};
 									id=652;
 									type="Land_Shoot_House_Wall_F";
@@ -16564,7 +16367,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && 2 in bigRoomOne";
-										createAsSimpleObject=1;
 									};
 									id=646;
 									type="Land_Shoot_House_Wall_F";
@@ -16583,7 +16385,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && 3 in bigRoomOne";
-										createAsSimpleObject=1;
 									};
 									id=119;
 									type="Land_Shoot_House_Wall_Long_Stand_F";
@@ -16613,7 +16414,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && smallRoomOne == 1";
-										createAsSimpleObject=1;
 									};
 									id=647;
 									type="Land_Shoot_House_Wall_F";
@@ -16632,7 +16432,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && smallRoomOne == 2";
-										createAsSimpleObject=1;
 									};
 									id=648;
 									type="Land_Shoot_House_Wall_F";
@@ -16662,7 +16461,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && sideRoomOneOne == 1";
-										createAsSimpleObject=1;
 									};
 									id=654;
 									type="Land_Shoot_House_Wall_F";
@@ -16681,7 +16479,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && sideRoomOneOne == 2";
-										createAsSimpleObject=1;
 									};
 									id=653;
 									type="Land_Shoot_House_Wall_F";
@@ -16711,7 +16508,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && sideRoomTwoOne == 1";
-										createAsSimpleObject=1;
 									};
 									id=656;
 									type="Land_Shoot_House_Wall_F";
@@ -16729,7 +16525,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in buildings && sideRoomTwoOne == 2";
-										createAsSimpleObject=1;
 									};
 									id=657;
 									type="Land_Shoot_House_Wall_F";
@@ -22483,7 +22278,6 @@ class Mission
 							{
 								init="if (isServer) then {" \n "    destroyableFences pushBack this; " \n "};";
 								presenceCondition="!(1 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2052;
 							type="Land_Net_Fence_8m_F";
@@ -22502,7 +22296,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="!(1 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2053;
 							type="Land_Net_Fence_4m_F";
@@ -22877,7 +22670,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="!(1 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2141;
 							type="Land_Shed_Big_F";
@@ -22896,7 +22688,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="!(1 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2142;
 							type="Land_Shed_Small_F";
@@ -22932,7 +22723,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="6 in windowThingsOne && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=508;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -22950,7 +22740,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(6 in windowThingsOne) && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=510;
 									type="Land_Shoot_House_Wall_F";
@@ -23099,7 +22888,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="5 in windowThingsOne && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=555;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -23118,7 +22906,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(5 in windowThingsOne) && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=554;
 									type="Land_Shoot_House_Wall_F";
@@ -23266,7 +23053,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="4 in windowThingsOne && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=615;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -23285,7 +23071,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(4 in windowThingsOne) && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=616;
 									type="Land_Shoot_House_Wall_F";
@@ -23434,7 +23219,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="3 in windowThingsOne && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=665;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -23453,7 +23237,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(3 in windowThingsOne) && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=664;
 									type="Land_Shoot_House_Wall_F";
@@ -23602,7 +23385,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(1 in windowThingsOne) && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=624;
 									type="Land_Shoot_House_Wall_F";
@@ -23621,7 +23403,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in windowThingsOne && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=626;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -23770,7 +23551,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(2 in windowThingsOne) && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=628;
 									type="Land_Shoot_House_Wall_F";
@@ -23788,7 +23568,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in windowThingsOne && 1 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=629;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -24030,7 +23809,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1663;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24048,7 +23826,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1664;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24067,7 +23844,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1665;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24086,7 +23862,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1666;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24105,7 +23880,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1667;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24123,7 +23897,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1668;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24141,7 +23914,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1669;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24160,7 +23932,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1670;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24178,7 +23949,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1671;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24197,7 +23967,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1672;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24216,7 +23985,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1673;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24235,7 +24003,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1674;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24254,7 +24021,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1675;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24273,7 +24039,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1676;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24292,7 +24057,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1677;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24311,7 +24075,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1678;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24329,7 +24092,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1679;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24348,7 +24110,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1680;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24367,7 +24128,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1681;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24386,7 +24146,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1682;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24404,7 +24163,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1683;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24423,7 +24181,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1685;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24442,7 +24199,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1686;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24461,7 +24217,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1689;
 							type="Land_Shoot_House_Wall_F";
@@ -24479,7 +24234,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1690;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24498,7 +24252,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1691;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24517,7 +24270,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1692;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24536,7 +24288,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1693;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24555,7 +24306,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1694;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24574,7 +24324,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1703;
 							type="Land_Shoot_House_Wall_F";
@@ -24593,7 +24342,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1704;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24612,7 +24360,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1705;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24630,7 +24377,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1707;
 							type="Land_Shoot_House_Wall_Stand_F";
@@ -24649,7 +24395,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1708;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24668,7 +24413,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1712;
 							type="Land_Shoot_House_Wall_F";
@@ -24686,7 +24430,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1713;
 							type="Land_Shoot_House_Wall_F";
@@ -24705,7 +24448,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1714;
 							type="Land_Shoot_House_Wall_F";
@@ -24724,7 +24466,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1715;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24742,7 +24483,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1716;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24760,7 +24500,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1731;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24779,7 +24518,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1732;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24797,7 +24535,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1733;
 							type="Land_Shoot_House_Wall_F";
@@ -24857,7 +24594,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1780;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24876,7 +24612,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=1983;
 							type="Land_Crane_F";
@@ -24895,7 +24630,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3246;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24914,7 +24648,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3247;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24933,7 +24666,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3248;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24952,7 +24684,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3249;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24971,7 +24702,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3250;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -24990,7 +24720,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3251;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25009,7 +24738,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3252;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25028,7 +24756,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3253;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25047,7 +24774,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3254;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25066,7 +24792,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3255;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25084,7 +24809,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3256;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25103,7 +24827,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3257;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25121,7 +24844,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3258;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25139,7 +24861,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3259;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25157,7 +24878,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3260;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25175,7 +24895,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3261;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25193,7 +24912,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3262;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25211,7 +24929,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3263;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25230,7 +24947,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3264;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25248,7 +24964,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3265;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25266,7 +24981,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3266;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25284,7 +24998,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3267;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25302,7 +25015,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3268;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25320,7 +25032,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3269;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25338,7 +25049,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3270;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25356,7 +25066,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3271;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25374,7 +25083,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3272;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25392,7 +25100,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3273;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25410,7 +25117,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3274;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25428,7 +25134,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3275;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25446,7 +25151,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3276;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25464,7 +25168,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3277;
 							type="Land_Shoot_House_Wall_Long_F";
@@ -25482,7 +25185,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3282;
 							type="Land_Shoot_House_Wall_F";
@@ -25500,7 +25202,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="2 in buildings";
-								createAsSimpleObject=1;
 							};
 							id=3283;
 							type="Land_Shoot_House_Wall_F";
@@ -25537,7 +25238,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="6 in buildingTwoEntrances";
-										createAsSimpleObject=1;
 									};
 									id=1775;
 									type="Land_Obstacle_Ramp_F";
@@ -25573,7 +25273,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="6 in buildingTwoEntrances";
-										createAsSimpleObject=1;
 									};
 									id=1774;
 									type="Land_Scaffolding_F";
@@ -25599,7 +25298,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && !(6 in buildingTwoEntrances)";
-												createAsSimpleObject=1;
 											};
 											id=1778;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -25640,7 +25338,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && ( !(3 in buildingTwoEntrances) || buildingTwoClimbup != 1 )";
-												createAsSimpleObject=1;
 											};
 											id=1746;
 											type="Land_Shoot_House_Wall_F";
@@ -25687,7 +25384,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="3 in buildingTwoEntrances && buildingTwoClimbup == 2";
-												createAsSimpleObject=1;
 											};
 											id=1749;
 											type="Land_Scaffolding_F";
@@ -25713,7 +25409,6 @@ class Mission
 													{
 														presence=0;
 														presenceCondition="2 in buildings && ( !(3 in buildingTwoEntrances) || buildingTwoClimbup != 2)";
-														createAsSimpleObject=1;
 													};
 													id=1751;
 													type="Land_Shoot_House_Wall_F";
@@ -25732,7 +25427,6 @@ class Mission
 													{
 														presence=0;
 														presenceCondition="2 in buildings && ( !(3 in buildingTwoEntrances) || buildingTwoClimbup != 2)";
-														createAsSimpleObject=1;
 													};
 													id=1752;
 													type="Land_Shoot_House_Wall_Long_F";
@@ -25754,7 +25448,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="3 in buildingTwoEntrances && buildingTwoClimbup == 2";
-												createAsSimpleObject=1;
 											};
 											id=1954;
 											type="Land_Obstacle_Ramp_F";
@@ -25788,7 +25481,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && !(1 in buildingTwoEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=1742;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -25807,7 +25499,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && !(1 in buildingTwoEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=1741;
 									type="Land_Shoot_House_Wall_F";
@@ -25836,7 +25527,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && !(7 in buildingTwoEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=1779;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -25862,7 +25552,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && !(7 in buildingTwoEntrances) && buildingTwoStairsExclusive == 2";
-												createAsSimpleObject=1;
 											};
 											id=1782;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -25881,7 +25570,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && !(7 in buildingTwoEntrances) && buildingTwoStairsExclusive == 1";
-												createAsSimpleObject=1;
 											};
 											id=1783;
 											type="Land_Shoot_House_Wall_F";
@@ -25915,7 +25603,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && !(4 in buildingTwoEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=1754;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -25934,7 +25621,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && !(4 in buildingTwoEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=1755;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -25953,7 +25639,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && !(4 in buildingTwoEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=1753;
 									type="Land_Shoot_House_Wall_F";
@@ -25983,7 +25668,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && !(2 in buildingTwoEntrances)";
-										createAsSimpleObject=1;
 									};
 									id=1743;
 									type="Land_Shoot_House_Wall_F";
@@ -26020,7 +25704,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && ( !(5 in buildingTwoEntrances) || buildingTwoOpenStairs != 1)";
-												createAsSimpleObject=1;
 											};
 											id=1762;
 											type="Land_Shoot_House_Wall_F";
@@ -26056,7 +25739,6 @@ class Mission
 													class Attributes
 													{
 														presenceCondition="2 in buildings && ( !(5 in buildingTwoEntrances) || buildingTwoOpenStairs != 2)";
-														createAsSimpleObject=1;
 													};
 													id=1766;
 													type="Land_Shoot_House_Wall_F";
@@ -26074,7 +25756,6 @@ class Mission
 													class Attributes
 													{
 														presenceCondition="2 in buildings && ( !(5 in buildingTwoEntrances) || buildingTwoOpenStairs != 2)";
-														createAsSimpleObject=1;
 													};
 													id=1767;
 													type="Land_Shoot_House_Wall_F";
@@ -26092,7 +25773,6 @@ class Mission
 													class Attributes
 													{
 														presenceCondition="2 in buildings && ( !(5 in buildingTwoEntrances) || buildingTwoOpenStairs != 2)";
-														createAsSimpleObject=1;
 													};
 													id=1765;
 													type="Land_Shoot_House_Wall_Long_F";
@@ -26122,7 +25802,6 @@ class Mission
 													class Attributes
 													{
 														presenceCondition="5 in buildingTwoEntrances && buildingTwoOpenStairs == 2";
-														createAsSimpleObject=1;
 													};
 													id=1764;
 													type="Land_Scaffolding_F";
@@ -26188,7 +25867,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1785;
 									type="Land_Shoot_House_Wall_F";
@@ -26207,7 +25885,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1796;
 									type="Land_Shoot_House_Wall_F";
@@ -26226,7 +25903,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1797;
 									type="Land_Shoot_House_Wall_F";
@@ -26245,7 +25921,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1786;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26264,7 +25939,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1787;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26283,7 +25957,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1788;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26302,7 +25975,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1789;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26321,7 +25993,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1790;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26340,7 +26011,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1791;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26359,7 +26029,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1792;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26378,7 +26047,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1793;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26397,7 +26065,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1794;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26416,7 +26083,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1795;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26435,7 +26101,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1798;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26454,7 +26119,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1799;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26473,7 +26137,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1800;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26492,7 +26155,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="buildingTwoFloorOneLayout == 1";
-										createAsSimpleObject=1;
 									};
 									id=1801;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -26518,7 +26180,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1 && 1 in oneToTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1809;
 											type="Land_Shoot_House_Wall_F";
@@ -26537,7 +26198,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1 && 2 in oneToTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1808;
 											type="Land_Shoot_House_Wall_F";
@@ -26556,7 +26216,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1 && 3 in oneToTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1815;
 											type="Land_Shoot_House_Wall_F";
@@ -26586,7 +26245,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1 && 1 in oneToThreeTwo";
-												createAsSimpleObject=1;
 											};
 											id=1811;
 											type="Land_Shoot_House_Wall_F";
@@ -26605,7 +26263,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1 && 2 in oneToThreeTwo";
-												createAsSimpleObject=1;
 											};
 											id=1812;
 											type="Land_Shoot_House_Wall_F";
@@ -26624,7 +26281,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1 && 3 in oneToThreeTwo";
-												createAsSimpleObject=1;
 											};
 											id=1810;
 											type="Land_Shoot_House_Wall_F";
@@ -26654,7 +26310,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1 && oneOrTwoTwo == 1";
-												createAsSimpleObject=1;
 											};
 											id=1814;
 											type="Land_Shoot_House_Wall_F";
@@ -26673,7 +26328,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1 && oneOrTwoTwo == 2";
-												createAsSimpleObject=1;
 											};
 											id=1813;
 											type="Land_Shoot_House_Wall_F";
@@ -26704,7 +26358,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1";
-												createAsSimpleObject=1;
 											};
 											id=1816;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -26724,7 +26377,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1";
-												createAsSimpleObject=1;
 											};
 											id=1817;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -26744,7 +26396,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1";
-												createAsSimpleObject=1;
 											};
 											id=1818;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -26764,7 +26415,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 1";
-												createAsSimpleObject=1;
 											};
 											id=1819;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28693,7 +28343,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1827;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28712,7 +28361,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1828;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28731,7 +28379,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1829;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28750,7 +28397,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1830;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28769,7 +28415,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1831;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28788,7 +28433,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1832;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28807,7 +28451,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1833;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28826,7 +28469,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1834;
 											type="Land_Shoot_House_Wall_F";
@@ -28845,7 +28487,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1835;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28864,7 +28505,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1836;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28883,7 +28523,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1837;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28902,7 +28541,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1838;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28921,7 +28559,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1839;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28940,7 +28577,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1840;
 											type="Land_Shoot_House_Wall_F";
@@ -28959,7 +28595,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1841;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -28978,7 +28613,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1826;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -29009,7 +28643,6 @@ class Mission
 											{
 												presence=0.5042358;
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1851;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -29029,7 +28662,6 @@ class Mission
 											{
 												presence=0.5042358;
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1852;
 											type="Land_Shoot_House_Wall_F";
@@ -29049,7 +28681,6 @@ class Mission
 											{
 												presence=0.5042358;
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1853;
 											type="Land_Shoot_House_Wall_F";
@@ -29068,7 +28699,6 @@ class Mission
 											{
 												presence=0.5042358;
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2";
-												createAsSimpleObject=1;
 											};
 											id=1850;
 											type="Land_Shoot_House_Wall_F";
@@ -29098,7 +28728,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2 && 1 in oneToTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1843;
 											type="Land_Shoot_House_Wall_F";
@@ -29117,7 +28746,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2 && 2 in oneToTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1844;
 											type="Land_Shoot_House_Wall_F";
@@ -29136,7 +28764,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2 && 3 in oneToTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1842;
 											type="Land_Shoot_House_Wall_F";
@@ -29166,7 +28793,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2 && 1 in zeroToThreeTwo";
-												createAsSimpleObject=1;
 											};
 											id=1848;
 											type="Land_Shoot_House_Wall_F";
@@ -29185,7 +28811,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2 && 2 in zeroToThreeTwo";
-												createAsSimpleObject=1;
 											};
 											id=1849;
 											type="Land_Shoot_House_Wall_F";
@@ -29204,7 +28829,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2 && 3 in zeroToThreeTwo";
-												createAsSimpleObject=1;
 											};
 											id=1847;
 											type="Land_Shoot_House_Wall_F";
@@ -29234,7 +28858,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2 && 1 in zeroToOneTwo";
-												createAsSimpleObject=1;
 											};
 											id=1846;
 											type="Land_Shoot_House_Wall_F";
@@ -29253,7 +28876,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 2 && 2 in zeroToOneTwo";
-												createAsSimpleObject=1;
 											};
 											id=1845;
 											type="Land_Shoot_House_Wall_F";
@@ -31371,7 +30993,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1860;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -31390,7 +31011,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1861;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -31409,7 +31029,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1862;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -31428,7 +31047,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1863;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -31447,7 +31065,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1864;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -31466,7 +31083,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1865;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -31484,7 +31100,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1866;
 											type="Land_Shoot_House_Wall_F";
@@ -31503,7 +31118,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1867;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -31522,7 +31136,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1868;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -31541,7 +31154,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1869;
 											type="Land_Shoot_House_Wall_F";
@@ -31560,7 +31172,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1870;
 											type="Land_Shoot_House_Wall_F";
@@ -31578,7 +31189,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="buildingTwoFloorOneLayout == 3";
-												createAsSimpleObject=1;
 											};
 											id=1859;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -31608,7 +31218,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 3 && 1 in oneToTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1874;
 											type="Land_Shoot_House_Wall_F";
@@ -31627,7 +31236,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 3 && 2 in oneToTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1875;
 											type="Land_Shoot_House_Wall_F";
@@ -31646,7 +31254,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 3 && 3 in oneToTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1873;
 											type="Land_Shoot_House_Wall_F";
@@ -31676,7 +31283,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 3 && 1 in zeroToOneTwo";
-												createAsSimpleObject=1;
 											};
 											id=1877;
 											type="Land_Shoot_House_Wall_F";
@@ -31695,7 +31301,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 3 && 2 in zeroToOneTwo";
-												createAsSimpleObject=1;
 											};
 											id=1876;
 											type="Land_Shoot_House_Wall_F";
@@ -31725,7 +31330,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 3 && oneOrTwoTwo == 1";
-												createAsSimpleObject=1;
 											};
 											id=1872;
 											type="Land_Shoot_House_Wall_F";
@@ -31744,7 +31348,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && buildingTwoFloorOneLayout == 3 && oneOrTwoTwo == 2";
-												createAsSimpleObject=1;
 											};
 											id=1871;
 											type="Land_Shoot_House_Wall_F";
@@ -33857,7 +33460,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="2 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=1891;
 											type="Land_Shoot_House_Wall_F";
@@ -33887,7 +33489,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in outerOneTwo";
-												createAsSimpleObject=1;
 											};
 											id=1885;
 											type="Land_Shoot_House_Wall_F";
@@ -33906,7 +33507,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in outerOneTwo";
-												createAsSimpleObject=1;
 											};
 											id=1886;
 											type="Land_Shoot_House_Wall_F";
@@ -33925,7 +33525,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="3 in outerOneTwo";
-												createAsSimpleObject=1;
 											};
 											id=1884;
 											type="Land_Shoot_House_Wall_F";
@@ -33955,7 +33554,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="1 in outerTwoTwo && 2 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=1888;
 											type="Land_Shoot_House_Wall_F";
@@ -33974,7 +33572,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in outerTwoTwo && 2 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=1889;
 											type="Land_Shoot_House_Wall_F";
@@ -33993,7 +33590,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="3 in outerTwoTwo && 2 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=1890;
 											type="Land_Shoot_House_Wall_F";
@@ -34011,7 +33607,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="4 in outerTwoTwo && 2 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=1887;
 											type="Land_Shoot_House_Wall_F";
@@ -35623,7 +35218,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="2 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=1911;
 											type="Land_Shoot_House_Wall_F";
@@ -35642,7 +35236,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="2 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=1912;
 											type="Land_Shoot_House_Wall_Crouch_F";
@@ -35662,7 +35255,6 @@ class Mission
 											{
 												presence=0.5;
 												presenceCondition="2 in buildings";
-												createAsSimpleObject=1;
 											};
 											id=1910;
 											type="Land_Shoot_House_Wall_F";
@@ -35692,7 +35284,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && doubleRoomsTwo != 0";
-												createAsSimpleObject=1;
 											};
 											id=1909;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -35711,7 +35302,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && doubleRoomsTwo != 0";
-												createAsSimpleObject=1;
 											};
 											id=1908;
 											type="Land_Shoot_House_Wall_F";
@@ -35740,7 +35330,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && doubleRoomsTwo == 1";
-												createAsSimpleObject=1;
 											};
 											id=1907;
 											type="Land_Shoot_House_Wall_F";
@@ -35759,7 +35348,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && doubleRoomsTwo == 2";
-												createAsSimpleObject=1;
 											};
 											id=1906;
 											type="Land_Shoot_House_Wall_F";
@@ -35794,7 +35382,6 @@ class Mission
 									{
 										presence=0.5;
 										presenceCondition="2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1925;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -35824,7 +35411,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && openWallTwo == 1";
-										createAsSimpleObject=1;
 									};
 									id=1902;
 									type="Land_Shoot_House_Wall_F";
@@ -35843,7 +35429,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && openWallTwo == 2";
-										createAsSimpleObject=1;
 									};
 									id=1901;
 									type="Land_Shoot_House_Wall_F";
@@ -35872,7 +35457,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && 3 in entrancesTwoTwo";
-										createAsSimpleObject=1;
 									};
 									id=1926;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -35909,7 +35493,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && 3 in entrancesTwoTwo";
-												createAsSimpleObject=1;
 											};
 											id=1924;
 											type="Land_Shoot_House_Wall_Long_F";
@@ -35955,7 +35538,6 @@ class Mission
 											class Attributes
 											{
 												presenceCondition="2 in buildings && !(1 in entrancesTwoTwo)";
-												createAsSimpleObject=1;
 											};
 											id=1916;
 											type="Land_Shoot_House_Wall_F";
@@ -35999,7 +35581,6 @@ class Mission
 															class Attributes
 															{
 																presenceCondition="2 in buildings && !(2 in entrancesTwoTwo)";
-																createAsSimpleObject=1;
 															};
 															id=1921;
 															type="Land_Shoot_House_Wall_Long_F";
@@ -36030,7 +35611,6 @@ class Mission
 															{
 																presence=0.5;
 																presenceCondition="2 in buildings && !(2 in entrancesTwoTwo)";
-																createAsSimpleObject=1;
 															};
 															id=1923;
 															type="Land_Shoot_House_Wall_F";
@@ -36050,7 +35630,6 @@ class Mission
 															{
 																presence=0.5;
 																presenceCondition="2 in buildings && !(2 in entrancesTwoTwo)";
-																createAsSimpleObject=1;
 															};
 															id=1922;
 															type="Land_Shoot_House_Wall_F";
@@ -40356,7 +39935,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && 1 in bigRoomTwo";
-										createAsSimpleObject=1;
 									};
 									id=1937;
 									type="Land_Shoot_House_Wall_F";
@@ -40375,7 +39953,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && 3 in bigRoomTwo";
-										createAsSimpleObject=1;
 									};
 									id=1938;
 									type="Land_Shoot_House_Wall_Long_Stand_F";
@@ -40394,7 +39971,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && 2 in bigRoomTwo";
-										createAsSimpleObject=1;
 									};
 									id=1936;
 									type="Land_Shoot_House_Wall_F";
@@ -40423,7 +39999,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && smallRoomTwo == 1";
-										createAsSimpleObject=1;
 									};
 									id=1946;
 									type="Land_Shoot_House_Wall_F";
@@ -40441,7 +40016,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && smallRoomTwo == 2";
-										createAsSimpleObject=1;
 									};
 									id=1945;
 									type="Land_Shoot_House_Wall_F";
@@ -40471,7 +40045,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && sideRoomOneTwo == 1";
-										createAsSimpleObject=1;
 									};
 									id=1940;
 									type="Land_Shoot_House_Wall_F";
@@ -40490,7 +40063,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && sideRoomOneTwo == 2";
-										createAsSimpleObject=1;
 									};
 									id=1941;
 									type="Land_Shoot_House_Wall_F";
@@ -40520,7 +40092,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && sideRoomTwoTwo == 1";
-										createAsSimpleObject=1;
 									};
 									id=1944;
 									type="Land_Shoot_House_Wall_F";
@@ -40539,7 +40110,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in buildings && sideRoomTwoTwo == 2";
-										createAsSimpleObject=1;
 									};
 									id=1943;
 									type="Land_Shoot_House_Wall_F";
@@ -40570,7 +40140,6 @@ class Mission
 									{
 										presence=0.5;
 										presenceCondition="2 in buildings && (1 in buildingTwoEntrances || ( !(3 in bigRoomTwo) && count bigRoomTwo > 1) )";
-										createAsSimpleObject=1;
 									};
 									id=1948;
 									type="Land_Shoot_House_Wall_Long_F";
@@ -40589,7 +40158,6 @@ class Mission
 									{
 										presence=0.5;
 										presenceCondition="2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1947;
 									type="Land_Shoot_House_Wall_Crouch_F";
@@ -40609,7 +40177,6 @@ class Mission
 									{
 										presence=0.5;
 										presenceCondition="2 in buildings && sideRoomTwoTwo != 1";
-										createAsSimpleObject=1;
 									};
 									id=1942;
 									type="Land_Shoot_House_Wall_F";
@@ -46726,7 +46293,6 @@ class Mission
 							class Attributes
 							{
 								presenceCondition="!(2 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2082;
 							type="Land_IronPipes_F";
@@ -46746,7 +46312,6 @@ class Mission
 							{
 								init="if (isServer) then {" \n "    destroyableFences pushBack this; " \n "};";
 								presenceCondition="!(2 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2049;
 							type="Land_Net_Fence_8m_F";
@@ -46766,7 +46331,6 @@ class Mission
 							{
 								init="if (isServer) then {" \n "    destroyableFences pushBack this; " \n "};";
 								presenceCondition="!(2 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2048;
 							type="Land_Net_Fence_8m_F";
@@ -46786,7 +46350,6 @@ class Mission
 							{
 								init="if (isServer) then {" \n "    destroyableFences pushBack this; " \n "};";
 								presenceCondition="!(2 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2047;
 							type="Land_Net_Fence_8m_F";
@@ -46806,7 +46369,6 @@ class Mission
 							{
 								init="if (isServer) then {" \n "    destroyableFences pushBack this; " \n "};";
 								presenceCondition="!(2 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2046;
 							type="Land_Net_Fence_8m_F";
@@ -46826,7 +46388,6 @@ class Mission
 							{
 								init="if (isServer) then {" \n "    destroyableFences pushBack this; " \n "};";
 								presenceCondition="!(2 in buildings)";
-								createAsSimpleObject=1;
 							};
 							id=2050;
 							type="Land_Net_Fence_8m_F";
@@ -46919,7 +46480,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(6 in windowThingsTwo) && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1893;
 									type="Land_Shoot_House_Wall_F";
@@ -46937,7 +46497,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="6 in windowThingsTwo && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1892;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -47085,7 +46644,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(5 in windowThingsTwo) && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1895;
 									type="Land_Shoot_House_Wall_F";
@@ -47104,7 +46662,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="5 in windowThingsTwo && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1894;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -47253,7 +46810,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(4 in windowThingsTwo) && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1929;
 									type="Land_Shoot_House_Wall_F";
@@ -47272,7 +46828,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="4 in windowThingsTwo && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1928;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -47420,7 +46975,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(3 in windowThingsTwo) && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1950;
 									type="Land_Shoot_House_Wall_F";
@@ -47439,7 +46993,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="3 in windowThingsTwo && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1949;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -47588,7 +47141,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="1 in windowThingsTwo && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1773;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -47607,7 +47159,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(1 in windowThingsTwo) && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1772;
 									type="Land_Shoot_House_Wall_F";
@@ -47754,7 +47305,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="2 in windowThingsTwo && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1770;
 									type="Land_Shoot_House_Panels_Window_F";
@@ -47773,7 +47323,6 @@ class Mission
 									class Attributes
 									{
 										presenceCondition="!(2 in windowThingsTwo) && 2 in buildings";
-										createAsSimpleObject=1;
 									};
 									id=1769;
 									type="Land_Shoot_House_Wall_F";
@@ -48708,7 +48257,6 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								createAsSimpleObject=1;
 							};
 							id=2005;
 							type="Land_IronPipes_F";
@@ -53320,7 +52868,7 @@ class Mission
 					};
 					id=3114;
 					type="Land_CampingTable_F";
-					atlOffset=0.2963295;
+					atlOffset=0.29257584;
 				};
 				class Item6
 				{
@@ -53368,6 +52916,7 @@ class Mission
 						angles[]={0,4.2045803,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						createAsSimpleObject=1;
@@ -53375,7 +52924,7 @@ class Mission
 					};
 					id=3121;
 					type="Land_Laptop_F";
-					atlOffset=0.7674675;
+					atlOffset=0.00051307678;
 				};
 				class Item9
 				{
@@ -53489,7 +53038,7 @@ class Mission
 				};
 			};
 			id=3056;
-			atlOffset=0.41509628;
+			atlOffset=0.41503906;
 		};
 		class Item11
 		{
@@ -54394,11 +53943,11 @@ class Mission
 		class Item16
 		{
 			dataType="Marker";
-			position[]={8367.9766,5.3718262,22205.139};
+			position[]={8824.5615,15.672852,21929.123};
 			name="mrk_exampleOuter";
 			type="Empty";
 			id=3157;
-			atlOffset=-20.957314;
+			atlOffset=-0.85182953;
 		};
 		class Item17
 		{
@@ -54497,17 +54046,6 @@ class Mission
 			type="Empty";
 			id=3180;
 			atlOffset=-142.38412;
-		};
-		class Item27
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9163.6172,14.348911,21695.328};
-			};
-			init="BIS_initRespawn_disconnect = -1;";
-			id=3181;
-			type="Logic";
 		};
 	};
 };
