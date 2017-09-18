@@ -1,10 +1,14 @@
-TF_no_auto_long_range_radio = true;
-TF_give_personal_radio_to_regular_soldier = true;
-TF_give_microdagr_to_soldier = false;
-TF_same_sw_frequencies_for_side = true;
-TF_same_lr_frequencies_for_side = true;
-TF_same_dd_frequencies_for_side = true;
-TF_default_radioVolume = 6;
+force TFAR_giveLongRangeRadioToGroupLeaders = false;
+force TFAR_givePersonalRadioToRegularSoldier = true;
+force TFAR_giveMicroDagrToSoldier = false;
+force TFAR_SameSRFrequenciesForSide = true;
+force TFAR_SameLRFrequenciesForSide = true;
+force TFAR_fullDuplex = true;
+force TFAR_enableIntercom = true;
+force TFAR_objectInterceptionEnabled = true;
+force TFAR_spectatorCanHearEnemyUnits = true;
+force TFAR_spectatorCanHearFriendlies = true;
+TFAR_default_radioVolume = 6;
 
 asr_ai3_main_setskills = false;
 asr_ai3_main_seekcover = true;
