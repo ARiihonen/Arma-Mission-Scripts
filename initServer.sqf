@@ -35,13 +35,13 @@ if ("ace_medical" call ARTR_fnc_checkMod) then
 
 //Sleep for 10-30 seconds and call server ending if all enemies dead
 trigger_clear = ["{ side _x == WEST } count allUnits <= 0", "call ARTR_fnc_serverEnding;"] call ARTR_fnc_emptyTrigger;
-trigger_clear setTriggerTimeout [10, 15, 30, false];
+trigger_clear setTriggerTimeout [5, 10, 15, false];
 
 trigger_almostClear = [
 	"{side _x == WEST} count allUnits <= 1",
 	"{ _x setDamage 1 } forEach (allUnits select { side _x == WEST})"
 ] call ARTR_fnc_emptyTrigger;
-trigger_almostClear setTriggerTimeout [30,30,30, false];
+trigger_almostClear setTriggerTimeout [15,20,30, false];
 
 //client inits wait for serverInit to be true before starting, to make sure all variables the server sets up are set up before clients try to refer to them (which would cause errors)
 missionNamespace setVariable["ARTR_serverInit", true, true];
