@@ -1,8 +1,3 @@
-params [
-	["_unit", player, [objNull] ],
-	["_clothCollection", "leave", [""] ],
-	["_weaponCollection", "leave", [""] ]
-];
+params ["_unit","_clothes","_weapons"];
 
-[_unit,_clothCollection] call ARTR_fnc_setIrregularClothes;
-[_unit,_weaponCollection] call ARTR_fnc_setIrregularWeapons;
+[_unit,_clothes] call ARTR_fnc_setIrregularClothes;

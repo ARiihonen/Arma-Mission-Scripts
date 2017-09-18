@@ -5,6 +5,7 @@ Params:
 	0: Variable name of the condition array. STRING
 	1: (Optional) Counter start position. INT
 */
+
 params[
 	["_var_name","presenceArray",[""]],
 	["_counter",0,[0]]
@@ -17,5 +18,5 @@ collect3DENHistory {
 	} forEach get3DENSelected "object";
 };
 
-systemChat (_var_name + " last value: " + (str _counter));
 diag_log ("Conditions set for " +  _var_name + ", last value: " + (str _counter));
+copyToClipboard str _counter;

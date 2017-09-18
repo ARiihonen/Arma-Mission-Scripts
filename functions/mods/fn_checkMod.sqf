@@ -5,7 +5,9 @@ Arguments:
 
 Return: BOOL
 */
-_cfgName = _this param [0,"",[""]];
+params [
+	[ "_cfgName", "", [""]]
+];
 
 _return = false;
 if isClass (configfile >> "CfgPatches" >> _cfgName) then { _return = true; };
