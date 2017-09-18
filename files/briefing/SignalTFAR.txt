@@ -1,7 +1,7 @@
 Channel setup for the mission:
 <br /> <br />
-CH1: Inter-squad communication <br />
-CH2: Team Alpha <br />
-CH3: Team Bravo
+CH1 - 45.00: Inter-squad communication <br />
+CH2 - 50.00: Team Alpha <br />
+CH3 - 60.00: Team Bravo
 <br /> <br />
 Squad leaders and team leaders have their secondary channels set to CH1 for coordination between teams.

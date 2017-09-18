@@ -11,8 +11,6 @@ ARTR_radioChannels = [
 ];
 
 _addStuff = [] spawn {
-	waitUntil { missionNamespace getVariable ["artr_gearAdded",false] };
-
 	private _primaryChannel = -1;
 	private _secondaryChannel = -1;
 	private _groupID = groupID (group player);
@@ -44,6 +42,4 @@ _addStuff = [] spawn {
 	if (_secondaryChannel != -1) then {
 		[call TFAR_fnc_activeSwRadio, _secondaryChannel] call TFAR_fnc_setAdditionalSwChannel;
 	};
-
-	missionNamespace setVariable ["artr_gearAdded", false, false];
 };
