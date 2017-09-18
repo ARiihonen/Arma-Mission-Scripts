@@ -146,7 +146,7 @@ private _ACEAdvMedicGear = [
 ];
 
 
-if (_unit == leader (group _unit) && !("ItemGPS" in assignedItems _unit)) then
+if ( (_unit == leader (group _unit) || ["_TL_", typeOf _unit] call BIS_fnc_inString) && !("ItemGPS" in assignedItems _unit) ) then
 {
 	_unit linkItem "ItemGPS";
 };

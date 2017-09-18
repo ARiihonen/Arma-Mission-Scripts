@@ -22,9 +22,8 @@ trigger_dead setTriggerTimeout [5, 5, 5, true];
 
 //Create trigger to advance phase when island cleared
 trigger_island = [
-	"triggerActivated trigger_islandCleared && triggerActivated trigger_islandSouth_1 && triggerActivated trigger_islandSouth_2 && triggerActivated trigger_islandNorth_1 && triggerActivated trigger_islandNorth_2 && (missionNamespace getVariable ['mission_phase',0] == 0)",
-	"call ARTR_fnc_advancePhase;",
-	""
+	"( { triggerActivated _x } count [ trigger_islandCleared, trigger_islandSouth_1, trigger_islandSouth_2, trigger_islandSouth_3, trigger_islandNorth_1, trigger_islandNorth_2, trigger_islandNorth_3] >= 7) && (missionNamespace getVariable ['mission_phase',0] == 0)",
+	"call ARTR_fnc_advancePhase;"
 ] call ARTR_fnc_emptyTrigger;
 trigger_island setTriggerTimeout [10, 20,60, false];
 

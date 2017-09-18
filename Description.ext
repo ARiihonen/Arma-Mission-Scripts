@@ -23,7 +23,7 @@ respawnOnStart = 0;
 respawnTemplates[] = {"Tickets","Spectator"};
 respawnButton = 0;
 
-enableDebugConsole = 0; //enable debug console for the admin
+enableDebugConsole = 1; //enable debug console for the admin
 
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
@@ -189,6 +189,7 @@ class CfgFunctions
 			class HCInit {};
 			class HCSetOwner {};
 			class getAIController {};
+			class initAI { postInit = 1; };
 		};
 
 		class gear
