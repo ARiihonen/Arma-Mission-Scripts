@@ -58,5 +58,15 @@ ARTR_irregularClothCollections = [
 			["shades", "shadesSport"],
 			"remove"
 		]
-	]
+	],
+	[
+        "sicario",
+        [
+            ["civilian", "civilianShorts", "bandit"],
+            ["chestRig", "bandolier", "tacVest"],
+            ["bandanna", "beanie", "boonie", "cap", "hat", "milcap", "safarihat"],
+            ["balaclava","bandanna","shades","shadesSport"],
+            "leave"
+        ]
+    ]
 ];
