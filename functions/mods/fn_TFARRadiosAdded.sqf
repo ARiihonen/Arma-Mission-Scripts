@@ -6,7 +6,8 @@ params [
 //SQUAD SPECIFIC RADIO CHANNEL SETTINGS: [GROUP ID, DEFAULT CHANNEL]. By default, channel 0 is for inter-squad communication
 //Need to use player setgroupID "id"; in unit init-field to get this initialised properly.
 ARTR_radioChannels = [
-
+    ["Alpha", 1],
+    ["Bravo", 2]
 ];
 
 _addStuff = [] spawn {
@@ -41,6 +42,4 @@ _addStuff = [] spawn {
 	if (_secondaryChannel != -1) then {
 		[call TFAR_fnc_activeSwRadio, _secondaryChannel] call TFAR_fnc_setAdditionalSwChannel;
 	};
-
-	missionNamespace setVariable ["artr_gearAdded", false, false];
 };

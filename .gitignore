@@ -47,4 +47,5 @@ Temporary Items
 .apdisk
 *.iml
 .idea/modules.xml
+.idea/misc.xml
 *.xml

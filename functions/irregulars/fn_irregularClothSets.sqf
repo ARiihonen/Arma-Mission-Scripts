@@ -2,7 +2,7 @@
 ARTR_irregularUniforms = [
 	[
 		"guerrilla",
-		["U_BG_Guerilla2_3","U_BG_Guerrilla_6_1","U_BG_Guerilla1_1","U_BG_Guerilla2_2","U_BG_Guerilla2_1","U_I_G_resistanceLeader_F"]
+		["U_BG_Guerilla2_3","U_BG_Guerrilla_6_1","U_BG_Guerilla1_1","U_BG_Guerilla2_2","U_BG_Guerilla2_1","U_I_G_resistanceLeader_F","U_BG_Guerilla1_2_F"]
 	],
 	[
 		"paramilitary",
@@ -14,7 +14,7 @@ ARTR_irregularUniforms = [
 	],
 	[
 		"civilian",
-		["U_C_Man_casual_1_F","U_C_Man_casual_3_F","U_C_Man_casual_2_F"]
+		["U_C_Man_casual_1_F","U_C_Man_casual_3_F","U_C_Man_casual_2_F","U_C_Mechanic_01_F"]
 	],
 	[
 		"civilianShorts",
@@ -23,6 +23,14 @@ ARTR_irregularUniforms = [
 	[
 		"civilianSports",
 		["U_C_man_sport_2_F","U_C_man_sport_3_F","U_C_man_sport_1_F"]
+	],
+	[
+        "IDAP",
+        ["U_C_IDAP_Man_cargo_F","U_C_IDAP_Man_Jeans_F","U_C_IDAP_Man_casual_F","U_C_IDAP_Man_shorts_F","U_C_IDAP_Man_Tee_F","U_C_IDAP_Man_TeeShorts_F"]
+    ],
+	[
+		"construction",
+		["U_C_ConstructionCoverall_Black_F","U_C_ConstructionCoverall_Blue_F","U_C_ConstructionCoverall_Red_F""U_C_ConstructionCoverall_Vrana_F"]
 	]
 ];
 
@@ -47,6 +55,18 @@ ARTR_irregularVests = [
 	[
 	 	"tacVest",
 	 	["V_TacVest_oli","V_TacVest_khk","V_TacVest_camo","V_TacVest_brn","V_TacVest_blk"]
+	],
+	[
+		"safety",
+		["V_Safety_blue_F","V_Safety_orange_F","V_Safety_yellow_F"]
+	],
+	[
+		"multipocket",
+		["V_Pocketed_black_F","V_Pocketed_coyote_F","V_Pocketed_olive_F"]
+	],
+	[
+		"legstrap",
+		["V_LegStrapBag_black_F","V_LegStrapBag_coyote_F","V_LegStrapBag_olive_F"]
 	]
 ];
 
@@ -90,7 +110,43 @@ ARTR_irregularHeadgear = [
 	[
 		"shemagh",
 		["H_ShemagOpen_khk","H_ShemagOpen_tan","H_Shemag_olive"]
-	]
+	],
+    [
+        "idapcap",
+        ["H_Cap_Black_IDAP_F","H_Cap_Orange_IDAP_F","H_Cap_White_IDAP_F"]
+    ],
+    [
+        "pasgt",
+        ["H_PASGT_basic_blue_F","H_PASGT_basic_olive_F","H_PASGT_basic_white_F"]
+    ],
+    [
+        "earpro",
+        ["H_EarProtectors_black_F","H_EarProtectors_orange_F","H_EarProtectors_red_F","H_EarProtectors_white_F","H_EarProtectors_yellow_F"]
+    ],
+    [
+        "hardhat",
+        ["H_Construction_basic_black_F","H_Construction_basic_black_F","H_Construction_basic_orange_F","H_Construction_basic_red_F","H_Construction_basic_white_F",",_Construction_basic_yellow_F","H_Construction_basic_vrana_F","H_Construction_earprot_black_F","H_Construction_earprot_orange_F","H_Construction_earprot_red_F","H_Construction_earprot_white_F","H_Construction_earprot_,ellow_F","H_Construction_earprot_vrana_F","H_Construction_headset_black_F","H_Construction_headset_orange_F","H_Construction_headset_red_F","H_Construction_headset_white_F","H_Construction_headset_,ellow_F","H_Construction_headset_vrana_F"]
+    ],
+    [
+        "bandage",
+        ["H_HeadBandage_clean_F","H_HeadBandage_stained_F","H_HeadBandage_bloody_F"]
+    ],
+    [
+        "headset",
+        ["H_HeadSet_black_F","H_HeadSet_orange_F","H_HeadSet_red_F","H_HeadSet_white_F","H_HeadSet_yellow_F"]
+    ],
+    [
+        "presshelm",
+        ["H_PASGT_basic_blue_press_F","H_PASGT_neckprot_blue_press_F"]
+    ],
+    [
+        "safarihat",
+        ["H_Hat_Safari_olive_F","H_Hat_Safari_sand_F"]
+    ],
+    [
+        "earpiece",
+        ["H_WirelessEarpiece_F"]
+    ]
 ];
 
 //Goggle sets definition
@@ -110,6 +166,18 @@ ARTR_irregularGoggles = [
 	[
 		"shadesSport",
 		["G_Sport_Greenblack","G_Sport_Blackred","G_Sport_Checkered","G_Sport_BlackWhite","G_Sport_Blackyellow","G_Sport_Red"]
+	],
+	[
+		"respirator",
+		["G_Respirator_blue_F","G_Respirator_white_F","G_Respirator_yellow_F"]
+	],
+	[
+		"eyepro",
+		["G_EyeProtectors_F","G_EyeProtectors_Earpiece_F"]
+	],
+	[
+		"earpiece",
+		["G_WirelessEarpiece_F"]
 	]
 ];
 
@@ -134,5 +202,13 @@ ARTR_irregularBackpacks = [
 	[
 		"assault",
 		["B_AssaultPack_sgg","B_AssaultPack_khk","B_AssaultPack_rgr","B_AssaultPack_blk","B_AssaultPack_cbr"]
-	]
+	],
+	[
+        "legstrap",
+        ["B_LegStrapBag_black_F","B_LegStrapBag_coyote_F","B_LegStrapBag_olive_F"]
+    ],
+    [
+        "messengerbag",
+        ["B_Messenger_Black_F","B_Messenger_Coyote_F","B_Messenger_Gray_F","B_Messenger_Olive_F"]
+    ]
 ];
