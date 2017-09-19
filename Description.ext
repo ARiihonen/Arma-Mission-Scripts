@@ -129,6 +129,7 @@ class CfgFunctions
 			class removeWaypoints {};
 			class setSkills { postInit = 1; };
 			class surrenderTarget {};
+			class vehicleWaypoints {};
 		};
 
 		class gear
@@ -147,8 +148,8 @@ class CfgFunctions
 		{
 			class getIrregularClothes {};
 			class getIrregularThing {};
-			class irregularClothSets {};
-			class irregularCollections {};
+			class irregularClothSets { preInit = 1; };
+			class irregularCollections { preInit = 1; };
 			class irregularGearSets { preInit = 1; };
 			class setIrregularClothes {};
 			class setIrregularGear {};

@@ -69,6 +69,60 @@ if ( (isServer && isNil "headlessClient") || (!isServer && !hasInterface) ) then
 			_startMarker = selectRandom _southPatrolMarkers;
 			[_startMarker,_patrolUnits,"SouthInner"] call ARTR_fnc_patrolGroup;
 		};
+
+		//Spawn vehicle patrols
+		private _vehicleStarts = [
+			"mrk_vehicleSpawn_1",
+			"mrk_vehicleSpawn_2",
+			"mrk_vehicleSpawn_3",
+			"mrk_vehicleSpawn_4",
+			"mrk_vehicleSpawn_5",
+			"mrk_vehicleSpawn_6",
+			"mrk_vehicleCentre"
+		];
+
+		for "_i" from 1 to (1+floor(random(3))) do {
+			private _start = _vehicleStarts deleteAt (floor random (count _vehicleStarts));
+
+			private _vehicle = createVehicle [(selectRandom ["I_C_Offroad_02_unarmed_F","I_C_Van_01_transport_F"]),markerPos _start,[],0,"NONE"];
+			_vehicle setDir (markerDir _start);
+
+			private _group = [markerPos _start, resistance, ["I_C_Soldier_Para_2_F","I_C_Soldier_Para_1_F","I_C_Soldier_Para_1_F"], [], [], [], [], [], markerDir _start] call BIS_fnc_spawnGroup;
+
+			{
+				switch (_forEachIndex) do
+				{
+					case 0: {
+						_x assignAsDriver _vehicle;
+						_x moveInDriver _vehicle;
+					};
+
+					case 1: {
+						_x assignAsGunner _vehicle;
+						_x moveInGunner _vehicle;
+					};
+
+					default {
+						_x assignAsCargo _vehicle;
+						_x moveInCargo _vehicle;
+					};
+				}
+			} forEach (units _group);
+
+			//Set skills
+			(units _group) call ARTR_fnc_setSkills;
+
+			//Set gear
+			/*
+			{
+				[_x,"guerrilla",(typeOf _x)] call ARTR_fnc_setIrregularGear;
+			} forEach (units _group);
+			*/
+
+
+			//Make waypoints for them
+			[_group] call ARTR_fnc_vehicleWaypoints;
+		};
 	};
 
 	//If the Blackfish has no pilot, add one and make him orbit the target
@@ -95,8 +149,7 @@ if ( (isServer && isNil "headlessClient") || (!isServer && !hasInterface) ) then
 		_loiterWP setWaypointLoiterType "CIRCLE_L";
 		_loiterWP setWaypointLoiterRadius _orbitDistance;
 		(group driver thunder) setCurrentWaypoint _loiterWP;
-		thunder flyInHeightASL _orbitHeight;
-
+		thunder flyInHeightASL [_orbitHeight,_orbitHeight,_orbitHeight];
 	};
 
 	//If the GHosthawk doesn't have a pilot, add one and make him go land at a default LZ
