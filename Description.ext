@@ -13,7 +13,7 @@ OnLoadMission = "Description.ext On Load Mission";
 loadscreen = "files\pictures\loadscreen.paa";
 
 saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
-disabledai = 0; //Disable AI taking over un-taken player slots
+disabledai = 1; //Disable AI taking over un-taken player slots
 
 //Default respawn options
 respawn = "BASE";
