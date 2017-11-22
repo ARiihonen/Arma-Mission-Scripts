@@ -16,15 +16,12 @@ if (player getVariable ['ACE_isUnconscious', false]) then { player setDamage 1; 
 
 if (alive player) then {
 
-	switch _ending do {
-		case "Win": {
-			["Win", true, true] call BIS_fnc_endMission;
-		};
-
-		default {
-			["Lose", false, true] call BIS_fnc_endMission;
-		};
-	};
+    if (_ending find "Win" >= 0) then
+    {
+        [_ending, true, true] call BIS_fnc_endMission;
+    } else {
+        [_ending, false, true] call BIS_fnc_endMission;
+    };
 
 } else {
 	["Dead", false, true] call BIS_fnc_endMission;
