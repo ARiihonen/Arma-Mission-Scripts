@@ -1,20 +1,3 @@
-//https://community.bistudio.com/wiki/Description.ext
-
-author="Sniper Party / Caranfin";
-briefingName = "Description.ext Briefing Name";
-
-//Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-overviewText = "Description.ext Overview Text"; //This is overwritten by the editor-set description
-//overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
-
-//Loading screen texts and picture for loading the mission
-OnLoadName = "Description.ext On Load Name";
-OnLoadMission = "Description.ext On Load Mission";
-loadscreen = "files\pictures\loadscreen.paa";
-
-saving = 0; //Set saving to 0 so that you can exit the mission without saving and causing dumb bugs when reloading
-disabledai = 1; //Disable AI taking over un-taken player slots
-
 //Default respawn options
 respawn = "BASE";
 respawnDelay = 5;
