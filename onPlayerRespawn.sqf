@@ -2,3 +2,4 @@
 waitUntil {!isNull player};
 
 [player] call ARTR_fnc_modGear;
+if ("ace_medical" call ARTR_fnc_checkMod) then { call ARTR_fnc_aceDeath; };
