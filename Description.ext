@@ -1,3 +1,5 @@
+//https://community.bistudio.com/wiki/Description.ext
+
 //Default respawn options
 respawn = "BASE";
 respawnDelay = 5;
@@ -5,8 +7,6 @@ respawnDialog = 0;
 respawnOnStart = 0;
 respawnTemplates[] = {"Tickets","Spectator"};
 respawnButton = 0;
-
-enableDebugConsole = 1; //enable debug console for the admin
 
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
@@ -17,15 +17,6 @@ ReviveDelay = 6;                        //time needed to revive someone (in secs
 ReviveMedicSpeedMultiplier = 2;         //speed multiplier for revive performed by medic
 ReviveForceRespawnDelay = 3;            //time needed to perform force respawn (in secs)
 ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
-
-
-//Game type stuff. Doesn't matter, but will get shown in mission select.
-class Header
-{
-	gameType = COOP;
-	minPlayers = 4;
-	maxPlayers = 18;
-};
 
 class ACE_Settings
 {
@@ -44,22 +35,37 @@ class CfgDebriefing
 		pictureColor[] = {0.6,0.1,0.2,1};
 	};
 
-	class Win
+	class WinTotal
 	{
 		title = "Mission Successful";
-		subtitle = "Yay you";
+		subtitle = "No evidence was left behind";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		picturecolor[] = {0.0,0.3,0.6,1};
 	};
 
-	class Lose
+	class WinPartial
 	{
-		title = "Mission Failed";
-		subtitle = "Fuck off";
-		description = "Scrub";
+		title = "Partial Success";
+		subtitle = "You left behind an insignificant amount of evidence";
+		picture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		picturecolor[] = {0.0,0.3,0.6,1};
+	};
+
+	class LoseTotal
+	{
+		title = "Complete Failure";
+		subtitle = "A catastrophic amount of evidence was left behind.";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 		pictureColor[] = {1.0,0.3,0.2,1.0};
 	};
+
+    class LosePartial
+    {
+        title = "Mission Failed";
+        subtitle = "A significant amount of evidence was left behind.";
+        picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+        pictureColor[] = {1.0,0.3,0.2,1.0};
+    };
 
 };
 
@@ -86,13 +92,11 @@ class CfgFunctions
 
 		class mods
 		{
+		    class aceDeath {};
 			class checkMod {};
 			class initRevive { preInit = 1; };
 			class initTFAR { preInit = 1; };
 			class initACRE { preInit = 1; };
-			class TFARRadiosAdded {};
-			class TFARSpeaking {};
-			class TFARVolumeChange {};
 		};
 
 		class ai
@@ -135,6 +139,8 @@ class CfgFunctions
 			class emptyTrigger {};
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
+			class reinforce {};
+			class groupEnding {};
 		};
 	};
 };
@@ -152,47 +158,14 @@ class CfgRemoteExec
 	              allowedTargets=0; 	// 0: can target anyone, 1: only clients, 2: only server
 	              jip = 1; 				// JIP setting override
 	       };
+
+	       class reinforce { allowedTargets = 0; jip = 0; };
 	};
 
 	// List of script commands allowed to be sent from client via remoteExec
 	class Commands
 	{
 		class reveal { allowedTargets=0; jip=0; };
-	};
-};
-
-//Parameters, accessible from the role selection screen and used to switch between pre-defined options for the mission (time of day, gear, headless client). Parameters are in an array called paramsArray.
-//So, to check, refer to paramsArray select i, where i is array index (starting with 0)
-class Params
-{
-	class ExampleParam {
-		title = "Example title";
-		values[] = {0,1};
-		texts[] = {"ZERO", "ONE"};
-		default = 0;
-	};
-};
-
-class CfgORBAT
-{
-	class ARTR
-	{
-		class Example
-		{
-			id = 1;
-			commander = "GreekMen";
-			commanderRank = "Captain";
-			description = "Unit description";
-			insignia = "\a3\missions_f_epa\data\img\orbat\I_AAF_ca.paa";
-			side = "Resistance";
-			size = "Platoon";
-			type = "Infantry";
-			text = "2nd Platoon";
-			textShort = "2nd Platoon";
-			texture = "flag_AAF";
-			assets[] = {};
-			subordinates[] = {};
-		};
 	};
 };
 
@@ -249,6 +222,15 @@ class CfgNotifications
 		description = "%1";
 		priority = 4;
 		sound = "taskUpdated";
+	};
+	class EvidenceDestroyed: TaskAssigned
+	{
+        title = "Evidence Destroyed";
+        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+        description = "No evidence remains here";
+        priority = 6;
+        color[] = {0.7,1.0,0.3,1.0};
+        sound = "taskSucceeded";
 	};
 };
 

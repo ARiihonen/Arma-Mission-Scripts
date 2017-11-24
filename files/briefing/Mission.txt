@@ -1,0 +1,7 @@
+Assault the former syndicate hideout %1, and <br />
+- kill all the gendarmerie defending it <br />
+- destroy all evidence they might be carrying <br />
+- destroy all evidence the syndicate members killed defending the area might have <br />
+- destroy all evidence on laptops or documents in the hideout <br />
+<br /> <br />
+When you are sure no evidence is left behind, leave the area to avoid inevitable gendarmerie reinforcements.
