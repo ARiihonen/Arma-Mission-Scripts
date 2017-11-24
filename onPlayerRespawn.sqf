@@ -2,6 +2,7 @@
 waitUntil {!isNull player};
 
 call ARTR_fnc_irregularGearSets;
+if ("ace_medical" call ARTR_fnc_checkMod) then { call ARTR_fnc_aceDeath; };
 
 [player, "scrubGuerrillas"] call ARTR_fnc_setIrregularClothes;
 [player] call ARTR_fnc_modGear;

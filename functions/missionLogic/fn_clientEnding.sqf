@@ -12,7 +12,7 @@ and fancyVisuals a boolean that says whether to go straight to the
 debriefing or to use the cool new ingame ending graphic*/
 
 
-if (player getVariable ['ACE_isUnconscious', false]) then { player setDamage 1; };
+if (player getVariable ["ACE_isUnconscious", false]) then { player setDamage 1; };
 
 if (alive player) then {
 
