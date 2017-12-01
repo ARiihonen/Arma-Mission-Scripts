@@ -86,9 +86,16 @@ class CfgFunctions
 {
 	class ARTR
 	{
-		class effects
+
+		class ai
 		{
-			class ambientCombat { postInit = 1; };
+		    class buildingEntered {};
+		    class getAIController {};
+		    class HCInit {};
+		    class HCSetOwner {};
+		    class initIndoorsBehaviour { postInit = 1; };
+			class initSkills { preInit = 1; };
+			class setSkills { postInit = 1; };
 		};
 
 		class eden
@@ -97,41 +104,16 @@ class CfgFunctions
 			class setIrregularGearEden {};
 		};
 
-		class preinit
+		class effects
 		{
-			class missionSettings { preInit = 1; };
-			class randInt {};
-			class populateArray {};
-			class chooseRandoms {};
-			class presenceArray {};
-		};
-
-		class mods
-		{
-		    class aceDeath {};
-			class checkMod {};
-			class initRevive { preInit = 1; };
-			class initTFAR { preInit = 1; };
-			class initACRE { preInit = 1; };
-			class TFARRadiosAdded {};
-		};
-
-		class ai
-		{
-			class initSkills { preInit = 1; };
-			class setSkills { postInit = 1; };
-			class HCInit {};
-			class HCSetOwner {};
-			class getAIController {};
-			class initIndoorsBehaviour { postInit = 1; };
-			class buildingEntered {};
+			class ambientCombat { postInit = 1; };
 		};
 
 		class gear
 		{
+		    class giveMagazines {};
+		    class modGear {};
 			class nvGoggles {};
-			class giveMagazines {};
-			class modGear {};
 			class switchBackpack {};
 			class switchHandgun {};
 			class switchPrimaryWeapon {};
@@ -154,13 +136,32 @@ class CfgFunctions
 		class missionLogic
 		{
 			class briefingFile {};
-			class serverEnding {};
 			class clientEnding {};
 			class emptyTrigger {};
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
+			class serverEnding {};
 			class startingPosition {};
 			class variableMarkers { postInit = 1; };
+		};
+
+		class mods
+		{
+		    class aceDeath {};
+			class checkMod {};
+			class initACRE { preInit = 1; };
+			class initRevive { preInit = 1; };
+			class initTFAR { preInit = 1; };
+			class TFARRadiosAdded {};
+		};
+
+		class preinit
+		{
+		    class chooseRandoms {};
+			class missionSettings { preInit = 1; };
+			class populateArray {};
+			class presenceArray {};
+			class randInt {};
 		};
 	};
 };
