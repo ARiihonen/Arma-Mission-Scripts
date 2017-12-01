@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=11614;
+		nextID=12720;
 	};
 	class Camera
 	{
-		pos[]={9013.2471,90.875168,21550.119};
-		dir[]={0.61781359,-0.47096524,0.6298824};
-		up[]={0.32980528,0.88212907,0.33624795};
-		aside[]={0.7140184,1.7136335e-007,-0.70032907};
+		pos[]={9138.8877,61.736645,21473.223};
+		dir[]={0.16116749,-0.34328765,0.92530185};
+		up[]={0.058906518,0.93923068,0.3381969};
+		aside[]={0.98517066,2.4214387e-008,-0.17159536};
 	};
 };
 binarizationWanted=0;
@@ -292,6 +292,25 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="EnableDebugConsole";
 			expression="true";
 			class Value
@@ -309,7 +328,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		nAttributes=2;
 	};
 };
 class Mission
@@ -321,6 +340,7 @@ class Mission
 		resistanceWest=0;
 		timeOfChanges=5400;
 		startWeather=0;
+		startFog=1;
 		startWind=0.1;
 		startWaves=0.1;
 		forecastWeather=0.49576423;
@@ -332,9 +352,8 @@ class Mission
 		day=12;
 		hour=5;
 		minute=24;
-		startFogBase=-1000;
 		forecastFogBase=-1000;
-		startFogDecay=0;
+		startFogDecay=0.1;
 		forecastFogDecay=0;
 	};
 	class Entities
@@ -25309,7 +25328,7 @@ class Mission
 								};
 							};
 							id=1735;
-							atlOffset=3.5691319;
+							atlOffset=3.5366755;
 						};
 						class Item1
 						{
@@ -25830,7 +25849,7 @@ class Mission
 										};
 									};
 									id=1756;
-									atlOffset=4.5145302;
+									atlOffset=4.5620489;
 								};
 							};
 							id=1734;
@@ -40377,7 +40396,7 @@ class Mission
 									};
 									id=2788;
 									type="B_G_Soldier_F";
-									atlOffset=0.11536789;
+									atlOffset=0.098266602;
 								};
 								class Item2
 								{
@@ -50889,7 +50908,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="_this setGroupID [_value];";
+							expression="[_this, _value] call CBA_fnc_setCallsign";
 							class Value
 							{
 								class data
@@ -52049,7 +52068,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="_this setGroupID [_value];";
+							expression="[_this, _value] call CBA_fnc_setCallsign";
 							class Value
 							{
 								class data
@@ -52868,7 +52887,7 @@ class Mission
 					};
 					id=3114;
 					type="Land_CampingTable_F";
-					atlOffset=0.29257584;
+					atlOffset=0.29127884;
 				};
 				class Item6
 				{
@@ -52886,7 +52905,7 @@ class Mission
 					};
 					id=3115;
 					type="Land_CampingTable_small_F";
-					atlOffset=0.33482742;
+					atlOffset=0.33612823;
 				};
 				class Item7
 				{
@@ -52916,7 +52935,6 @@ class Mission
 						angles[]={0,4.2045803,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						createAsSimpleObject=1;
@@ -52924,7 +52942,7 @@ class Mission
 					};
 					id=3121;
 					type="Land_Laptop_F";
-					atlOffset=0.00051307678;
+					atlOffset=0.7674675;
 				};
 				class Item9
 				{
@@ -53038,7 +53056,7 @@ class Mission
 				};
 			};
 			id=3056;
-			atlOffset=0.41503906;
+			atlOffset=0.41505814;
 		};
 		class Item11
 		{
@@ -53108,7 +53126,7 @@ class Mission
 							};
 							id=3091;
 							type="I_Soldier_LAT_F";
-							atlOffset=0.00055408478;
+							atlOffset=0.00055456161;
 						};
 						class Item3
 						{

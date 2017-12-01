@@ -1,6 +1,6 @@
 Channel setup for the mission:
 <br /> <br />
-CH0 - 45.00: Command channel <br />
+CH0 - 42.00: Command channel <br />
 CH1 - 50.00: Alpha Squad <br />
 CH2 - 60.00: Beta Squad
 <br /> <br />
