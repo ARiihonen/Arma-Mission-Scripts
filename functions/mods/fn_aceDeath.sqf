@@ -3,7 +3,7 @@ With the increased revive time, we still don't really want people to sit idle fo
 */
 
 //Define settings for the trigger (up here for easy modification)
-private _areaSize = 10;
+private _maxRange = 15;
 private _timeOut = 60;
 
 //Get the trigger-friendly string for player side
@@ -17,21 +17,30 @@ switch (playerSide) do
 };
 
 //remove previous trigger if it exists
-if (!isNull (player getVariable ["ARTR_killTrigger", objNull])) then
+if (!isNull (player getVariable ["ARTR_killTimer", objNull])) then
 {
-    deleteVehicle (player getVariable "ARTR_killTrigger");
+    deleteVehicle (player getVariable "ARTR_killTimer");
 };
 
-//Create the trigger: kill player after the interruptable timeout if there are no friendlies within the specified range
-tr_killTimer = createTrigger ["emptyDetector", player, false];
-tr_killTimer setTriggerArea [_areaSize, _areaSize, 0, false];
-tr_killTimer setTriggerActivation [_sideString, "PRESENT", false];
-tr_killTimer setTriggerTimeout [_timeOut,_timeOut,_timeOut,true];
-tr_killTimer setTriggerStatements [
-    "this && player getVariable ['ACE_isUnconscious', false]",
+//Create trigger that kills player if no conscious friendlies are within range
+private _tr_killTimer = [
+    format [
+        "
+            player getVariable ['ace_isUnconscious', false] &&
+            {
+                {
+                    _x distance player <= %1 &&
+                    {
+                        side _x == playerSide && !(_x getVariable ['ace_isUnconscious', false])
+                    }
+                } count playableUnits <= 0
+            }
+        ",
+        _maxRange
+    ],
     "player setDamage 1;"
-];
+] call ARTR_fnc_emptyTrigger;
+_tr_killTimer setTriggerTimeout [_timeOut, _timeOut, _timeOut, true];
 
-//Attach the trigger to the player
-player setVariable ["ARTR_killTrigger", tr_killTimer, false];
-tr_killTimer attachTo [player, [0,0,0]];
+//Store the trigger in player namespace
+player setVariable ["ARTR_killTimer", _tr_killTimer, false];

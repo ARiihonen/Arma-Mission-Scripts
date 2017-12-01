@@ -1,0 +1,12 @@
+Evidence in the hideout
+<br /> <br />
+The gear and working areas of the hideout were scattered <marker name = 'mrk_obj01_%1'>here</marker>, <marker name = 'mrk_obj02_%1'>here</marker>, and <marker name = 'mrk_obj03_%1'>here</marker>.
+<br /> <br />
+There were four syndicate members in the area, they will have died in its defense somewhere around the gear and working areas.
+<br /> <br />
+In addition to any evidence on the defenders' persons, the working area will have contained a laptop, supply boxes, and paper documents, which might have incriminating evidence on them.
+<br /> <br />
+<br /> <br />
+Gendarmerie reinforcements
+<br /> <br />
+The initial force defending the hideout is going to be light, and you should have no trouble with them. However, as the gendarmerie figure out what's going on, they are bound to increase forces in each location. You should do your best to strike quickly and simultaneously, and to complete your business swiftly, in order to avoid an overwhelming response.

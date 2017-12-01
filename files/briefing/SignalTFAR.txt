@@ -1,4 +1,1 @@
-All task force elements are on the same net. Each team has their own designated channel, and all leaders have a secondary channel (CH1) assigned inter-team communication.
-<br /> <br />
-
-<br /> <br />
+Your team is on its own net, with no way to communicate with the other locations. Coordination is up to anything you decide during the briefing.

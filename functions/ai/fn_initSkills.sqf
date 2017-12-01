@@ -18,13 +18,20 @@ if (isServer || (!isServer && !hasInterface)) then {
 
 	//Faction default skill sets (["faction",skillset])
 	private _ai_faction_skills = [
+	    ["BLU_CTRG_F", 1],
+	    ["OPF_V_F", 1],
 		["BLU_F",3],
+		["BLU_T_F", 3],
 		["OPF_F",3],
+		["OPF_T_F", 3],
 		["IND_F",4],
 		["BLU_G_F",5],
+		["BLU_GEN_F", 5],
 		["OPF_G_F",5],
 		["IND_G_F",5],
-		["CIV_F",7]
+		["IND_C_F", 6],
+		["CIV_F",7],
+		["CIV_IDAP_F", 7]
 	];
 	missionNamespace setVariable ["ARTR_ai_factionSkills", _ai_faction_skills];
 
