@@ -11,3 +11,5 @@ if (didJIP) then {
 		player setPos _pos;
 	};
 };
+
+if ("ace_medical" call ARTR_fnc_checkMod) then { call ARTR_fnc_aceDeath; };

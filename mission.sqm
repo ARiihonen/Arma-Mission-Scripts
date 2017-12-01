@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=680;
+		nextID=691;
 	};
 	class Camera
 	{
-		pos[]={12413.606,87.525215,12665.165};
-		dir[]={0.26022425,-0.46659344,-0.84543961};
-		up[]={0.13727316,0.88443327,-0.44598258};
-		aside[]={-0.95585716,1.0144431e-006,-0.29420471};
+		pos[]={12051.389,80.930016,12205.042};
+		dir[]={0.69518787,-0.48810858,0.52788514};
+		up[]={0.38876349,0.87274063,0.29520604};
+		aside[]={0.60481453,7.7125151e-007,-0.79650569};
 	};
 };
 binarizationWanted=0;
@@ -282,6 +282,25 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="EnableDebugConsole";
 			expression="true";
 			class Value
@@ -299,7 +318,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		nAttributes=2;
 	};
 };
 class Mission
@@ -4442,7 +4461,7 @@ class Mission
 							};
 							showWP="NEVER";
 							id=812;
-							atlOffset=0.030761719;
+							atlOffset=0.020719528;
 						};
 					};
 					class Attributes
@@ -7299,7 +7318,7 @@ class Mission
 					};
 					id=524;
 					type="Land_SurvivalRadio_F";
-					atlOffset=0.0038528442;
+					atlOffset=0.0025672913;
 				};
 				class Item14
 				{
@@ -7318,7 +7337,7 @@ class Mission
 					};
 					id=525;
 					type="Land_CampingTable_F";
-					atlOffset=-0.0069961548;
+					atlOffset=-0.0082836151;
 				};
 				class Item15
 				{
@@ -7357,7 +7376,7 @@ class Mission
 					};
 					id=527;
 					type="Land_Map_altis_F";
-					atlOffset=0.0037651062;
+					atlOffset=0.0023593903;
 				};
 				class Item17
 				{
@@ -10047,7 +10066,7 @@ class Mission
 					};
 					id=557;
 					type="Land_SurvivalRadio_F";
-					atlOffset=0.0036849976;
+					atlOffset=0.0023994446;
 				};
 				class Item14
 				{
@@ -10066,7 +10085,7 @@ class Mission
 					};
 					id=558;
 					type="Land_CampingTable_F";
-					atlOffset=-0.0043640137;
+					atlOffset=-0.005645752;
 				};
 				class Item15
 				{
@@ -10105,7 +10124,7 @@ class Mission
 					};
 					id=560;
 					type="Land_Map_altis_F";
-					atlOffset=0.0037269592;
+					atlOffset=0.0024452209;
 				};
 				class Item17
 				{
@@ -13355,7 +13374,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="_this setGroupID [_value];";
+							expression="[_this, _value] call CBA_fnc_setCallsign";
 							class Value
 							{
 								class data
@@ -14172,7 +14191,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="_this setGroupID [_value];";
+							expression="[_this, _value] call CBA_fnc_setCallsign";
 							class Value
 							{
 								class data
