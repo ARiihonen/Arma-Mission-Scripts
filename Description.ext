@@ -108,6 +108,7 @@ class CfgFunctions
 
 		class mods
 		{
+		    class aceDeath {};
 			class checkMod {};
 			class initRevive { preInit = 1; };
 			class initTFAR { preInit = 1; };

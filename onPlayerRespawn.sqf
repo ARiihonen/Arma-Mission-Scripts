@@ -2,3 +2,5 @@
 call ARTR_fnc_startingPosition;
 [player] call ARTR_fnc_modGear;
 call ARTR_fnc_nvGoggles;
+
+if ("ace_medical" call ARTR_fnc_checkMod) then { call ARTR_fnc_aceDeath; };
