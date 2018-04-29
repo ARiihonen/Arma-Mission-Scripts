@@ -16,7 +16,9 @@ ReviveRequiredItemsFakConsumed = 1;     //0: first aid kit is not consumed upon 
 ReviveDelay = 6;                        //time needed to revive someone (in secs)
 ReviveMedicSpeedMultiplier = 2;         //speed multiplier for revive performed by medic
 ReviveForceRespawnDelay = 3;            //time needed to perform force respawn (in secs)
-ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
+ReviveBleedOutDelay = 300;              //unconscious state duration (in secs)
+
+cba_settings_hasSettingsFile = 1;
 
 
 //Game type stuff. Doesn't matter, but will get shown in mission select.
@@ -75,6 +77,7 @@ class CfgFunctions
             class HCInit {};
             class HCSetOwner { postInit = 1; };
             class initSkills { preInit = 1; };
+			class lootFix { postInit = 1; };
             class setSkills { postInit = 1; };
         };
 
@@ -112,6 +115,7 @@ class CfgFunctions
 		{
 			class briefingFile {};
 			class clientEnding {};
+			class deathTimer {};
 			class emptyTrigger {};
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
@@ -121,7 +125,6 @@ class CfgFunctions
 
 		class mods
         {
-            class aceDeath {};
             class checkMod {};
             class initACRE { preInit = 1; };
             class initRevive { preInit = 1; };
