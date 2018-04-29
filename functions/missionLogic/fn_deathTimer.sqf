@@ -22,14 +22,18 @@ if (!isNull (player getVariable ["ARTR_killTrigger", objNull])) then
     deleteVehicle (player getVariable "ARTR_killTrigger");
 };
 
+//Select the correct trigger condition based on whether ACE Medical is on
+private _conditionString = ["this && lifeState player == 'INCAPACITATED'", "this && player getVariable ['ACE_isUnconscious', false]"] select ("ace_medical" call ARTR_fnc_checkMod);
+
 //Create the trigger: kill player after the interruptable timeout if there are no friendlies within the specified range
 tr_killTimer = createTrigger ["emptyDetector", player, false];
 tr_killTimer setTriggerArea [_areaSize, _areaSize, 0, false];
 tr_killTimer setTriggerActivation [_sideString, "PRESENT", false];
 tr_killTimer setTriggerTimeout [_timeOut,_timeOut,_timeOut,true];
 tr_killTimer setTriggerStatements [
-    "this && player getVariable ['ACE_isUnconscious', false]",
-    "player setDamage 1;"
+    _conditionString,
+    "player setDamage 1;",
+	""
 ];
 
 //Attach the trigger to the player

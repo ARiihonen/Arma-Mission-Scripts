@@ -12,4 +12,4 @@ if (didJIP) then {
 	};
 };
 
-if ("ace_medical" call ARTR_fnc_checkMod) then { call ARTR_fnc_aceDeath; };
+call ARTR_fnc_deathTimer;
