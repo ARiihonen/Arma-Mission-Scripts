@@ -3,7 +3,7 @@
 author="Sniper Party / Caranfin";
 
 //Overview text and picture for the mission list (admin sees when selecting missions, also shown when slotting in)
-overviewText = "A highly replayable COOP CQB mission for 04-16 players"; //This is overwritten by the editor-set description
+overviewText = "A highly replayable COOP CQB Killhouse mission for 04-16 players"; //This is overwritten by the editor-set description
 //overviewPicture = "LoadScreen.paa"; This does not work on dedicated servers. Arma is bad.
 
 //Loading screen texts and picture for loading the mission

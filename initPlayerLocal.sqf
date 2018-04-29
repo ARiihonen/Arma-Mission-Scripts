@@ -16,7 +16,7 @@ startingPosEH = addMissionEventHandler [
             removeMissionEventHandler ["mapSingleClick", startingPosEH];
         } else {
 
-            if (_alt && _shift && (_pos inArea "mrk_spawnOuter") && !(_pos inArea "mrk_spawnInner")) then
+            if (_alt && (_pos inArea "mrk_spawnOuter") && !(_pos inArea "mrk_spawnInner")) then
             {
                 if ((missionNamespace getVariable ["startMarker" + groupID (group player), ""]) == "" ) then
                 {
