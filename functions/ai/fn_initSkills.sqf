@@ -7,7 +7,7 @@ if (isServer || (!isServer && !hasInterface)) then {
 		[ [0.85,0.03],[0.40,0.02],[0.40,0.02] ], // 02: Real Good
 		[ [0.80,0.03],[0.30,0.03],[0.30,0.05] ], // 03: Pro
 		[ [0.75,0.03],[0.25,0.03],[0.25,0.03] ], // 04: Semi pro
-		[ [0.70,0.05],[0.20,0.05],[0.20,0.05] ], // 05: Irregular
+		[ [0.70,0.05],[0.05,0.05],[0.30,0.05] ], // 05: Irregular
 		[ [0.60,0.10],[0.10,0.10],[0.10,0.10] ], // 06: Scrub
 		[ [0.50,0.15],[0.05,0.15],[0.05,0.15] ], // 07: Civvie
 		[ [0.90,0.05],[0.25,0.05],[0.50,0.05] ], // 08: Pilot
@@ -18,7 +18,7 @@ if (isServer || (!isServer && !hasInterface)) then {
 
 	//Faction default skill sets (["faction",skillset])
 	private _ai_faction_skills = [
-		["BLU_F",3],
+		["BLU_F",5],
 		["OPF_F",3],
 		["IND_F",4],
 		["BLU_G_F",5],
@@ -36,7 +36,7 @@ if (isServer || (!isServer && !hasInterface)) then {
 
 	//Per-class exceptions to faction skill ([class,skillset])
 	private _ai_class_sets = [
-	
+
 	];
 	missionNamespace setVariable ["ARTR_ai_classSets", _ai_class_sets];
 

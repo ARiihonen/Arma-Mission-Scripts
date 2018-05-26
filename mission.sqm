@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13036;
+		nextID=13510;
 	};
 	class Camera
 	{
-		pos[]={9141.2441,61.736645,21550.717};
-		dir[]={0.52841336,-0.35424644,0.77155292};
-		up[]={0.20016879,0.93515211,0.29227272};
-		aside[]={0.82505584,6.495975e-008,-0.56505537};
+		pos[]={9228.4775,68.440918,21539.42};
+		dir[]={0.37668583,-0.32099792,0.86897349};
+		up[]={0.12767099,0.94707811,0.29452556};
+		aside[]={0.91752613,-2.8754584e-007,-0.39773178};
 	};
 };
 binarizationWanted=0;
@@ -292,25 +292,6 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="EnableDebugConsole";
 			expression="true";
 			class Value
@@ -328,7 +309,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		nAttributes=1;
 	};
 };
 class Mission
@@ -352,7 +333,6 @@ class Mission
 		day=12;
 		hour=5;
 		minute=24;
-		forecastFogBase=-1000;
 		startFogDecay=0.1;
 		forecastFogDecay=0;
 	};
@@ -50908,7 +50888,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -52068,7 +52048,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -52850,7 +52830,7 @@ class Mission
 					};
 					id=3065;
 					type="I_Truck_02_covered_F";
-					atlOffset=1.9073486e-006;
+					atlOffset=-5.1498413e-005;
 				};
 				class Item4
 				{
@@ -53126,7 +53106,7 @@ class Mission
 							};
 							id=3091;
 							type="I_Soldier_LAT_F";
-							atlOffset=0.00055456161;
+							atlOffset=0.00055408478;
 						};
 						class Item3
 						{
