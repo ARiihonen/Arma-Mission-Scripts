@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13510;
+		nextID=13668;
 	};
 	class Camera
 	{
 		pos[]={9228.4775,68.440918,21539.42};
-		dir[]={0.37668583,-0.32099792,0.86897349};
-		up[]={0.12767099,0.94707811,0.29452556};
-		aside[]={0.91752613,-2.8754584e-007,-0.39773178};
+		dir[]={-0.22462201,-0.39601719,0.89037287};
+		up[]={-0.096874058,0.91824168,0.38399276};
+		aside[]={0.969643,-3.4819823e-007,0.24462093};
 	};
 };
 binarizationWanted=0;
@@ -321,7 +321,6 @@ class Mission
 		resistanceWest=0;
 		timeOfChanges=5400;
 		startWeather=0;
-		startFog=1;
 		startWind=0.1;
 		startWaves=0.1;
 		forecastWeather=0.49576423;
@@ -333,7 +332,7 @@ class Mission
 		day=12;
 		hour=5;
 		minute=24;
-		startFogDecay=0.1;
+		startFogDecay=0;
 		forecastFogDecay=0;
 	};
 	class Entities
@@ -53106,7 +53105,7 @@ class Mission
 							};
 							id=3091;
 							type="I_Soldier_LAT_F";
-							atlOffset=0.00055408478;
+							atlOffset=0.00055456161;
 						};
 						class Item3
 						{

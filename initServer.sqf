@@ -19,6 +19,10 @@ This runs on the server machine after objects have initialised in the map. Anyth
 	true
 ] call BIS_fnc_taskCreate;
 
+//Fog settings
+0 setFog [1, 0.1, 0];
+5400 setFog [0, 0, 0];
+
 //Updating tasks example: ["TaskName", "STATE", false] call BIS_fnc_taskSetState;
 //Custom task update notification: ["NotificationName", ["Message"]] remoteExec ["BIS_fnc_showNotification", west, false];
 
