@@ -3,18 +3,8 @@ With the increased revive time, we still don't really want people to sit idle fo
 */
 
 //Define settings for the trigger (up here for easy modification)
-private _areaSize = 10;
+private _minDistance = 10;
 private _timeOut = 60;
-
-//Get the trigger-friendly string for player side
-private _sideString = "";
-switch (playerSide) do
-{
-    case west: { _sideString = "WEST"; };
-    case east: { _sideString = "EAST"; };
-    case resistance: { _sideString = "GUER"; };
-    case civilian: { _sideString = "CIV"; };
-};
 
 //remove previous trigger if it exists
 if (!isNull (player getVariable ["ARTR_killTrigger", objNull])) then
@@ -22,20 +12,32 @@ if (!isNull (player getVariable ["ARTR_killTrigger", objNull])) then
     deleteVehicle (player getVariable "ARTR_killTrigger");
 };
 
-//Select the correct trigger condition based on whether ACE Medical is on
-private _conditionString = ["this && lifeState player == 'INCAPACITATED'", "this && player getVariable ['ACE_isUnconscious', false]"] select ("ace_medical" call ARTR_fnc_checkMod);
+//Build trigger condition based on mod factors
+
+//Player unconsciousness
+private _unconsciousString = ["lifeState player == 'INCAPACITATED'", "player getVariable ['ACE_isUnconscious', false]"] select ("ace_medical" call ARTR_fnc_checkMod);
+
+//Active friendlies condition
+private _nearbyCondition = "alive _x && ";
+if ("ace_medical" call ARTR_fnc_checkMod) then
+{
+	_nearbyCondition = _nearbyCondition + "!(_x getVariable ['ACE_isUnconscious', false])";
+} else {
+	_nearbyCondition = _nearbyCondition + "lifeState _x != 'INCAPACITATED'";
+};
+
+//Finalize _conditionString
+private _conditionString = _unconsciousString + " && ({ side _x == " + str(playerSide) + " && " + _nearbyCondition + " && _x distance player <= " + str(_minDistance) + "} count playableUnits <= 0)";
+
+diag_log "DEATH TIMER LOGIC";
+diag_log _conditionString;
 
 //Create the trigger: kill player after the interruptable timeout if there are no friendlies within the specified range
-tr_killTimer = createTrigger ["emptyDetector", player, false];
-tr_killTimer setTriggerArea [_areaSize, _areaSize, 0, false];
-tr_killTimer setTriggerActivation [_sideString, "PRESENT", false];
-tr_killTimer setTriggerTimeout [_timeOut,_timeOut,_timeOut,true];
-tr_killTimer setTriggerStatements [
-    _conditionString,
-    "player setDamage 1;",
-	""
-];
+tr_killTimer = [
+	_conditionString,
+	"player setDamage 1;"
+] call ARTR_fnc_emptyTrigger;
+tr_killTimer setTriggerTimeout [_timeOut, _timeOut, _timeOut, true];
 
-//Attach the trigger to the player
+//Store the variable in case of respawns and stuff
 player setVariable ["ARTR_killTrigger", tr_killTimer, false];
-tr_killTimer attachTo [player, [0,0,0]];
