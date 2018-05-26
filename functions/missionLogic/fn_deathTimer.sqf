@@ -27,7 +27,10 @@ if ("ace_medical" call ARTR_fnc_checkMod) then
 };
 
 //Finalize _conditionString
-private _conditionString = _unconsciousString + " && ({ side _x == " + playerSide + " && " + _nearbyCondition + " && _x distance player <= " + str(_minDistance) "} count playableUnits <= 0");
+private _conditionString = _unconsciousString + " && ({ side _x == " + str(playerSide) + " && " + _nearbyCondition + " && _x distance player <= " + str(_minDistance) + "} count playableUnits <= 0)";
+
+diag_log "DEATH TIMER LOGIC";
+diag_log _conditionString;
 
 //Create the trigger: kill player after the interruptable timeout if there are no friendlies within the specified range
 tr_killTimer = [
