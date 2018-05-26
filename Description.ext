@@ -60,11 +60,6 @@ class Params
 };
 */
 
-class ACE_Settings
-{
-	#include "aceSettings.hpp"
-};
-
 //Mission ending states, used via BIS_fnc_endMission from end.sqf
 class CfgDebriefing
 {
