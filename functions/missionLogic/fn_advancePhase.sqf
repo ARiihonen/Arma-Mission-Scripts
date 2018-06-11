@@ -1,73 +1,78 @@
-switch ( missionNamespace getVariable ["mission_phase", 0] ) do {
-	case 0:
-	{
-		["ClearTask", "Succeeded", false] call BIS_fnc_taskSetState;
-		["TaskSucceeded", ["Island cleared"]] remoteExec ["BIS_fnc_showNotification", west, false];
+params ["_nextPhase"];
 
-		missionNamespace setVariable ["mission_phase", 1, true];
-
-		_newTasking = [] spawn
+if (_nextPhase > missionNamespace getVariable ["mission_phase", 0]) then
+{
+	switch ( missionNamespace getVariable ["mission_phase", 0] ) do {
+		case 0:
 		{
+			["ClearTask", "Succeeded", false] call BIS_fnc_taskSetState;
+			["TaskSucceeded", ["Island cleared"]] remoteExec ["BIS_fnc_showNotification", west, false];
 
-			if ( count (allPlayers select { !alive _x }) == 0 ) then
+			missionNamespace setVariable ["mission_phase", 1, true];
+
+			_newTasking = [] spawn
 			{
-				//Make all enemies on the island run to the beach
-				call ARTR_fnc_punishEarlyClear;
 
-				//radio message if no players have died
-				[ukko,"newTask"] remoteExec ["sideRadio", 0, false];
+				if ( count (allPlayers select { !alive _x }) == 0 ) then
+				{
+					//Make all enemies on the island run to the beach
+					call ARTR_fnc_punishEarlyClear;
 
-				"marker_camps" setMarkerAlpha 1;
-				"mrk_lz" setMarkerAlpha 1;
+					//radio message if no players have died
+					[ukko,"newTask"] remoteExec ["sideRadio", 0, false];
 
-				"marker_island" setMarkerColor "colorGUER";
-				"marker_island" setMarkerBrush "FDiagonal";
+					"marker_camps" setMarkerAlpha 1;
+					"mrk_lz" setMarkerAlpha 1;
 
-				sleep 10;
+					"marker_island" setMarkerColor "colorGUER";
+					"marker_island" setMarkerBrush "FDiagonal";
 
-				[ukko,"heloPickup"] remoteExec ["sideRadio", 0, false];
+					sleep 10;
 
-				[west, "BoardHelo", ["A helicopter is coming to pick you up from the beach for transport to your new task.", "Board transport", "Board"], markerPos "mrk_pickup", "assigned", 3, false, "default", false] call BIS_fnc_taskCreate;
-				["TaskAssigned", ["Board helicopter"]] remoteExec ["BIS_fnc_showNotification", west, false];
+					[ukko,"heloPickup"] remoteExec ["sideRadio", 0, false];
 
-				[west, "ClearAnother", ["SIGINT has picked up communications between the guerrilla fighters on the island and another group. Continue the operation and clear the other camp.", "Clear New Camp", "Clear"], markerPos "marker_camps", "created", 2, false, "attack", false] call BIS_fnc_taskCreate;
+					[west, "BoardHelo", ["A helicopter is coming to pick you up from the beach for transport to your new task.", "Board transport", "Board"], markerPos "mrk_pickup", "assigned", 3, false, "default", false] call BIS_fnc_taskCreate;
+					["TaskAssigned", ["Board helicopter"]] remoteExec ["BIS_fnc_showNotification", west, false];
 
-			} else {
+					[west, "ClearAnother", ["SIGINT has picked up communications between the guerrilla fighters on the island and another group. Continue the operation and clear the other camp.", "Clear New Camp", "Clear"], markerPos "marker_camps", "created", 2, false, "attack", false] call BIS_fnc_taskCreate;
 
-				//radio message if some players have died
-				[ukko,"rtbBad"] remoteExec ["sideRadio", 0, false];
+				} else {
+
+					//radio message if some players have died
+					[ukko,"rtbBad"] remoteExec ["sideRadio", 0, false];
+
+					sleep 2;
+
+					call ARTR_fnc_serverEnding;
+				};
+			};
+		};
+
+		case 1:
+		{
+			["ClearAnother", "Succeeded", false] call BIS_fnc_taskSetState;
+			["TaskSucceeded", ["Camp cleared"]] remoteExec ["BIS_fnc_showNotification", west, false];
+
+			missionNamespace setVariable ["mission_phase", 2, true];
+
+			"marker_camps" setMarkerColor "colorGUER";
+			"marker_camps" setMarkerBrush "FDiagonal";
+
+			_endMission = [] spawn
+			{
+				if ( count (allPlayers select { !alive _x }) == 0 ) then
+				{
+					//radio message if no players have died
+					[ukko,"rtbGood"] remoteExec ["sideRadio", 0, false];
+				} else {
+					//radio message if some players have died
+					[ukko,"rtbBad"] remoteExec ["sideRadio", 0, false];
+				};
 
 				sleep 2;
 
 				call ARTR_fnc_serverEnding;
 			};
-		};
-	};
-
-	case 1:
-	{
-		["ClearAnother", "Succeeded", false] call BIS_fnc_taskSetState;
-		["TaskSucceeded", ["Camp cleared"]] remoteExec ["BIS_fnc_showNotification", west, false];
-
-		missionNamespace setVariable ["mission_phase", 2, true];
-
-		"marker_camps" setMarkerColor "colorGUER";
-		"marker_camps" setMarkerBrush "FDiagonal";
-
-		_endMission = [] spawn
-		{
-			if ( count (allPlayers select { !alive _x }) == 0 ) then
-			{
-				//radio message if no players have died
-				[ukko,"rtbGood"] remoteExec ["sideRadio", 0, false];
-			} else {
-				//radio message if some players have died
-				[ukko,"rtbBad"] remoteExec ["sideRadio", 0, false];
-			};
-
-			sleep 2;
-
-			call ARTR_fnc_serverEnding;
 		};
 	};
 };

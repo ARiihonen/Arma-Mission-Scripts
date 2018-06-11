@@ -1,6 +1,6 @@
 player addAction [
 	"<t color='#FF0000'>Report island cleared</t>",
-	"remoteExecCall ['ARTR_fnc_advancePhase',2,false];",
+	"[1] remoteExecCall ['ARTR_fnc_advancePhase',2,false];",
 	"",
 	1,
 	false,

@@ -14614,7 +14614,7 @@ class Mission
 			{
 				name="trigger_campsCleared";
 				condition="this && ({ triggerActivated _x } count [trigger_campCleared_N_01, trigger_campCleared_N_02, trigger_campCleared_N_03, trigger_campCleared_N_04, trigger_campCleared_S_01, trigger_campCleared_S_02, trigger_campCleared_S_03, trigger_campCleared_S_04] >= 4)";
-				onActivation="call ARTR_fnc_advancePhase;";
+				onActivation="[1] call ARTR_fnc_advancePhase;";
 				sizeA=250;
 				sizeB=250;
 				timeout[]={10,15,20};

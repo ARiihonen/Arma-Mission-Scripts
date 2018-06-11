@@ -337,7 +337,7 @@ ace_ui_zeroing = true;
 // ACE Vehicle Lock
 force ace_vehiclelock_defaultLockpickStrength = 10;
 force ace_vehiclelock_lockVehicleInventory = true;
-force ace_vehiclelock_vehicleStartingLockState = 1;
+force ace_vehiclelock_vehicleStartingLockState = 2;
 
 // ACE View Distance Limiter
 ace_viewdistance_enabled = false;

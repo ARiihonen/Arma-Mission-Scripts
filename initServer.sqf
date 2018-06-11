@@ -23,9 +23,9 @@ trigger_dead setTriggerTimeout [5, 5, 5, true];
 //Create trigger to advance phase when island cleared
 trigger_island = [
 	"( { triggerActivated _x } count [ trigger_islandCleared, trigger_islandSouth_1, trigger_islandSouth_2, trigger_islandSouth_3, trigger_islandNorth_1, trigger_islandNorth_2, trigger_islandNorth_3] >= 7) && (missionNamespace getVariable ['mission_phase',0] == 0)",
-	"call ARTR_fnc_advancePhase;"
+	"[1] call ARTR_fnc_advancePhase;"
 ] call ARTR_fnc_emptyTrigger;
-trigger_island setTriggerTimeout [10, 20,60, false];
+trigger_island setTriggerTimeout [10, 15, 20, false];
 
 //client inits wait for serverInit to be true before starting, to make sure all variables the server sets up are set up before clients try to refer to them (which would cause errors)
 missionNamespace setVariable["ARTR_serverInit", true, true];
